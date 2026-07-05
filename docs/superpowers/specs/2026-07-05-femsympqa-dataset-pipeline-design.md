@@ -49,8 +49,8 @@ later RAG prototype, risk classifier, and evaluation harness all consume.
 ### Base entries — `data/base/base_entries.json`
 
 One per distinct symptom–condition pair (est. 40–60 single-symptom entries, plus
-compound-symptom entries combining 2–3 co-occurring symptoms of the same condition).
-Fields:
+~20–30 compound-symptom entries combining 2–3 co-occurring symptoms of the same
+condition). Fields:
 
 | Field | Description |
 |---|---|
@@ -65,12 +65,15 @@ Fields:
 
 ### Final records — `data/final/femsympqa.jsonl`
 
-One JSON object per line, one per query variant (~18–60 per base entry):
+One JSON object per line, one per query variant. Per base entry: 1 canonical +
+15–20 paraphrases = 16–21 English variants, each translated to FR and AR → ~48–63
+records per base entry. Across 60–90 base entries this yields the ~3,000–4,500 target.
 
 | Field | Description |
 |---|---|
 | `id` | e.g. `femsympqa-0421` |
 | `base_id` | Link back to the base entry |
+| `parent_id` | For translations: the `id` of the English variant it was translated from; `null` for English records |
 | `lang` | `en` / `fr` / `ar` |
 | `variant_type` | `canonical` / `paraphrase` / `translation` |
 | `query` | The patient-style query text |
