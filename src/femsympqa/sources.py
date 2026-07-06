@@ -22,7 +22,7 @@ SOURCES: list[Source] = [
     Source(slug="nhs-pcos", condition=CONDITIONS["pcos"],
            url="https://www.nhs.uk/conditions/polyendocrine-metabolic-ovarian-syndrome-pmos/"),
     Source(slug="cdc-pcos", condition=CONDITIONS["pcos"],
-           url="https://www.cdc.gov/diabetes/basics/pcos.html"),
+           url="https://www.cdc.gov/diabetes/risk-factors/pcos-polycystic-ovary-syndrome.html"),
     Source(slug="nhs-heavy-periods", condition=CONDITIONS["heavy-periods"],
            url="https://www.nhs.uk/conditions/heavy-periods/"),
     Source(slug="nhs-infertility", condition=CONDITIONS["infertility"],
