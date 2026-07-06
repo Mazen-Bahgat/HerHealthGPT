@@ -6,3 +6,5 @@ __pycache__/
 .superpowers/
 HerHealthGPT-RF3.pdf
 *.egg-info/
+/docs
+*.docx
