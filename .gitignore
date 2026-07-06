@@ -5,3 +5,4 @@ __pycache__/
 .pytest_cache/
 .superpowers/
 HerHealthGPT-RF3.pdf
+*.egg-info/

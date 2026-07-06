@@ -1,8 +1,0 @@
-README.md
-pyproject.toml
-src/femsympqa/__init__.py
-src/femsympqa.egg-info/PKG-INFO
-src/femsympqa.egg-info/SOURCES.txt
-src/femsympqa.egg-info/dependency_links.txt
-src/femsympqa.egg-info/requires.txt
-src/femsympqa.egg-info/top_level.txt
