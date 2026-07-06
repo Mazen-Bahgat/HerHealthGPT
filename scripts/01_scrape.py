@@ -22,12 +22,12 @@ def main() -> None:
         path = snapshot_path(source.slug)
         if path.exists():
             print(f"skip  {source.slug} (snapshot exists)")
-            continue
-        print(f"fetch {source.slug} <- {source.url}")
-        resp = requests.get(source.url, headers=HEADERS, timeout=30)
-        resp.raise_for_status()
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(resp.text, encoding="utf-8")
+        else:
+            print(f"fetch {source.slug} <- {source.url}")
+            resp = requests.get(source.url, headers=HEADERS, timeout=30)
+            resp.raise_for_status()
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(resp.text, encoding="utf-8")
         if source.slug not in fetched_slugs:
             manifest.append({
                 "slug": source.slug,
@@ -35,8 +35,9 @@ def main() -> None:
                 "url": source.url,
                 "fetched_at": date.today().isoformat(),
             })
+            fetched_slugs.add(source.slug)
+            write_json(MANIFEST, manifest)  # flush after every new entry
 
-    write_json(MANIFEST, manifest)
     print(f"done: {len(manifest)} snapshots recorded in {MANIFEST}")
 
 
