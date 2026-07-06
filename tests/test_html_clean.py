@@ -29,3 +29,19 @@ def test_boilerplate_excluded():
 
 def test_short_sections_dropped():
     assert "Tiny" not in [s.heading for s in _sections()]
+
+
+def test_nested_li_p_text_counted_once():
+    symptoms = next(s for s in _sections() if s.heading == "Symptoms")
+    assert symptoms.text.count("heavy bleeding during periods") == 1
+
+
+def test_breadcrumb_junk_excluded():
+    all_text = " ".join(s.text for s in _sections())
+    assert "breadcrumb trail junk" not in all_text
+
+
+def test_empty_heading_sections_dropped():
+    assert all(s.heading for s in _sections())
+    all_text = " ".join(s.text for s in _sections())
+    assert "Orphan paragraph" not in all_text
