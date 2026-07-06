@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "nhs-pcos",
+    "condition": "PCOS",
+    "url": "https://www.nhs.uk/conditions/polyendocrine-metabolic-ovarian-syndrome-pmos/",
+    "fetched_at": "2026-07-06"
+  },
+  {
+    "slug": "cdc-pcos",
+    "condition": "PCOS",
+    "url": "https://www.cdc.gov/diabetes/basics/pcos.html",
+    "fetched_at": "2026-07-06"
+  },
+  {
+    "slug": "nhs-heavy-periods",
+    "condition": "Heavy periods (menorrhagia)",
+    "url": "https://www.nhs.uk/conditions/heavy-periods/",
+    "fetched_at": "2026-07-06"
+  },
+  {
+    "slug": "nhs-infertility",
+    "condition": "Infertility (female)",
+    "url": "https://www.nhs.uk/conditions/infertility/",
+    "fetched_at": "2026-07-06"
+  },
+  {
+    "slug": "nih-endometriosis",
+    "condition": "Endometriosis",
+    "url": "https://www.nichd.nih.gov/health/topics/endometri/conditioninfo",
+    "fetched_at": "2026-07-06"
+  }
+]
