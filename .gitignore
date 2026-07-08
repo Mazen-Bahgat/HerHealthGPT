@@ -8,4 +8,5 @@ HerHealthGPT-RF3.pdf
 *.egg-info/
 /docs
 *.docx
-related work/Dataset.zip
+related work/
+Dataset.zip
