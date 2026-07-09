@@ -1,0 +1,22 @@
+{
+  "clear_raw_post_dedup": {
+    "menstrual": 4000,
+    "pcos": 1550,
+    "fertility": 1219
+  },
+  "clear_eligible": {
+    "menstrual": 2724,
+    "pcos": 1393,
+    "fertility": 1154
+  },
+  "proposed_targets": {
+    "menstrual": 30,
+    "pcos": 30,
+    "fertility": 30
+  },
+  "yield_notes": {
+    "menstrual": "ok",
+    "pcos": "ok",
+    "fertility": "ok"
+  }
+}

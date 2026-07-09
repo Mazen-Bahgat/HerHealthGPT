@@ -1,0 +1,970 @@
+{
+  "menst-001": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-002": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-003": {
+    "claims": [
+      "period pain",
+      "fertility"
+    ],
+    "clinical": "I have period pain and fertility.",
+    "layperson": "My period pain / cramps (period pain and fertility) have been hard to deal with.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding period pain and fertility.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (period pain and fertility).",
+    "emotionally_concerned": "I am really worried and scared about period pain and fertility. Please help me understand what this means."
+  },
+  "menst-004": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-005": {
+    "claims": [
+      "PMS"
+    ],
+    "clinical": "I have PMS.",
+    "layperson": "Before my period I feel bad PMS symptoms (PMS) and it worries me.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding PMS.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PMS).",
+    "emotionally_concerned": "I am really worried and scared about PMS. Please help me understand what this means."
+  },
+  "menst-006": {
+    "claims": [
+      "amenorrhea"
+    ],
+    "clinical": "I have amenorrhea.",
+    "layperson": "My period is not coming properly — this is about amenorrhea.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding amenorrhea.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (amenorrhea).",
+    "emotionally_concerned": "I am really worried and scared about amenorrhea. Please help me understand what this means."
+  },
+  "menst-007": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-008": {
+    "claims": [
+      "irregular periods",
+      "conceive"
+    ],
+    "clinical": "I have irregular periods and conceive.",
+    "layperson": "My period is not coming properly — this is about irregular periods and conceive.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods and conceive.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods and conceive).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods and conceive. Please help me understand what this means."
+  },
+  "menst-009": {
+    "claims": [
+      "amenorrhea"
+    ],
+    "clinical": "I have amenorrhea.",
+    "layperson": "My period is not coming properly — this is about amenorrhea.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding amenorrhea.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (amenorrhea).",
+    "emotionally_concerned": "I am really worried and scared about amenorrhea. Please help me understand what this means."
+  },
+  "menst-010": {
+    "claims": [
+      "cramps",
+      "PMS"
+    ],
+    "clinical": "I have cramps and PMS.",
+    "layperson": "Before my period I feel bad PMS symptoms (cramps and PMS) and it worries me.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding cramps and PMS.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (cramps and PMS).",
+    "emotionally_concerned": "I am really worried and scared about cramps and PMS. Please help me understand what this means."
+  },
+  "menst-011": {
+    "claims": [
+      "hormonal"
+    ],
+    "clinical": "I have hormonal.",
+    "layperson": "My period is not coming properly — this is about hormonal.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding hormonal.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (hormonal).",
+    "emotionally_concerned": "I am really worried and scared about hormonal. Please help me understand what this means."
+  },
+  "menst-012": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-013": {
+    "claims": [
+      "missed periods"
+    ],
+    "clinical": "I have missed periods.",
+    "layperson": "My period is not coming properly — this is about missed periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding missed periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (missed periods).",
+    "emotionally_concerned": "I am really worried and scared about missed periods. Please help me understand what this means."
+  },
+  "menst-014": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-015": {
+    "claims": [
+      "no periods"
+    ],
+    "clinical": "I have no periods.",
+    "layperson": "My period is not coming properly — this is about no periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding no periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (no periods).",
+    "emotionally_concerned": "I am really worried and scared about no periods. Please help me understand what this means."
+  },
+  "menst-016": {
+    "claims": [
+      "irregular periods",
+      "weight"
+    ],
+    "clinical": "I have irregular periods and weight.",
+    "layperson": "My period is not coming properly — this is about irregular periods and weight.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods and weight.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods and weight).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods and weight. Please help me understand what this means."
+  },
+  "menst-017": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-018": {
+    "claims": [
+      "conceive"
+    ],
+    "clinical": "I have conceive.",
+    "layperson": "My period is not coming properly — this is about conceive.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding conceive.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (conceive).",
+    "emotionally_concerned": "I am really worried and scared about conceive. Please help me understand what this means."
+  },
+  "menst-019": {
+    "claims": [
+      "missed periods"
+    ],
+    "clinical": "I have missed periods.",
+    "layperson": "My period is not coming properly — this is about missed periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding missed periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (missed periods).",
+    "emotionally_concerned": "I am really worried and scared about missed periods. Please help me understand what this means."
+  },
+  "menst-020": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-021": {
+    "claims": [
+      "missed periods"
+    ],
+    "clinical": "I have missed periods.",
+    "layperson": "My period is not coming properly — this is about missed periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding missed periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (missed periods).",
+    "emotionally_concerned": "I am really worried and scared about missed periods. Please help me understand what this means."
+  },
+  "menst-022": {
+    "claims": [
+      "PCOD",
+      "irregular periods"
+    ],
+    "clinical": "I have PCOD and irregular periods.",
+    "layperson": "My period is not coming properly — this is about PCOD and irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding PCOD and irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD and irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about PCOD and irregular periods. Please help me understand what this means."
+  },
+  "menst-023": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-024": {
+    "claims": [
+      "no periods",
+      "cysts"
+    ],
+    "clinical": "I have no periods and cysts.",
+    "layperson": "My period is not coming properly — this is about no periods and cysts.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding no periods and cysts.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (no periods and cysts).",
+    "emotionally_concerned": "I am really worried and scared about no periods and cysts. Please help me understand what this means."
+  },
+  "menst-025": {
+    "claims": [
+      "no periods",
+      "have not had a period"
+    ],
+    "clinical": "I have no periods and have not had a period.",
+    "layperson": "My period is not coming properly — this is about no periods and have not had a period.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding no periods and have not had a period.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (no periods and have not had a period).",
+    "emotionally_concerned": "I am really worried and scared about no periods and have not had a period. Please help me understand what this means."
+  },
+  "menst-026": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-027": {
+    "claims": [
+      "no periods"
+    ],
+    "clinical": "I have no periods.",
+    "layperson": "My period is not coming properly — this is about no periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding no periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (no periods).",
+    "emotionally_concerned": "I am really worried and scared about no periods. Please help me understand what this means."
+  },
+  "menst-028": {
+    "claims": [
+      "irregular periods"
+    ],
+    "clinical": "I have irregular periods.",
+    "layperson": "My period is not coming properly — this is about irregular periods.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods. Please help me understand what this means."
+  },
+  "menst-029": {
+    "claims": [
+      "irregular periods",
+      "ovulation",
+      "weight",
+      "hormonal"
+    ],
+    "clinical": "I have irregular periods, ovulation, weight, and hormonal.",
+    "layperson": "My period is not coming properly — this is about irregular periods, ovulation, weight, and hormonal.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods, ovulation, weight, and hormonal.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods, ovulation, weight, and hormonal).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods, ovulation, weight, and hormonal. Please help me understand what this means."
+  },
+  "menst-030": {
+    "claims": [
+      "irregular periods",
+      "cysts",
+      "conceive"
+    ],
+    "clinical": "I have irregular periods, cysts, and conceive.",
+    "layperson": "My period is not coming properly — this is about irregular periods, cysts, and conceive.",
+    "indirect_cultural": "My monthly / womanly problem has become unusual regarding irregular periods, cysts, and conceive.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (irregular periods, cysts, and conceive).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods, cysts, and conceive. Please help me understand what this means."
+  },
+  "pcos-001": {
+    "claims": [
+      "PCOS",
+      "weight"
+    ],
+    "clinical": "I have symptoms related to PCOS and weight.",
+    "layperson": "I think something hormonal is going on with me (PCOS and weight).",
+    "indirect_cultural": "My body changes (PCOS and weight) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and weight).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and weight. Please help me understand what this means."
+  },
+  "pcos-002": {
+    "claims": [
+      "PCOS",
+      "excess hair",
+      "fatigue"
+    ],
+    "clinical": "I have symptoms related to PCOS, excess hair, and fatigue.",
+    "layperson": "I think something hormonal is going on with me (PCOS, excess hair, and fatigue).",
+    "indirect_cultural": "My body changes (PCOS, excess hair, and fatigue) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS, excess hair, and fatigue).",
+    "emotionally_concerned": "I am really worried and scared about PCOS, excess hair, and fatigue. Please help me understand what this means."
+  },
+  "pcos-003": {
+    "claims": [
+      "PCOS",
+      "menstrual cramps",
+      "cramps"
+    ],
+    "clinical": "I have symptoms related to PCOS and menstrual cramps.",
+    "layperson": "I think something hormonal is going on with me (PCOS and menstrual cramps).",
+    "indirect_cultural": "My body changes (PCOS and menstrual cramps) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and menstrual cramps).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and menstrual cramps. Please help me understand what this means."
+  },
+  "pcos-004": {
+    "claims": [
+      "PCOS"
+    ],
+    "clinical": "I have symptoms related to PCOS.",
+    "layperson": "I think something hormonal is going on with me (PCOS).",
+    "indirect_cultural": "My body changes (PCOS) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS).",
+    "emotionally_concerned": "I am really worried and scared about PCOS. Please help me understand what this means."
+  },
+  "pcos-005": {
+    "claims": [
+      "PCOS",
+      "weight"
+    ],
+    "clinical": "I have symptoms related to PCOS and weight.",
+    "layperson": "I think something hormonal is going on with me (PCOS and weight).",
+    "indirect_cultural": "My body changes (PCOS and weight) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and weight).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and weight. Please help me understand what this means."
+  },
+  "pcos-006": {
+    "claims": [
+      "PCOS",
+      "irregular periods",
+      "weight",
+      "acne"
+    ],
+    "clinical": "I have symptoms related to PCOS, irregular periods, weight, and acne.",
+    "layperson": "I think something hormonal is going on with me (PCOS, irregular periods, weight, and acne).",
+    "indirect_cultural": "My body changes (PCOS, irregular periods, weight, and acne) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS, irregular periods, weight, and acne).",
+    "emotionally_concerned": "I am really worried and scared about PCOS, irregular periods, weight, and acne. Please help me understand what this means."
+  },
+  "pcos-007": {
+    "claims": [
+      "polycystic ovaries"
+    ],
+    "clinical": "I have symptoms related to polycystic ovaries.",
+    "layperson": "I think something hormonal is going on with me (polycystic ovaries).",
+    "indirect_cultural": "My body changes (polycystic ovaries) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (polycystic ovaries).",
+    "emotionally_concerned": "I am really worried and scared about polycystic ovaries. Please help me understand what this means."
+  },
+  "pcos-008": {
+    "claims": [
+      "PCOS"
+    ],
+    "clinical": "I have symptoms related to PCOS.",
+    "layperson": "I think something hormonal is going on with me (PCOS).",
+    "indirect_cultural": "My body changes (PCOS) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS).",
+    "emotionally_concerned": "I am really worried and scared about PCOS. Please help me understand what this means."
+  },
+  "pcos-009": {
+    "claims": [
+      "PCOD",
+      "weight",
+      "conceive"
+    ],
+    "clinical": "I have symptoms related to PCOD, weight, and conceive.",
+    "layperson": "I think something hormonal is going on with me (PCOD, weight, and conceive).",
+    "indirect_cultural": "My body changes (PCOD, weight, and conceive) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD, weight, and conceive).",
+    "emotionally_concerned": "I am really worried and scared about PCOD, weight, and conceive. Please help me understand what this means."
+  },
+  "pcos-010": {
+    "claims": [
+      "PCOD"
+    ],
+    "clinical": "I have symptoms related to PCOD.",
+    "layperson": "I think something hormonal is going on with me (PCOD).",
+    "indirect_cultural": "My body changes (PCOD) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD).",
+    "emotionally_concerned": "I am really worried and scared about PCOD. Please help me understand what this means."
+  },
+  "pcos-011": {
+    "claims": [
+      "PCOD",
+      "infertility"
+    ],
+    "clinical": "I have symptoms related to PCOD and infertility.",
+    "layperson": "I think something hormonal is going on with me (PCOD and infertility).",
+    "indirect_cultural": "My body changes (PCOD and infertility) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD and infertility).",
+    "emotionally_concerned": "I am really worried and scared about PCOD and infertility. Please help me understand what this means."
+  },
+  "pcos-012": {
+    "claims": [
+      "PCOD"
+    ],
+    "clinical": "I have symptoms related to PCOD.",
+    "layperson": "I think something hormonal is going on with me (PCOD).",
+    "indirect_cultural": "My body changes (PCOD) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD).",
+    "emotionally_concerned": "I am really worried and scared about PCOD. Please help me understand what this means."
+  },
+  "pcos-013": {
+    "claims": [
+      "PCOS",
+      "conceive"
+    ],
+    "clinical": "I have symptoms related to PCOS and conceive.",
+    "layperson": "I think something hormonal is going on with me (PCOS and conceive).",
+    "indirect_cultural": "My body changes (PCOS and conceive) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and conceive).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and conceive. Please help me understand what this means."
+  },
+  "pcos-014": {
+    "claims": [
+      "polycystic ovaries",
+      "hirsutism",
+      "facial hair",
+      "weight"
+    ],
+    "clinical": "I have symptoms related to polycystic ovaries, hirsutism, facial hair, and weight.",
+    "layperson": "I think something hormonal is going on with me (polycystic ovaries, hirsutism, facial hair, and weight).",
+    "indirect_cultural": "My body changes (polycystic ovaries, hirsutism, facial hair, and weight) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (polycystic ovaries, hirsutism, facial hair, and weight).",
+    "emotionally_concerned": "I am really worried and scared about polycystic ovaries, hirsutism, facial hair, and weight. Please help me understand what this means."
+  },
+  "pcos-015": {
+    "claims": [
+      "PCOS",
+      "weight"
+    ],
+    "clinical": "I have symptoms related to PCOS and weight.",
+    "layperson": "I think something hormonal is going on with me (PCOS and weight).",
+    "indirect_cultural": "My body changes (PCOS and weight) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and weight).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and weight. Please help me understand what this means."
+  },
+  "pcos-016": {
+    "claims": [
+      "polycystic ovaries"
+    ],
+    "clinical": "I have symptoms related to polycystic ovaries.",
+    "layperson": "I think something hormonal is going on with me (polycystic ovaries).",
+    "indirect_cultural": "My body changes (polycystic ovaries) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (polycystic ovaries).",
+    "emotionally_concerned": "I am really worried and scared about polycystic ovaries. Please help me understand what this means."
+  },
+  "pcos-017": {
+    "claims": [
+      "PCOD"
+    ],
+    "clinical": "I have symptoms related to PCOD.",
+    "layperson": "I think something hormonal is going on with me (PCOD).",
+    "indirect_cultural": "My body changes (PCOD) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD).",
+    "emotionally_concerned": "I am really worried and scared about PCOD. Please help me understand what this means."
+  },
+  "pcos-018": {
+    "claims": [
+      "PCOD",
+      "trying to conceive",
+      "ovulation",
+      "weight",
+      "conceive"
+    ],
+    "clinical": "I have symptoms related to PCOD, trying to conceive, ovulation, and weight.",
+    "layperson": "I think something hormonal is going on with me (PCOD, trying to conceive, ovulation, and weight).",
+    "indirect_cultural": "My body changes (PCOD, trying to conceive, ovulation, and weight) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD, trying to conceive, ovulation, and weight).",
+    "emotionally_concerned": "I am really worried and scared about PCOD, trying to conceive, ovulation, and weight. Please help me understand what this means."
+  },
+  "pcos-019": {
+    "claims": [
+      "PCOS",
+      "TTC"
+    ],
+    "clinical": "I have symptoms related to PCOS and TTC.",
+    "layperson": "I think something hormonal is going on with me (PCOS and TTC).",
+    "indirect_cultural": "My body changes (PCOS and TTC) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and TTC).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and TTC. Please help me understand what this means."
+  },
+  "pcos-020": {
+    "claims": [
+      "PCOD",
+      "weight"
+    ],
+    "clinical": "I have symptoms related to PCOD and weight.",
+    "layperson": "I think something hormonal is going on with me (PCOD and weight).",
+    "indirect_cultural": "My body changes (PCOD and weight) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD and weight).",
+    "emotionally_concerned": "I am really worried and scared about PCOD and weight. Please help me understand what this means."
+  },
+  "pcos-021": {
+    "claims": [
+      "polycystic ovaries"
+    ],
+    "clinical": "I have symptoms related to polycystic ovaries.",
+    "layperson": "I think something hormonal is going on with me (polycystic ovaries).",
+    "indirect_cultural": "My body changes (polycystic ovaries) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (polycystic ovaries).",
+    "emotionally_concerned": "I am really worried and scared about polycystic ovaries. Please help me understand what this means."
+  },
+  "pcos-022": {
+    "claims": [
+      "PCOD",
+      "weight"
+    ],
+    "clinical": "I have symptoms related to PCOD and weight.",
+    "layperson": "I think something hormonal is going on with me (PCOD and weight).",
+    "indirect_cultural": "My body changes (PCOD and weight) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD and weight).",
+    "emotionally_concerned": "I am really worried and scared about PCOD and weight. Please help me understand what this means."
+  },
+  "pcos-023": {
+    "claims": [
+      "PCOD"
+    ],
+    "clinical": "I have symptoms related to PCOD.",
+    "layperson": "I think something hormonal is going on with me (PCOD).",
+    "indirect_cultural": "My body changes (PCOD) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD).",
+    "emotionally_concerned": "I am really worried and scared about PCOD. Please help me understand what this means."
+  },
+  "pcos-024": {
+    "claims": [
+      "PCOD",
+      "trying to get pregnant"
+    ],
+    "clinical": "I have symptoms related to PCOD and trying to get pregnant.",
+    "layperson": "I think something hormonal is going on with me (PCOD and trying to get pregnant).",
+    "indirect_cultural": "My body changes (PCOD and trying to get pregnant) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD and trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about PCOD and trying to get pregnant. Please help me understand what this means."
+  },
+  "pcos-025": {
+    "claims": [
+      "PCOD"
+    ],
+    "clinical": "I have symptoms related to PCOD.",
+    "layperson": "I think something hormonal is going on with me (PCOD).",
+    "indirect_cultural": "My body changes (PCOD) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD).",
+    "emotionally_concerned": "I am really worried and scared about PCOD. Please help me understand what this means."
+  },
+  "pcos-026": {
+    "claims": [
+      "PCOS"
+    ],
+    "clinical": "I have symptoms related to PCOS.",
+    "layperson": "I think something hormonal is going on with me (PCOS).",
+    "indirect_cultural": "My body changes (PCOS) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS).",
+    "emotionally_concerned": "I am really worried and scared about PCOS. Please help me understand what this means."
+  },
+  "pcos-027": {
+    "claims": [
+      "PCOD"
+    ],
+    "clinical": "I have symptoms related to PCOD.",
+    "layperson": "I think something hormonal is going on with me (PCOD).",
+    "indirect_cultural": "My body changes (PCOD) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOD).",
+    "emotionally_concerned": "I am really worried and scared about PCOD. Please help me understand what this means."
+  },
+  "pcos-028": {
+    "claims": [
+      "PCOS"
+    ],
+    "clinical": "I have symptoms related to PCOS.",
+    "layperson": "I think something hormonal is going on with me (PCOS).",
+    "indirect_cultural": "My body changes (PCOS) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS).",
+    "emotionally_concerned": "I am really worried and scared about PCOS. Please help me understand what this means."
+  },
+  "pcos-029": {
+    "claims": [
+      "PCOS",
+      "cysts"
+    ],
+    "clinical": "I have symptoms related to PCOS and cysts.",
+    "layperson": "I think something hormonal is going on with me (PCOS and cysts).",
+    "indirect_cultural": "My body changes (PCOS and cysts) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and cysts).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and cysts. Please help me understand what this means."
+  },
+  "pcos-030": {
+    "claims": [
+      "PCOS",
+      "acne"
+    ],
+    "clinical": "I have symptoms related to PCOS and acne.",
+    "layperson": "I think something hormonal is going on with me (PCOS and acne).",
+    "indirect_cultural": "My body changes (PCOS and acne) have become hard to ignore.",
+    "ambiguous": "Something feels wrong with my cycle / hormones (PCOS and acne).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and acne. Please help me understand what this means."
+  },
+  "fert-001": {
+    "claims": [
+      "irregular periods",
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about irregular periods and trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about irregular periods and trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to irregular periods and trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (irregular periods and trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about irregular periods and trying to conceive. Please help me understand what this means."
+  },
+  "fert-002": {
+    "claims": [
+      "trying to conceive",
+      "conceive",
+      "periods have not come"
+    ],
+    "clinical": "I have concerns about trying to conceive and periods have not come.",
+    "layperson": "We have been trying for a baby and I worry about trying to conceive and periods have not come.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to conceive and periods have not come.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to conceive and periods have not come).",
+    "emotionally_concerned": "I am really worried and scared about trying to conceive and periods have not come. Please help me understand what this means."
+  },
+  "fert-003": {
+    "claims": [
+      "polycystic ovaries",
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about polycystic ovaries and trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about polycystic ovaries and trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to polycystic ovaries and trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (polycystic ovaries and trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about polycystic ovaries and trying to get pregnant. Please help me understand what this means."
+  },
+  "fert-004": {
+    "claims": [
+      "PCOS",
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about PCOS and trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about PCOS and trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to PCOS and trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (PCOS and trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and trying to conceive. Please help me understand what this means."
+  },
+  "fert-005": {
+    "claims": [
+      "conceive"
+    ],
+    "clinical": "I have concerns about conceive.",
+    "layperson": "We have been trying for a baby and I worry about conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (conceive).",
+    "emotionally_concerned": "I am really worried and scared about conceive. Please help me understand what this means."
+  },
+  "fert-006": {
+    "claims": [
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant. Please help me understand what this means."
+  },
+  "fert-007": {
+    "claims": [
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about trying to conceive. Please help me understand what this means."
+  },
+  "fert-008": {
+    "claims": [
+      "trying to get pregnant",
+      "ovulation"
+    ],
+    "clinical": "I have concerns about trying to get pregnant and ovulation.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant and ovulation.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant and ovulation.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant and ovulation).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant and ovulation. Please help me understand what this means."
+  },
+  "fert-009": {
+    "claims": [
+      "infertility",
+      "IVF",
+      "IUI"
+    ],
+    "clinical": "I have concerns about infertility, IVF, and IUI.",
+    "layperson": "We have been trying for a baby and I worry about infertility, IVF, and IUI.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to infertility, IVF, and IUI.",
+    "ambiguous": "Something feels wrong with our ability to conceive (infertility, IVF, and IUI).",
+    "emotionally_concerned": "I am really worried and scared about infertility, IVF, and IUI. Please help me understand what this means."
+  },
+  "fert-010": {
+    "claims": [
+      "TTC",
+      "fertility"
+    ],
+    "clinical": "I have concerns about TTC and fertility.",
+    "layperson": "We have been trying for a baby and I worry about TTC and fertility.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to TTC and fertility.",
+    "ambiguous": "Something feels wrong with our ability to conceive (TTC and fertility).",
+    "emotionally_concerned": "I am really worried and scared about TTC and fertility. Please help me understand what this means."
+  },
+  "fert-011": {
+    "claims": [
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about trying to conceive. Please help me understand what this means."
+  },
+  "fert-012": {
+    "claims": [
+      "infertility",
+      "IVF",
+      "conceive"
+    ],
+    "clinical": "I have concerns about infertility, IVF, and conceive.",
+    "layperson": "We have been trying for a baby and I worry about infertility, IVF, and conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to infertility, IVF, and conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (infertility, IVF, and conceive).",
+    "emotionally_concerned": "I am really worried and scared about infertility, IVF, and conceive. Please help me understand what this means."
+  },
+  "fert-013": {
+    "claims": [
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about trying to conceive. Please help me understand what this means."
+  },
+  "fert-014": {
+    "claims": [
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant. Please help me understand what this means."
+  },
+  "fert-015": {
+    "claims": [
+      "trying to get pregnant",
+      "ovulation"
+    ],
+    "clinical": "I have concerns about trying to get pregnant and ovulation.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant and ovulation.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant and ovulation.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant and ovulation).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant and ovulation. Please help me understand what this means."
+  },
+  "fert-016": {
+    "claims": [
+      "TTC"
+    ],
+    "clinical": "I have concerns about TTC.",
+    "layperson": "We have been trying for a baby and I worry about TTC.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to TTC.",
+    "ambiguous": "Something feels wrong with our ability to conceive (TTC).",
+    "emotionally_concerned": "I am really worried and scared about TTC. Please help me understand what this means."
+  },
+  "fert-017": {
+    "claims": [
+      "trying to get pregnant",
+      "ovulation"
+    ],
+    "clinical": "I have concerns about trying to get pregnant and ovulation.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant and ovulation.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant and ovulation.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant and ovulation).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant and ovulation. Please help me understand what this means."
+  },
+  "fert-018": {
+    "claims": [
+      "trying to conceive",
+      "weight",
+      "conceive"
+    ],
+    "clinical": "I have concerns about trying to conceive and weight.",
+    "layperson": "We have been trying for a baby and I worry about trying to conceive and weight.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to conceive and weight.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to conceive and weight).",
+    "emotionally_concerned": "I am really worried and scared about trying to conceive and weight. Please help me understand what this means."
+  },
+  "fert-019": {
+    "claims": [
+      "infertility"
+    ],
+    "clinical": "I have concerns about infertility.",
+    "layperson": "We have been trying for a baby and I worry about infertility.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to infertility.",
+    "ambiguous": "Something feels wrong with our ability to conceive (infertility).",
+    "emotionally_concerned": "I am really worried and scared about infertility. Please help me understand what this means."
+  },
+  "fert-020": {
+    "claims": [
+      "TTC",
+      "conceive"
+    ],
+    "clinical": "I have concerns about TTC and conceive.",
+    "layperson": "We have been trying for a baby and I worry about TTC and conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to TTC and conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (TTC and conceive).",
+    "emotionally_concerned": "I am really worried and scared about TTC and conceive. Please help me understand what this means."
+  },
+  "fert-021": {
+    "claims": [
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant. Please help me understand what this means."
+  },
+  "fert-022": {
+    "claims": [
+      "fertility"
+    ],
+    "clinical": "I have concerns about fertility.",
+    "layperson": "We have been trying for a baby and I worry about fertility.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to fertility.",
+    "ambiguous": "Something feels wrong with our ability to conceive (fertility).",
+    "emotionally_concerned": "I am really worried and scared about fertility. Please help me understand what this means."
+  },
+  "fert-023": {
+    "claims": [
+      "PCOS",
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about PCOS and trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about PCOS and trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to PCOS and trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (PCOS and trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and trying to conceive. Please help me understand what this means."
+  },
+  "fert-024": {
+    "claims": [
+      "PCOS",
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about PCOS and trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about PCOS and trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to PCOS and trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (PCOS and trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and trying to conceive. Please help me understand what this means."
+  },
+  "fert-025": {
+    "claims": [
+      "endometriosis",
+      "trying to conceive",
+      "conceive"
+    ],
+    "clinical": "I have concerns about endometriosis and trying to conceive.",
+    "layperson": "We have been trying for a baby and I worry about endometriosis and trying to conceive.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to endometriosis and trying to conceive.",
+    "ambiguous": "Something feels wrong with our ability to conceive (endometriosis and trying to conceive).",
+    "emotionally_concerned": "I am really worried and scared about endometriosis and trying to conceive. Please help me understand what this means."
+  },
+  "fert-026": {
+    "claims": [
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant. Please help me understand what this means."
+  },
+  "fert-027": {
+    "claims": [
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about trying to get pregnant. Please help me understand what this means."
+  },
+  "fert-028": {
+    "claims": [
+      "PCOS",
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about PCOS and trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about PCOS and trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to PCOS and trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (PCOS and trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and trying to get pregnant. Please help me understand what this means."
+  },
+  "fert-029": {
+    "claims": [
+      "infertility"
+    ],
+    "clinical": "I have concerns about infertility.",
+    "layperson": "We have been trying for a baby and I worry about infertility.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to infertility.",
+    "ambiguous": "Something feels wrong with our ability to conceive (infertility).",
+    "emotionally_concerned": "I am really worried and scared about infertility. Please help me understand what this means."
+  },
+  "fert-030": {
+    "claims": [
+      "PCOS",
+      "trying to get pregnant"
+    ],
+    "clinical": "I have concerns about PCOS and trying to get pregnant.",
+    "layperson": "We have been trying for a baby and I worry about PCOS and trying to get pregnant.",
+    "indirect_cultural": "Family-building has not happened yet; this relates to PCOS and trying to get pregnant.",
+    "ambiguous": "Something feels wrong with our ability to conceive (PCOS and trying to get pregnant).",
+    "emotionally_concerned": "I am really worried and scared about PCOS and trying to get pregnant. Please help me understand what this means."
+  }
+}
