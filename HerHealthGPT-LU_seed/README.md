@@ -2,6 +2,35 @@
 
 Week-1 categorized **English** seed set for HerHealthGPT-LU / LUHME 2026.
 
+## Status (2026-07-09)
+
+- **Style variants are being regenerated.** `build_seed.py`'s `generate_styles()` is a
+  fixed-template rewriter and was verified to lose clinical content (e.g. `menst-001`
+  and `menst-002` — different canonical questions, one about post-miscarriage timing,
+  one about fertility — both collapsed to the identical templated `clinical` variant
+  "I have irregular periods."). `../scripts/regenerate_style_variants_and_gold.py`
+  replaces these with LLM-regenerated, meaning-preserving variants and also fills in
+  `gold_risk_level`, `gold_action`, `requires_clarification` (previously blank —
+  `draft_grounding()` only ever set `gold_condition`). Requires `ANTHROPIC_API_KEY`;
+  not yet run as of this note. **A human must review `regeneration_report.md` before
+  the benchmark freezes** — this is an AI first pass, not a substitute for the
+  meaning-preservation review the design spec requires.
+- **Translation ownership decided:** Arabic is translated in-house by team members
+  (fluent speakers); French is outsourced to a professional translation/localization
+  agency. See `translation_handoff/` (built by `../scripts/build_translator_handoff.py`)
+  and `translation_handoff/fr_agency_brief.md`. This replaces the earlier
+  GPT/NLLB-machine-translation-first-pass plan.
+- **FT corpus v1 built:** `../scripts/build_ft_corpus.py` produced `ft_corpus_v1.jsonl`
+  (2,700 pairs, 900/category) with a **dual** leakage key — `leakage_note.md` now also
+  carries `seed_answer_hash` per seed (MENST paraphrase-family key), and
+  `leakage_log.csv` is the build-time audit trail of every row excluded and why.
+- **Grounding sources:** 5 of the 6 NHS/CDC/NICHD pages in `build_seed.py`'s
+  `GROUNDING` dict are fetched under `grounding_sources/` (see
+  `../scripts/scrape_grounding_sources.py`). CDC's `common-concerns.html` returns 403
+  to every fetch method available in this environment (browser UA, WebFetch tool) —
+  needs a manual fetch from someone with normal browser access, then drop the HTML at
+  `grounding_sources/cdc_reproductive.html` and re-run the regeneration script.
+
 ## Finalized split decision (canonical)
 
 Finalized fine-tuning target: **800-1,000 per category** (**2,400-3,000 total**) for **SFT / multilingual adaptation**.  

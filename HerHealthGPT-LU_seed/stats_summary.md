@@ -43,6 +43,14 @@
 - Keywords applied only to patient-authored fields (`<human>:` / `input` / `Question`).
 - Style variants recycle only claim phrases attested in canonical patient text.
 
+## Update (2026-07-09)
+
+- FT corpus v1 built (`../scripts/build_ft_corpus.py`): 2,700 pairs, 900/category, dual
+  leakage key applied (317 rows excluded). See `ft_corpus_stats.md`.
+- The 29 `needs_grounding_flag=true` seeds above, plus all `gold_risk_level`/`gold_action`/
+  `requires_clarification` fields, are pending `../scripts/regenerate_style_variants_and_gold.py`
+  (needs `ANTHROPIC_API_KEY`, not yet run) — these counts will change once that runs.
+
 ## Planning note (does not change measured v1 stats)
 
 - Current v1 benchmark nucleus remains **90 seeds / 540 rows** (30 seeds per category).

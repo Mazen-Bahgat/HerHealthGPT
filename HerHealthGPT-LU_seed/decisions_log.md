@@ -1,5 +1,24 @@
 # Decisions log — HerHealthGPT-LU English seed v1
 
+## Translation ownership (decided 2026-07-09)
+
+Arabic: translated in-house by team members who are fluent native/near-native speakers —
+not a machine-translation-first-pass + external validation workflow. French: outsourced
+to a professional translation and localization agency. See `../scripts/build_translator_handoff.py`
+and `translation_handoff/fr_agency_brief.md`. Supersedes the original
+GPT/NLLB-first-pass plan in the design spec §2A for both languages.
+
+## Style-variant regeneration (started 2026-07-09)
+
+`generate_styles()` in `build_seed.py` is a fixed-template rewriter, verified to drop
+clinical content on real seeds (see `../HerHealthGPT-LU_seed/README.md` §Status for the
+menst-001/menst-002 example). `../scripts/regenerate_style_variants_and_gold.py`
+regenerates all 5 non-canonical style rows per seed via LLM under a meaning-preservation
+rubric, and separately completes `gold_risk_level`/`gold_action`/`requires_clarification`
+against the evidence in `grounding_sources/`. Requires `ANTHROPIC_API_KEY` — not yet run.
+Until it runs, `seeds_en_v1.csv`'s style_text columns (other than `canonical`) should be
+treated as **not yet meaning-preserving** and not sent to translators or reviewers.
+
 ## Finalized fine-tuning decision (locked)
 
 Finalized target for training split: **800-1,000 per category** (**2,400-3,000 total**) for **SFT / multilingual adaptation**.  
