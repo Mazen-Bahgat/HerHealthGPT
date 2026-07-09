@@ -1,0 +1,108 @@
+% HerHealthGPT-LU / LUHME 2026 — Introduction and Related Work
+% Paste into ACL Overleaf template (double-blind safe).
+
+\section{Introduction}
+
+Women's-health communication is a high-stakes \emph{language understanding} problem.
+Patients describe menstrual, hormonal, and fertility concerns through colloquial, indirect, emotionally loaded, and culturally coded language that is often clinically under-specified \cite{recker-etal-2025-large}.
+A model that misreads such an utterance---confusing routine cycle variation with a fertility emergency, collapsing PCOS-related hormonal symptoms into unrelated categories, or reassuring when clarification is warranted---can steer a user toward delayed care, unnecessary anxiety, or unsafe self-management long before any downstream answer is generated.
+Recent clinical commentary on large language models (LLMs) in gynecology and obstetrics therefore stresses not only whether systems can \emph{produce} accessible information, but whether they reliably \emph{interpret} patient wording across languages, phrasing variants, and care contexts \cite{recker-etal-2025-large,devries-etal-2025-enhancing}.
+Despite this risk profile, much of the women's-health LLM literature still evaluates \emph{generation}: answer fluency, readability, expert preference, and user satisfaction \cite{adhikary-etal-2025-menstrual,recker-etal-2025-large}.
+Domain adaptation can improve response quality on held-out questions, yet adaptation alone does not guarantee safe understanding.
+Empirical work on perinatal patient information shows that LLM outputs vary with minor prompt phrasing, can diverge from national care guidelines, and may oversimplify complex decisions \cite{devries-etal-2025-enhancing,wang-etal-2024-prompt}.
+Parallel lines of multilingual and cross-cultural NLP research further show that models often compress cultural variation, misalign with survey-grounded human judgments, and remain sensitive to surface form even when underlying intent is preserved \cite{mohammadi-etal-2025-large,nicholls-alperin-2025-cross}.
+These findings motivate evaluation protocols that test \emph{interpretation}---condition inference, urgency calibration, clarification behavior, and cross-language consistency---rather than surface-level answer quality alone.
+
+We introduce \textbf{HerHealthGPT-LU}, a multilingual benchmark for evaluating LLM \emph{understanding} of women's-health symptom communication across three categories: menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility.
+Each of 90 English seed cases is expanded into six expression styles (canonical, clinical, layperson, indirect/culturally sensitive, ambiguous, and emotionally concerned), yielding 540 evaluation items whose clinical facts are held constant so that performance differences are attributable to linguistic form rather than content \cite{nicholls-alperin-2025-cross}.
+Gold labels specify inferred condition, risk level, recommended action, and whether clarification is required, grounded where possible to public-health sources.
+The benchmark is extended to Arabic and French through human-validated translation, enabling matched cross-lingual comparison.
+Evaluation and adaptation are strictly separated: benchmark lineage is frozen, and fine-tuning draws only from a leakage-controlled silver corpus with dual exclusion by source provenance and paraphrase-family keys.
+
+Our contributions are fourfold:
+\begin{enumerate}
+    \item A human-validated, multilingual benchmark of realistic women's-health symptom expressions spanning menstrual, PCOS, and fertility concerns, with style- and language-controlled item identities.
+    \item An evaluation framework targeting misunderstanding, safety violations, clarification appropriateness, and cross-language/cross-style consistency---metrics aligned with clinical risk rather than lexical overlap alone.
+    \item A systematic error taxonomy for analyzing how LLMs misinterpret women's-health language across models, languages, and registers.
+    \item Evidence on whether multilingual LoRA fine-tuning on women's-health data reduces misunderstanding relative to general-purpose and domain-adapted baselines.
+\end{enumerate}
+
+The remainder of this paper reviews related work (\S\ref{sec:related}), describes the benchmark and experimental protocol (\S\ref{sec:methods}), presents results and error analysis (\S\ref{sec:results}), and discusses limitations and ethical considerations (\S\ref{sec:discussion}).
+
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Women's Health, Medical QA, and LLMs}
+
+LLMs are increasingly positioned as digital companions for gynecological and obstetric patient education, offering anonymous, on-demand access to information on menstruation, contraception, pregnancy, and fertility \cite{recker-etal-2025-large}.
+Editorial and empirical accounts emphasize both promise and hazard: models can simplify medical terminology and support health literacy, yet they lack individualized clinical assessment, may misalign with local guidelines, and can be misread as professional advice \cite{recker-etal-2025-large,devries-etal-2025-enhancing}.
+De~Vries et al.\ report that ChatGPT can deliver relevant perinatal information across languages, but also document language-dependent accuracy and sensitivity to how questions are phrased \cite{devries-etal-2025-enhancing}.
+These observations establish women's-health interaction as a setting where \emph{understanding} errors carry direct safety consequences, but they rarely provide benchmarked, item-level tests of interpretation across realistic patient registers.
+
+Complementary work in obstetric patient education evaluates AI-generated responses on accuracy, comprehensiveness, and safety for specific conditions \cite{rotem-etal-2024-future}.
+Such studies foreground expert-rated safety yet typically treat the patient query as given rather than systematically varying how the same clinical concern is expressed.
+HerHealthGPT-LU addresses this gap by holding clinical content fixed while varying style and language, making linguistic understanding an explicit evaluation axis.
+
+Prior PCOS-focused machine learning operates on structured clinical measurements---hormone panels, follicle counts, and tabular features---rather than free-text patient communication \cite{elmannai-etal-2023-polycystic}.
+That line of work demonstrates the clinical importance of early hormonal-condition detection but does not evaluate whether language models interpret ambiguous symptom descriptions safely in conversation.
+HerHealthGPT-LU complements these systems by targeting \emph{natural-language symptom communication}, where misunderstanding arises from wording rather than missing laboratory values.
+
+\subsection{Domain Adaptation for Women's-Health LLMs}
+
+MenstLLaMA is the closest prior \emph{system} work: a LoRA-adapted LLaMA-3-8B model trained on the MENST menstrual-health corpus and evaluated for educational answer quality in English \cite{adhikary-etal-2025-menstrual}.
+The authors curate roughly 24K question--answer pairs, benchmark against general-purpose LLMs using automatic overlap metrics, expert ratings, and user satisfaction, and show gains in culturally sensitive menstrual-health education.
+Crucially, however, MenstLLaMA optimizes and evaluates \emph{generation quality}---BLEU, BERTScore, expert preference---not whether a model correctly infers clinical intent, triage urgency, or clarification need from under-specified patient language.
+MENST paraphrases also serve primarily as training-time augmentation without gold understanding labels tied to each surface form.
+HerHealthGPT-LU uses MENST-derived material only under strict leakage control for adaptation, while treating style diversity as a \emph{controlled evaluation dimension} with gold condition, risk, action, and clarification labels.
+The overlap in domain (menstrual health) is therefore superficial relative to task formulation: education-oriented generation versus multilingual understanding and safety evaluation across menstrual, PCOS, and fertility axes.
+
+\subsection{Multilingual Clinical NLP and Cross-Cultural Evaluation}
+
+The LUHME line of work studies whether LLMs preserve meaning and cultural variation beyond monolingual English settings.
+Mohammadi et al.\ compare model-generated moral judgments with international survey data across dozens of countries, finding that LLMs often compress cross-cultural variance and achieve low alignment with empirical response patterns \cite{mohammadi-etal-2025-large}.
+Their protocol---variance comparison, cluster alignment, significance testing on matched items---provides a template for rigorous cross-cultural evaluation, although their target is moral attitude probing rather than clinical symptom interpretation.
+Nicholls and Alperin study cross-genre native language identification with open-source LLMs, showing that QLoRA fine-tuning transfers across registers when confounds such as topic-specific nouns are controlled \cite{nicholls-alperin-2025-cross}.
+We adopt their leakage-aware adaptation philosophy and reporting discipline (multi-seed fine-tuning, per-class confusion analysis), but redirect the task from L1 classification to \emph{safe clinical understanding}: triage, clarification, and unsafe-advice detection.
+
+HerHealthGPT-LU extends this multilingual evaluation tradition to women's-health \emph{patient language} in English, Arabic, and French.
+Items are parallelized across languages with dual human validation to reduce translation-induced semantic drift---a known failure mode when symptom nuance and cultural phrasing alter clinical meaning \cite{mohammadi-etal-2025-large,recker-etal-2025-large}.
+
+\subsection{Safety, Ambiguity, and Clarification}
+
+Safe health communication requires models to recognize when a description is too vague for definitive guidance and to ask clarifying questions rather than over-commit \cite{recker-etal-2025-large,devries-etal-2025-enhancing}.
+Prompt engineering studies likewise show that small wording changes can shift LLM behavior in clinical settings \cite{wang-etal-2024-prompt}.
+Existing women's-health LLM evaluations seldom measure clarification appropriateness conditional on ambiguity, nor do they report severity errors such as under-triage of urgent presentations.
+HerHealthGPT-LU labels items for required clarification and risk level, and scores models on misunderstanding rate, unsafe-response rate, and clarification behavior on ambiguous versus clear cases.
+
+\subsection{Positioning of HerHealthGPT-LU}
+
+Table~\ref{tab:positioning} summarizes how HerHealthGPT-LU differs from the closest prior lines of work.
+Prior studies predominantly evaluate what models \emph{believe} \cite{mohammadi-etal-2025-large}, what they \emph{classify} \cite{nicholls-alperin-2025-cross,elmannai-etal-2023-polycystic}, or how well they \emph{generate} educational answers \cite{adhikary-etal-2025-menstrual,recker-etal-2025-large}.
+We instead evaluate whether models \emph{understand patients safely}---interpreting multilingual, multi-register symptom communication with explicit tests of calibration, clarification, and cross-lingual consistency.
+By separating a frozen gold benchmark from leakage-controlled fine-tuning data, HerHealthGPT-LU makes domain adaptation a hypothesis to be tested rather than a proxy for understanding.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccc}
+\hline
+\textbf{Aspect} & \textbf{MenstLLaMA} & \textbf{LUHME'25 line} & \textbf{HerHealthGPT-LU} \\
+\hline
+Primary task & Answer generation & Attitudes / NLI & Symptom understanding \\
+Languages & English & Mostly English & EN / AR / FR \\
+Styles & Training aug. & Genre / prompt & Controlled eval axis \\
+Safety metrics & Expert preference & Not clinical & Triage, clarify, unsafe \\
+Benchmark gold & Held-out QA & Survey / NLI labels & Condition, risk, action \\
+\hline
+\end{tabular}
+\caption{Positioning against closest related work. LUHME'25 line refers to \citet{mohammadi-etal-2025-large,nicholls-alperin-2025-cross}.}
+\label{tab:positioning}
+\end{table}
+
+% --- Overleaf bibliography setup ---
+% In acl_latex.tex (or main.tex), use:
+%   \bibliography{custom,anthology-1,anthology-2}
+% Add anthology shards via Overleaf: New File -> From External URL
+%   https://aclanthology.org/anthology-1.bib
+%   https://aclanthology.org/anthology-2.bib
+% Keep custom.bib for non-ACL papers only; LUHME'25 proceedings resolve from anthology shards.

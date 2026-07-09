@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+% Change "review" to "final" to generate the final (sometimes called camera-ready) version.
+% Change to "preprint" to generate a non-anonymous version with page numbers.
+\usepackage[review]{acl}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% This is also not strictly necessary, and may be commented out.
+% However, it will improve the aesthetics of text in
+% the typewriter font.
+\usepackage{inconsolata}
+
+%Including images in your LaTeX document requires adding
+%additional package(s)
+\usepackage{graphicx}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\title{HerHealthGPT-LU: A Multilingual Benchmark for LLM Understanding of Women's-Health Symptom Communication}
+
+% Double-blind submission: omit author names until camera-ready.
+\author{Anonymous ACL submission}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Large language models are increasingly used for women's-health patient education, yet most evaluations target answer \emph{generation} rather than safe \emph{interpretation} of symptom language across registers and languages.
+We present \textbf{HerHealthGPT-LU}, a multilingual benchmark for evaluating LLM understanding of women's-health symptom communication in English, Arabic, and French.
+The benchmark comprises 540 style-controlled items spanning menstruation, PCOS/hormonal concerns, and fertility, with gold labels for condition inference, risk calibration, recommended action, and clarification need.
+We separate a frozen evaluation benchmark from leakage-controlled adaptation data and propose metrics targeting misunderstanding, unsafe responses, and cross-lingual consistency.
+We report baseline and fine-tuned model results together with a systematic error taxonomy for women's-health language understanding.
+\end{abstract}
+
+\input{overleaf_intro_related}
+
+\section{Methods}
+\label{sec:methods}
+
+% TODO: Benchmark construction, annotation protocol, evaluation metrics, and fine-tuning setup.
+
+\section{Results}
+\label{sec:results}
+
+% TODO: Main quantitative results, ablations, and error analysis.
+
+\section{Discussion}
+\label{sec:discussion}
+
+% TODO: Interpretation of findings, limitations, ethics, and future work.
+
+\section*{Limitations}
+
+% TODO: Required ACL limitations paragraph (dataset scope, languages, clinical disclaimer, etc.).
+
+% Bibliography: journal articles in custom.bib; ACL proceedings in anthology shards.
+% In Overleaf: New File -> From External URL
+%   https://aclanthology.org/anthology-1.bib
+%   https://aclanthology.org/anthology-2.bib
+% LUHME'25 keys (mohammadi-etal-2025-large, nicholls-alperin-2025-cross) resolve from shards.
+\bibliography{custom,anthology-1,anthology-2}
+
+\end{document}
