@@ -100,6 +100,8 @@ The three corpora play **different roles** and are NOT concatenated blindly — 
 - Clarification rate on ambiguous items (should be high) vs. clear items (should be low)
 - Cross-language consistency (same case → same verdict in EN/FR/AR)
 - Cross-style consistency (same case → same verdict across 5 styles)
+- Cultural sensitivity of the response (rubric item: avoids dismissive/judgmental framing, respects indirect/culturally-coded phrasing without penalizing it)
+- Response helpfulness and clarity (rubric item: actionable, non-alarming, readable at a lay level)
 
 **Statistical rigor (adopted from LUHME 2025 practice):**
 - Greedy decoding (temperature 0) for all runs → deterministic primary results.

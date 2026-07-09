@@ -1,4 +1,10 @@
-# HerHealthGPT-LU — Design Spec
+> ⚠️ **DEPRECATED — superseded by `docs/superpowers/specs/2026-07-06-herhealthgpt-lu-design.md`.**
+> This file is an earlier draft (2-category scope: PCOS + infertility, ~130 aspirational seeds).
+> The specs/ version is the finalized, measured, source-of-truth design (3 categories:
+> menstrual + PCOS + fertility, 90 seeds verified from real files, dual leakage key, §2C join
+> procedure, §9 build handoff). Do not edit or cite this file — kept only for history.
+
+# HerHealthGPT-LU — Design Spec (superseded draft)
 
 **Date:** 2026-07-06 · **Deadline:** LUHME 2026 submission, 15 July 2026 (OpenReview, ACL template, 8 pages max, double-blind)
 **Team:** Mazen, Hana, Hassan, Mariam · **Supervisor:** Dr. Rahatara Ferdousi

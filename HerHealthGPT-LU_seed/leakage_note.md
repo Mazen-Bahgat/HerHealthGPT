@@ -1,96 +1,96 @@
 # Leakage exclusion list — seeds_en_v1
 
-Exclude these `(source_dataset, source_row_id)` from fine-tuning pulls.
+Exclude these from fine-tuning pulls. Dual key: a row is excluded if it matches EITHER `(source_dataset, source_row_id)` OR `seed_answer_hash` (MENST paraphrase-family key — see build_ft_corpus.py docstring).
 
-| seed_id | category | source_dataset | source_row_id |
-|---|---|---|---|
-| menst-001 | menstrual | MENST_training2K | training2K:56 |
-| menst-002 | menstrual | MENST_training2K | training2K:55 |
-| menst-003 | menstrual | MENST_training2K | training2K:0 |
-| menst-004 | menstrual | MENST_training2K | training2K:54 |
-| menst-005 | menstrual | MENST_train24K | train24K:3701 |
-| menst-006 | menstrual | MENST_train24K | train24K:7068 |
-| menst-007 | menstrual | MENST_train24K | train24K:4010 |
-| menst-008 | menstrual | MENST_train24K | train24K:6054 |
-| menst-009 | menstrual | MENST_train24K | train24K:7067 |
-| menst-010 | menstrual | MENST_train24K | train24K:3753 |
-| menst-011 | menstrual | MENST_train24K | train24K:7040 |
-| menst-012 | menstrual | MENST_train24K | train24K:4987 |
-| menst-013 | menstrual | HealthCareMagic-100k | 109797 |
-| menst-014 | menstrual | HealthCareMagic-100k | 106383 |
-| menst-015 | menstrual | HealthCareMagic-100k | 7595 |
-| menst-016 | menstrual | HealthCareMagic-100k | 97633 |
-| menst-017 | menstrual | HealthCareMagic-100k | 74280 |
-| menst-018 | menstrual | HealthCareMagic-100k | 29251 |
-| menst-019 | menstrual | HealthCareMagic-100k | 73441 |
-| menst-020 | menstrual | HealthCareMagic-100k | 33258 |
-| menst-021 | menstrual | HealthCareMagic-100k | 110102 |
-| menst-022 | menstrual | HealthCareMagic-100k | 78907 |
-| menst-023 | menstrual | HealthCareMagic-100k | 108545 |
-| menst-024 | menstrual | HealthCareMagic-100k | 107020 |
-| menst-025 | menstrual | HealthCareMagic-100k | 34987 |
-| menst-026 | menstrual | HealthCareMagic-100k | 51768 |
-| menst-027 | menstrual | ChatDoctor-iCliniq | 2956 |
-| menst-028 | menstrual | ChatDoctor-iCliniq | 4500 |
-| menst-029 | menstrual | ChatDoctor-iCliniq | 1159 |
-| menst-030 | menstrual | ChatDoctor-iCliniq | 5584 |
-| pcos-001 | pcos | MENST_train24K | train24K:1346 |
-| pcos-002 | pcos | MENST_train24K | train24K:8628 |
-| pcos-003 | pcos | MENST_train24K | train24K:1230 |
-| pcos-004 | pcos | MENST_train24K | train24K:8623 |
-| pcos-005 | pcos | MENST_train24K | train24K:8860 |
-| pcos-006 | pcos | MENST_train24K | train24K:1426 |
-| pcos-007 | pcos | MENST_train24K | train24K:1320 |
-| pcos-008 | pcos | MENST_train24K | train24K:1450 |
-| pcos-009 | pcos | HealthCareMagic-100k | 89842 |
-| pcos-010 | pcos | HealthCareMagic-100k | 109413 |
-| pcos-011 | pcos | HealthCareMagic-100k | 111550 |
-| pcos-012 | pcos | HealthCareMagic-100k | 20984 |
-| pcos-013 | pcos | HealthCareMagic-100k | 97712 |
-| pcos-014 | pcos | HealthCareMagic-100k | 95225 |
-| pcos-015 | pcos | HealthCareMagic-100k | 98510 |
-| pcos-016 | pcos | HealthCareMagic-100k | 111904 |
-| pcos-017 | pcos | HealthCareMagic-100k | 42196 |
-| pcos-018 | pcos | HealthCareMagic-100k | 81142 |
-| pcos-019 | pcos | HealthCareMagic-100k | 91838 |
-| pcos-020 | pcos | HealthCareMagic-100k | 104706 |
-| pcos-021 | pcos | HealthCareMagic-100k | 106993 |
-| pcos-022 | pcos | HealthCareMagic-100k | 12293 |
-| pcos-023 | pcos | HealthCareMagic-100k | 14095 |
-| pcos-024 | pcos | HealthCareMagic-100k | 21786 |
-| pcos-025 | pcos | HealthCareMagic-100k | 38268 |
-| pcos-026 | pcos | ChatDoctor-iCliniq | 1651 |
-| pcos-027 | pcos | ChatDoctor-iCliniq | 1382 |
-| pcos-028 | pcos | ChatDoctor-iCliniq | 4746 |
-| pcos-029 | pcos | ChatDoctor-iCliniq | 3437 |
-| pcos-030 | pcos | MENST_train24K | train24K:8626 |
-| fert-001 | fertility | MENST_train24K | train24K:4975 |
-| fert-002 | fertility | MENST_train24K | train24K:22 |
-| fert-003 | fertility | MENST_train24K | train24K:1359 |
-| fert-004 | fertility | MENST_train24K | train24K:1476 |
-| fert-005 | fertility | MENST_train24K | train24K:606 |
-| fert-006 | fertility | MENST_train24K | train24K:14949 |
-| fert-007 | fertility | MENST_train24K | train24K:14941 |
-| fert-008 | fertility | MENST_train24K | train24K:15295 |
-| fert-009 | fertility | HealthCareMagic-100k | 88025 |
-| fert-010 | fertility | HealthCareMagic-100k | 106997 |
-| fert-011 | fertility | HealthCareMagic-100k | 26742 |
-| fert-012 | fertility | HealthCareMagic-100k | 45294 |
-| fert-013 | fertility | HealthCareMagic-100k | 111073 |
-| fert-014 | fertility | HealthCareMagic-100k | 91510 |
-| fert-015 | fertility | HealthCareMagic-100k | 102112 |
-| fert-016 | fertility | HealthCareMagic-100k | 39282 |
-| fert-017 | fertility | HealthCareMagic-100k | 39311 |
-| fert-018 | fertility | HealthCareMagic-100k | 31410 |
-| fert-019 | fertility | HealthCareMagic-100k | 39921 |
-| fert-020 | fertility | HealthCareMagic-100k | 43630 |
-| fert-021 | fertility | HealthCareMagic-100k | 80546 |
-| fert-022 | fertility | HealthCareMagic-100k | 92581 |
-| fert-023 | fertility | ChatDoctor-iCliniq | 6651 |
-| fert-024 | fertility | ChatDoctor-iCliniq | 3699 |
-| fert-025 | fertility | ChatDoctor-iCliniq | 5688 |
-| fert-026 | fertility | ChatDoctor-iCliniq | 6240 |
-| fert-027 | fertility | MENST_train24K | train24K:14938 |
-| fert-028 | fertility | MENST_train24K | train24K:1353 |
-| fert-029 | fertility | MENST_train24K | train24K:9803 |
-| fert-030 | fertility | MENST_train24K | train24K:1352 |
+| seed_id | category | source_dataset | source_row_id | seed_answer_hash |
+|---|---|---|---|---|
+| fert-001 | fertility | MENST_train24K | train24K:4975 | `4bd2a038c1b3a46cdacf327f548cef7553bd0a8e` |
+| fert-002 | fertility | MENST_train24K | train24K:22 | `df2c385d3b0ba10444c22ef2bc35e756df8f3d62` |
+| fert-003 | fertility | MENST_train24K | train24K:1359 | `c3b870a5a4348b4e4f7b7177ca9306dae1fc17b3` |
+| fert-004 | fertility | MENST_train24K | train24K:1476 | `f47289dd15600b30550986458fb4727376c2fe2e` |
+| fert-005 | fertility | MENST_train24K | train24K:606 | `60fc575b9532604032cbfb8d078485ef59832e0b` |
+| fert-006 | fertility | MENST_train24K | train24K:14949 | `725586f96088de6fb4aea07cbed06332a9a1f96d` |
+| fert-007 | fertility | MENST_train24K | train24K:14941 | `725586f96088de6fb4aea07cbed06332a9a1f96d` |
+| fert-008 | fertility | MENST_train24K | train24K:15295 | `6d0e6fae39418a2ba27ac51a23b6521e7481f89f` |
+| fert-009 | fertility | HealthCareMagic-100k | 88025 | `—` |
+| fert-010 | fertility | HealthCareMagic-100k | 106997 | `—` |
+| fert-011 | fertility | HealthCareMagic-100k | 26742 | `—` |
+| fert-012 | fertility | HealthCareMagic-100k | 45294 | `—` |
+| fert-013 | fertility | HealthCareMagic-100k | 111073 | `—` |
+| fert-014 | fertility | HealthCareMagic-100k | 91510 | `—` |
+| fert-015 | fertility | HealthCareMagic-100k | 102112 | `—` |
+| fert-016 | fertility | HealthCareMagic-100k | 39282 | `—` |
+| fert-017 | fertility | HealthCareMagic-100k | 39311 | `—` |
+| fert-018 | fertility | HealthCareMagic-100k | 31410 | `—` |
+| fert-019 | fertility | HealthCareMagic-100k | 39921 | `—` |
+| fert-020 | fertility | HealthCareMagic-100k | 43630 | `—` |
+| fert-021 | fertility | HealthCareMagic-100k | 80546 | `—` |
+| fert-022 | fertility | HealthCareMagic-100k | 92581 | `—` |
+| fert-023 | fertility | ChatDoctor-iCliniq | 6651 | `—` |
+| fert-024 | fertility | ChatDoctor-iCliniq | 3699 | `—` |
+| fert-025 | fertility | ChatDoctor-iCliniq | 5688 | `—` |
+| fert-026 | fertility | ChatDoctor-iCliniq | 6240 | `—` |
+| fert-027 | fertility | MENST_train24K | train24K:14938 | `725586f96088de6fb4aea07cbed06332a9a1f96d` |
+| fert-028 | fertility | MENST_train24K | train24K:1353 | `c3b870a5a4348b4e4f7b7177ca9306dae1fc17b3` |
+| fert-029 | fertility | MENST_train24K | train24K:9803 | `967999facdfcbc0bd01904305eeec3631ee5245a` |
+| fert-030 | fertility | MENST_train24K | train24K:1352 | `c3b870a5a4348b4e4f7b7177ca9306dae1fc17b3` |
+| menst-001 | menstrual | MENST_training2K | training2K:56 | `e1f4c8dd572ee897adbb52a5561007a76f80400d` |
+| menst-002 | menstrual | MENST_training2K | training2K:55 | `eea6031ea7dcbe696cbd561716fd7e543af0855b` |
+| menst-003 | menstrual | MENST_training2K | training2K:0 | `37d7151d924dc903628dee4f226d050f5bbe1434` |
+| menst-004 | menstrual | MENST_training2K | training2K:54 | `b0e02e88f46f0878b1b877d46423372d34be7277` |
+| menst-005 | menstrual | MENST_train24K | train24K:3701 | `d2650a7032fa17ee51d26567f97aee3d88076b32` |
+| menst-006 | menstrual | MENST_train24K | train24K:7068 | `d5ce783f8143f0faa140549ee384b8eb75c2b4cd` |
+| menst-007 | menstrual | MENST_train24K | train24K:4010 | `a29ff29cdd9b3f6ec71b7133b548771298896ed9` |
+| menst-008 | menstrual | MENST_train24K | train24K:6054 | `—` |
+| menst-009 | menstrual | MENST_train24K | train24K:7067 | `d5ce783f8143f0faa140549ee384b8eb75c2b4cd` |
+| menst-010 | menstrual | MENST_train24K | train24K:3753 | `30e6faa826dee2e89ddf55e2f86463408b5b6466` |
+| menst-011 | menstrual | MENST_train24K | train24K:7040 | `ad4158a8c8200296631788b66650770771ade8d8` |
+| menst-012 | menstrual | MENST_train24K | train24K:4987 | `52ff0794396093426841c15fae998cb2b5114d35` |
+| menst-013 | menstrual | HealthCareMagic-100k | 109797 | `—` |
+| menst-014 | menstrual | HealthCareMagic-100k | 106383 | `—` |
+| menst-015 | menstrual | HealthCareMagic-100k | 7595 | `—` |
+| menst-016 | menstrual | HealthCareMagic-100k | 97633 | `—` |
+| menst-017 | menstrual | HealthCareMagic-100k | 74280 | `—` |
+| menst-018 | menstrual | HealthCareMagic-100k | 29251 | `—` |
+| menst-019 | menstrual | HealthCareMagic-100k | 73441 | `—` |
+| menst-020 | menstrual | HealthCareMagic-100k | 33258 | `—` |
+| menst-021 | menstrual | HealthCareMagic-100k | 110102 | `—` |
+| menst-022 | menstrual | HealthCareMagic-100k | 78907 | `—` |
+| menst-023 | menstrual | HealthCareMagic-100k | 108545 | `—` |
+| menst-024 | menstrual | HealthCareMagic-100k | 107020 | `—` |
+| menst-025 | menstrual | HealthCareMagic-100k | 34987 | `—` |
+| menst-026 | menstrual | HealthCareMagic-100k | 51768 | `—` |
+| menst-027 | menstrual | ChatDoctor-iCliniq | 2956 | `—` |
+| menst-028 | menstrual | ChatDoctor-iCliniq | 4500 | `—` |
+| menst-029 | menstrual | ChatDoctor-iCliniq | 1159 | `—` |
+| menst-030 | menstrual | ChatDoctor-iCliniq | 5584 | `—` |
+| pcos-001 | pcos | MENST_train24K | train24K:1346 | `bad08357cd97a41841fe1775175e7adfb8adff83` |
+| pcos-002 | pcos | MENST_train24K | train24K:8628 | `f449301f69f16ac5e20aabd5c4d841d2b5b7d081` |
+| pcos-003 | pcos | MENST_train24K | train24K:1230 | `5801ec82418ca2f864266d1058c5d35062195418` |
+| pcos-004 | pcos | MENST_train24K | train24K:8623 | `f449301f69f16ac5e20aabd5c4d841d2b5b7d081` |
+| pcos-005 | pcos | MENST_train24K | train24K:8860 | `d4cad931297dc73356b77d2091171fa556445fc1` |
+| pcos-006 | pcos | MENST_train24K | train24K:1426 | `7f91b04950ed82628c3441a79e9327dc52c3bca5` |
+| pcos-007 | pcos | MENST_train24K | train24K:1320 | `c6767ccaa0c4528e3b3bdb4cbd73e0b56154e20c` |
+| pcos-008 | pcos | MENST_train24K | train24K:1450 | `b50ba4c852f8296b88f022c6f119c49d65d326a1` |
+| pcos-009 | pcos | HealthCareMagic-100k | 89842 | `—` |
+| pcos-010 | pcos | HealthCareMagic-100k | 109413 | `—` |
+| pcos-011 | pcos | HealthCareMagic-100k | 111550 | `—` |
+| pcos-012 | pcos | HealthCareMagic-100k | 20984 | `—` |
+| pcos-013 | pcos | HealthCareMagic-100k | 97712 | `—` |
+| pcos-014 | pcos | HealthCareMagic-100k | 95225 | `—` |
+| pcos-015 | pcos | HealthCareMagic-100k | 98510 | `—` |
+| pcos-016 | pcos | HealthCareMagic-100k | 111904 | `—` |
+| pcos-017 | pcos | HealthCareMagic-100k | 42196 | `—` |
+| pcos-018 | pcos | HealthCareMagic-100k | 81142 | `—` |
+| pcos-019 | pcos | HealthCareMagic-100k | 91838 | `—` |
+| pcos-020 | pcos | HealthCareMagic-100k | 104706 | `—` |
+| pcos-021 | pcos | HealthCareMagic-100k | 106993 | `—` |
+| pcos-022 | pcos | HealthCareMagic-100k | 12293 | `—` |
+| pcos-023 | pcos | HealthCareMagic-100k | 14095 | `—` |
+| pcos-024 | pcos | HealthCareMagic-100k | 21786 | `—` |
+| pcos-025 | pcos | HealthCareMagic-100k | 38268 | `—` |
+| pcos-026 | pcos | ChatDoctor-iCliniq | 1651 | `—` |
+| pcos-027 | pcos | ChatDoctor-iCliniq | 1382 | `—` |
+| pcos-028 | pcos | ChatDoctor-iCliniq | 4746 | `—` |
+| pcos-029 | pcos | ChatDoctor-iCliniq | 3437 | `—` |
+| pcos-030 | pcos | MENST_train24K | train24K:8626 | `f449301f69f16ac5e20aabd5c4d841d2b5b7d081` |
