@@ -8,16 +8,31 @@ to a professional translation and localization agency. See `../scripts/build_tra
 and `translation_handoff/fr_agency_brief.md`. Supersedes the original
 GPT/NLLB-first-pass plan in the design spec §2A for both languages.
 
-## Style-variant regeneration (started 2026-07-09)
+## Gold-label completion (done 2026-07-09, deterministic)
+
+`../scripts/complete_gold_labels.py` filled in `gold_risk_level`, `gold_action`,
+`evidence_quote`, `source_url`, `requires_clarification` for all 90 seeds — previously
+blank (`draft_grounding()` only ever set `gold_condition`). No LLM needed: all 5 fetched
+evidence pages converge on NHS's "See a GP if:" convention with no urgent/emergency
+language anywhere, so `gold_risk_level` is `see-doctor` for every grounded seed and as
+the conservative default for `NEEDS_GROUNDING` seeds; `gold_action` quotes the matched
+page's actual advice text. `requires_clarification` is a length/vagueness heuristic —
+approximate, flagged `needs_human_review=true` on every row. 61/90 seeds grounded;
+1 seed (`menst-017`) matched the still-inaccessible CDC page and is labeled accordingly
+rather than given a fabricated action. See `gold_label_completion_report.md`.
+
+## Style-variant regeneration (blocked on API key, not yet run)
 
 `generate_styles()` in `build_seed.py` is a fixed-template rewriter, verified to drop
 clinical content on real seeds (see `../HerHealthGPT-LU_seed/README.md` §Status for the
 menst-001/menst-002 example). `../scripts/regenerate_style_variants_and_gold.py`
 regenerates all 5 non-canonical style rows per seed via LLM under a meaning-preservation
-rubric, and separately completes `gold_risk_level`/`gold_action`/`requires_clarification`
-against the evidence in `grounding_sources/`. Requires `ANTHROPIC_API_KEY` — not yet run.
-Until it runs, `seeds_en_v1.csv`'s style_text columns (other than `canonical`) should be
-treated as **not yet meaning-preserving** and not sent to translators or reviewers.
+rubric (this part genuinely needs an LLM — a real paraphrasing task, unlike gold-label
+completion above). Requires `ANTHROPIC_API_KEY` — not yet run. Until it runs,
+`seeds_en_v1.csv`'s style_text columns (other than `canonical`) should be treated as
+**not yet meaning-preserving** and not sent to translators or reviewers. Note: running
+that script later will also recompute the gold-label columns above (LLM-assisted,
+evidence-grounded) and is expected to supersede this deterministic pass.
 
 ## Finalized fine-tuning decision (locked)
 

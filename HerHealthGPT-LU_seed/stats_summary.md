@@ -47,9 +47,14 @@
 
 - FT corpus v1 built (`../scripts/build_ft_corpus.py`): 2,700 pairs, 900/category, dual
   leakage key applied (317 rows excluded). See `ft_corpus_stats.md`.
-- The 29 `needs_grounding_flag=true` seeds above, plus all `gold_risk_level`/`gold_action`/
-  `requires_clarification` fields, are pending `../scripts/regenerate_style_variants_and_gold.py`
-  (needs `ANTHROPIC_API_KEY`, not yet run) — these counts will change once that runs.
+- `gold_risk_level`/`gold_action`/`evidence_quote`/`source_url`/`requires_clarification` are
+  now filled in (`../scripts/complete_gold_labels.py`, deterministic, no LLM needed): 61/90
+  seeds grounded (down from the 29-ungrounded figure above, which only reflected
+  `gold_condition`), 4/90 flagged `requires_clarification=yes`. See
+  `gold_label_completion_report.md`. All rows still carry `needs_human_review=true`.
+- Style variants (the `style_text` column for non-canonical rows) are still the broken
+  templated text — pending `../scripts/regenerate_style_variants_and_gold.py`, which needs
+  `ANTHROPIC_API_KEY` and has not run yet.
 
 ## Planning note (does not change measured v1 stats)
 
