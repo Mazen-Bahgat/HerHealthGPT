@@ -4,17 +4,24 @@ Week-1 categorized **English** seed set for HerHealthGPT-LU / LUHME 2026.
 
 ## Status (2026-07-09)
 
-- **Style variants are being regenerated.** `build_seed.py`'s `generate_styles()` is a
-  fixed-template rewriter and was verified to lose clinical content (e.g. `menst-001`
-  and `menst-002` — different canonical questions, one about post-miscarriage timing,
-  one about fertility — both collapsed to the identical templated `clinical` variant
-  "I have irregular periods."). `../scripts/regenerate_style_variants_and_gold.py`
-  replaces these with LLM-regenerated, meaning-preserving variants and also fills in
-  `gold_risk_level`, `gold_action`, `requires_clarification` (previously blank —
-  `draft_grounding()` only ever set `gold_condition`). Requires `OPENAI_API_KEY` (model: `gpt-5.5`);
-  not yet run as of this note. **A human must review `regeneration_report.md` before
-  the benchmark freezes** — this is an AI first pass, not a substitute for the
-  meaning-preservation review the design spec requires.
+- **Style variants regenerated (done 2026-07-09).** `build_seed.py`'s `generate_styles()`
+  was a fixed-template rewriter, verified to lose clinical content (`menst-001` and
+  `menst-002` — different canonical questions, one about post-miscarriage timing, one
+  about fertility — both collapsed to the identical templated `clinical` variant
+  "I have irregular periods."). All 450 style rows (90 seeds x 5 styles) were rewritten
+  directly by Claude, one at a time, under the meaning-preservation rubric — no external
+  LLM API call, since the OpenAI account behind `regenerate_style_variants_and_gold.py`
+  hit a billing/quota block. Verified before merging: **100% distinct-string ratio**
+  across all 450 variants (up from ~51 distinct strings under the old template), zero
+  collisions with canonical text. Merged via `../scripts/merge_manual_style_variants.py`.
+  `regenerate_style_variants_and_gold.py` is kept as an alternative/second-pass path if
+  `OPENAI_API_KEY` becomes available later; not required for the current data.
+  **A human on the team must still review `regeneration_report.md` before the benchmark
+  freezes** — this is an AI first pass (a different AI than the one that wrote the
+  original broken templates), not a substitute for the team's own meaning-preservation
+  review. `gold_risk_level`/`gold_action`/`requires_clarification` were already filled
+  in separately and deterministically by `complete_gold_labels.py` (see below) and were
+  not touched by this step.
 - **Translation ownership decided:** Arabic is translated in-house by team members
   (fluent speakers); French is outsourced to a professional translation/localization
   agency. See `translation_handoff/` (built by `../scripts/build_translator_handoff.py`)
@@ -57,6 +64,13 @@ Leakage rule: any row sharing the same `source_dataset + source_row_id` with ben
 | `borderline_bucket.csv` | Borderline candidates + keep/drop reason |
 | `build_seed.py` | Reproducible pipeline |
 | `phase1_*` / `phase2_*` / `phase3_*` | Intermediate dumps |
+| `style_variants_manual.json` | Claude-authored style variants (source for the merge below) |
+| `style_variants.json` | Merged/current style variants (post-regeneration) |
+| `regeneration_report.md` | Old vs new style_text per seed, for human review |
+| `gold_label_completion_report.md` | Deterministic gold-label completion detail |
+| `ft_corpus_v1.jsonl` / `ft_corpus_stats.md` | Silver fine-tuning corpus + build stats |
+| `leakage_log.csv` | FT-build-time audit trail of excluded rows |
+| `translation_handoff/` | AR (in-house) and FR (agency) translator handoff files |
 
 ## Schema (`seeds_en_v1.*`)
 

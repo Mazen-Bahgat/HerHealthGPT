@@ -52,9 +52,10 @@
   seeds grounded (down from the 29-ungrounded figure above, which only reflected
   `gold_condition`), 4/90 flagged `requires_clarification=yes`. See
   `gold_label_completion_report.md`. All rows still carry `needs_human_review=true`.
-- Style variants (the `style_text` column for non-canonical rows) are still the broken
-  templated text — pending `../scripts/regenerate_style_variants_and_gold.py`, which needs
-  `OPENAI_API_KEY` (model: `gpt-5.5`) and has not run yet.
+- Style variants regenerated (`../scripts/merge_manual_style_variants.py`, from 450
+  Claude-authored variants — the OpenAI-based script hit a billing quota error before any
+  output): 100% distinct-string ratio across all 450 variants, zero canonical collisions.
+  See `regeneration_report.md`. Still needs a human spot-check before freeze.
 
 ## Planning note (does not change measured v1 stats)
 

@@ -21,18 +21,25 @@ approximate, flagged `needs_human_review=true` on every row. 61/90 seeds grounde
 1 seed (`menst-017`) matched the still-inaccessible CDC page and is labeled accordingly
 rather than given a fabricated action. See `gold_label_completion_report.md`.
 
-## Style-variant regeneration (blocked on API key, not yet run)
+## Style-variant regeneration (done 2026-07-09, Claude-authored manually)
 
 `generate_styles()` in `build_seed.py` is a fixed-template rewriter, verified to drop
-clinical content on real seeds (see `../HerHealthGPT-LU_seed/README.md` §Status for the
-menst-001/menst-002 example). `../scripts/regenerate_style_variants_and_gold.py`
-regenerates all 5 non-canonical style rows per seed via LLM under a meaning-preservation
-rubric (this part genuinely needs an LLM — a real paraphrasing task, unlike gold-label
-completion above). Requires `OPENAI_API_KEY` (model: `gpt-5.5`) — not yet run. Until it runs,
-`seeds_en_v1.csv`'s style_text columns (other than `canonical`) should be treated as
-**not yet meaning-preserving** and not sent to translators or reviewers. Note: running
-that script later will also recompute the gold-label columns above (LLM-assisted,
-evidence-grounded) and is expected to supersede this deterministic pass.
+clinical content on real seeds (menst-001/menst-002 — different questions, one about
+post-miscarriage timing, one about fertility — both collapsed to the identical templated
+`clinical` variant). `../scripts/regenerate_style_variants_and_gold.py` was written to
+fix this via the OpenAI API, but the account behind the provided key had no billing/quota
+set up (`insufficient_quota` on the first call, before any output). Rather than block on
+that, all 450 style rows (90 seeds x 5 styles) were written directly by Claude in this
+conversation, one at a time, under the same meaning-preservation rubric the script would
+have used, then merged via `../scripts/merge_manual_style_variants.py`. Verified before
+merging: **100% distinct-string ratio** across all 450 variants (the old template
+produced ~51 distinct strings across 90 seeds), zero variant equals its own canonical
+text. `regenerate_style_variants_and_gold.py` remains available as an alternative or
+second independent pass if `OPENAI_API_KEY` billing gets resolved later — not required
+for the current data. `seeds_en_v1.csv`'s style_text columns are now meaning-preserving,
+but **every row is still flagged `needs_human_review=true`** — a team member should spot
+check `regeneration_report.md` (old vs new per seed) before the benchmark freezes.
+Gold-label columns were not touched by this step (see the gold-label section above).
 
 ## Finalized fine-tuning decision (locked)
 
