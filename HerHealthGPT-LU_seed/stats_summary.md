@@ -54,7 +54,7 @@
   `gold_label_completion_report.md`. All rows still carry `needs_human_review=true`.
 - Style variants (the `style_text` column for non-canonical rows) are still the broken
   templated text — pending `../scripts/regenerate_style_variants_and_gold.py`, which needs
-  `ANTHROPIC_API_KEY` and has not run yet.
+  `OPENAI_API_KEY` (model: `gpt-5.5`) and has not run yet.
 
 ## Planning note (does not change measured v1 stats)
 

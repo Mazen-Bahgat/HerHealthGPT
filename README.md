@@ -16,7 +16,7 @@ fine-tuning reduces misunderstanding.
 
 1. Python 3.12, then: `python -m venv .venv`
 2. `.\.venv\Scripts\python -m pip install -e .[dev]`
-3. Copy `.env.example` to `.env` and add your Anthropic API key (needed for
+3. Copy `.env.example` to `.env` and add your OpenAI API key (needed for
    `scripts/regenerate_style_variants_and_gold.py`; not needed for the rest).
 
 ## HerHealthGPT-LU pipeline (current)
@@ -30,7 +30,7 @@ holds the pipeline stages built on top of it:
 |---|--------|--------|-------|
 | 1 | `scripts/scrape_grounding_sources.py` | `HerHealthGPT-LU_seed/grounding_sources/` | NHS/CDC/NICHD evidence pages; 5/6 fetched, CDC common-concerns.html is bot-blocked (needs manual fetch) |
 | 2 | `scripts/complete_gold_labels.py` | `seeds_en_v1.csv` (gold fields), `gold_label_completion_report.md` | **Done, deterministic, no API key needed.** Fills gold_risk_level/gold_action/evidence_quote/source_url/requires_clarification (previously blank). 61/90 seeds grounded. |
-| 3 | `scripts/regenerate_style_variants_and_gold.py` | `seeds_en_v1.csv` (style_text), `regeneration_report.md` | **Needs `ANTHROPIC_API_KEY`, not yet run.** Replaces build_seed.py's templated style variants (verified broken — see decisions_log.md). Also recomputes the gold fields above with LLM+evidence grounding, superseding step 2's deterministic pass. Human review of the report is still required before freezing. |
+| 3 | `scripts/regenerate_style_variants_and_gold.py` | `seeds_en_v1.csv` (style_text), `regeneration_report.md` | **Needs `OPENAI_API_KEY` (model: `gpt-5.5`), not yet run.** Replaces build_seed.py's templated style variants (verified broken — see decisions_log.md). Also recomputes the gold fields above with LLM+evidence grounding, superseding step 2's deterministic pass. Human review of the report is still required before freezing. |
 | 4 | `scripts/build_ft_corpus.py` | `HerHealthGPT-LU_seed/ft_corpus_v1.jsonl`, `leakage_log.csv` | Silver fine-tuning corpus, dual leakage key vs the frozen seeds. Already run: 2,700 pairs (900/category). |
 | 5 | `scripts/build_translator_handoff.py` | `HerHealthGPT-LU_seed/translation_handoff/` | AR translated in-house by the team (fluent speakers); FR outsourced to a professional localization agency — see `fr_agency_brief.md`. Re-run after step 3 so translators work from corrected text. |
 | 6 | `scripts/run_inference.py` | one JSONL per model | Scaffold against any OpenAI-compatible endpoint (vLLM/TGI). Needs cluster wiring (`--base-url`) before real runs. |

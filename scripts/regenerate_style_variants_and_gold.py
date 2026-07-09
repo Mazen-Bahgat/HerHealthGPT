@@ -13,15 +13,21 @@ plus finishes the gold-label fields the spec's item schema calls for
 (gold_risk_level, gold_action, requires_clarification) that build_seed.py's
 draft_grounding() never set.
 
-One Claude API call per seed (90 total) does BOTH jobs together, because
+One OpenAI API call per seed (90 total) does BOTH jobs together, because
 gold labels must be written from the canonical text (spec: "Gold labels are
 written from the canonical text, not the variant") and the same evidence
 context the model needs for grounding is naturally available at the same
-call. NO temperature/top_p/top_k (rejected by claude-opus-4-8). Idempotent:
-per-seed raw API responses are cached before parsing, so a crash never loses
-paid output and a re-run only calls for seeds not yet cached.
+call. Idempotent: per-seed raw API responses are cached before parsing, so a
+crash never loses paid output and a re-run only calls for seeds not yet
+cached.
 
-Requires ANTHROPIC_API_KEY in .env (see .env.example) or the environment —
+Note: gold_risk_level/gold_action/evidence_quote/source_url/
+requires_clarification were already filled in deterministically by
+scripts/complete_gold_labels.py (no LLM needed for that half — see its
+docstring). This script recomputes them anyway, LLM+evidence-grounded, and
+is expected to supersede that pass once it runs.
+
+Requires OPENAI_API_KEY in .env (see .env.example) or the environment —
 not present when this script was written; run once a key is available:
 
     python scripts/regenerate_style_variants_and_gold.py
@@ -42,8 +48,8 @@ import sys
 from pathlib import Path
 from typing import Literal
 
-import anthropic
 from dotenv import load_dotenv
+from openai import OpenAI
 from pydantic import BaseModel
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -57,7 +63,7 @@ SEEDS_JSONL = SEED_DIR / "seeds_en_v1.jsonl"
 STYLE_VARIANTS_OUT = SEED_DIR / "style_variants.json"
 REPORT_OUT = SEED_DIR / "regeneration_report.md"
 
-MODEL = "claude-opus-4-8"
+MODEL = "gpt-5.5"
 STYLES = ("clinical", "layperson", "indirect_cultural", "ambiguous", "emotionally_concerned")
 
 # Which grounding_sources/evidence.json keys are admissible evidence per category.
@@ -173,19 +179,21 @@ def build_prompt(seed: dict, evidence_text: str) -> str:
     )
 
 
-def regenerate_one(client: anthropic.Anthropic, seed: dict, evidence: dict) -> SeedRegeneration:
+def regenerate_one(client: OpenAI, seed: dict, evidence: dict) -> SeedRegeneration:
     cache_file = CACHE_DIR / f"{seed['seed_id']}.json"
     if cache_file.exists():
         return SeedRegeneration.model_validate_json(cache_file.read_text(encoding="utf-8"))
 
     prompt = build_prompt(seed, evidence_text_for_category(seed["category"], evidence))
-    response = client.messages.parse(
+    completion = client.chat.completions.parse(
         model=MODEL,
-        max_tokens=2000,
         messages=[{"role": "user", "content": prompt}],
-        output_format=SeedRegeneration,
+        response_format=SeedRegeneration,
     )
-    result: SeedRegeneration = response.parsed_output
+    message = completion.choices[0].message
+    if message.parsed is None:
+        raise RuntimeError(f"{seed['seed_id']}: model refused or returned no parsed output ({message.refusal!r})")
+    result: SeedRegeneration = message.parsed
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_file.write_text(result.model_dump_json(indent=2), encoding="utf-8")
     return result
@@ -206,7 +214,7 @@ def main() -> None:
     evidence = load_evidence_bundle()
     print(f"{len(seeds)} seeds loaded; regenerating style variants + gold labels...")
 
-    client = anthropic.Anthropic()
+    client = OpenAI()
     results: dict[str, SeedRegeneration] = {}
     for i, seed in enumerate(seeds, start=1):
         print(f"[{i}/{len(seeds)}] {seed['seed_id']} ({seed['category']})...")

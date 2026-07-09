@@ -28,7 +28,7 @@ clinical content on real seeds (see `../HerHealthGPT-LU_seed/README.md` §Status
 menst-001/menst-002 example). `../scripts/regenerate_style_variants_and_gold.py`
 regenerates all 5 non-canonical style rows per seed via LLM under a meaning-preservation
 rubric (this part genuinely needs an LLM — a real paraphrasing task, unlike gold-label
-completion above). Requires `ANTHROPIC_API_KEY` — not yet run. Until it runs,
+completion above). Requires `OPENAI_API_KEY` (model: `gpt-5.5`) — not yet run. Until it runs,
 `seeds_en_v1.csv`'s style_text columns (other than `canonical`) should be treated as
 **not yet meaning-preserving** and not sent to translators or reviewers. Note: running
 that script later will also recompute the gold-label columns above (LLM-assisted,

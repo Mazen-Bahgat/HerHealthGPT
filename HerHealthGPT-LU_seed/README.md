@@ -11,7 +11,7 @@ Week-1 categorized **English** seed set for HerHealthGPT-LU / LUHME 2026.
   "I have irregular periods."). `../scripts/regenerate_style_variants_and_gold.py`
   replaces these with LLM-regenerated, meaning-preserving variants and also fills in
   `gold_risk_level`, `gold_action`, `requires_clarification` (previously blank —
-  `draft_grounding()` only ever set `gold_condition`). Requires `ANTHROPIC_API_KEY`;
+  `draft_grounding()` only ever set `gold_condition`). Requires `OPENAI_API_KEY` (model: `gpt-5.5`);
   not yet run as of this note. **A human must review `regeneration_report.md` before
   the benchmark freezes** — this is an AI first pass, not a substitute for the
   meaning-preservation review the design spec requires.

@@ -12,6 +12,7 @@ dependencies = [
     "beautifulsoup4>=4.12",
     "pydantic>=2.7",
     "anthropic>=0.92",
+    "openai>=2.0",
     "transformers>=4.44",
     "torch>=2.3",
     "sentencepiece>=0.2",
