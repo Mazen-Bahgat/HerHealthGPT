@@ -1,159 +1,189 @@
-# Task 1 report: WSL2 + Unsloth environment
+# Task 1 report: `run_local_inference.py` — runner + unit tests
 
-Date: 2026-07-12
+## Scope executed
 
-Status: initial implementation and verification committed as `c8f5617`; review
-corrections are recorded in the follow-up section below.
+Steps 1–5 and Step 7 (commit) per the controller's instructions. **Step 6 (GPU
+smoke run) was explicitly skipped** — left for the controller to run on the
+WSL GPU box.
 
-## Environment and decisions
+## Files created
 
-- WSL distro: `HerHealthUbuntu`, invoked as root with
-  `wsl.exe -d HerHealthUbuntu -u root -- ...`.
-- GPU: `NVIDIA RTX 5000 Ada Generation, 32760 MiB`.
-- `uv`: installed from the official Astral installer; version `0.11.28`.
-- Python: uv-managed CPython `3.11.15` in
-  `/mnt/d/Grad-Project/HerHealthGPT/.venv-ft`.
-- The pre-existing `.venv-ft` was unusable because its interpreter home pointed
-  at `/home/sw2/.local/share/uv/...`, which does not exist in the new root WSL
-  environment. It was removed after resolving and checking the exact path, then
-  recreated cleanly.
-- Installing the brief's initial `torch==2.5.*` CUDA 12.4 wheel succeeded, but
-  the current `unsloth==2026.7.2` resolver upgraded it to its compatible current
-  stack. The setup doc therefore pins the verified final stack instead of
-  leaving a misleading intermediate pin.
+- `scripts/run_local_inference.py` — local (no-server) benchmark inference
+  runner for M2/M3. Written verbatim from the brief (Step 3 code block):
+  - `iter_benchmark(path) -> list[dict]`
+  - `done_item_ids(path) -> set[str]`
+  - `record_for_row(row, raw_response, model, label, row_number) -> dict`
+    (delegates to `run_inference.parse_model_content` /
+    `build_output_record` / `select_input_text` — no reimplementation)
+  - `LocalGenerator` class: lazily imports `unsloth`/`torch` inside
+    `__init__`/`__call__` only, so the module itself imports cleanly with
+    no heavy deps present (verified: Windows `.venv` has neither torch nor
+    unsloth installed, and the test module still imports/collects/runs).
+    Uses `FastLanguageModel.from_pretrained(..., load_in_4bit=True,
+    dtype=None)`, `enable_thinking=False`, `do_sample=False`, greedy decode.
+  - `main()` CLI: `--label`, `--model`, `--adapter`, `--benchmark`,
+    `--output`, `--limit`, `--max-new-tokens` (default 512). Appends to
+    output JSONL, skips already-done `item_id`s (resume-safe), flushes each
+    line, catches per-row generation exceptions and records them as
+    `generation_error` rather than aborting the run.
+- `tests/test_run_local_inference.py` — the exact 3-test file from the brief
+  (Step 1 code block), unmodified.
 
-## Commands and observed outputs
+## Files removed
 
-### GPU passthrough
+- `scripts/run_local_raw_baseline.py` (superseded single-purpose Qwen3.5 raw
+  baseline runner — its functionality is now covered by
+  `run_local_inference.py --label M2` with no adapter).
+- `tests/test_run_local_raw_baseline.py` (its test suite, 6 tests).
+- Confirmed via `grep -rn "run_local_raw_baseline" scripts/ tests/` → no
+  matches in either directory after removal.
 
-```powershell
-wsl.exe -d HerHealthUbuntu -u root -- bash -lc "nvidia-smi --query-gpu=name,memory.total --format=csv | tr -d '\0'"
+## Test execution (exact commands + output)
+
+Command specified by the controller:
+```
+.venv/Scripts/python.exe -m pytest tests/test_run_local_inference.py -v
 ```
 
-```text
-name, memory.total [MiB]
-NVIDIA RTX 5000 Ada Generation, 32760 MiB
+**Note on environment:** on this machine, plain `pytest` runs (both before
+and unrelated to my changes) hit a pre-existing Windows permission error
+against the shared `C:\Users\SW2\AppData\Local\Temp\pytest-of-SW2` directory
+used by pytest's `tmp_path` fixture (`PermissionError: [WinError 5] Access is
+denied`) — almost certainly a directory ACL left behind by a concurrent/
+previous process on this multi-agent machine, not something specific to this
+task. It also manifested as a benign `PytestCacheWarning` on `.pytest_cache`.
+I worked around both by pointing `--basetemp` at the writable scratchpad
+directory and disabling cacheprovider; no test code or fixture behavior was
+changed. This is an environment quirk, not a code defect — flagging for
+visibility.
+
+Step 2 (pre-implementation, confirming the intended failure):
+```
+$ .venv/Scripts/python.exe -m pytest tests/test_run_local_inference.py -v
+...
+ModuleNotFoundError: No module named 'run_local_inference'
+=========================== 2 warnings, 1 error in 0.17s ===========================
+```
+Matches the brief's expected failure exactly.
+
+Step 4 (post-implementation):
+```
+$ .venv/Scripts/python.exe -m pytest tests/test_run_local_inference.py -v \
+    --basetemp="<scratchpad>/pytest-tmp"
+tests/test_run_local_inference.py::test_record_for_row_is_scorable_by_evaluate PASSED [ 33%]
+tests/test_run_local_inference.py::test_record_for_row_marks_bad_json_unparsed PASSED [ 66%]
+tests/test_run_local_inference.py::test_done_item_ids_reads_existing_output PASSED [100%]
+============================== 3 passed in 0.07s ==============================
+```
+3/3 pass — matches the brief's expected "3 passed".
+
+Full repo test suite, before removal (sanity check nothing else broke):
+```
+75 passed in 0.48s
 ```
 
-### uv installation and venv creation
-
-```powershell
-wsl.exe -d HerHealthUbuntu -u root -- bash -lc "curl -LsSf https://astral.sh/uv/install.sh -o /tmp/uv-install.sh; sh /tmp/uv-install.sh; export PATH=/root/.local/bin:$PATH; cd /mnt/d/Grad-Project/HerHealthGPT; uv venv --seed --python 3.11 .venv-ft"
+Full repo test suite, after removing the superseded raw-baseline
+script+test (Step 5):
 ```
-
-```text
-uv 0.11.28 (x86_64-unknown-linux-gnu)
-Using CPython 3.11.15
-Creating virtual environment with seed packages at: .venv-ft
+69 passed in 0.23s
 ```
+75 − 6 (the removed `test_run_local_raw_baseline.py` tests) = 69. Confirms
+the removal didn't silently break any other test file (nothing else imported
+`run_local_raw_baseline`).
 
-uv warned that the repository application declares `requires-python >=3.12`.
-This isolated training environment deliberately uses Python 3.11 per the task
-interface and does not install the application package itself.
+## Self-review notes
 
-### Dependency installation
+- The runner file and test file were written byte-for-byte from the brief's
+  code blocks — no deviations. I did not invent any additional logic beyond
+  what's specified.
+- Verified `run_inference.py` actually exposes `FIXED_PROMPT_TEMPLATE`,
+  `parse_model_content`, `build_output_record`, `select_input_text`,
+  `build_item_id` with the signatures `record_for_row`/`main()` rely on —
+  read the full file before trusting the brief's DRY claim; signatures match.
+- Verified `evaluate.py`'s `score_record()` consumes the record shape
+  `record_for_row` produces (`item_id`, `model_label`, `gold_category`,
+  `gold_risk_level`, `requires_clarification`, `_parse_error`,
+  `predicted_category`/`predicted_risk`/`asks_clarification` via
+  `validate_prediction_object`) — confirmed by the passing
+  `test_record_for_row_is_scorable_by_evaluate` test, which round-trips a
+  record through `ev.score_record` and asserts `parse_ok`,
+  `category_correct`, `risk_correct`, `clarification_correct` are all
+  `True`.
+- Confirmed `LocalGenerator` does not import `unsloth`/`torch` at module
+  scope (only inside `__init__`/`__call__`), so the module imports fine on
+  the CPU-only Windows venv, which lacks those heavy deps — this was
+  load-bearing for the unit tests to run at all in this environment.
+- Git line-ending warnings ("LF will be replaced by CRLF") appeared on `git
+  add` for both new files — this is the repo's existing `core.autocrlf`
+  behavior (not something I configured) and does not affect file content on
+  disk; ignorable.
+- `git status` is clean after commit; working tree ahead of
+  `origin/feat/qwen35-en-finetune` by 3 commits (2 pre-existing + this
+  one, `42c11c6`). Not pushed, per instructions.
 
-The requested sequence was run: pip upgrade, `torch==2.5.*` from the cu124
-index, then Unsloth and training dependencies. The first stage installed
-`torch-2.5.1+cu124`. The second stage resolved the current compatible final
-stack and completed successfully after approximately 22 minutes on mounted
-NTFS.
+## Concerns
 
-Final direct versions:
+- **Step 6 (GPU smoke run) was not executed**, per explicit scope
+  instructions — the controller will run it on WSL. This means the
+  `LocalGenerator` class (the only piece with real Unsloth/torch/CUDA
+  interaction) has **not been exercised end-to-end**; only its pure-Python
+  siblings (`iter_benchmark`, `done_item_ids`, `record_for_row`, and the CLI
+  argument wiring in `main()`) are covered by the unit tests. Any bug in the
+  chat-template/generation/decode path (e.g. `apply_chat_template` kwargs,
+  `.to("cuda")`, tokenizer decode slicing) would only surface during the
+  skipped smoke step.
+- The pytest `tmp_path`/`--basetemp` permission issue described above is an
+  environment artifact on this Windows machine (shared temp dir ACL), not
+  introduced by this task — worth a one-time look if it recurs across
+  sessions, but out of scope here.
 
-```text
-pip 26.1.2
-torch 2.10.0+cu128
-unsloth 2026.7.2
-transformers 5.5.0
-trl 0.24.0
-peft 0.19.1
-bitsandbytes 0.49.2
-datasets 4.3.0
-accelerate 1.14.0
+## Follow-up fix (post-GPU-smoke): `apply_chat_template` return_dict
+
+The controller's GPU smoke confirmed the concern above: the untested
+`LocalGenerator.__call__` path had a real bug. Every `generate()` raised
+`TypeError: string indices must be integers, not 'str'`.
+
+Root cause: in transformers 5.5.0, `tokenizer.apply_chat_template(...,
+tokenize=True, return_tensors="pt")` returns a **BatchEncoding dict**, not a
+bare tensor. So the original `generate(input_ids=inputs)` and `inputs.shape[1]`
+were operating on a dict, not a tensor.
+
+Fix (only `__call__` changed): request `return_dict=True`, unpack with
+`generate(**inputs, ...)`, and slice using `inputs["input_ids"].shape[1]` for
+the prompt length. Everything else in the module is unchanged.
+
+The three pure-function tests still pass after the fix (heavy deps still load
+lazily, so this GPU path remains unit-uncovered — the controller re-runs the
+GPU smoke to validate real generation):
 ```
-
-The repeatable direct-package command documented for future runs pins those
-final versions and pip itself. It is intentionally not described as a full
-environment lock because transitive resolution may change:
-
-```powershell
-wsl.exe -d HerHealthUbuntu -u root -- bash -lc "set -euo pipefail; cd /mnt/d/Grad-Project/HerHealthGPT && .venv-ft/bin/python -m pip install 'pip==26.1.2' && .venv-ft/bin/pip install 'torch==2.10.0' 'unsloth==2026.7.2' 'transformers==5.5.0' 'trl==0.24.0' 'peft==0.19.1' 'bitsandbytes==0.49.2' 'datasets==4.3.0' 'accelerate==1.14.0'"
+$ .venv/Scripts/python.exe -m pytest tests/test_run_local_inference.py -v --basetemp=<scratch>
+tests/test_run_local_inference.py::test_record_for_row_is_scorable_by_evaluate PASSED [ 33%]
+tests/test_run_local_inference.py::test_record_for_row_marks_bad_json_unparsed PASSED [ 66%]
+tests/test_run_local_inference.py::test_done_item_ids_reads_existing_output PASSED [100%]
+============================== 3 passed in 0.07s ==============================
 ```
+Committed as `fix: apply_chat_template return_dict for transformers 5.5 generate`.
 
-### Import and CUDA verification
+## Follow-up fix 2 (confirmed root cause): typed content parts for Qwen3-VL
 
-The verification imported all direct dependencies, queried CUDA, and allocated
-a CUDA tensor. Key output:
+The controller's direct probe confirmed the true primary root cause: the
+model's processor is a **`Qwen3VLProcessor`** — Qwen3.5-9B is a
+vision-language model. Passing the chat message `content` as a **bare string**
+raises `string indices must be integers`; passing it as a **typed text part**
+(`content=[{"type": "text", "text": prompt}]`) works and returns
+`input_ids` / `attention_mask` / `mm_token_type_ids`.
 
-```text
-python 3.11.15
-torch 2.10.0+cu128 cuda_runtime 12.8
-unsloth 2026.7.2
-transformers 5.5.0
-trl 0.24.0
-peft 0.19.1
-bitsandbytes 0.49.2
-datasets 4.3.0
-accelerate 1.14.0
-cuda True NVIDIA RTX 5000 Ada Generation
-cuda_tensor 1.0
+The earlier `return_dict=True` change remains correct and stays. This fix is
+the additional, primary correction: in `LocalGenerator.__call__`, the message
+content changed from a bare string to a typed text part. Nothing else changed.
+
+The three pure-function tests still pass after this fix (GPU path still
+unit-uncovered; controller re-runs the GPU smoke to validate real generation):
 ```
-
-## Concern for later model verification
-
-During `import unsloth`, vendored FLA emitted two warnings:
-
-```text
-Triton is not supported on current platform, roll back to CPU.
+$ .venv/Scripts/python.exe -m pytest tests/test_run_local_inference.py -v --basetemp=<scratch>
+tests/test_run_local_inference.py::test_record_for_row_is_scorable_by_evaluate PASSED [ 33%]
+tests/test_run_local_inference.py::test_record_for_row_marks_bad_json_unparsed PASSED [ 66%]
+tests/test_run_local_inference.py::test_done_item_ids_reads_existing_output PASSED [100%]
+============================== 3 passed in 0.07s ==============================
 ```
-
-The overall import exited zero, PyTorch reported CUDA available, and an actual
-CUDA tensor allocation succeeded. That proves generic CUDA, not accelerated
-FLA/GatedDeltaNet usability. The environment remains provisional for Qwen3.5;
-Task 3's `--max-steps 10` training smoke is the binding go/no-go.
-
-## Review corrections and non-install verification
-
-The setup doc now:
-
-- labels the procedure as a repeatable direct-package setup rather than a fully
-  reproducible locked environment;
-- exports `/root/.local/bin` before checking for `uv`, checks `uv 0.11.28`, and
-  requests Python `3.11.15` explicitly;
-- records this Ubuntu 24.04 distro's actual system Python (`3.12.3`) and explains
-  why the isolated tested 3.11 interpreter is used, while retaining the plan's
-  Python 3.14 compatibility warning for newer images;
-- documents the actual FLA/Triton CPU-fallback warning and marks Qwen3.5 GPU
-  acceleration provisional; and
-- identifies Task 3's 10-step training smoke as the binding go/no-go without
-  adding an expensive model test to Task 1.
-
-Non-install WSL verification (the Python payload also asserted the displayed
-versions, device name, and CUDA tensor value):
-
-```powershell
-wsl.exe -d HerHealthUbuntu -u root -- bash -lc "set -euo pipefail; /root/.local/bin/uv --version | grep '^uv 0\.11\.28'; python3 --version; cd /mnt/d/Grad-Project/HerHealthGPT; .venv-ft/bin/python -c 'import sys, torch, unsloth; assert sys.version_info[:3] == (3, 11, 15); assert torch.__version__ == \"2.10.0+cu128\"; assert unsloth.__version__ == \"2026.7.2\"; assert torch.cuda.is_available(); assert torch.cuda.get_device_name(0) == \"NVIDIA RTX 5000 Ada Generation\"; assert torch.ones(1, device=\"cuda\").item() == 1.0; print(\"python\", sys.version.split()[0]); print(\"torch\", torch.__version__, \"runtime\", torch.version.cuda); print(\"unsloth\", unsloth.__version__); print(\"cuda\", torch.cuda.is_available(), torch.cuda.get_device_name(0)); print(\"cuda_tensor ok\")' 2>/tmp/task1-review-stderr.log; grep -c 'Triton is not supported on current platform, roll back to CPU.' /tmp/task1-review-stderr.log"
-```
-
-```text
-uv 0.11.28 (x86_64-unknown-linux-gnu)
-Python 3.12.3
-python 3.11.15
-torch 2.10.0+cu128 runtime 12.8
-unsloth 2026.7.2
-cuda True NVIDIA RTX 5000 Ada Generation
-cuda_tensor ok
-2
-```
-
-Documentation contract verification:
-
-```powershell
-$doc = Get-Content -Raw 'docs\wsl_finetune_setup.md'; # assert nine required disclosures and reject the old overbroad heading
-```
-
-```text
-doc_contract PASS (9 required disclosures; no overbroad heading)
-git diff --check: exit 0
-```
+Committed as `fix: pass typed content parts to Qwen3-VL chat template`.
