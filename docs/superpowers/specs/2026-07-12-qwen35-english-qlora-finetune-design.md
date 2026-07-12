@@ -49,7 +49,6 @@ originally-assumed Linux HPC cluster.
 | Compute | Local RTX 5000 Ada, 32 GB, WSL2 Ubuntu (already running, GPU passes through) | Available now, no queue, 32 GB is ample for 9B QLoRA |
 | Framework | **Unsloth** (in WSL2) | Purpose-built for single-GPU QLoRA; fastest/lowest-VRAM path. Diverges from parent spec's Llama-Factory — see §9 paper note |
 | Model | **Qwen3.5-9B directly** | User's target model; attempt it first |
-| Fallback | Qwen2.5-7B-Instruct, one `--model` flag change | Guaranteed Unsloth support; protects the July 15 deadline if GatedDeltaNet is unsupported |
 | Code layout | 3 modular scripts under `scripts/` | Matches repo convention; each independently runnable/testable |
 
 ## 4. Environment (WSL2 Ubuntu)
@@ -99,21 +98,17 @@ where noted.
   clearly decreasing and generations underfit.
 - **Effective batch:** ~16 (e.g. per-device 2 × grad-accum 8); room to grow on 32 GB.
 - **Seed:** fixed and recorded (this run = seed 1).
-- **`--model`** flag: defaults to Qwen3.5-9B; Qwen2.5-7B-Instruct fallback is the same
-  flag with a different value. No other change needed to fall back.
+- **`--model`** flag: defaults to Qwen3.5-9B and is retained only to match the served/model repo identifier when needed.
 - **Reproducibility artifact:** emit `run_config.json` capturing every hyperparameter,
   the resolved model id, the git SHA, and the seed.
 
-### Go/no-go gate (protects the deadline)
+### Smoke gate (protects the deadline)
 
 Before the full run, execute a `--max-steps 10` smoke run. It confirms the architecture
-**loads, steps, and saves** end-to-end. This is the parent spec's Day-1 go/no-go
-realized locally:
+**loads, steps, and saves** end-to-end:
 
-- **Go:** Qwen3.5-9B loads and steps → proceed to the full 3-epoch run.
-- **No-go:** if Qwen3.5-9B will not load/train in Unsloth within a bounded debugging
-  window (~2–3 h), switch `--model` to Qwen2.5-7B-Instruct and proceed. Do **not**
-  deep-debug the architecture past that window.
+- Qwen3.5-9B loads and steps → proceed to the full 3-epoch run.
+- If Qwen3.5-9B does not load/train, stop and report the runtime blocker; do not silently switch model families.
 
 ## 7. Outputs & sanity check — `scripts/sanity_generate.py`
 
@@ -136,15 +131,14 @@ realized locally:
 
 Record in the method section that the local runs used **Unsloth** (not Llama-Factory as
 the parent spec stated); the QLoRA **recipe is unchanged**. Note the local single-GPU
-setup (RTX 5000 Ada, 32 GB), fixed seeds, and — if the fallback triggered — that M3's
-base is Qwen2.5-7B-Instruct rather than Qwen3.5-9B. Fold this into the parent spec's
-open-questions/decisions when it becomes the paper.
+setup (RTX 5000 Ada, 32 GB), fixed seeds, and Qwen3.5-9B as the M3 base model. Fold
+this into the parent spec's open-questions/decisions when it becomes the paper.
 
 ## 10. Risks
 
 | Risk | Mitigation |
 |---|---|
-| Qwen3.5-9B GatedDeltaNet unsupported by installed Unsloth/transformers | 10-step go/no-go gate; bounded debug window; one-flag fallback to Qwen2.5-7B-Instruct |
+| Qwen3.5-9B GatedDeltaNet unsupported by installed Unsloth/transformers | 10-step smoke gate; stop and report the runtime blocker rather than switching model families |
 | WSL Python 3.14 breaks torch/Unsloth install | Pin Python 3.11 via `uv` (documented in setup doc) |
 | Overfitting on silver data at 5 epochs | Start at 3 epochs; monitor eval loss on the 5% val split |
 | Adapter/model artifacts bloat the repo | `models/` and large `data/ft/` outputs gitignored; reproducible from committed corpus + `run_config.json` |

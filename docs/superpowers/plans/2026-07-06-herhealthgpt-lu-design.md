@@ -50,7 +50,7 @@ Framed as a language-understanding problem in a high-stakes domain (LUHME topics
 
 - All three evaluated **zero-shot** on the full benchmark with one fixed prompt: interpret the symptom, assess urgency, recommend an action, ask for clarification if the description is insufficient.
 - **Thinking mode OFF** for all Qwen3.5 runs; fine-tune with the non-thinking chat template so train/eval match. Documented in the paper.
-- **Fallback rule:** if Qwen3.5-9B inference or LoRA does not run on the cluster by end of Day 1 (recent vLLM/transformers required for its hybrid GatedDeltaNet architecture), switch to Qwen2.5-7B-Instruct immediately. No environment debugging past Day 1.
+- **Qwen3.5 status:** Qwen3.5-9B is the fixed multilingual model for M2/M3; run zero-shot, English fine-tuned, and multilingual fine-tuned comparisons against this model family.
 - **Stretch goal only:** RAG over the NHS/CDC/NIH corpus on top of M3. Cut without discussion if anything slips.
 
 ## 4. Evaluation
@@ -142,7 +142,7 @@ Everyone drafts their own paper sections daily in Overleaf; Mariam assembles and
 
 | Risk | Mitigation |
 |------|-----------|
-| Qwen3.5-9B environment issues (new hybrid architecture) | Day-1 smoke tests; hard fallback to Qwen2.5-7B-Instruct |
+| Qwen3.5-9B environment issues (new hybrid architecture) | Smoke-test vLLM inference and local QLoRA before full runs; document any unresolved runtime blocker immediately |
 | Reviewers slower than promised | Day-4 handoff + Day-6 return agreed up front; cut line #1 |
 | GPT-generated variants drift from gold labels | Human review of every English item; variant must preserve the seed's clinical meaning |
 | Benchmark/FT-corpus leakage | Explicit leakage log owned by Hassan; checked before fine-tune launch |

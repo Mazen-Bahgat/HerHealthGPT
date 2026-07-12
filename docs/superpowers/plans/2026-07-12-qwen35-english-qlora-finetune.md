@@ -14,7 +14,7 @@
 - **Never train on** `HerHealthGPT-LU_seed/seeds_en_v1.{csv,jsonl}` (the 540-row frozen benchmark) or any candidate CSV. The corpus is already dual-key leakage-cleaned against the seeds; do not add seed data.
 - **Chat template:** Qwen, **thinking-mode OFF** (`enable_thinking=False`) at both format and inference time, so train/eval match.
 - **QLoRA recipe (from parent spec §2C / MenstLLaMA):** 4-bit NF4, LoRA r=16 alpha=16 dropout=0, lr 2e-4, warmup ratio 0.03, max grad norm 0.3, max seq 2048, paged AdamW 8-bit, cosine schedule, bf16. Epochs start at 3 (ceiling 5).
-- **Model:** primary `Qwen/Qwen3.5-9B`; fallback `Qwen/Qwen2.5-7B-Instruct` via one `--model` flag change if the primary won't load/train in Unsloth within a bounded window.
+- **Model:** `Qwen/Qwen3.5-9B`; do not switch model families for this run.
 - **Seeds:** training seed `3407`; val-split seed `42`. Both recorded.
 - **Python:** WSL system Python is 3.14 (unsupported by torch/Unsloth) — the training env MUST pin 3.11 via `uv`.
 - **Repo path in WSL:** `/mnt/d/Grad-Project/HerHealthGPT` (Windows `d:\Grad-Project\HerHealthGPT`).
@@ -93,7 +93,7 @@ in pyproject.toml — install them here.
 Env: `/mnt/d/Grad-Project/HerHealthGPT/.venv-ft` (Python 3.11 via uv).
 Why 3.11: WSL system Python is 3.14, unsupported by torch/Unsloth.
 ```
-Then the four command blocks above with their expected outputs, and a one-line troubleshooting note: "If `import unsloth` fails on a Qwen3.5 architecture error, that is the go/no-go signal for the Task 3 fallback."
+Then the four command blocks above with their expected outputs, and a one-line troubleshooting note: "If `import unsloth` fails on a Qwen3.5 architecture error, stop and report the runtime blocker before full training."
 
 - [ ] **Step 6: Commit**
 
@@ -279,7 +279,7 @@ git commit -m "feat: FT data prep (corpus -> Qwen chat messages + balanced split
 
 ---
 
-## Task 3: Training script + 10-step smoke gate (go/no-go)
+## Task 3: Training script + 10-step smoke gate
 
 **Files:**
 - Create: `scripts/train_qlora.py`
@@ -314,7 +314,7 @@ Run inside WSL (.venv-ft). Smoke gate first:
 Full run:
   python scripts/train_qlora.py --epochs 3 --output models/qwen3.5-9b-herhealth-en-lora
 
-Fallback: --model Qwen/Qwen2.5-7B-Instruct if the primary won't load/train.
+Use Qwen3.5-9B for this run; do not switch model families.
 """
 import argparse
 import json
@@ -417,7 +417,7 @@ Add to `.gitignore`:
 models/
 ```
 
-- [ ] **Step 4: Run the 10-step smoke gate (GO/NO-GO)**
+- [ ] **Step 4: Run the 10-step smoke gate**
 
 Run:
 ```bash
@@ -426,9 +426,9 @@ wsl.exe -d Ubuntu -- bash -lc "cd /mnt/d/Grad-Project/HerHealthGPT && \
 ```
 Expected: model downloads, training logs ~10 steps with a decreasing loss, prints `saved adapter -> models/_smoke`.
 
-**GO/NO-GO decision:**
-- **GO** — it loads and steps → continue to Task 4 with `Qwen/Qwen3.5-9B`.
-- **NO-GO** — if it fails on the model architecture (GatedDeltaNet unsupported) and is not resolved within ~2–3 h, rerun this exact command with `--model Qwen/Qwen2.5-7B-Instruct`. Expected then: same success on the fallback. Record which base was used.
+**Smoke decision:**
+- If it loads and steps, continue to Task 4 with `Qwen/Qwen3.5-9B`.
+- If it fails on the model architecture or training stack, stop and report the runtime blocker; do not rerun with a different model family.
 
 - [ ] **Step 5: Commit**
 
@@ -450,7 +450,7 @@ git commit -m "feat: Unsloth QLoRA training script + 10-step smoke gate"
 
 - [ ] **Step 1: Launch the full 3-epoch run**
 
-Use the base that passed Task 3's gate (default primary shown; append `--model Qwen/Qwen2.5-7B-Instruct` if the fallback triggered). Run:
+Use Qwen3.5-9B. Run:
 ```bash
 wsl.exe -d Ubuntu -- bash -lc "cd /mnt/d/Grad-Project/HerHealthGPT && \
   .venv-ft/bin/python scripts/train_qlora.py --epochs 3 \
@@ -582,7 +582,7 @@ Create `docs/finetune_run_notes.md`:
 - **Hardware:** local RTX 5000 Ada (32 GB), WSL2 Ubuntu, Python 3.11 (uv).
 - **Data:** HerHealthGPT-LU_seed/ft_corpus_v1.jsonl (2,700 EN pairs, balanced),
   95/5 train/val split (seed 42). Benchmark seeds excluded (dual-key leakage filter).
-- **Base model used:** <Qwen/Qwen3.5-9B | Qwen/Qwen2.5-7B-Instruct — fill in which>.
+- **Base model used:** Qwen/Qwen3.5-9B.
 - **Training seed:** 3407 (this run = seed 1; seeds 2–3 are reruns with --seed).
 - **Epochs:** <3 | adjusted — fill in>. Eval-loss trend: <fill in>.
 - **Thinking mode:** OFF at train and inference (enable_thinking=False).
@@ -607,7 +607,7 @@ git commit -m "docs: M3 run notes + README pipeline row for the local fine-tune"
 
 ## Self-Review
 
-**Spec coverage:** §1 scope → Tasks 1–6; §4 env → Task 1; §5 data prep → Task 2; §6 training + go/no-go gate → Tasks 3–4; §7 outputs + sanity → Tasks 4–5; §8 testing (unit/smoke/verify) → Task 2 Step 4 / Task 3 Step 4 / Task 5 Step 2; §9 paper note → Task 6; §10 risks (Python 3.11 pin, fallback flag, overfitting, gitignored artifacts, thinking-off) all mapped to concrete steps. No gaps.
+**Spec coverage:** §1 scope → Tasks 1–6; §4 env → Task 1; §5 data prep → Task 2; §6 training + smoke gate → Tasks 3–4; §7 outputs + sanity → Tasks 4–5; §8 testing (unit/smoke/verify) → Task 2 Step 4 / Task 3 Step 4 / Task 5 Step 2; §9 paper note → Task 6; §10 risks (Python 3.11 pin, runtime blockers, overfitting, gitignored artifacts, thinking-off) all mapped to concrete steps. No gaps.
 
 **Placeholders:** The only intentional fill-in is `docs/finetune_run_notes.md`'s `<...>` fields, which capture *runtime outcomes* (which base model ran, actual epochs/eval loss) — these cannot be known at plan time and Step 1 instructs filling them before commit. The `--model` repo-id confirmation (Task 3 Step 1) is a runtime check with a concrete default, not a placeholder.
 

@@ -88,7 +88,7 @@ The three corpora play **different roles** and are NOT concatenated blindly — 
 
 - All three evaluated **zero-shot** on the full benchmark with one fixed prompt: interpret the symptom, assess urgency, recommend an action, ask for clarification if the description is insufficient.
 - **Thinking mode OFF** for all Qwen3.5 runs; fine-tune with the non-thinking chat template so train/eval match. Documented in the paper.
-- **Fallback rule:** if Qwen3.5-9B inference or LoRA does not run on the cluster by end of Day 1 (recent vLLM/transformers required for its hybrid GatedDeltaNet architecture), switch to Qwen2.5-7B-Instruct immediately. No environment debugging past Day 1.
+- **Qwen3.5 status:** Qwen3.5-9B is the fixed multilingual model for M2/M3; run zero-shot, English fine-tuned, and multilingual fine-tuned comparisons against this model family.
 - **Stretch goal only:** RAG over the NHS/CDC/NIH corpus on top of M3. Cut without discussion if anything slips.
 
 ## 4. Evaluation
@@ -198,7 +198,7 @@ Everyone drafts their own paper sections daily in Overleaf; Mariam assembles and
 
 | Risk | Mitigation |
 |------|-----------|
-| Qwen3.5-9B environment issues (new hybrid architecture) | Day-1 smoke tests; hard fallback to Qwen2.5-7B-Instruct |
+| Qwen3.5-9B environment issues (new hybrid architecture) | Smoke-test vLLM inference and local QLoRA before full runs; document any unresolved runtime blocker immediately |
 | Reviewers slower than promised | Day-4 handoff + Day-6 return agreed up front; cut line #1 |
 | GPT-generated variants drift from gold labels | Human review of every English item; variant must preserve the seed's clinical meaning |
 | Benchmark/FT-corpus leakage | Explicit leakage log owned by Hassan; checked before fine-tune launch |
@@ -213,7 +213,7 @@ The weekly brief aligns with this spec on framing, translation-validation, exper
 2. **Leakage key is dual, not single:** the brief's `leakage_key = source_dataset + source_row_id` is necessary but insufficient for MENST (one answer → ~13 paraphrase siblings under different row IDs). Add `seed_answer_hash` (normalized-answer sha1) as a second block key. Both filters apply to every fine-tuning pull. This is the highest-priority correction.
 3. **Style variants are NOT final:** seed v1's variants are template-generated and must be regenerated from canonical text under the meaning-preservation rubric (§2A) **before** translation to AR/FR — otherwise broken templates get translated and validated at cost. The brief's "audit-ready provenance" applies to sourcing/provenance, not to the variant text.
 
-Also fold into the brief when it becomes the paper: name the actual models (M1 LLaMA-3-8B, M2 Qwen3.5-9B, M3 +LoRA, optional M4 Menstrual-LLaMA-8B, Qwen2.5-7B fallback), the thinking-mode-off decision, the Day-1 go/no-go, and the gold-label fields (`gold_risk_level`, `gold_action`, `requires_clarification`) that the safety metrics depend on.
+Also fold into the brief when it becomes the paper: name the actual models (M1 LLaMA-3-8B, M2 Qwen3.5-9B, M3 +LoRA, optional M4 Menstrual-LLaMA-8B), the thinking-mode-off decision, and the gold-label fields (`gold_risk_level`, `gold_action`, `requires_clarification`) that the safety metrics depend on.
 
 ## 9. Handoff to Claude Code — build order and definitions of done
 
@@ -226,4 +226,4 @@ Single source of truth: this spec. Repo already contains `deliverables/week1/` (
 5. **`scripts/run_inference.py`** — M1/M2/M3(/M4) × benchmark, thinking-mode off, temp 0, fixed prompt. DoD: deterministic outputs, JSON-parsed, one row per (item × model).
 6. **`scripts/evaluate.py`** — judge + metrics (§4), McNemar, bootstrap CIs, confusion matrices, 3-seed mean±std for M3. DoD: judge–human kappa computed on 100-item calibration set.
 
-Environment note: `pip install --break-system-packages`; verify Qwen3.5-9B on the cluster Day 1 (fallback Qwen2.5-7B). Keep everything git-versioned. Do not translate style variants until step 2 is human-reviewed and the benchmark is frozen.
+Environment note: `pip install --break-system-packages`; verify Qwen3.5-9B on the serving/training machine before full runs. Keep everything git-versioned. Do not translate style variants until step 2 is human-reviewed and the benchmark is frozen.
