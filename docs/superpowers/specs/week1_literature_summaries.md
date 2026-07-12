@@ -22,7 +22,7 @@ Each pair owns its block below and expands it into the Overleaf Related Work. Al
 
 ## Mazen + Hana — Modeling & Language
 
-**Model selection (task: base + multilingual).** Following the supervisor's "one base model and one multilingual model, simple and reproducible" instruction, we select **LLaMA-3-8B-Instruct** as the English-centric base and **Qwen3.5-9B as our multilingual model**. Qwen3.5-9B is Apache-2.0, covers 201 languages/dialects (strong Arabic and French), and its base variant supports efficient LoRA fine-tuning with the official chat template — ideal for our mandatory fine-tune (M3 = Qwen3.5-9B + LoRA). Fallback if the cluster's library stack cannot run its hybrid GatedDeltaNet architecture: Qwen2.5-7B-Instruct. Optional zero-cost fourth baseline: Menstrual-LLaMA-8B.
+**Model selection (task: base + multilingual).** Following the supervisor's "one base model and one multilingual model, simple and reproducible" instruction, we select **LLaMA-3-8B-Instruct** as the English-centric base and **Qwen3.5-9B as our multilingual model**. Qwen3.5-9B is Apache-2.0, covers 201 languages/dialects (strong Arabic and French), and its base variant supports efficient LoRA fine-tuning with the official chat template — ideal for our mandatory fine-tune (M3 = Qwen3.5-9B + LoRA). Optional zero-cost fourth baseline: Menstrual-LLaMA-8B.
 
 **Fine-tuning recipe (MenstLLaMA + Nicholls & Alperin).** MenstLLaMA gives us a published, working QLoRA recipe for an 8–9B health-QA model on a single A100 (4-bit NF4, ~5 epochs, lr 2×10⁻⁴, max seq 2048, Paged AdamW). Nicholls & Alperin confirm QLoRA via Llama-Factory as a reproducible path for small open LLMs, with cross-genre transfer showing fine-tuned features generalize.
 
