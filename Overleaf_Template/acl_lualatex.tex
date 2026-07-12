@@ -1,4 +1,4 @@
-% This file compiles with both LuaLaTeX and XeLaTeX
+% COMPILE WITH LuaLaTeX — use acl_latex.tex + pdfLaTeX if you don't need Arabic script in the paper body
 \documentclass[11pt]{article}
 
 % Change "review" to "final" to generate the final (sometimes called camera-ready) version.
@@ -8,7 +8,9 @@
 % This is not strictly necessary, and may be commented out,
 % but it will improve the layout of the manuscript,
 % and will typically save some space.
- \usepackage{microtype}
+\usepackage{microtype}
+
+\usepackage{graphicx}
 
 % If the title and author information does not fit in the area allocated, uncomment the following
 %
@@ -16,86 +18,52 @@
 %
 % and set <dim> to something 5cm or larger.
 
-% These font selection commands work with
-% LuaLaTeX and XeLaTeX, but not pdfLaTeX.
-\usepackage[english,bidi=default]{babel} % English as the main language.
-\babelfont{rm}{TeXGyreTermesX} % similar to Times
-%%% include whatever languages you need below this line
-\babelprovide[import]{hindi}
-\babelfont[*devanagari]{rm}{Lohit Devanagari}
-\babelprovide[import]{arabic}
-\babelfont[*arabic]{rm}{Noto Sans Arabic}
+% LuaLaTeX / XeLaTeX font setup (do not compile this file with pdfLaTeX).
+\usepackage[english]{babel}
+\babelfont{rm}{TeXGyreTermesX}
+% When Arabic script appears in the paper body, uncomment:
+% \usepackage[english,bidi=default]{babel}
+% \babelprovide[import]{arabic}
+% \babelfont[*arabic]{rm}{Noto Sans Arabic}
 
+\title{HerHealthGPT-LU: A Multilingual Benchmark for LLM Understanding of Women's-Health Symptom Communication}
 
-%\usepackage{polyglossia}
-%\setdefaultlanguage{english}
-%\setotherlanguages{arabic,russian,thai,hindi,kannada}
-
-%%%%%
-
-
-\title{LuaLaTeX and XeLaTeX Template for *ACL Style Files}
-
-% Author information can be set in various styles:
-% For several authors from the same institution:
-% \author{Author 1 \and ... \and Author n \\
-%         Address line \\ ... \\ Address line}
-% if the names do not fit well on one line use
-%         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
-% For authors from different institutions:
-% \author{Author 1 \\ Address line \\  ... \\ Address line
-%         \And  ... \And
-%         Author n \\ Address line \\ ... \\ Address line}
-% To start a seperate ``row'' of authors use \AND, as in
-% \author{Author 1 \\ Address line \\  ... \\ Address line
-%         \AND
-%         Author 2 \\ Address line \\ ... \\ Address line \And
-%         Author 3 \\ Address line \\ ... \\ Address line}
-
-\author{First Author \\
-  Affiliation / Address line 1 \\
-  Affiliation / Address line 2 \\
-  Affiliation / Address line 3 \\
-  \texttt{email@domain} \\\And
-  Second Author \\
-  Affiliation / Address line 1 \\
-  Affiliation / Address line 2 \\
-  Affiliation / Address line 3 \\
-  \texttt{email@domain} \\}
+% Double-blind submission: omit author names until camera-ready.
+\author{Anonymous ACL submission}
 
 \begin{document}
-
 \maketitle
 \begin{abstract}
-This document provides an example showing how
-to use the *ACL style files with either
-LuaLaTeX or XeLaTeX.
+Large language models are increasingly used for women's-health patient education, yet most evaluations target answer \emph{generation} rather than safe \emph{interpretation} of symptom language across registers and languages.
+We present \textbf{HerHealthGPT-LU}, a multilingual benchmark for evaluating LLM understanding of women's-health symptom communication in English, Arabic, and French.
+The benchmark comprises 540 style-controlled items spanning menstruation, PCOS/hormonal concerns, and fertility, with gold labels for condition inference, risk calibration, recommended action, and clarification need.
+We separate a frozen evaluation benchmark from leakage-controlled adaptation data and propose metrics targeting misunderstanding, unsafe responses, and cross-lingual consistency.
+We report baseline and fine-tuned model results together with a systematic error taxonomy for women's-health language understanding.
 \end{abstract}
 
+\input{overleaf_intro_related}
 
-\section{Introduction}
+\input{overleaf_methods}
 
-Please see the general instructions
-in the file \verb|acl_latex.tex|.
+\section{Results}
+\label{sec:results}
 
-Here are some examples of text in various languages.
+% TODO: Main quantitative results, ablations, and error analysis.
 
-Hindi: \foreignlanguage{hindi}{मानव अधिकारों की सार्वभौम घोषणा}
+\section{Discussion}
+\label{sec:discussion}
 
-Arabic: \foreignlanguage{arabic}{الإعلان العالمي لحقوق الإنسان}
+% TODO: Interpretation of findings, limitations, ethics, and future work.
 
-Here is an example citation:
-\citet{Gusfield:97} argues that...
+\section*{Limitations}
 
+% TODO: Required ACL limitations paragraph (dataset scope, languages, clinical disclaimer, etc.).
 
-% Entries for the entire Anthology, followed by custom entries
-\bibliography{custom}
-
-\appendix
-
-\section{Example Appendix}
-\label{sec:appendix}
-
-This is an appendix.
+% Bibliography: journal articles in custom.bib; ACL proceedings in anthology shards.
+% In Overleaf: New File -> From External URL
+%   https://aclanthology.org/anthology-1.bib
+%   https://aclanthology.org/anthology-2.bib
+% LUHME'25 keys (mohammadi-etal-2025-large, nicholls-alperin-2025-cross) resolve from shards.
+\bibliography{custom,anthology-1,anthology-2}
 
 \end{document}
