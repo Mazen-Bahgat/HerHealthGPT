@@ -67,11 +67,12 @@ class LocalGenerator:
         inputs = self.tokenizer.apply_chat_template(
             [{"role": "user", "content": prompt}], tokenize=True,
             add_generation_prompt=True, enable_thinking=False,
-            return_tensors="pt").to("cuda")
+            return_tensors="pt", return_dict=True).to("cuda")
         with self.torch.inference_mode():
-            out = self.model.generate(input_ids=inputs, max_new_tokens=self.max_new_tokens,
+            out = self.model.generate(**inputs, max_new_tokens=self.max_new_tokens,
                                       do_sample=False, use_cache=True)
-        return self.tokenizer.decode(out[0][inputs.shape[1]:], skip_special_tokens=True)
+        prompt_len = inputs["input_ids"].shape[1]
+        return self.tokenizer.decode(out[0][prompt_len:], skip_special_tokens=True)
 
 
 def main() -> None:
