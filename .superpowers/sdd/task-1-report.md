@@ -2,8 +2,8 @@
 
 Date: 2026-07-12
 
-Status: implementation and verification completed; commit recorded below after
-the commit is created.
+Status: initial implementation and verification committed as `c8f5617`; review
+corrections are recorded in the follow-up section below.
 
 ## Environment and decisions
 
@@ -73,10 +73,12 @@ datasets 4.3.0
 accelerate 1.14.0
 ```
 
-The reproducible command documented for future runs pins those final versions:
+The repeatable direct-package command documented for future runs pins those
+final versions and pip itself. It is intentionally not described as a full
+environment lock because transitive resolution may change:
 
 ```powershell
-wsl.exe -d HerHealthUbuntu -u root -- bash -lc "set -euo pipefail; cd /mnt/d/Grad-Project/HerHealthGPT && .venv-ft/bin/python -m pip install --upgrade pip && .venv-ft/bin/pip install 'torch==2.10.0' 'unsloth==2026.7.2' 'transformers==5.5.0' 'trl==0.24.0' 'peft==0.19.1' 'bitsandbytes==0.49.2' 'datasets==4.3.0' 'accelerate==1.14.0'"
+wsl.exe -d HerHealthUbuntu -u root -- bash -lc "set -euo pipefail; cd /mnt/d/Grad-Project/HerHealthGPT && .venv-ft/bin/python -m pip install 'pip==26.1.2' && .venv-ft/bin/pip install 'torch==2.10.0' 'unsloth==2026.7.2' 'transformers==5.5.0' 'trl==0.24.0' 'peft==0.19.1' 'bitsandbytes==0.49.2' 'datasets==4.3.0' 'accelerate==1.14.0'"
 ```
 
 ### Import and CUDA verification
@@ -107,6 +109,51 @@ Triton is not supported on current platform, roll back to CPU.
 ```
 
 The overall import exited zero, PyTorch reported CUDA available, and an actual
-CUDA tensor allocation succeeded. The warning appears limited to the vendored
-FLA device probe, but Task 3 should explicitly verify the Qwen3.5 model load and
-training kernels before treating the accelerated GatedDeltaNet path as viable.
+CUDA tensor allocation succeeded. That proves generic CUDA, not accelerated
+FLA/GatedDeltaNet usability. The environment remains provisional for Qwen3.5;
+Task 3's `--max-steps 10` training smoke is the binding go/no-go.
+
+## Review corrections and non-install verification
+
+The setup doc now:
+
+- labels the procedure as a repeatable direct-package setup rather than a fully
+  reproducible locked environment;
+- exports `/root/.local/bin` before checking for `uv`, checks `uv 0.11.28`, and
+  requests Python `3.11.15` explicitly;
+- records this Ubuntu 24.04 distro's actual system Python (`3.12.3`) and explains
+  why the isolated tested 3.11 interpreter is used, while retaining the plan's
+  Python 3.14 compatibility warning for newer images;
+- documents the actual FLA/Triton CPU-fallback warning and marks Qwen3.5 GPU
+  acceleration provisional; and
+- identifies Task 3's 10-step training smoke as the binding go/no-go without
+  adding an expensive model test to Task 1.
+
+Non-install WSL verification (the Python payload also asserted the displayed
+versions, device name, and CUDA tensor value):
+
+```powershell
+wsl.exe -d HerHealthUbuntu -u root -- bash -lc "set -euo pipefail; /root/.local/bin/uv --version | grep '^uv 0\.11\.28'; python3 --version; cd /mnt/d/Grad-Project/HerHealthGPT; .venv-ft/bin/python -c 'import sys, torch, unsloth; assert sys.version_info[:3] == (3, 11, 15); assert torch.__version__ == \"2.10.0+cu128\"; assert unsloth.__version__ == \"2026.7.2\"; assert torch.cuda.is_available(); assert torch.cuda.get_device_name(0) == \"NVIDIA RTX 5000 Ada Generation\"; assert torch.ones(1, device=\"cuda\").item() == 1.0; print(\"python\", sys.version.split()[0]); print(\"torch\", torch.__version__, \"runtime\", torch.version.cuda); print(\"unsloth\", unsloth.__version__); print(\"cuda\", torch.cuda.is_available(), torch.cuda.get_device_name(0)); print(\"cuda_tensor ok\")' 2>/tmp/task1-review-stderr.log; grep -c 'Triton is not supported on current platform, roll back to CPU.' /tmp/task1-review-stderr.log"
+```
+
+```text
+uv 0.11.28 (x86_64-unknown-linux-gnu)
+Python 3.12.3
+python 3.11.15
+torch 2.10.0+cu128 runtime 12.8
+unsloth 2026.7.2
+cuda True NVIDIA RTX 5000 Ada Generation
+cuda_tensor ok
+2
+```
+
+Documentation contract verification:
+
+```powershell
+$doc = Get-Content -Raw 'docs\wsl_finetune_setup.md'; # assert nine required disclosures and reject the old overbroad heading
+```
+
+```text
+doc_contract PASS (9 required disclosures; no overbroad heading)
+git diff --check: exit 0
+```
