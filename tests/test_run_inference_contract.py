@@ -138,6 +138,47 @@ def test_success_validator_rejects_raw_schema_boundaries(field, value):
     assert ri.is_successful_record(record) is False
 
 
+def test_parse_model_content_repairs_missing_closing_brace():
+    # Observed M3 failure mode: complete JSON, final "}" never emitted (130/149 cases).
+    content = json.dumps(valid_prediction())[:-1] + "\n"
+    parsed = ri.parse_model_content(content)
+    assert parsed["_parse_error"] == ""
+    assert parsed["_json_repaired"] is True
+    assert parsed["predicted_category"] == "pcos"
+
+
+def test_parse_model_content_repairs_string_truncated_mid_value():
+    # Remaining M3 failure mode: cut mid-string inside response_text (max_tokens).
+    content = json.dumps(valid_prediction(response_text="Track your symptoms and"))[:-2]
+    parsed = ri.parse_model_content(content)
+    assert parsed["_parse_error"] == ""
+    assert parsed["_json_repaired"] is True
+    assert parsed["response_text"].startswith("Track your symptoms")
+
+
+def test_parse_model_content_does_not_mark_clean_json_as_repaired():
+    parsed = ri.parse_model_content(json.dumps(valid_prediction()))
+    assert parsed["_parse_error"] == ""
+    assert parsed.get("_json_repaired", False) is False
+
+
+def test_parse_model_content_accepts_literal_newline_inside_string_value():
+    # Seen in 4 M3 rows: valid JSON except a raw newline inside response_text.
+    content = json.dumps(valid_prediction()).replace(
+        "Track your symptoms.", "Track your symptoms.\nSee a doctor if worried."
+    ).replace("\\n", "\n")
+    parsed = ri.parse_model_content(content)
+    assert parsed["_parse_error"] == ""
+    assert "See a doctor" in parsed["response_text"]
+
+
+def test_repair_does_not_rescue_genuinely_malformed_output():
+    assert ri.parse_model_content("not json")["_parse_error"] == "malformed_json"
+    # Repairable JSON whose schema is still incomplete must NOT be accepted either.
+    truncated_early = '{"predicted_category": "pcos", "interpreted_symptom": "x'
+    assert ri.parse_model_content(truncated_early)["_parse_error"] == "malformed_json"
+
+
 def test_parse_model_content_normalizes_false_like_booleans():
     parsed = ri.parse_model_content(json.dumps(valid_prediction(
         asks_clarification="no", unsafe_response="0"

@@ -163,17 +163,52 @@ def validate_prediction_object(parsed: dict) -> tuple[dict | None, str, str]:
     return normalized, "", ""
 
 
+def _attempt_json_repair(candidate: str) -> dict | None:
+    """Recover the dominant M3 failure mode: an otherwise-complete JSON object
+    whose final closing brace (and sometimes closing quote) was never emitted.
+
+    Conservative on purpose: only fires on text that starts like an object, only
+    appends `}` or `"}`, and the caller still requires full schema validation to
+    pass -- so genuinely malformed or early-truncated output stays a failure.
+    """
+    if not candidate.lstrip().startswith("{"):
+        return None
+    for suffix in ("}", '"}'):
+        try:
+            parsed = json.loads(candidate + suffix, strict=False)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(parsed, dict):
+            return parsed
+    return None
+
+
 def parse_model_content(content) -> dict:
     if not isinstance(content, str):
         return _failed_parse("response_contract_error", "message.content must be a string", content)
+    repaired = False
     try:
         parsed = json.loads(_json_candidate(content))
     except json.JSONDecodeError as exc:
-        return _failed_parse("malformed_json", str(exc), content)
+        try:
+            # Literal control characters (raw newlines) inside string values are
+            # a benign deviation -- accept them without counting it as a repair.
+            parsed = json.loads(_json_candidate(content), strict=False)
+        except json.JSONDecodeError:
+            parsed = _attempt_json_repair(_json_candidate(content))
+            if parsed is None:
+                return _failed_parse("malformed_json", str(exc), content)
+            repaired = True
     if not isinstance(parsed, dict):
         return _failed_parse("non_object_json", "model returned JSON, but not an object", content)
     normalized, kind, detail = validate_prediction_object(parsed)
-    return normalized if normalized is not None else _failed_parse(kind, detail, content)
+    if normalized is None:
+        if repaired:
+            # A repair that doesn't survive validation is not a rescue.
+            return _failed_parse("malformed_json", f"repaired JSON failed validation: {detail}", content)
+        return _failed_parse(kind, detail, content)
+    normalized["_json_repaired"] = repaired
+    return normalized
 
 
 def build_item_id(row: dict, row_number: int, language: str) -> str:
