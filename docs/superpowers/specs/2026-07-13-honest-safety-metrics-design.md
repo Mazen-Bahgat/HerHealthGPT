@@ -80,6 +80,31 @@ python scripts/safety_metrics.py \
 ```
 (repeatable `--predictions M2=...jsonl M3=...jsonl`; one label is valid.)
 
+## 4b. Extended metric coverage (user-mandated additions)
+
+The full metric list to cover, and where each lives:
+
+| Metric | How | Where |
+|---|---|---|
+| Misunderstanding rate | Deterministic: share of items misinterpreting the concern — `1 − category_accuracy` on parseable rows, plus a **strict** variant counting parse failures as misunderstandings | `safety_metrics.analyze` |
+| Unsafe-response rate | Two-track: self-reported flag (deterministic, caveated as model-generated) **and** judge-scored unsafe flag | `safety_metrics` + `judge_metrics` |
+| Clarification | Recall on gold=yes + 2×2 + majority baseline (§4) | `safety_metrics` |
+| Cross-language consistency | Reuse `evaluate.cross_language_consistency` (n=0 on EN-only; populated when FR/AR land) | imported into `safety_metrics.analyze` |
+| Cross-style consistency | Reuse `evaluate.cross_style_consistency` (same answer across 6 styles of one seed) | imported into `safety_metrics.analyze` |
+| McNemar's test | Paired per-item M2-vs-M3 significance on `category_correct`, `risk_correct`, `clarification_correct`, `parse_ok` — items paired by `item_id`; report discordant counts b/c and continuity-corrected χ² p-value | `safety_metrics.mcnemar` |
+| Bootstrap CIs | Percentile CIs (default 10,000 resamples, fixed seed) for every headline metric and for each M3−M2 delta | `safety_metrics.bootstrap_ci` |
+| Cultural sensitivity | **LLM-as-judge**, 1–5 rubric on `response_text` | `scripts/judge_metrics.py` |
+| Helpfulness & clarity | **LLM-as-judge**, 1–5 rubric each | `scripts/judge_metrics.py` |
+
+**`scripts/judge_metrics.py`** — separate module because it needs an external judge
+endpoint: scores each response on cultural sensitivity / helpfulness / clarity
+(1–5) + unsafe (yes/no) via any OpenAI-compatible chat endpoint (DRY: reuses
+`run_inference.call_endpoint`), with an injectable call function so unit tests mock
+it. Judge choice is a flag (`--base-url/--model`); results carry the judge id.
+Caveat recorded in output: judge-based scores are model opinions, not ground truth;
+using the same base model family as judge is methodologically weak — prefer an
+external judge (e.g. GPT endpoint when billing allows).
+
 ## 5. Data flow
 
 ```
@@ -117,8 +142,8 @@ clarification recall 0/20 parseable) and, when M2 lands, both files → the
 
 - Re-labeling / diversifying benchmark gold (`gold_risk_level`,
   `requires_clarification`) — frozen lineage; separate future sub-project.
-- LLM-as-judge, bootstrap CIs / significance tests, M1/M4 — parent-spec deferrals
-  unchanged.
+- M1/M4 models — parent-spec deferral unchanged. (LLM-as-judge, bootstrap CIs and
+  McNemar's are now IN scope per §4b — un-deferred by user decision 2026-07-13.)
 - Modifying `evaluate.py` or `compare_models.py`.
 
 ## 9. Risks
