@@ -1,0 +1,3602 @@
+[
+ {
+  "source_row_id": "HealthCareMagic-100k:19789",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My doc's got me on some injections every other day for trying to have a baby and said no sex for 2 months cuz my uterus is swollen. Is it actually not okay to do it while I'm on the shots?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17710",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Is there any way to boost my sperm count naturally? Doc's already got me on some pills for it but wanna know what else helps."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:25968",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My cycles are kinda short and I've got some ovary thing going on with high hormone levels. Should I get a scan done now to check my eggs or just wait it out?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102219",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I'm 52 and still get my egg-release thing every month, but I've had this ache on my right side for like 6 months and my scan showed some fluid down there. What's up with that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104641",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My wife's on some TB meds even though her test came back clean, and we're doing IVF soon. Is it gonna mess with the baby if she keeps taking those pills?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1419",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I get these quick sharp stabby pains on my lower right side and worse cramps right before my period, plus we've been trying for a baby for 2 years with no luck. What could be going on?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3162",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "When's the best time in the month for my sister to actually get pregnant?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:3040",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Me and my partner have the same blood type, will that mess things up if we try to have a kid?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:105433",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I've got that ovary cyst thing, my blood tests look fine, I'm on a bunch of fertility meds and my eggs are releasing fine each month but I still can't get pregnant. What gives?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:39240",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "We've done everything to track my cycle but can't seem to get pregnant with baby number 4, and I think I only actually ovulate for like half a day. Any tricks to help that along?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104464",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Both my tubes are blocked and the doc says IVF's my only shot. Is that really the only option, and is it worth it success-rate wise?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:3940",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "How long am I supposed to stay on these fertility pills the doc gave me, and does my partner's blood sugar being kinda high actually mess with us conceiving?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107499",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I've got some little bumps down there from a wart thing. Is that dangerous, can I still get pregnant, and would it be risky for a baby?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20882",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I've got a bunch of fibroids and my husband's sperm isn't moving great, doc wants to do a tube test next. I'm honestly feeling really down about all this, is there any hope?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3167",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Does knowing my ovulation days actually boost my chances of getting pregnant?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6529",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "What are the signs to look out for that tell you you're ovulating?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6582",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Nobody around here really explains this stuff, so what are the actual signs that you're ovulating?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101840",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "The fertility doc thinks my husband's blood pressure pills might be the problem. Is there a different kind of blood pressure med that wouldn't cause that issue?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111654",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "One of my tubes is blocked and the other's only half open, and even though my TB test came back clean the doc still wants to treat me for it. My prolactin's also a bit high. Not sure what to do next."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2897",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My test showed some kind of TB infection in there, and I'm supposed to do a treatment course. Will I actually be able to get pregnant after that's done?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6584",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "There's no real doctor access where I am, so what are the usual signs your body gives off when you're ovulating?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29707",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Can I just grab some fertility pills without a prescription, or is that a bad idea?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100924",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I'm on some fertility pills and only made one tiny follicle so they bumped up my dose. My doctor never really explains anything and I'm nervous - will a higher dose actually get me more eggs this time?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3121",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "What should I be watching for to tell when my wife's ovulating?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:3818",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "What actually is this IUI thing my doctor mentioned, and does it have any risks?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12279",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "After my fertility pills I got a bunch of tiny eggs on one side and just one normal-sized one on the other. Is that normal or a sign something's wrong?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107935",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Can I get in to see a specific fertility doctor again for my fibroid issue?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20925",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My blood pressure pills got switched to a new one, is that one okay to be on while trying for a baby?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16416",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My egg-count hormone thing is low and the other one's high, doc's got me on some meds now. Can I even still get pregnant with numbers like that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12597",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I've been on mental health meds for years and now I'm having fertility trouble, my sperm's fine when I'm off them but I can't just stop. Who should I even go see about this?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3118",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "What actually goes on in your body during ovulation?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100631",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My lining's still thin even with meds, is it still okay for the doc to go ahead and put the frozen embryos in?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:13",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I've had a fishy smell down there since I was a kid, turns out it's some kind of bacterial thing. Could that mess up my fertility if it's not fully treated?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11352",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Both of us have some fertility issues going on, hers with her eggs and lining, mine with my sperm test. Doc wants to try IUI, is that a safe bet?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2370",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Trying for baby number 2, my periods are regular but I've had two abortions before. Doc put me on some pills, are my chances actually decent or could those past abortions be an issue?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36787",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "We've been trying 10 months and everything checks out fine on both of us. Should we just jump into IUI now or give it more time, and who do we even see for that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1120",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Is it normal for my teen daughter to get pain around the middle of her cycle?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:38015",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Had my IUD taken out and now my period's late, home test's negative, and I've got this weird shoulder pain that's got me spooked about an ectopic thing. Should I be worried?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111577",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My prolactin's been high for a while but the doc won't put me on anything for it. Could that actually be why we're not getting pregnant?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17200",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "One of my feet's been feeling kinda numb and I've had thyroid cancer before. I'm also trying to get pregnant so my doc's been running a bunch of tests, could the numbness be connected to any of that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1037",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "What's ovulation exactly, and when's the best time to actually get pregnant?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:10925",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "We messed around without protection but he didn't finish inside me, then I got some weird pink and later white gunky discharge. Could that mean I'm pregnant?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:106265",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Trying for baby number 2, all my tests came back fine but hubby won't get tested. Doc gave me some fertility tablets, what are those actually for and do they have side effects?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11403",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I was on the birth control shot, came off it, went back on, and now I wanna try for a baby. How long's that usually gonna take to get out of my system? Kinda discouraged since it worked fast before but I lost that one."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12968",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Every month around my fertile days I get super bloated and gotta pee a ton, my eggs release fine on the scan but I never end up pregnant and my period always comes anyway, just shorter. Also get bloated right after sex. What's the deal?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20762",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "We're trying to add a baby to the family, been tracking my fertile days for 4 months with nothing happening yet. Is something maybe wrong?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31350",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Did my third round of IUI and now I'm spotting a bit about 10 days later. Any chance that's actually a good sign for being pregnant?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:21144",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My numbers all look fine and I got one decent-sized egg last month, but still nothing after 3 months of trying and I'm super stressed about it. Any advice?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24646",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "We've been trying a couple months, no birth control, both healthy, regular cycles and all. Should we just keep going or is it time to get checked out?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101523",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "One of my tubes is blocked and the doc wants to do surgery, but I'm scared of that. Is there any way to fix it without going under the knife?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1784",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Can you actually still be pregnant even if you get what seems like a normal period with bad cramps?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36914",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My liver numbers came back super high out of nowhere and I don't have hepatitis or anything like that. Any idea what could cause that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104512",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Ever since I started this hormone pill after my IUI I've been getting bad mouth ulcers and sore gums. Is the medication actually causing that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:14112",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My egg size stayed exactly the same on two scans in a row even after more meds, then they gave me a trigger shot and told us to just try naturally. Is that normal, and does my IUI actually still count?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17822",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My tube test came back clear but one of my hormone levels is really low, plus I'm underweight and my periods are irregular. What are my actual chances of getting pregnant, and how long might it take?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1129",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "In plain terms, why does ovulation hurt sometimes?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32706",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My husband's sperm's kinda weak and a friend said some vitamin thing worked for her before doing IVF. Worth trying that first since IVF's pricey?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:108203",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "I got zapped pretty bad by electricity years back and blacked out for a bit. Could that be messing with my ability to have a kid now?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27738",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My prolactin's come down a good bit since starting treatment, does that mean I've got a decent shot at getting pregnant now, or should I just go straight to IUI or IVF?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:28345",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "After getting the trigger shot, how long till I actually ovulate, how long's the egg good for after that, and how long do sperm even survive in there?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12193",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "One tube's blocked, one's fine, and the doc's only offering me IVF or IUI. Is there really nothing else worth trying first?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:3103",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My tube test after the ectopic showed one side's blocked and the other's kinda unclear. Is there any way to fix that up so I could still get pregnant the normal way?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6628",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "What actually kicks off ovulation in the first place?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16418",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Been trying a year now, doc thinks there might be a cyst thing on my ovary and I had an abortion a while back. Could that old abortion be why I'm not getting pregnant now?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6468",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "My mom's always going on about staying away from my fallopian tubes, so what do those things actually do?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2575",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Been trying to have a kid for like 13 years, one tube's blocked and they couldn't fix it, the other's fine. Should I just go for IVF at this point?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20576",
+  "category": "fertility",
+  "style": "layperson",
+  "rewritten_question": "Been trying a year, had my eggs checked and they released fine, but now I've got some swelling down there and threw up randomly. Should I be worried about that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1127",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Asking for my sister, not me... she gets a lot of pain around the middle of her cycle. Any idea, in simple terms, why that happens?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11604",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "So, hypothetically, if someone had one damaged tube and one really tight one after years of trying and a few rounds of IUI... would there still be a real chance naturally, or would they basically need to look into IVF somewhere good?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24167",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is kind of embarrassing to ask, but... if someone's been trying for almost a year, had one loss already, and keeps tracking their fertile days with nothing happening, is that something to actually worry about at a young age?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:22467",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Not sure how to bring this up, but I keep getting the same kind of infection down there over and over even after treatment. Could that quietly be setting someone up for fertility trouble down the road?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27460",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just curious, in a general sort of way... if someone's cycle is regular and they're already on some fertility vitamins, when would actually be the best time in the month to try, and is there anything else worth doing?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31071",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Hypothetically speaking, if someone's egg was still pretty small at the midpoint of their cycle and they added more medication after that, would there realistically still be a shot at conceiving that same cycle?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3170",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Kind of a general question, but when in someone's cycle would they be most likely to actually conceive?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26762",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Asking more out of curiosity than anything... if someone had thyroid cancer treated and is now on thyroid medication, could that actually end up helping with fertility issues they'd been having before the diagnosis?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13519",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This might be nothing, but if someone's spotting pattern before their period suddenly changed after months of trying to conceive, would that be worth mentioning to a doctor?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6523",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just wondering in general, what's usually considered the most likely time in a cycle for someone to conceive?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16272",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Someone I know has had a couple of losses and is wondering, kind of quietly, whether taking evening primrose oil alongside progesterone and folic acid might actually help with getting pregnant."
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:542",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Not gonna lie, I'm a little fuzzy on this... what exactly is supposed to happen during ovulation?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36359",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "So if, say, someone's egg wasn't quite ready on a fertility medication and the doctor suggested moving to IUI the next round... is that a pretty normal next step for a second pregnancy at an older age?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:103563",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Hypothetically, if adhesions were found and treated with antibiotics but pregnancy still hasn't happened after that, what would the next reasonable step even be?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111463",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Kind of a delicate question, but if someone's been having a certain discharge for months, plus some itching after being intimate, could that be getting in the way of trying to conceive?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107735",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Not totally sure how to figure this out, but if someone doesn't really know their exact cycle length, how would they even guess when they're ovulating?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100850",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, if someone's on fertility medication with a slightly high hormone level, what should they realistically expect, and is there anything about timing or diet that actually helps?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:15582",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is a bit awkward, but if a partner has a urinary infection, could that get in the way of conceiving, or is that not really connected?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107691",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Someone I know got pregnant easily twice before but it's taking a lot longer this time around. Is there anything over the counter that's actually worth trying to help move things along?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:108206",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just curious in general, if someone's ovaries were noted as being on the smaller side and they'd been getting monitored with injections, would that meaningfully lower their chances of conceiving?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30024",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This might sound like a strange question, but could something that happened during a mother's pregnancy possibly be connected to her daughter never really ovulating later in life?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104827",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Someone I know had a positive pregnancy test after IVF, then some bleeding and a bit of tissue passing, but it's still testing positive. Is that a good sign or something to worry about quietly?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13015",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone's sperm motility wasn't great and they went on a supplement for a while, but their partner still isn't getting pregnant even though her tests are fine, what would be the next thing to look at?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:103053",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is a sensitive one, but if someone can't have a baby the usual way because of a health condition, would going through IVF change anything about how their partner might feel about them?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3168",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "I've heard people say you should be careful during a certain part of the cycle - when exactly would that be for someone trying to figure out their own timing?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:166",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is a little embarrassing, but if someone noticed something unusual in their partner's semen and the partner has a past history that makes them wonder, could that actually point to a fertility or health issue?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1119",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just wondering, generally speaking, what's usually behind that mid-cycle pain some women get around ovulation?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:2082",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Someone considering a newer ovary treatment after a failed IVF cycle is quietly wondering whether it could actually do more harm than good."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:2501",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "People around here have opinions about needing regular periods to get pregnant - what would actually cause someone's periods to not be regular in the first place?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:109037",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If a doctor has said conceiving naturally isn't likely after a major fibroid surgery, but the couple still really wants their own child, would there be any other route worth exploring quietly?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101671",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Hypothetically, if someone's been through a long list of fertility tests, one of which came back positive for a certain infection, and nothing's worked after a year and a half, what would actually be the next move?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26946",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If a couple got pregnant once with help before but lost it, and a couple rounds of a follow-up treatment haven't worked since, what's usually suggested as the next step?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3126",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Where I'm from nobody really explains this stuff properly, so how would someone even go about figuring out when they're ovulating?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27053",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of an odd one, but if someone's never noticed that stretchy fertile discharge people talk about, just a milkier kind, and their doctor says everything looks fine, is that actually something to worry about?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:13994",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Given that fancy trackers aren't really an option where I am, what would be the simplest, most basic way to keep tabs on a cycle and figure out ovulation?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:13042",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "My partner's a little on edge about something - is there actually any real chance of getting pregnant from being intimate during her period?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:34321",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "So if the timing lined up with someone's fertile window based on an app, and they noticed some very light pinkish spotting a few days after, could that possibly be an early pregnancy sign rather than just random spotting?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100286",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This might sound like a strange worry, but could a lot of bumpy travel actually interfere with ovulation or an early pregnancy taking hold?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:34985",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone was partway through a new pack of birth control and had unprotected sex where nothing was supposed to have happened internally, would there realistically be any chance of pregnancy there?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:25744",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is kind of uncomfortable to bring up, but if someone has a confirmed bacterial infection and things don't seem to stay in properly after being intimate, plus some stomach upset afterward, what could be causing that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33080",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone with a heart rhythm condition on medication started noticing new chest discomfort that seems tied to their cycle, would that be something worth flagging rather than brushing off?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:3380",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just a general question, but if someone's had some odd spotting for a couple of cycles along with a few urinary infections while trying to conceive, could that point to a hormone imbalance?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6467",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Kind of a basic question I never really got a straight answer on - what exactly do the fallopian tubes actually do?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:3981",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This might be unrelated to anything reproductive, but if an old neck and spine issue that had gone quiet started acting up again, what's usually done to actually manage that pain?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27885",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "A friend mentioned that using emergency contraception too often could affect fertility down the line - is there any truth to that if someone's been relying on it regularly?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5570",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Nobody really talks about this openly where I'm from, but is ovulation actually something your body lets you notice or feel?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30907",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone's tests all came back clear over years of trying, but their egg size varies month to month and doctors keep pushing one particular treatment they're not keen on, what other options might be worth considering?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101178",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If a semen test came back with pretty low numbers across the board including very little movement, would that basically rule out getting a partner pregnant naturally?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1638",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is a bit embarrassing, but if there was some non-penetrative activity with very brief contact around the later part of someone's cycle, is there really any meaningful chance of pregnancy from that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:103363",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "After a loss a few months back, someone trying again noticed they're not getting the fertile discharge they used to before ovulation. Is there a way to encourage that to come back?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11081",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Asking on behalf of a family member - if someone lost a twin pregnancy, was later found to have a thyroid issue, and had one unsuccessful IVF attempt despite otherwise normal results, is there still real hope for her?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6710",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just curious in general, does breastfeeding actually have any effect on a young woman's future fertility or her cycle?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24816",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone had a tube issue noted since birth and a scan recently picked up a fairly sizable cyst with some fluid around it, is that the kind of thing that could quietly turn out to be something more serious?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24949",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone had bleeding issues linked to a hormonal imbalance after years on birth control, and they've been trying without luck for a couple of years despite already having kids, what's usually the next step to look into?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:28413",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If a partner's semen test showed things taking unusually long to change consistency and a lower volume than expected, would that likely mean natural conception is off the table, or are there still options?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6626",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Out of curiosity, what kind of internal changes actually end up triggering ovulation?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:10702",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is a bit personal, but if the last release during intimacy felt noticeably weaker than earlier ones, and it happened to be right around ovulation, would there still be a real chance of pregnancy?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5536",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Could someone explain, in a general sense, what actually happens in the body during ovulation?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:23471",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone conceived easily before via a planned delivery but hasn't had luck trying again despite everything looking normal on scans, is it reasonable to quietly worry that something's changed with their fertility?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1126",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Is it usually nothing to worry about if someone gets a bit of lower abdominal pain right around when they ovulate?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107050",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone's getting laser and ultrasound therapy for their neck while also planning to try for a baby soon, could that treatment realistically interfere with conceiving?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32589",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "In someone's first time trying, they had some spotting that changed color over a couple weeks after their fertile window, along with soreness and other pregnancy-like signs, then more bleeding with cramping. What might actually be behind bleeding like that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111330",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If a couple's tests have all come back normal, including tube patency and egg development, but conception still hasn't happened after being together a couple of years, what would the reasonable next step even be?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11673",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "This is probably a common worry, but if a newly married couple hasn't conceived within their first year of trying, is that actually something to be scared about yet?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:39006",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "If someone's fertility charting showed an up-and-down pattern that's hard to interpret, and they're not noticing the usual fertile signs but do have some mild abdominal discomfort, would that suggest the medication isn't working well?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3160",
+  "category": "fertility",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, what exactly is ovulation, and when would a wife typically be most likely to conceive around it?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30969",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I already lost one pregnancy to a chromosome problem and now this next one looks like it's failing too with barely-rising numbers and empty sacs on the scan! Is there ANY chance this could still turn into a healthy pregnancy, and what on earth caused this to happen twice?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:25993",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "It's been months of pill after pill and I still am not pregnant! I'm starting to panic, what am I doing wrong??"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102314",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I lost my baby and now I can't get pregnant again no matter how hard I try, and it's breaking my heart every single month! Please, is there anything at all I can do?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5530",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I really need to know, am I even ovulating every month?! And what's actually the point of it for someone desperate to have a baby?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:106380",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "We were SO hopeful when the first test came back positive, but now there's heavy bleeding and I'm terrified we're losing this pregnancy! Please tell me there's still hope!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24450",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "After going through surgery for my fibroids I'm desperate for this medication plan to actually work, can you please explain how it's supposed to help me finally get pregnant?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5576",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so anxious about missing my fertile window, is there really any way to actually FEEL when I'm ovulating?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:22578",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm 43 and terrified my time to have a child has already run out! I'm trying so hard to get the timing right but I have no idea if it's even working anymore, should I keep going or is it hopeless?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:13996",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm getting desperate to understand my cycle better, what are the real benefits of tracking ovulation and how do I actually do it right?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:108782",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm freaking out because I took the morning after pill but I'm so scared it won't work since I'm about to ovulate any day now! Please tell me I'll be okay!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20537",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm already stressed enough trying to get pregnant and now this awful heartburn is making everything worse, is it even safe for me to take something for it?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30507",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "We've seen three different doctors, done every test imaginable, and everyone keeps saying we're both fine, but we still can't have a baby after three years and it's devastating! What are we missing?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11084",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so frustrated, after everything we've been through with IVF I've now got this new problem on top of it and I just want real answers, where can I actually get proper help for this?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33123",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "My temperature just isn't moving like it's supposed to after ovulation and I'm panicking that this means I'm infertile! Is that really what this could mean?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:18974",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I really want this to finally work, how long do I need to keep taking this medication and exactly when should we be trying so I can finally get pregnant?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:108392",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I am praying so hard that my period doesn't come this month! I've got cramps that won't quit even after more medication and I'm scared something's wrong, is my treatment even safe and when can I finally test?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1097",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "The pain in the middle of my cycle is honestly excruciating, is that really just normal ovulation or should I be worried something's wrong?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32732",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Three years of trying and now I've found out my sperm count is severely low, I'm devastated, is there any medicine that can actually fix this?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17846",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I've been trying for a whole year and I'm honestly terrified something is seriously wrong with me, please help me figure out what it could be!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5534",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a little overwhelmed by everything my friends have told me about this, can someone just clearly explain what actually happens during ovulation?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13813",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so anxious right now, we timed everything perfectly with the ovulation kit and now I've got these cramps days before my period is even due, could this actually mean I'm pregnant?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:110244",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Because of some really difficult family circumstances I desperately need to know if I can still have another baby after everything my body's been through, is it even possible at this point?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26405",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Eleven months of trying and I'm just staring at these scan numbers with no idea what they mean, please just tell me straight, is this actually going to help me get pregnant or not?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1597",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Five years and not a single pregnancy despite being told we're both completely normal, I am so lost and scared, what could possibly still be wrong that no one's telling us?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:28790",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried sick about planning a pregnancy while dealing with this gallbladder issue, will these particles actually go away, and could they hurt my chances of having a healthy baby?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13842",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I really don't want to go through IUI or IVF, I just want to conceive naturally, but I'm so worried this hormone problem is going to make that impossible, is there any real hope?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36906",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "After two exhausting years of trying, my doctor's now put me on yet another new medication and I'm anxious about whether it's actually safe and if it'll finally work, can you help me understand it?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:1988",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I read online that this condition can cause infertility and now I'm absolutely terrified, especially since I'm still in pain, is that really going to happen to me?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104272",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "We've waited so long for a good sign like this month's scan, please tell me this medication is really going to help her finally get pregnant!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2541",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Everything keeps coming back 'fine' but we still aren't pregnant after a year and it's so discouraging, will these new pills actually make a real difference, and how long until we might see results?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32120",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm holding onto so much hope for these injections working, will they actually get me pregnant, and how soon will I know?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17697",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I've never been able to have a baby and now with this pain coming back and all these abnormal results I'm scared this cyst is the reason for everything, please tell me what's going on."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2830",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so worried I might be infertile, my hormones are borderline and now there's cysts on both sides, is this something I should really be scared about?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31554",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm anxious because this weird taste in my mouth won't go away even after treating the malaria, and my fertile window is right now, what should I actually do?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27353",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I am so scared for tomorrow, the last scan hurt so badly I screamed, will I actually still feel that kind of pain even under anesthesia?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104103",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm confused and a little hopeful, could this ache actually be an implantation sign even though I have birth control in, or is something else going on?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107608",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm getting two totally different answers from my doctors and I'm so frustrated, could this thyroid mess actually be the reason I can't get pregnant even though I seem to be ovulating fine?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102679",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm under so much pressure and so stressed after losing a baby before and having one failed attempt already, please, what can I actually do to make this transfer work this time?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5500",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm trying to understand everything I can about my wife's body right now because we're so anxious about this process, what exactly do the fallopian tubes actually do?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104829",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Two years of trying and taking these tablets with nothing to show for it is exhausting me, and now there's a cyst too even though everything else looks normal, I just want answers!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1506",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I am terrified after being told I might never get pregnant because of this infection, I desperately want a baby, please tell me the treatment will actually work!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:37382",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I've done everything right and even with medication my follicle barely grows and I still can't conceive, I'm so worried, what am I supposed to do now?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:35453",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "After two long years of trying I finally think I ovulated this cycle, but now there's this strange pulsing pain in my hip that's worrying me, what could that be?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:22728",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so scared because my doctors here aren't prescribing anything, not even folic acid, for my very first pregnancy, please tell me what tests and tablets I actually need to keep my baby safe!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2514",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm scared that my age and weight are the reason I can't get pregnant this time even though it worked before, do I need medication to fix my hormones?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29679",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Everything went perfectly and my embryos were great, so getting a negative result has completely devastated me, what could have possibly gone wrong, and can I try again soon?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32110",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so confused and heartbroken after losing two pregnancies to ectopics, and now hearing IVF only works about 25 percent of the time terrifies me, what should I actually do next?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31455",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "After everything I've been through trying to have children again in this new chapter of my life, I'm anxious about whether this medication could harm me and whether my numbers are even good enough for IUI."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:37544",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I am mentally and emotionally exhausted after losing my baby right after birth, and now my follicles just won't grow properly no matter what medication I try, please tell me there's still a real chance for a healthy baby."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107625",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so confused and a little scared, I got a faint positive on a pregnancy test days after ovulation and I don't understand how that's even possible, can you explain?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30426",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm nervous about trying again after my loss and seeing these test results, please tell me it's actually safe for me to go ahead."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31865",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "After two heartbreaking failed IVF attempts I'm desperate to do everything right before the next one, is it actually safe for me to take a weight loss tablet right now?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100869",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I keep testing and getting negative results and I'm starting to lose hope, does this medication even actually cause ovulation, and how would I really know if it's working?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:109381",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "This pain has gotten so severe every month that it hurts just to move, and doctors keep ruling things out without answers, I'm scared and don't know what's wrong with me anymore!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:10347",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "This sharp pain today is different from every other attempt and I'm honestly scared, could this actually mean something went wrong or is it a good sign?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:108354",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm 48 with no children yet, not getting my period at all, and every test keeps coming back negative, I'm honestly terrified, what should I do next?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:10504",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Finding out just now, after getting married, that I have such serious fertility issues has been devastating, we really want a child together, please, is there anything at all that can help us?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24316",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I just got my results back and I'm honestly panicking a little, is there any medication or solution that could actually help with this infertility?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:10482",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "This has been such a stressful year trying to have a baby with this added problem, I'm nervous about taking this medication often, does it work like the other one and is it actually safe long term?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2168",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm so hopeful this cycle finally works after the trigger shot, please tell me exactly when I need to have intercourse so I don't miss this chance!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1093",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm really worried about my wife, is the pain she gets in the middle of her cycle actually something serious tied to ovulation?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:19724",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm anxiously waiting on tomorrow's scan, is there really still a chance I can conceive this cycle, and how much is my lining even supposed to grow each day?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100023",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I got my hopes up thinking I might finally be pregnant, but now with this pain and sickness I'm terrified something serious is wrong instead, please help me understand what's happening!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:4112",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Everyone around me keeps saying you can't get pregnant from being intimate during your period, but I'm honestly anxious that they might be wrong, is that actually true?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102281",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I lost my mother to ovarian cancer and now with this constant pain and a negative pregnancy test I'm terrified history might be repeating itself, please tell me what could be causing this!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12224",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "Four years of trying with everything coming back normal is so heartbreaking and confusing, if there's really nothing wrong, why can't I get pregnant?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17845",
+  "category": "fertility",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly scared, I just finished antibiotics for a kidney infection and now I'm peeing constantly with stinging afterward, plus bloating and sore breasts, could I actually be pregnant or is this just another infection?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11680",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Am I not supposed to go into the temple when I've got my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10649",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "How do I make my wife feel like I actually get it when she's on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12073",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My period cramps are so bad I can't even sit still in class. Anything that'll actually help with the pain?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11695",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it fine to just chill and rest when I'm wiped out on my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11644",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I get kinda low energy right before my period hits. What can I do to feel better mentally during that time?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10318",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it fine to just eat chocolate when I'm craving it on my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11517",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Are there any skills or tricks that actually help with dealing with period problems?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11981",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My grandma always says to shower and change everything after my period ends. Do my clothes actually get dirty from it or is that just an old thing people say?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10449",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "How do I get more comfortable talking to my partner about my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11242",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "What's the best way to bring up my period stuff with my male teacher?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11813",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I worked out and my cramps got way worse after. Is that normal or does exercise usually make it worse?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12119",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "What's actually good about just talking openly with my sister about her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10441",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "How do I get my daughter to feel okay talking to me about her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11101",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "How can I help my daughter out with her period when we don't have a lot around us?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10856",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it fine for my wife to travel while she's on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10651",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My wife just started her period and things are pretty old-school around here. How do I show her I've got her back?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11630",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "There's a girl nearby who has to hide her period and skip school over it. How can I actually help her out?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11703",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My sister's too scared to even talk about her period. How do I get her to open up?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1136",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I can't get any meds where I live. What can I do to make my period shorter or hurt less?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10519",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "What's a good way to actually support my daughter while she's on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11697",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it cool to just rest when I'm super tired during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10719",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My wife gets super drained during her period. What can I do to help her get through those days?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11888",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Why's talking about periods such an awkward thing where I'm from?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10298",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Should I be telling my daughter to skip hanging out with friends when she's on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10539",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "It's basically all guys in my family, how are they even supposed to help me out during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:121",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "There's no women's health doc around here, so when should I actually get help if my period's not showing up?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10709",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "What can I actually do to help ease my partner's period cramps?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10886",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I've done all the usual stuff people say to do and my cramps are still killing me. What actually helps?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1065",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Can you actually get pregnant while you're on your period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10311",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it fine if my teen eats chocolate during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10502",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is working out during my period actually worth it even when I've got zero energy?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11422",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My mom totally dodged the subject when I brought up my period. Why's it such a weird taboo thing?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11792",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Could my wife actually get pregnant just from swimming while on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10708",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My partner's in so much pain every month with her period. Is there anything I can actually do to help?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10503",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Even if I really don't feel like moving, do I still get any benefit from working out on my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11663",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Does my daughter actually get 'unclean' or whatever once she starts her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11179",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Who do I even ask if I've got questions or problems with my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10878",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "How do I get more comfortable bringing up my period with my parents?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1164",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My stomach hurts like clockwork every period. What kind of tests should I get to figure out why?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11098",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My daughter just got her first period and we're pretty out of the way here. What advice should I give her?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10415",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it actually true my daughter shouldn't cook or touch religious stuff while she's on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10629",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My boyfriend says he just won't talk to me while I'm on my period. Is that actually a decent way to handle it?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12114",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it okay to be active and do stuff physically while I've got my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10578",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I always worry I look gross during my period. How can guys actually help us feel better about how we look?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11836",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "No doctor around here for this stuff, so when's actually the right time to go get period problems checked out?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12091",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "What kinda foods are actually good for my wife to eat during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11272",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My wife's worried she could get pregnant if she's not using a pad during her period. Is that actually a real risk?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10626",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "How can the guys around here actually be more supportive when women are on their period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11472",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "No running water where I live, so how do I stay clean during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10984",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "How do I stop being so scared to talk to my mom about my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11469",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My sister doesn't have a bathroom with running water. How's she supposed to stay clean during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10883",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "No pain pills available where we live, so how do I help my daughter deal with her cramps?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12008",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I never actually rest during my period even with cramps. Could that come back to bite me later?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1191",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I get really bad lower belly pain a few days before my period starts. Is there an actual name for that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1041",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "When should I be telling my wife to actually go see a doctor about her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11190",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "What are the signs that show a girl's period is about to start?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11171",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Nobody around here really knows much about periods, so who can I actually ask?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10343",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I've got a family thing this weekend and my period just started. Should I just skip it?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10287",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My family thinks I'm just being lazy during my period. How do I actually get some rest without the attitude?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10370",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "I get major chocolate cravings on my period, is it fine to just give in?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10429",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it normal for your body to look different on your period, like less attractive or something?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11598",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "What if my daughter stains her clothes from her period and everyone at school notices?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12041",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Is it normal to just not have gotten your period yet?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11692",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "There's a ton of chores to do but I'm wiped out on my period. Is it okay to just take a break?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1204",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "My mom and sisters get really bad period pain, what actually causes that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1149",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "No pain meds where I live, what are some home tricks to actually help with period pain?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10308",
+  "category": "menstrual",
+  "style": "layperson",
+  "rewritten_question": "Am I supposed to avoid my friends while I'm on my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10863",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "My friends are heading somewhere and I'm hesitant to join because of, well, timing... is it actually fine to travel during your period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10858",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Kind of a general question, but is it actually safe for a woman to travel while on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11810",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "People around here have strong opinions about not exercising during that time of the month - does it actually make things worse if you do?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1112",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might be a weird thing to ask, but if periods are usually regular yet pain-free some months, what might explain that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11231",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just wondering in general, what are some remedies someone could use for period pain while stuck at school?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10589",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit awkward, but if guy friends tend to joke around when someone's period starts, what should they really be avoiding saying or doing?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11320",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Not sure how to ask this, but what are some ways to avoid staining your clothes during your period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10056",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a little embarrassing, but if someone's too shy to talk to the community health worker about period stuff, what should they do instead?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11949",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Asking for a friend, sort of - what should a mother tell her daughter if she notices unusual bleeding or feeling unwell during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10377",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a sensitive one, but if someone's being teased for being emotional during her period, how could a sibling help without making it worse?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11694",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Hypothetically, if someone's expected to do all the housework during her period despite feeling exhausted, is it reasonable for her to just rest instead?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12017",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a sensitive money question, but if someone can't afford pads, what other options are there for managing a period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11958",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just a general question, but what should someone keep in mind if their bleeding during a period seems unusual?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11636",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Kind of a delicate topic, but what can a husband actually do to support his wife's mental and emotional state during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12039",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might be nothing, but if a wife hasn't started her period yet at all, is that something worth looking into?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12125",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "My brother's got this idea that period talk is only a 'girl thing.' How would someone go about explaining why open conversations about it actually matter, for everyone?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12011",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just curious generally, what could go wrong health-wise if someone doesn't take proper care of themselves during their period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11001",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is an odd one to bring up, but is there any actual truth to periods being considered 'dirty' the way some people say?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10434",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This feels a little vain to ask, but if someone doesn't feel their best-looking during their period, does that actually make them less desirable to others?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11982",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is embarrassing, but if friends joke that you should stay away from people during your period because it's 'dirty,' is there any truth to that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10015",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, is there any kind of government support available for rural women during their periods?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11839",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might be nothing, but if someone's been feeling unusually exhausted during her period for a few months running, when would it be worth seeing a doctor about it?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11181",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just curious in a general way, what are some signs that would suggest a girl's first period is coming soon?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1046",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Kind of a basic question, but if periods are regular, is there really any need to still check in with a doctor about them?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11188",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "A friend mentioned her periods sometimes come with mild pain and a bit of fever - would something like that actually be a sign someone else's period is about to start too?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10364",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just a general food question, but is it actually fine for someone to eat chocolate during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11577",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is really embarrassing to even bring up, but if someone had an accident at school during their period, what could help make sure it doesn't happen again?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10687",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a tender subject, but what can a husband do when his wife seems insecure or low during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1213",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, besides the actual pain, what other physical symptoms tend to show up during someone's period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11957",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Kind of a broad question, but if someone feels physically unwell during their period, what's generally recommended?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11953",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might sound overly cautious, but if someone's nervous about a long trip to the hospital for a period-related issue, are there other options worth considering first?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12089",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just a practical question, but what are some ways to manage a period without it costing a fortune?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11818",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Asking on behalf of my wife, sort of - what can actually be done to help with cramps when her periods are especially painful?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10835",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a practical concern more than anything, but without running water at home, how would someone keep up hygiene during their period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1044",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, if there's no doctor nearby to discuss period issues with, when should someone still try to seek medical advice?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11273",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a delicate question, but is a teenager actually at any risk of pregnancy just from not using a pad during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11237",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a little awkward to admit, but how would someone go about bringing up period-related issues with a male teacher for the first time?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might be nothing to worry about, but if someone hasn't had her period in a while, is that actually a common thing to happen?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11495",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Kind of a supportive-sibling question, but how can someone help their sister feel less judged when talking to a doctor about her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10718",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, what can a partner do to support someone who gets frequent fatigue during her cycle?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11151",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a career-related worry, but could taking time off work or school for period issues actually hurt someone's future prospects?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1016",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just a general parenting question, but what can a mother do to help her daughter stay clean during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1177",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might sound alarming, but if someone's period pain is unbearable and comes with heavy bleeding, what should they actually do about it?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10809",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Where I'm from, girls tend to just stay home during their period - how could someone make sure that doesn't end up affecting her own school attendance?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10695",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit personal, but what can a husband do when his wife feels low and unconfident during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10568",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just curious generally, why does it actually matter for men to understand what's going on hormonally during a woman's period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:103",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might be nothing, but are there actually any consequences to missing a period some months?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1057",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "A friend told me something about not being able to get pregnant from sex during a period - is that actually accurate?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11863",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a little embarrassing, but if changing a pad in a public washroom felt really uncomfortable, is that just normal or does it point to needing more privacy?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12014",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just a general question as a parent, but what kinds of period products would actually be appropriate for a teenager to use?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10334",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a soft topic, but how can someone communicate better with their partner about how they're feeling during their period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11148",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might be an overreaction, but if a sister missed a few days of school because of her period, could that actually affect her future?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10315",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "People around me keep saying to avoid a certain food during my period - is there actually anything to that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11240",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit awkward to bring up, but how would someone even start a conversation with a male teacher about having irregular periods?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10394",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a tender one, but if someone's exhausted and in pain during her period, is there anything her partner could actually do to help?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10397",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, what's something a partner could actually do when cramps and exhaustion hit during a period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11668",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a little uncomfortable to even repeat, but a friend said getting your period makes you 'unclean' - is there any truth to that at all?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1113",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might be a strange pattern, but if someone gets cramps some months and not others, what could explain that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11315",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a money-related concern, but what are some ways to avoid staining clothes during a period without needing to replace them constantly?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10443",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a sensitive one given how conservative my family is, but how would someone go about openly discussing period stuff with their partner?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11841",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "Just a general timing question, but how soon should someone actually see a doctor if they're having period-related problems?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11230",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a practical worry more than anything, but what can someone do to ease period pain if it starts while they're at school?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11504",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This might sound paranoid, but is someone actually likely to be judged for asking for help with period-related things?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10979",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a little hard to admit, but if someone feels scared to talk to her mom about her period, what should she actually do?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11864",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of an odd situation, but if someone changed a pad in a public washroom in front of others, is that actually harmful, or does it just point to needing more privacy?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11706",
+  "category": "menstrual",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a shy question, but if someone feels too embarrassed to discuss periods with anyone around her, how could she still get accurate information?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1049",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "My period is never late and now it is and I'm honestly freaking out a little, should I go talk to my doctor about this?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10704",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It breaks my heart watching her suffer through these cramps every single month, please, how can I actually help her get some relief?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12106",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried sick, is it actually safe for my sister to be active while she's on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12075",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This pain is honestly unbearable every single month, please, are there any real solutions for cramps this intense?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11708",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I know deep down this is totally natural, but I get so anxious every time I try to talk about my period with anyone, how do I actually get past this?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11006",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I was so embarrassed when my teacher said that, is it actually true that I can't go to the temple during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11214",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It's honestly heartbreaking that people still think this way, how can health workers actually help fight this taboo about periods making us impure?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11057",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I felt so humiliated when my neighbour laughed at me, how does this kind of shaming actually end up hurting rural women's health in the long run?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10388",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I hate seeing her so exhausted every month and feeling helpless about it, is there really anything I can do to help with her period fatigue?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10585",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I really don't want to keep accidentally making things worse for her, what are the things men should absolutely avoid saying or doing during her period?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10532",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a little overwhelmed as a parent, what can I actually do to help my teenage daughter through her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11809",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm so drained right now and scared that exercising might actually make everything worse, should I even try?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10756",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "My parents keep insisting on this and I'm honestly frustrated, why does staying so clean during my period even matter that much?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1018",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly at a loss here with no idea what I'm even supposed to use, please, what should I actually use to stay hygienic during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11480",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It's breaking my heart hearing that they whisper about her like that, how can I actually make them stop?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1133",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "Seeing her in so much pain every month is honestly awful, what can I actually do to help her?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1054",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "My wife's genuinely worried about this and so am I, is it actually true that she could get pregnant during her period?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11643",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm so frustrated that I can't even focus on my work during this time every month, how do I actually manage my emotions and mental wellness through it?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12069",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "These cramps make it so hard to even go to school and I'm at my wit's end, what can I actually do to reduce the pain?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10051",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "She's so shy about this it's honestly worrying me, what should she actually do if she can't bring herself to talk to the health worker?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10317",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "My aunt and mom keep arguing about this and it's honestly stressing me out, is it actually fine to eat chocolate during my period or not?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11603",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I am SO embarrassed right now, please, how do I make sure nobody finds out I stained my dress?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10301",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This is honestly stressing me out, am I really supposed to avoid going out just because of some bad omen thing my peers keep saying?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11886",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It genuinely upsets me how nobody will even talk about this here, why is it treated this way?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10314",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly getting so much grief over this, is eating chocolate during my period actually bad for my health or is everyone just overreacting?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1188",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This pain is honestly awful every month, is there even an actual medical term for what I'm dealing with?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1073",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly terrified, it's been months without a period and every test comes back negative, is something seriously wrong with me?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11779",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It genuinely bothers me that we both feel so awkward about this, why can't we just talk about her periods comfortably?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11200",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm so tired of being teased about this at school, how can they actually make it stop?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10563",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It's honestly exhausting feeling so unseen every month, why can't men just understand what the hormones are doing to us during our periods?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10667",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly walking on eggshells every month worried I'll set her off, how do I even talk to her during this time without making things worse?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11688",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "She's absolutely exhausted and still expected to do everything around the house, please tell me it's okay for her to just rest instead!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1051",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly getting anxious about this, when do I actually need to see a doctor about my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12043",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly terrified comparing myself to other women here, is something wrong with me because my period isn't coming on time?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10402",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'd hate for her to be caught without anything, is there a way I can actually help my daughter if she runs out of pads?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11432",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly scared, could I actually get sick from not using a pad since there aren't any available where I live?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11444",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It genuinely hurts that my own family treats this like something shameful, how can I make them understand it's actually completely normal?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11126",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried this keeps happening, are there real health effects from missing school because of my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10572",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I hate seeing her feel so down on herself every month, what can I actually do to help her feel beautiful during her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11569",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly so humiliated by this, is there anything I can actually do to make the other students stop making fun of me?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10902",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It's honestly devastating to hear she missed school over something so basic, how much does this lack of products really end up hurting girls' education in places like this?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10477",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I really want to get this right for her, what role should I actually be playing when she's on her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10346",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly anxious about this, do I really need to avoid seeing people just because I'm on my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1203",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This pain is honestly unbearable every single cycle, what could actually be causing all this cramping?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10999",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It genuinely worries me that she believes this about herself, is she actually right that periods are dirty?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10798",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It honestly hurts that he gets so uncomfortable, is that even a normal reaction when I bring up my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11671",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This has genuinely been eating at me, is it actually true that having my period makes me impure and dirty?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10929",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It worries me seeing my mother still use old cloth like this, why do women in rural areas end up relying on that instead of proper pads?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11117",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a bit concerned about this pattern, is it actually normal for her to miss school sometimes because of her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10295",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm so exhausted every single cycle, what can my family actually do to help me feel better during this time?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10352",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This genuinely upsets me, is it actually true that I should be staying away from my partner during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10304",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly so disappointed my period started right before this, can I still go on the picnic with everyone?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10889",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This pain is honestly really hard to deal with, how am I even supposed to manage it without any pain relievers like my mother says?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10757",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly getting a bit anxious about all these rules, is it really necessary to take that much extra care with hygiene during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10369",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I feel so guilty every time she scolds me, is there actually something wrong with eating chocolate during my period?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10586",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I really don't want the men around me making things worse without realizing it, what should they absolutely avoid doing or saying during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12006",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I never let myself rest even though it always hurts so much, could that actually be doing real damage to my health?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11562",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It's honestly humiliating being laughed at like this, how can I make them actually understand why periods matter instead of mocking them?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11780",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It genuinely hurts that she can't open up to me about this, why is it so hard for her to talk to me about her period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12068",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This pain is honestly so bad I can't even go to school, please, what can I do to actually reduce it?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10411",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I really hope I can count on him for this, is it reasonable to rely on my partner if I run out of pads during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11811",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This is honestly so frustrating, why does exercising now make my periods hurt so much more than it used to?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10467",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I really want him to understand this better, what role should my partner actually be playing when it comes to my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11928",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "It's honestly upsetting hearing about things like this happening to young girls, how can we actually break this kind of taboo?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1194",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "This pain feels so intense every time, is there even an actual medical term for it?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10587",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "He genuinely means well but keeps getting it wrong, what should my brother actually avoid doing or saying during my period?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10324",
+  "category": "menstrual",
+  "style": "emotional",
+  "rewritten_question": "I desperately want her to feel like she can come to me about anything, how do I make sure she truly feels safe talking to me about her period?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29709",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got PCOS and thyroid issues, been trying for a baby a year with a few rounds of fertility meds already failed. Doc's got me on a whole new combo this round, is that actually the right way to do it?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:2663",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got a few fertility issues going on plus I'm overweight and the doc wants me to lose weight first, but I just can't seem to drop any. What can I actually do here?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8783",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "My friend just found out she's got PCOS, what other signs should she be looking out for?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:105213",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got this weird burning pain on my lower right side that comes and goes, plus some other random aches, and the docs say everything's fine but I'm still worried. Should I be more concerned about this?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:4289",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Got a coil put in for my PCOS and now I'm bleeding a ton plus my moods are all over the place and I'm itchy everywhere. Is that all from the coil?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:37363",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Got my follicle scan results and I'm trying for baby number 2 with PCOD. What do these numbers actually mean?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1465",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "How do doctors usually treat PCOS, like what lifestyle stuff do they normally recommend?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1336",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Can PCOS actually make you grow extra hair on your chin and cheeks?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:105225",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Got a bunch of meds for my PCOD and doc said hold off trying for 3 months while I lose weight. Will I actually be able to get pregnant after that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:23950",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Doc's got me on a bunch of pills for a hormone imbalance messing with my fertility. Any idea when I might actually get pregnant?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17842",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got PCOS and been tracking my temperature, it's showing 97 degrees, does that mean I've already ovulated? Not on any birth control or anything."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8529",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "My wife just got diagnosed with PCOS, what does that actually mean?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1466",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What kinds of treatment are even out there for PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1492",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've been on the same meds for PCOD for 20 years and now there's a tumor grown in my liver. What should I even be eating, and should it just get operated on?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:51678",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've had this awful ongoing leg pain for months that gets way worse sitting down, and scans found some weird stress thing in my hip even though I'm not really athletic. What could actually be causing this?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111824",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've had ovary surgery and a few rounds of fertility treatment for my PCOD, even got pregnant once but lost it, and now nothing's working. What's an actual solution here?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:41774",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got this hard lump on my shoulder that's been there for years and today some fluid and blood came out of it. I've also got an ovarian cyst, could this lump be some kind of cyst too?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8568",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "How would a doctor actually go about diagnosing whether my wife has PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8851",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What kind of lifestyle changes actually help keep PCOS symptoms under control?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:44612",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got PCOS and just had my IUD taken out, now I've had some light pink spotting and my nipples are sore and looking weird, but my test came back negative. Could I still be pregnant?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8715",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Nobody around here really knows about PCOS, what health risks should I actually be aware of?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8887",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Someone told me PCOS actually makes it easier to get pregnant. Is that true, and how would I stay safe if so?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8765",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What are the main things I should know about PCOS to help my sister?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:4519",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Doc's got me on a few different tablets for mild PCOD to take for months. What are these actually for, and do they have side effects?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102641",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got PCOS and thyroid issues, plus a cough that won't quit and now a small lump at the base of my skull. Should I be worried about that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:15579",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Been trying for a baby a year, had a couple of late losses, and now I'm told it's PCOS with really irregular periods. Any advice for me?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32631",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Trying for a baby a year now and getting this weird ache on one side that feels like a trapped air bubble. Think it might be PCOS but not diagnosed yet, what could this pain actually be?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8786",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What other symptoms usually come along with PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:23408",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've had ongoing bleeding for a couple months, plus I already have PCOS and a scan found a thicker lining and a cyst. Also dealing with exhaustion and some past depression. Should I be worried about the bleeding coming back?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27922",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Been trying for a baby over a year, just found out I've got PCOD and mild endometriosis but my tubes are clear. What's the actual outlook here?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13425",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Had a baby a few years back out of nowhere despite an ovary issue, now wondering what my odds are of conceiving again since a recent test suggests I might not have ovulated."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1335",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got some unwanted hair on my chin and cheeks, could that actually be a sign of PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2943",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "My thyroid numbers have been improving but I've also got PCOS and I'm struggling so much with my weight while trying to get pregnant. Is it okay for me to take a weight loss pill on top of everything?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17014",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Doc told me to start my fertility pill on day 2 of my cycle but I read somewhere it should be day 5. When am I actually supposed to take it?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8781",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Living somewhere without much access to doctors, what signs should I actually look for to identify PCOS myself?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29285",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Got told I have a follicular cyst on my ovary but everything else checks out. How serious is that actually, and what's the best way to treat it?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8533",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What do people actually mean when they say someone has PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8570",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "How would I even go about telling if my sister has PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8741",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Can't get to a doctor for my PCOS, what can I actually do at home to manage the physical symptoms?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8546",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "People here think PCOS comes from some kind of bad habit, is there any truth to that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8536",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "My doctor said my hormone imbalance is from PCOS but I honestly have no clue what that even means."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36551",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I'm going through puberty but haven't really grown down there at all even though everything else about puberty is happening. Could my hormone levels be off?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16928",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got a small pituitary growth and PCOS, been on meds fine for a while, but now I've had weeks of headaches and blurry vision that my doctors don't seem too worried about. Should I be pushing harder for answers?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8595",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Can medicine actually fully cure a teenager's PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8750",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "My wife's got PCOS and I want to make her next doctor's visit go as smoothly as possible. What can I actually do to help?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8761",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "How should I actually prepare myself for a good visit to the doctor about my PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:22154",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I'm on a few meds for PCOS and my husband's got a low sperm count too, both of us on treatment now. Will this combo actually get us pregnant?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8676",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Is there any real way to treat PCOS if you're out in a rural area without much access?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33949",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've had this ongoing pain on my right side for a while that radiates up to my back and shoulder, and scans found some cysts and fibroids. Should I actually get this looked at more?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8845",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I'm not sure what changes I'm even supposed to make day to day to keep my PCOS symptoms under control out here."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8668",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What are the actual signs that someone has PCOS?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:314",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got very little facial hair and some hormone numbers came back a bit off, plus a risk for diabetes. Is it okay for me to try a hormone supplement just to grow a beard?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:25246",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got patchy facial and body hair, some thick some thin. What can I actually do to even it out and make it thicker?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:53654",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Had a hysterectomy but kept my ovaries, and I've struggled with PCOS and fertility for years before that. Now since the surgery I've got new back and pelvic pain around ovulation time, what could be causing that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111758",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got thyroid issues, mild PCOD, and asthma from all the dust around me. Is there any kind of permanent fix for all this?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:10935",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I'm on some hormone pills for PCOS and just started noticing signs of ovulating again after restarting one of them. How's that even possible, and should I go back on the other pill too?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8725",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "When's actually the right time to take my teenage daughter to see a doctor about possible PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1410",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Some women where I live get hair growth in places they don't want, is that actually a sign of PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1500",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Are there any home remedies that actually help with PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36306",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "My ankles have been swelling up lately and I'm on a couple of different meds right now including some hormone pills. What could be causing the swelling?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:50190",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Was being treated for PCOS but a recent scan showed it's actually cleared up, and now we're doing fertility treatment with some injections and a good-sized follicle rupturing. What are my chances of getting pregnant this cycle?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8755",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I'm honestly nervous about seeing a health worker for my PCOS out here. What can I do to make the visit actually go well?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1401",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What actually is Polycystic Ovary Syndrome?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1330",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got some extra hair growing on my chin and cheeks out here, is that a sign of PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8834",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "Doc's got me on meds for PCOS but I'd rather try something more natural. Is there a specific diet that could actually help?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8565",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "What are some of the indications that point to PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:25475",
+  "category": "pcos",
+  "style": "layperson",
+  "rewritten_question": "I've got barely any facial hair even though my hormone levels came back normal. Is there anything that could actually help me grow a proper beard?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8739",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, what can someone actually do to help a sister manage the physical symptoms of PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8601",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a hopeful question, but after just a month of medication for PCOS, is it realistic to expect it could be completely gone eventually?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:103010",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone following a specific medication schedule for PCOS while trying to conceive is quietly wondering whether this could be the month it finally works, and whether travel might get in the way."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16882",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If someone with a stable cycle took a fertility medication and got a trigger shot after a fairly typical egg size, would there realistically still be a good chance of pregnancy?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32966",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Hypothetically, if a couple has several overlapping fertility issues on both sides, would tablets alone realistically be enough, or would something more involved likely be needed?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101390",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of an odd one, but if someone's had hormone-related pain before and now it's showing up specifically in the tailbone along with some discomfort using the bathroom, how should they go about addressing that?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17728",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone dealing with a lot of physical changes after a PCOD diagnosis, and not seeing lasting results from standard treatment, is quietly wondering whether trying a different kind of medicine altogether might be worth it."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:49577",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If someone's scan shows a certain follicle pattern but their hormone levels and specialist both say it's not actually PCOS, would that finding still realistically affect their chances of conceiving?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8542",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering in general, what tends to actually cause PCOS in the first place?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1468",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Kind of a broad question, but what are the treatments usually recommended for PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31696",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a lot to carry as a parent, but if a daughter has an ongoing kidney condition on top of thyroid and PCOD issues with no clear answers yet, what kind of guidance would actually help at this point?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8587",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This might sound like a basic question, but if a doctor mentions treatment for PCOS without much explanation, what should someone actually do next to get better?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16096",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If someone already dealing with kidney stones is now getting excruciating pain and chills specifically when sitting, alongside a newly found ovarian cyst, what might actually explain that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1392",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just curious generally, what exactly is PCOS and how does it tend to affect someone who has it?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:39634",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone who's had a loss before and has now tried more than one fertility treatment without success is feeling pretty disappointed and quietly wondering what's actually left to try."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20047",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If a supplement meant to help with a hormonal imbalance is causing uneasy side effects like dry mouth and stomach discomfort, is it still worth continuing, or should that be a red flag?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16909",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If someone with a long-standing hormonal condition starts noticing hair thinning specifically at the front of the scalp along with high testosterone, would the medication typically prescribed for the condition also be expected to help with the hair loss?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8586",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Given that proper medical care isn't really accessible, is there a realistic way for someone to treat PCOS without a doctor's involvement?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1017",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a worrying question, but if someone took several birth control pills at once to catch up on missed doses, is that actually dangerous?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8561",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just asking on behalf of someone else, but what kind of symptoms would a person recently diagnosed with PCOS typically be dealing with?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1398",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "A friend mentioned she's dealing with PCOS but wasn't sure what it actually was - could someone explain it simply?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8794",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, given how common this seems to be in some communities, what's actually understood to cause PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8882",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a supportive-sibling kind of question, but if a sister is anxious about her fertility because of PCOS, what could actually be done to help her feel better?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:56047",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone who's conceived before but is now dealing with a hormonal condition and struggling to conceive again is quietly worried about whether it'll actually happen this time."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8874",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just curious generally, what kind of physical or medical complications tend to come with a PCOS diagnosis?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36774",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If someone was just diagnosed with a hormonal condition shortly after marriage and started a full course of medication right away, would that realistically speed up their chances of conceiving?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31207",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This might be an overreaction, but if a doctor says not to worry about a small finding on a scan while someone's still struggling to conceive after a previous loss, is it really nothing to be concerned about?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8721",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just a general question, but how does PCOS actually end up impacting someone's overall health beyond fertility?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29369",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If someone newly started on medication for a hormonal condition begins having brief stabbing pains in the lower abdomen while trying to conceive, what might that actually be?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8532",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just picked up this term from people around here, but what does PCOS actually mean?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8870",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, what complications tend to be associated with this condition that people around here talk about?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17711",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a lot to deal with at once, but if someone's tried several acne treatments without lasting success, and also has both a hormonal diagnosis and depression, would that combination make the skin issue especially stubborn to treat?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:52775",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If a scan shows a certain follicle size and the doctor says it's fine while recommending a trigger shot, is that large a size actually still workable for getting pregnant?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:23819",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a skin concern, but if stopping a long-used topical treatment causes itching and redness, and facial hair has also increased over that time, could those two things actually be related?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:48135",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone who's lost a lot of hope after many rounds of one fertility medication is now being tried on something less conventional and is quietly wondering if it could actually make a difference."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:53115",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If every single test for both partners comes back completely normal, what would actually explain not being able to conceive after so many years of living together?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8602",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone heard that this condition can't be cured, and is wondering, kind of skeptically, whether that's actually true or if medicine really can't fix it at all."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8638",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just curious generally, what factors might make women in certain communities more prone to developing PCOS?"
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:792",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just a general question, but are there other signs of PCOS beyond the most commonly known ones?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1380",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just a general parenting question, but what can someone actually do to help a daughter stay healthy while managing PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8640",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This might point to a pattern, but if both a mother and aunt have PCOS, is there likely something in common causing it to run in the family?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8833",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Given that specialist care isn't really accessible, what kind of food might realistically help reduce PCOS symptoms?"
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:791",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, what are the key things worth remembering about PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:42598",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone whose wife has a fairly mild hormonal condition is quietly worried about their fertility future, even though she's doing everything her doctor has recommended so far."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8720",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just curious generally, what kind of health risks can PCOS actually lead to over time?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8744",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This might be a common struggle, but if the physical symptoms of PCOS feel especially complex and hard to manage, what could actually help make them more bearable?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8599",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, given limited access to care, could medication realistically cure this condition fully on its own?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8537",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Asking on behalf of a friend who was just diagnosed and has no idea what it actually is, could someone explain PCOS simply?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8901",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a worrying thought, but is it actually true that this condition could lead to heart problems down the line?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1395",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "The local doctor mentioned this term but didn't really explain it well, could someone break down what it actually means?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:106885",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Someone who's been managing this condition for years with different medications and still hasn't conceived after years of trying is feeling really anxious about whether things will actually improve."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8689",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just a general question, but what other health issues tend to be related to this condition beyond what's commonly known?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8664",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Given there's no real medical professional nearby, is there a realistic way for someone to figure out on their own whether they have PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:105446",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If someone is guessing at the right timing for medication and intercourse based on incomplete monitoring during a fertility treatment cycle, is that actually a reasonable way to approach it, or a risky one?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8852",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, what kind of lifestyle changes tend to actually reduce how severe PCOS symptoms get?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8791",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just curious generally, what are some of the possible causes behind a sister's PCOS diagnosis?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8695",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just a general question, but what adverse effects can actually come from having PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8690",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This might be a basic question, but could someone help explain the complications associated with PCOS in a way that's easier to understand?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1379",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a supportive-partner kind of question, but if a wife is anxious about the long-term risks of PCOS, what could actually be done to help her stay healthy?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:28599",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If sharp abdominal pain on both sides shows up after coming off birth control, with a past history of ovarian cysts, what might actually be causing that?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8656",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just a basic question, but what does the acronym PCOS actually stand for?"
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:777",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just wondering generally, how is PCOS typically treated?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8829",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Just a general parenting question, but is there any food that could actually help a daughter manage her PCOS symptoms?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8758",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "This is a bit of a nervous question, but if someone's anxious about their upcoming appointment for PCOS, what could make that visit go more successfully?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1462",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "Given that there isn't much awareness about this where I live, if someone suspects they have PCOS themselves, how would they actually go about getting it treated?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:38313",
+  "category": "pcos",
+  "style": "indirect",
+  "rewritten_question": "If every standard test comes back close to normal except one borderline fertility marker, and multiple treatment cycles still haven't worked, what's realistically left to try?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8867",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried sick about my wife, what are the real risks she could actually be facing because of her PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26152",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "We've been trying for a whole year with no luck and I'm desperate for answers, is it even possible for us to have a baby with both her PCOD and thyroid issues going on?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11368",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Ten years of trying and I'm feeling so low about all of this, between my weight, barely getting periods, and my husband's low count, is there really any hope left for us?"
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:778",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I really need to know, can medicine actually completely cure PCOS or am I stuck with this forever?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1449",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Fifteen years of marriage and still no child because of this hormonal imbalance is honestly devastating, I really want to become pregnant, please help me!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8832",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly trying everything I can with what little I have access to, is there a specific food that could really help with my PCOS symptoms?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1383",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm genuinely worried about my future health with nobody around here even discussing this condition, is there a real way for me to stay healthy long term?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:37907",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm in so much pain right now and honestly scared because the doctors barely even examined me, what could be causing this?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:42744",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've gained so much weight so fast and now I've got this really bad pain under my ribs, is PCOS actually supposed to hurt like this?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8639",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried about my sister, what could actually be making her more likely to suffer from this condition?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:19779",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "This pain has been going on for six months and getting worse, and no doctor seems to know why, could my birth control actually be the cause of all this?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:40346",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm so worried reading these results, with both of our fertility issues combined, what are our actual chances of having a baby?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30645",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've been hospitalized multiple times over this same pain with a different diagnosis every time and I'm honestly at my wit's end, is there something everyone's missing?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8538",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a little lost, could someone please just explain clearly what PCOS actually is?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:21464",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly getting really self-conscious about this, is there any way to grow facial hair without spending a fortune on treatments?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:1022",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "My skin has gotten so much worse after these treatments and I'm really upset about it, could this be from the treatments or from my hormones, and is there anything that can actually help?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8847",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I just got this diagnosis and I'm honestly feeling overwhelmed, what diet and exercise changes should I actually be making to manage it?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:42374",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a bit alarmed seeing blood and strange bits in my urine after everything I've been through, is this actually normal after surgery and infection?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102456",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Six years of trying and switching through so many medications with awful side effects is exhausting, will I actually conceive soon with this new one?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:22300",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly getting scared seeing my numbers so low and now these other results coming back abnormal too, what could actually be going on?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:11567",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "We're both so anxious about this cyst that keeps growing back, will treatment actually work this time, and will she be able to get pregnant easily afterward?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:38953",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've been too embarrassed to even bring this up with my therapist, but I'm really struggling with feeling so much worse afterward, could this actually be a hormonal thing?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8904",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "This has honestly been worrying me a lot, is it actually accurate that PCOS raises the risk of heart problems?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:19509",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Nothing I've tried is helping and these bumps are so itchy and uncomfortable, please, what can actually get rid of this?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:4794",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "After a loss and over a year of trying everything with no eggs even developing, I'm honestly anxious, how serious is this and what's actually going to work?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8728",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried about waiting too long since healthcare is so hard to access here, when should I actually go see someone about possible PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:35358",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly very worried about my elderly relative with all these findings piling up, what does all of this actually mean, and should the rest of us be concerned about it running in the family?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26408",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I had to stop my treatment partway through because of stress and personal issues and now I'm anxious about whether to pick it back up, what are my actual chances of conceiving at this point?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1328",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a little worried, is facial hair growth in a teenage girl actually a sign of PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12601",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've got these scan numbers in front of me and I'm honestly confused, what do they actually mean for my chances of getting pregnant?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:15175",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly exhausted all the time and worried about these blood pressure spikes and headaches, what should I actually be doing about all this?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8661",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly concerned about my sister, is there a real way to tell if she actually has PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8881",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried for my daughter's future, what can I actually do to help her with her fertility concerns because of PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101779",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly running out of options here, what else can be done after clomephene citrate hasn't worked for me?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29264",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've suffered with this acne for eight years now and nothing gives lasting relief, plus now a cyst was found too, is there really anything more natural that could actually help?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8831",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly not sure where to turn without a dietician nearby, what should I actually be eating to help with my PCOS symptoms?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24035",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly overwhelmed by all these findings and can't even get in to see anyone for a week, can someone please help me understand what all of this actually means?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26421",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly terrified for my daughter with everything she's been through, how long will this treatment actually take and is this something contagious?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8556",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I want to catch this early for my daughter, what signs should I actually be watching out for that could point to PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:41086",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly hopeful but not sure if I should be, does having fairly regular periods with PCOS actually mean I have a good shot at getting pregnant naturally?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111879",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly getting anxious about what happens if this next round of medication doesn't work either, what would actually be the next step?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8795",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I feel for my friend and want to understand this better, what actually caused her to develop PCOS?"
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:788",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly not sure when I should even bring this up, when should someone actually consult a doctor about PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8824",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've been struggling with both of these for so long, could PCOS honestly be the reason behind both my irregular cycles and not being able to lose weight?"
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:782",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a bit lost here, what exactly is PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8776",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I want to make sure I'm not missing anything for my wife, are there other signs of PCOS she might be experiencing that I should watch for?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:38563",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Three years with no child despite all this treatment is honestly disheartening, and these side effects have been rough, what's actually the next step and why did stopping the medication change things?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32979",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm anxiously watching these numbers change day by day, what are my actual chances of this follicle rupturing and me conceiving this cycle?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8655",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a little confused, could someone explain PCOS to me clearly?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100108",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "After five years of treatments that haven't worked, I feel so let down, is there really anything left to try besides donor eggs?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:55282",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm getting ready for such a big new chapter in my life and I'm honestly anxious, is this hair treatment actually safe to continue once I'm trying to get pregnant?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8635",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly worried about my sister, what factors would actually make her more likely to develop PCOS?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:18429",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Ten years of trying so many medications with nothing working is honestly exhausting, please, is there any remedy that could actually help me get pregnant?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8785",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I want to make sure I'm not missing anything, are there other indications of PCOS beyond the common ones?"
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:785",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly a bit anxious to know, what are the real complications that can come with PCOS?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:1672",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly torn about continuing this medication, will my facial hair keep getting worse, and will my acne come roaring back once I stop?!"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1327",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm a little concerned for my wife, is this extra hair growth on her chin and cheeks actually a symptom of PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8790",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I keep wondering what I could have missed, what could have actually caused my daughter to develop PCOS?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8767",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly starting from zero here, what are the key things I should keep in mind about how PCOS affects my health?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32518",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've been in pain for so long and my doctor barely even examined me before diagnosing it, could this actually be something else, like my ovaries?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33185",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Eleven months of trying and I'm honestly anxious about getting the timing right, are these medications actually correct for me, and when should we actually be trying?"
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:468",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "We're both so confused and worried right now with these new symptoms despite negative tests, do we actually need to get a blood test to be sure?"
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8809",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Seeing my relative go through this has me worried for myself too, what should I actually keep in mind if I'm dealing with this long term as well?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:10621",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm so eager to have a baby and it's been months of treatment with this new complication on top of it, please, what should I actually do now?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:34454",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I'm honestly feeling so negative about all of this right now, is the surgery actually going to help me conceive, and what should I actually do next?"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:21514",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "I've only got 7 days left before my husband leaves for a year and I'm honestly panicking, will stopping my medication and trying every day actually work in time?!"
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:40418",
+  "category": "pcos",
+  "style": "emotional",
+  "rewritten_question": "Seven months of trying and switching medications with no luck is honestly wearing me down, will this new combination actually get me pregnant this month?"
+ }
+]

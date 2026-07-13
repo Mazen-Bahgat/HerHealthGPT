@@ -1,0 +1,2162 @@
+[
+ {
+  "source_row_id": "HealthCareMagic-100k:19372",
+  "category": "fertility",
+  "vague_question": "I've been trying to have a baby for a while and nothing's working, is something wrong with me?",
+  "register": "json",
+  "clarifying_question": "How long have you been trying to conceive, and have you been diagnosed with any conditions like PCOS or ovarian cysts that might affect fertility?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17002",
+  "category": "fertility",
+  "vague_question": "My doctor put me on a hormone therapy to help me get pregnant, but I'm not sure if it's the right call for my cycle. Should I trust it?",
+  "register": "json",
+  "clarifying_question": "What specific hormone medication and dosage did your doctor prescribe, and how long have you been trying to conceive?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:34042",
+  "category": "fertility",
+  "vague_question": "I did a fertility monitoring cycle and took some medication afterward, but my pregnancy test came back negative. What does that mean?",
+  "register": "json",
+  "clarifying_question": "What medications were you given after the monitored cycle, and how many days after your last dose did you take the pregnancy test?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:34328",
+  "category": "fertility",
+  "vague_question": "Is there a way to get pregnant without regular intercourse, and would it actually work?",
+  "register": "json",
+  "clarifying_question": "Are you asking about a specific insemination method, and roughly how soon after collection would it be used?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:31359",
+  "category": "fertility",
+  "vague_question": "I have a thyroid problem and I've been trying to get pregnant for a while without luck. Could my thyroid be the reason?",
+  "register": "json",
+  "clarifying_question": "Do you know your current thyroid hormone levels, and how long have you been on treatment for it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6713",
+  "category": "fertility",
+  "vague_question": "Does breastfeeding affect my chances of having another baby later on?",
+  "register": "json",
+  "clarifying_question": "Are you currently breastfeeding, and are you asking about fertility while breastfeeding or after you stop?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27335",
+  "category": "fertility",
+  "vague_question": "My daughter and her husband want to get pregnant and heard some supplements might help. Is that true?",
+  "register": "json",
+  "clarifying_question": "Have your daughter and her husband had any fertility testing done, and are they currently taking any supplements or medications?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3171",
+  "category": "fertility",
+  "vague_question": "Can you explain what ovulation actually is and when it happens?",
+  "register": "json",
+  "clarifying_question": "Are you trying to understand ovulation in general, or trying to figure out your own fertile window based on your cycle?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:105254",
+  "category": "fertility",
+  "vague_question": "I was treated for an infection a while back and now I'm having trouble conceiving. Could the two be related?",
+  "register": "json",
+  "clarifying_question": "What infection were you treated for, when did you finish treatment, and has a doctor confirmed it's fully cleared?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:19661",
+  "category": "fertility",
+  "vague_question": "Some of my hormone levels came back low even though most tests were normal. Could that be why I'm not getting pregnant?",
+  "register": "json",
+  "clarifying_question": "Which specific hormone levels came back low, and what treatment, if any, has your doctor already suggested?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27495",
+  "category": "fertility",
+  "vague_question": "My partner's fertility test results didn't look great. Does that mean we'll have trouble having a baby?",
+  "register": "json",
+  "clarifying_question": "Which specific values in the semen analysis were flagged as abnormal, and has a fertility doctor reviewed the full report yet?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26312",
+  "category": "fertility",
+  "vague_question": "We've had some fertility tests done and they seem fine, but we're still not pregnant after a year. What could be going on?",
+  "register": "json",
+  "clarifying_question": "Which tests have you and your partner already completed, and how long exactly have you been trying to conceive?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:25640",
+  "category": "fertility",
+  "vague_question": "We've been told we can't conceive naturally and need help finding the right kind of treatment. Where do we even start?",
+  "register": "json",
+  "clarifying_question": "What reason did your doctor give for recommending that treatment, and have either of you had fertility testing done already?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:108187",
+  "category": "fertility",
+  "vague_question": "My fertility test came back with some kind of infection. Can I still have children after treating it?",
+  "register": "json",
+  "clarifying_question": "What did the culture test identify as the infection, and has your doctor started you on treatment for it yet?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5507",
+  "category": "fertility",
+  "vague_question": "Someone mentioned fallopian tubes being important for pregnancy. What do they actually do?",
+  "register": "json",
+  "clarifying_question": "Are you asking generally about how fallopian tubes work, or are you concerned about a specific issue involving your own tubes?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:35836",
+  "category": "fertility",
+  "vague_question": "I'm worried that fluid leaking out after sex might mean we can't get pregnant. Is that something to worry about?",
+  "register": "json",
+  "clarifying_question": "How long have you and your partner been trying to conceive, and has either of you had any fertility testing done yet?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32328",
+  "category": "fertility",
+  "vague_question": "I had a uterine infection that was treated a while ago, and I've been trying to conceive for years since with no luck. What are my chances now?",
+  "register": "json",
+  "clarifying_question": "What treatment did you receive for the uterine infection, and what did your more recent fertility tests show?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102050",
+  "category": "fertility",
+  "vague_question": "My fertility treatment failed and now a follow-up test came back concerning. Should I worry about it affecting future attempts?",
+  "register": "json",
+  "clarifying_question": "What did the follow-up test come back positive for, and has your doctor started any treatment while you wait for confirmation?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:2811",
+  "category": "fertility",
+  "vague_question": "A fertility marker from my blood test seems low and my doctor wants me to move straight to IVF. Should I be concerned about my numbers?",
+  "register": "json",
+  "clarifying_question": "What is your AMH level and age, and how many follicles were seen on your most recent monitoring scan?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107013",
+  "category": "fertility",
+  "vague_question": "I've been trying to get pregnant for years and I'm starting to wonder if something's wrong with my ovaries. What could it be?",
+  "register": "json",
+  "clarifying_question": "Have you had any fertility testing done to check ovulation and ovarian reserve, and do you have any past pregnancy history like miscarriages?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101683",
+  "category": "fertility",
+  "vague_question": "I have some fertility issues found on a scan and my doctor wants me to consider a procedure, but I'd rather try something more natural first. Is that realistic?",
+  "register": "json",
+  "clarifying_question": "What exactly did your scan show, and which specific procedure has your doctor recommended?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:34738",
+  "category": "fertility",
+  "vague_question": "I'm on a birth control shot and having ongoing side effects, and I also want to start trying for a baby soon. What should I do?",
+  "register": "json",
+  "clarifying_question": "How long have you been on the birth control shot, and roughly when are you hoping to start trying to conceive?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100270",
+  "category": "fertility",
+  "vague_question": "I tested positive for an infection and started treatment, but I'm not totally sure the test was accurate. Should I keep taking the medication?",
+  "register": "json",
+  "clarifying_question": "Which test came back positive, how many weeks have you been on treatment, and has your doctor mentioned repeating the test to confirm it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6538",
+  "category": "fertility",
+  "vague_question": "How would I know if I'm ovulating?",
+  "register": "json",
+  "clarifying_question": "Are you trying to identify ovulation signs for general awareness, or are you tracking your cycle for a specific reason like trying to conceive?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1125",
+  "category": "fertility",
+  "vague_question": "My friend gets pain around the middle of her cycle. Is that something to be concerned about?",
+  "register": "json",
+  "clarifying_question": "How severe is the pain your friend experiences, and does it happen every single cycle or only occasionally?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:14506",
+  "category": "fertility",
+  "vague_question": "Does having sex at a certain point in the cycle affect whether you can get pregnant?",
+  "register": "json",
+  "clarifying_question": "Are you asking about having sex specifically during your period, or about timing sex around ovulation?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102486",
+  "category": "fertility",
+  "vague_question": "We went through fertility treatment that didn't work, and some infection screening results came back that I don't fully understand. Could they explain what happened?",
+  "register": "json",
+  "clarifying_question": "Which specific infections were flagged in the test, and were the markers for recent infection positive or negative?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17114",
+  "category": "fertility",
+  "vague_question": "I'm on a fertility medication and just started another medication for something else. Could they interact or cause a problem with trying to conceive?",
+  "register": "json",
+  "clarifying_question": "What is the name of the fertility drug you're on, and what is the other medication you just started?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:25175",
+  "category": "fertility",
+  "vague_question": "Someone told me a certain blood type combination makes it harder to get pregnant. Is there any truth to that?",
+  "register": "json",
+  "clarifying_question": "How long have you and your partner been trying to conceive, and have either of you had any fertility testing done?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:38725",
+  "category": "fertility",
+  "vague_question": "My semen test results looked off in a few ways. Does that mean I can't father a child?",
+  "register": "json",
+  "clarifying_question": "What was the sperm count and motility percentage on the report, and has a fertility specialist reviewed it with you yet?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32984",
+  "category": "fertility",
+  "vague_question": "I've been trying for a baby for a few months and taking some supplements my doctor gave me, plus I'm having some new cramping. Is that something to worry about?",
+  "register": "json",
+  "clarifying_question": "How severe and frequent is the cramping, and does it happen at a particular point in your cycle?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:3130",
+  "category": "fertility",
+  "vague_question": "What are some ways to figure out when I'm ovulating?",
+  "register": "json",
+  "clarifying_question": "Are you looking for at-home methods like tracking apps or ovulation kits, or do you want to know what signs your body naturally shows?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:1570",
+  "category": "fertility",
+  "vague_question": "My doctor gave me some discouraging news about my ovulation and I'm scared it means I can't have children. Is that really the case?",
+  "register": "json",
+  "clarifying_question": "What exact diagnosis did your doctor give you regarding your ovulation, and has any treatment been discussed?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12588",
+  "category": "fertility",
+  "vague_question": "I had a pregnancy loss a while back and now I'm having trouble conceiving again. Could the loss be connected to why it's harder now?",
+  "register": "json",
+  "clarifying_question": "How long ago was the pregnancy loss, and have you had any fertility testing done since then?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26103",
+  "category": "fertility",
+  "vague_question": "I recently came off birth control and had sex around the time I think I ovulated. What are the chances I could be pregnant?",
+  "register": "json",
+  "clarifying_question": "On which cycle day did your ovulation test turn positive, and on which days did you have intercourse relative to that?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:23191",
+  "category": "fertility",
+  "vague_question": "My fertility medications are really expensive and I'm looking for a more affordable option that still works. Is that safe to do?",
+  "register": "json",
+  "clarifying_question": "Which specific fertility medication has your doctor prescribed, and what's the treatment plan you're currently following?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100131",
+  "category": "fertility",
+  "vague_question": "I recently had another pregnancy loss and I'm wondering how soon it's safe to start trying again.",
+  "register": "json",
+  "clarifying_question": "How many days or weeks ago was your loss, and has a doctor identified a specific cause behind your repeated losses?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30525",
+  "category": "fertility",
+  "vague_question": "We've been trying for years with no explanation from our doctors as to why it's not happening. What could we be missing?",
+  "register": "json",
+  "clarifying_question": "How many years have you been actively trying, and have both partners completed a full fertility workup?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29154",
+  "category": "fertility",
+  "vague_question": "I'm trying to conceive but I get uncomfortable and irritated after sex around my fertile days. Is there a way to fix that so we can keep trying?",
+  "register": "json",
+  "clarifying_question": "Does the irritation happen every cycle or only sometimes, and have you noticed any discharge or other symptoms alongside it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111767",
+  "category": "fertility",
+  "vague_question": "I found a lump and I'm being sent for more testing, and I'm scared because I used fertility treatment to conceive my kids. Could that be connected?",
+  "register": "json",
+  "clarifying_question": "How long ago did you complete fertility treatment, and has your doctor told you anything about the location of the lump?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:18325",
+  "category": "fertility",
+  "vague_question": "A fertility test showed a possible blockage in my tubes after my IVF didn't work. Is there anything I can do to conceive naturally in the meantime?",
+  "register": "json",
+  "clarifying_question": "What did your HSG test specifically show about the blockage, and has your doctor mentioned a likely cause like infection or endometriosis?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:1178",
+  "category": "fertility",
+  "vague_question": "I'm on a medication for my skin right now and I'm worried it might affect my ability to have children later. Should I be concerned?",
+  "register": "json",
+  "clarifying_question": "What medication are you currently taking, and how long do you plan to continue it before trying to conceive?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102404",
+  "category": "fertility",
+  "vague_question": "I have a cyst that's being removed and I'm worried the surgery itself might affect my fertility. Is that a real risk?",
+  "register": "json",
+  "clarifying_question": "What type of cyst do you have and on which ovary, and what specific procedure has your doctor recommended?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6579",
+  "category": "fertility",
+  "vague_question": "How can I tell when my wife is in her fertile window?",
+  "register": "json",
+  "clarifying_question": "Is your wife currently tracking her cycle in any way, such as with an app, temperature, or ovulation tests?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27237",
+  "category": "fertility",
+  "vague_question": "I did a monitored fertility cycle with injections and a trigger shot but it didn't work. Should I repeat the same protocol?",
+  "register": "json",
+  "clarifying_question": "What medications and doses did you take this cycle, and has your doctor reviewed why this attempt didn't result in pregnancy?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:28820",
+  "category": "fertility",
+  "vague_question": "I've had irregular periods for years and tried lots of treatments to conceive with no success. What am I missing?",
+  "register": "json",
+  "clarifying_question": "How irregular are your cycles exactly, and which treatments have you already tried for both conceiving and regulating your periods?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1036",
+  "category": "fertility",
+  "vague_question": "My mom said I need to be extra careful around a certain time in my cycle. What is she talking about?",
+  "register": "json",
+  "clarifying_question": "Do you know roughly how long your menstrual cycle is, so we can figure out when your fertile window would fall?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32276",
+  "category": "fertility",
+  "vague_question": "I had a pregnancy loss later on and I'm on thyroid medication. How soon is it safe to try again?",
+  "register": "json",
+  "clarifying_question": "How many weeks along was the pregnancy loss, and is your thyroid currently well controlled on medication?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33033",
+  "category": "fertility",
+  "vague_question": "I get a painful bump in a sensitive area every month around ovulation. Should I get that checked out?",
+  "register": "json",
+  "clarifying_question": "How many days does the bump typically last, and does it appear at the same point in your cycle each time?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:5535",
+  "category": "fertility",
+  "vague_question": "Can you walk me through what happens in my body during ovulation?",
+  "register": "json",
+  "clarifying_question": "Are you asking out of general curiosity, or are you trying to understand your own cycle for family planning purposes?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33542",
+  "category": "fertility",
+  "vague_question": "I had a pregnancy termination years ago and now I'm having trouble conceiving despite a monitored cycle. What should the next step be?",
+  "register": "json",
+  "clarifying_question": "How many monitored cycles have you completed so far, and what medications has your doctor prescribed for each?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13273",
+  "category": "fertility",
+  "vague_question": "I had surgery to try to fix a fertility issue but it didn't work. What are my options now?",
+  "register": "json",
+  "clarifying_question": "What was the surgery meant to correct, and has your doctor discussed alternatives like IVF afterward?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:101235",
+  "category": "fertility",
+  "vague_question": "I've been having some odd spotting and cramping after my fertile days and a home test came back negative. Could I still be pregnant?",
+  "register": "json",
+  "clarifying_question": "How many days after your suspected ovulation did the spotting start, and when exactly did you take the negative test?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:203",
+  "category": "fertility",
+  "vague_question": "In simple terms, why does it hurt around ovulation?",
+  "register": "json",
+  "clarifying_question": "Is this pain something you experience yourself, and if so, how many days does it usually last?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:347",
+  "category": "fertility",
+  "vague_question": "I have a couple of hormone conditions that are being treated and I want to know how to best prepare for pregnancy. Where should I start?",
+  "register": "json",
+  "clarifying_question": "Which hormone conditions are you currently managing, and are your levels currently within the normal range on treatment?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29153",
+  "category": "fertility",
+  "vague_question": "My partner's fertility test came back with a lot of numbers I don't understand. Is it good or bad, and does performance in bed relate to fertility at all?",
+  "register": "json",
+  "clarifying_question": "Which specific values in the semen analysis are you unsure about, like count or motility?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:19751",
+  "category": "fertility",
+  "vague_question": "My early pregnancy scan showed smaller measurements than expected and I'm not sure if there's still hope. What does this usually mean?",
+  "register": "json",
+  "clarifying_question": "How many weeks pregnant are you, and what specifically did the scan show compared to what's expected at that stage?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16317",
+  "category": "fertility",
+  "vague_question": "Fluid leaks out after we have sex and I'm worried it means my partner is infertile. Is that a valid concern?",
+  "register": "json",
+  "clarifying_question": "How long have you two been trying to conceive, and has your partner had a semen analysis done?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:188",
+  "category": "fertility",
+  "vague_question": "I heard that having a certain reproductive condition means you can never have children. Is that actually true?",
+  "register": "json",
+  "clarifying_question": "Has this condition been formally diagnosed by a doctor, and have you had any fertility testing done?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:21766",
+  "category": "fertility",
+  "vague_question": "I get a strange recurring rash around the same time every cycle and it's leaving scars. What could be causing that?",
+  "register": "json",
+  "clarifying_question": "Roughly how many days before or after ovulation does the rash appear, and how long does it typically last?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102776",
+  "category": "fertility",
+  "vague_question": "I had an infection treated a long time ago as a child and I'm worried it could still affect my fertility now. Should I be concerned?",
+  "register": "chat",
+  "clarifying_question": "How long ago was the infection fully treated, and have you had any recent tests to confirm there's no lingering effect?",
+  "chat_reply": "It makes sense that an old diagnosis would still weigh on your mind. How long ago was it fully treated, and have you had any recent tests confirming it's cleared? A doctor can order the right follow-up tests to reassure you either way."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:57",
+  "category": "fertility",
+  "vague_question": "People keep telling me that having irregular periods means I definitely can't have kids. Is that true?",
+  "register": "chat",
+  "clarifying_question": "How irregular are your cycles, and have you had any hormone testing done to check for a specific cause?",
+  "chat_reply": "I can see why hearing that repeated would be stressful. How irregular are your cycles usually, and have you had any hormone testing done? A gynecologist can look at your specific pattern and tell you what it actually means for your fertility, rather than going by what people say."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:15780",
+  "category": "fertility",
+  "vague_question": "I have a growth in my cervix and I'm not sure if it needs to come out before my fertility treatment. Could it get in the way?",
+  "register": "chat",
+  "clarifying_question": "What size is the polyp and where is it located, and what have the two doctors you consulted each recommended?",
+  "chat_reply": "That's a smart thing to sort out before starting treatment. Do you know the size and location of the polyp, and what each doctor you saw recommended? Since the two opinions differ, it's worth getting a fertility specialist's clear read on whether it could affect implantation."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6521",
+  "category": "fertility",
+  "vague_question": "I sort of understand ovulation but I'm not sure exactly when the best time to try for a baby is.",
+  "register": "chat",
+  "clarifying_question": "Do you know the typical length of your menstrual cycle, so we can estimate your fertile window?",
+  "chat_reply": "Happy to help narrow this down for you. Do you know roughly how long your cycle usually runs, from one period to the next? Once we know that we can estimate your fertile window, though a doctor can pin it down more precisely with tracking or bloodwork if you'd like."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:34564",
+  "category": "fertility",
+  "vague_question": "I have a vitamin deficiency that might be linked to my fertility trouble, and the pills aren't fixing it. Would a different form work better?",
+  "register": "chat",
+  "clarifying_question": "What was your most recent level on testing, and how long have you been taking the current supplement?",
+  "chat_reply": "That's a frustrating cycle of not seeing improvement. What was your most recent level on testing, and how long have you been on the current dose? It's worth asking your doctor directly whether switching forms makes sense, since absorption can vary from person to person."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:36627",
+  "category": "fertility",
+  "vague_question": "My wife has an infection in her uterus that's being treated and we're planning fertility treatment soon. Could the infection affect it or spread?",
+  "register": "chat",
+  "clarifying_question": "How far along is your wife in her treatment course, and has her doctor cleared her for the fertility procedure yet?",
+  "chat_reply": "It's smart to ask about this before moving ahead. How far along is your wife in her treatment, and has her doctor said anything about clearing her for the procedure? Her treating doctor and fertility specialist should coordinate directly to make sure the timing is safe."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:27727",
+  "category": "fertility",
+  "vague_question": "I had ovary surgery a while back and now I'm having some new pain and symptoms after unprotected sex. Could I be pregnant, or is something else going on?",
+  "register": "chat",
+  "clarifying_question": "How many weeks ago was your surgery, and when was your last period compared to when you had sex?",
+  "chat_reply": "That combination of new pain and worry after surgery is a lot to carry at once. How many weeks ago was the surgery, and when was your last period compared to when you had sex? Given your surgical history, it's worth getting checked by a doctor soon rather than waiting it out."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20429",
+  "category": "fertility",
+  "vague_question": "A scan showed something on one of my ovaries and I'm trying to figure out if I'll still ovulate normally this cycle.",
+  "register": "chat",
+  "clarifying_question": "Which ovary did the scan flag as abnormal, and which ovary ovulated during your previous cycle?",
+  "chat_reply": "It's great that you're already being monitored closely for this. Which ovary did the scan flag, and which one ovulated last cycle? Your monitoring doctor will have the clearest picture from your scan, so it's worth checking in with them as this cycle progresses."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:21859",
+  "category": "fertility",
+  "vague_question": "I had a pregnancy complication before and had surgery, and now I can't seem to conceive again. Is it still possible through my other side?",
+  "register": "chat",
+  "clarifying_question": "What did your recent HSG test show about your fallopian tubes, and how long has it been since you resumed trying?",
+  "chat_reply": "That's an important thing to get clarity on, and it's good you're staying on top of testing. What did your recent HSG show about your tubes, and how long has it been since you started trying again? Your fertility specialist can explain your specific odds based on that tube's condition."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:24222",
+  "category": "fertility",
+  "vague_question": "I've had some difficult pregnancy losses in the past and now I'm having trouble conceiving again. What should I look into next?",
+  "register": "chat",
+  "clarifying_question": "How many fertility-related tests have you had done since your last pregnancy, and how long have you been trying this time?",
+  "chat_reply": "I'm sorry you've been through so much, and it makes sense you'd want clear answers now. How many fertility tests have you had since your last pregnancy, and how long have you been trying this time? A fertility specialist can put together a plan based on your full history."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107353",
+  "category": "fertility",
+  "vague_question": "I'm looking for a birth control option but I'm worried about family health history and keeping my fertility intact for later. What should I consider?",
+  "register": "chat",
+  "clarifying_question": "What specific health conditions run in your family, and have you discussed contraceptive options with your doctor yet?",
+  "chat_reply": "It's smart to think this through carefully given your family history. What conditions run in your family, and have you already discussed options with your doctor? They can help you weigh choices against both that history and your future fertility goals."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32593",
+  "category": "fertility",
+  "vague_question": "I got some positive pregnancy signs but there's also a cyst that might be affecting my hormone levels. Am I actually pregnant?",
+  "register": "chat",
+  "clarifying_question": "What was your hormone level on the blood test, and has your doctor scheduled a follow-up scan to confirm?",
+  "chat_reply": "That's a confusing place to be without clear confirmation. What was your hormone level on the blood test, and has a follow-up scan been scheduled? Your doctor will need another test or scan to confirm things given the cyst is also in the picture."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:14418",
+  "category": "fertility",
+  "vague_question": "I'm on fertility medication and I'm not sure about the timing of one of the drugs. When exactly should I start taking it?",
+  "register": "chat",
+  "clarifying_question": "What is the name of the medication you're unsure about timing for, and on which cycle day are you currently taking the other one?",
+  "chat_reply": "Getting the timing right really does matter with these medications. Which medication's start day are you unsure about, and what day are you currently on with the other one? Your prescribing doctor is the best person to confirm the exact schedule for your specific cycle."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2532",
+  "category": "fertility",
+  "vague_question": "I have a reproductive condition and a couple of fertility treatments haven't worked. What are my realistic chances going forward?",
+  "register": "chat",
+  "clarifying_question": "How many treatment cycles have you completed so far, and has your doctor suggested a next step like IVF?",
+  "chat_reply": "It's completely understandable to want a realistic sense of where things stand. How many cycles have you completed, and has your doctor mentioned a next step like IVF? A fertility specialist can give you numbers based on your specific case rather than general odds."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:30611",
+  "category": "fertility",
+  "vague_question": "It's been about two weeks since my embryo transfer and I have no symptoms at all. Can I test for pregnancy yet or should I wait?",
+  "register": "chat",
+  "clarifying_question": "How many days exactly has it been since your transfer, and when is your scheduled blood test date?",
+  "chat_reply": "Those days after a transfer can feel endless. How many days exactly has it been, and when is your clinic's scheduled blood test? Home tests can be unreliable this early, so it's best to wait for or confirm with the blood test your clinic has planned."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:18815",
+  "category": "fertility",
+  "vague_question": "My partner is on medication for a chronic condition and we want to start trying for a baby. Is it safe to start now or should we wait?",
+  "register": "chat",
+  "clarifying_question": "What medication is your partner currently taking, and has his doctor given any guidance on timing around conception?",
+  "chat_reply": "It's great that you're planning ahead together like this. What medication is your partner on, and has his doctor said anything about timing conception around it? His prescribing doctor can confirm whether it's safe to start now or better to wait a bit longer."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13283",
+  "category": "fertility",
+  "vague_question": "I'm a few days past my embryo transfer and having some symptoms, but my early home test was negative. Is it too soon to know?",
+  "register": "chat",
+  "clarifying_question": "How many days post-transfer are you, and is your blood test scheduled through the clinic yet?",
+  "chat_reply": "Waiting through this stretch is genuinely hard. How many days post-transfer are you, and do you have a blood test scheduled through the clinic? It's still quite early for a home test to be reliable, so the clinic's blood test will give you a much clearer answer."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:21214",
+  "category": "fertility",
+  "vague_question": "My doctor put me on a fertility supplement even though my results were normal. Is that necessary, and are there side effects to worry about?",
+  "register": "chat",
+  "clarifying_question": "What did your original test results show, and how long has your doctor recommended taking the supplement?",
+  "chat_reply": "It's a fair thing to question when your own results look fine. What did your original results actually show, and how long has your doctor recommended the supplement for? Your prescribing doctor is best placed to walk you through the reasoning and any side effects."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:14617",
+  "category": "fertility",
+  "vague_question": "I just started a new medication while trying to conceive and I'm having some new symptoms. Is that expected or a problem?",
+  "register": "chat",
+  "clarifying_question": "How many days ago did you start the medication, and what specific symptoms are you experiencing now?",
+  "chat_reply": "New symptoms right after starting something can definitely be unsettling. How many days ago did you start it, and what symptoms are you noticing now besides the spotting? These can be common early side effects for some medications, but it's worth checking in with your prescribing doctor to be safe."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:6621",
+  "category": "fertility",
+  "vague_question": "What actually causes ovulation to happen each cycle?",
+  "register": "chat",
+  "clarifying_question": "Are you asking about the general hormonal process, or are you trying to understand your own cycle for a specific reason?",
+  "chat_reply": "That's a great question to understand your body better. Are you asking about the general hormonal process, or trying to figure out something about your own cycle specifically? If it's personal, a doctor can map it out more precisely using your cycle history."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32099",
+  "category": "fertility",
+  "vague_question": "I've been tracking my body temperature to figure out ovulation and my numbers seem lower than what I've read online. Is that a problem?",
+  "register": "chat",
+  "clarifying_question": "What are your typical temperatures before and after your suspected ovulation, and how long is your average cycle?",
+  "chat_reply": "Temperature charting takes real patience, so it's good you're keeping track. What are your typical temperatures before and after you think you ovulate, and how long is your average cycle? A doctor can look at your full chart and tell you whether those numbers are a normal pattern for you."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:38822",
+  "category": "fertility",
+  "vague_question": "My doctor prescribed a couple of fertility medications and I want to understand the safety and side effects before starting.",
+  "register": "chat",
+  "clarifying_question": "What are the exact names of the medications prescribed, and did your doctor explain why you specifically need them?",
+  "chat_reply": "It's always smart to understand what you're taking before you start. What are the exact medications prescribed, and did your doctor explain why you need them specifically? Your prescribing doctor is best placed to walk you through the safety profile and expected side effects."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:15038",
+  "category": "fertility",
+  "vague_question": "I've had several cervical procedures done and now I've been told it might be hard to conceive naturally because of them. Is that really true?",
+  "register": "chat",
+  "clarifying_question": "How many procedures have you had on your cervix, and what specifically did the fertility clinic say about your chances?",
+  "chat_reply": "Hearing that must have been really discouraging. How many procedures have you had on your cervix, and what exactly did the clinic say about your chances? A fertility specialist can look at your full history and give you a clearer, more personalized picture than a general statement."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:103562",
+  "category": "fertility",
+  "vague_question": "We're following a fertility medication schedule and trying to time things right, but I'm not sure we're doing it correctly. Are we on the right track?",
+  "register": "chat",
+  "clarifying_question": "What are the exact days you're taking each medication, and around which days are you having intercourse relative to those?",
+  "chat_reply": "It's great that you're being this careful with the protocol. What exact days are you taking each medication, and around which days are you having intercourse relative to those? Your fertility doctor can confirm whether the timing lines up well with your monitoring results."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:39323",
+  "category": "fertility",
+  "vague_question": "All of my fertility tests came back normal but my doctor still started me on medication for an infection I don't think I have. Is that the right call?",
+  "register": "chat",
+  "clarifying_question": "What condition is the medication meant to treat, and did any of your test results show even a borderline positive result?",
+  "chat_reply": "That's a reasonable thing to question if your results looked clear to you. What condition is the medication meant to treat, and did any result come back even slightly borderline? It's worth asking your doctor directly why they felt it was still necessary in your case."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:102709",
+  "category": "fertility",
+  "vague_question": "We had a condom fail recently and took emergency contraception, but the timing was close to ovulation. What are the actual chances of pregnancy?",
+  "register": "chat",
+  "clarifying_question": "How many hours after the incident was the emergency contraception taken, and how many days before your period was your last ovulation?",
+  "chat_reply": "That kind of uncertainty is genuinely stressful to sit with. How many hours after did you take the emergency contraception, and roughly when do you expect your next period based on your last one? If your period is late or you're still unsure, a follow-up pregnancy test in a week or so would give you a clearer answer."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:26460",
+  "category": "fertility",
+  "vague_question": "I'm on fertility medication trying for a second child and my follicle sizes seem to vary a lot cycle to cycle. Is there still a good chance this month?",
+  "register": "chat",
+  "clarifying_question": "What follicle size did you see on your most recent monitoring scan, and on which cycle day was that scan done?",
+  "chat_reply": "Cycle-to-cycle variation like that can definitely be frustrating to watch. What follicle size showed up on your latest scan, and which cycle day was it taken? Your monitoring doctor will have the best sense of your odds this month based on that measurement."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104821",
+  "category": "fertility",
+  "vague_question": "We've been trying for almost two years and one of our fertility test results is just barely outside the normal range. What should our next step be?",
+  "register": "chat",
+  "clarifying_question": "Which specific test result was borderline, and has a fertility specialist reviewed both partners' full results together?",
+  "chat_reply": "Almost two years of trying is a long time, and it makes sense you want a clear next step. Which result came back borderline, and has a specialist reviewed both of your results together? A fertility specialist can help you decide whether it's time to move beyond watchful waiting."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32963",
+  "category": "fertility",
+  "vague_question": "I've had irregular periods for years and now I'm trying to conceive with no luck, plus I haven't had a period in a while. Could these be connected?",
+  "register": "chat",
+  "clarifying_question": "How many months has it been since your last period, and have you taken a pregnancy test recently?",
+  "chat_reply": "That combination of missed periods and trying to conceive is worth looking into properly. How many months has it been since your last period, and have you taken a pregnancy test recently? If it comes back negative, a doctor should check your hormones to understand what's driving the missed cycles."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33532",
+  "category": "fertility",
+  "vague_question": "I'm considering traveling somewhere for fertility treatment and want to understand what the whole process and costs actually involve.",
+  "register": "chat",
+  "clarifying_question": "Which specific fertility treatment are you considering, and roughly how long are you planning to stay for it?",
+  "chat_reply": "Planning ahead for treatment like this is a big step. Which specific fertility treatment are you considering, and roughly how long are you able to stay for it? Costs and requirements vary a lot by clinic, so reaching out directly to a couple of fertility centers for a personalized quote would be the most reliable next step."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11629",
+  "category": "menstrual",
+  "vague_question": "Someone close to me just started her period unexpectedly and had an accident with her clothes. What can I do to help her?",
+  "register": "json",
+  "clarifying_question": "How old is she, and has anyone talked to her yet about what a period actually is and how to manage it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10372",
+  "category": "menstrual",
+  "vague_question": "Are there foods I should avoid eating while I'm on my period?",
+  "register": "json",
+  "clarifying_question": "Are you asking generally, or have you noticed a particular food seems to make your symptoms worse?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10203",
+  "category": "menstrual",
+  "vague_question": "How can I help my daughter manage her hygiene during her period while she's away at school?",
+  "register": "json",
+  "clarifying_question": "Has she started using pads, tampons, or another product, and does her school have a private place for her to change?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11833",
+  "category": "menstrual",
+  "vague_question": "At what point should period problems actually be checked out by a doctor?",
+  "register": "json",
+  "clarifying_question": "Are you asking in general, or are you noticing a specific symptom in yourself right now that's concerning you?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10661",
+  "category": "menstrual",
+  "vague_question": "My partner gets really moody around her period. What can I do to help her through it?",
+  "register": "json",
+  "clarifying_question": "How severe are the mood changes, and do they happen every cycle or just sometimes?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10576",
+  "category": "menstrual",
+  "vague_question": "My partner said something hurtful about how I look during my period. Is there any truth to that, and how can he be more supportive?",
+  "register": "json",
+  "clarifying_question": "What exactly did he say, and how did it make you feel in the moment?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10527",
+  "category": "menstrual",
+  "vague_question": "What are some ways a partner can be supportive during someone's period?",
+  "register": "json",
+  "clarifying_question": "Are you asking for yourself and your own partner, or more generally for how men in general should approach it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10410",
+  "category": "menstrual",
+  "vague_question": "If I ran out of period supplies, could my partner actually help me out?",
+  "register": "json",
+  "clarifying_question": "Is your partner someone who has bought period products before, or would this be the first time?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11825",
+  "category": "menstrual",
+  "vague_question": "My period pain is so bad some months that I can't function. What can I do to ease it?",
+  "register": "json",
+  "clarifying_question": "How many days does the severe pain last, and does anything at all help, like heat or over-the-counter pain relief?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10358",
+  "category": "menstrual",
+  "vague_question": "What should I realistically expect from my partner in terms of support during my period?",
+  "register": "json",
+  "clarifying_question": "Is there something specific your partner isn't doing right now that's bothering you?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11689",
+  "category": "menstrual",
+  "vague_question": "My daughter seems really worn out during her period and has chores to do. Is it okay for her to rest instead?",
+  "register": "json",
+  "clarifying_question": "How many days into her period is she typically most tired, and does she have any other symptoms alongside the fatigue?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11831",
+  "category": "menstrual",
+  "vague_question": "My wife has been having some period-related issues lately. At what point should we actually see a doctor about it?",
+  "register": "json",
+  "clarifying_question": "What specific issues has she been noticing, and how long has this been going on?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:113",
+  "category": "menstrual",
+  "vague_question": "I'm a teenager and haven't gotten my period yet. Should I be worried?",
+  "register": "json",
+  "clarifying_question": "Have you noticed any other signs of puberty, like breast development or body hair, and is there a family history of getting periods later?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10337",
+  "category": "menstrual",
+  "vague_question": "Is it necessary for my teenage daughter to stay home while she's on her period?",
+  "register": "json",
+  "clarifying_question": "Is there a specific concern making you consider keeping her home, like pain, heavy flow, or access to supplies at school?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11482",
+  "category": "menstrual",
+  "vague_question": "Kids at school keep talking about my family member's periods and it's upsetting her. How can I make it stop?",
+  "register": "json",
+  "clarifying_question": "Is this happening at her school specifically, and has a teacher or counselor been made aware of it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10978",
+  "category": "menstrual",
+  "vague_question": "I'm nervous about bringing up my period with a parent who I think will react badly. What should I do?",
+  "register": "json",
+  "clarifying_question": "What specifically are you worried she'll say or do, and is there another trusted adult you could talk to instead?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10239",
+  "category": "menstrual",
+  "vague_question": "I'm worried about the environmental impact of period products. Are there more sustainable options?",
+  "register": "json",
+  "clarifying_question": "Are you looking for reusable options like cups or cloth pads, or ways to reduce waste with disposable products?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10236",
+  "category": "menstrual",
+  "vague_question": "Are there any eco-friendlier ways to manage my period where I live, given limited access to stores?",
+  "register": "json",
+  "clarifying_question": "What period products, if any, are currently available to you locally?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10345",
+  "category": "menstrual",
+  "vague_question": "Is it fine for me to go about my normal activities while on my period?",
+  "register": "json",
+  "clarifying_question": "Is there a specific activity you're wondering about, like exercise, swimming, or travel?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10518",
+  "category": "menstrual",
+  "vague_question": "What are some practical things I can do to support my partner during her period?",
+  "register": "json",
+  "clarifying_question": "Are you looking for emotional support ideas, practical tasks, or both?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1055",
+  "category": "menstrual",
+  "vague_question": "My daughter asked me something about periods and pregnancy and I want to make sure I explain it correctly.",
+  "register": "json",
+  "clarifying_question": "Did she ask specifically whether having a period means she's currently pregnant, or whether having periods means she could get pregnant in general?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11186",
+  "category": "menstrual",
+  "vague_question": "Are there early signs that tell you your period is about to start?",
+  "register": "json",
+  "clarifying_question": "Are you trying to track your own cycle, or are you asking about general symptoms women commonly notice beforehand?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11498",
+  "category": "menstrual",
+  "vague_question": "I'm nervous that a doctor might judge me for bringing up period-related concerns. Is that a realistic fear?",
+  "register": "json",
+  "clarifying_question": "Have you had a bad experience with a healthcare provider before, or is this more a general worry about stigma?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10220",
+  "category": "menstrual",
+  "vague_question": "How do I bring up period hygiene with my teenage daughter without making things awkward?",
+  "register": "json",
+  "clarifying_question": "Has she already started her period, or are you preparing to have this conversation before it happens?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11394",
+  "category": "menstrual",
+  "vague_question": "How does the culture of silence around periods make it harder for women to manage their hygiene well?",
+  "register": "json",
+  "clarifying_question": "Are you asking about a specific community or region, or menstrual stigma more broadly?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10487",
+  "category": "menstrual",
+  "vague_question": "I crave junk food a lot during my period. Should I be trying to control that?",
+  "register": "json",
+  "clarifying_question": "How many days before or during your period do these cravings tend to hit, and how intense are they?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11789",
+  "category": "menstrual",
+  "vague_question": "Why do periods still feel like such a taboo subject in so many places?",
+  "register": "json",
+  "clarifying_question": "Are you asking about this culturally and historically, or about a specific situation you've encountered personally?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11656",
+  "category": "menstrual",
+  "vague_question": "Is it safe to be around my family as normal while I'm on my period?",
+  "register": "json",
+  "clarifying_question": "Is there a specific belief or concern that's making you ask, like something you were told by family or in your community?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11741",
+  "category": "menstrual",
+  "vague_question": "Why does my teenage daughter need to be extra careful with her health during her period?",
+  "register": "json",
+  "clarifying_question": "Is there a specific aspect you're wondering about, like hygiene, nutrition, or activity level?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12105",
+  "category": "menstrual",
+  "vague_question": "Is it okay to encourage my daughter to stay active while she's on her period?",
+  "register": "json",
+  "clarifying_question": "Does she currently avoid exercise during her period, and if so, do you know why?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10974",
+  "category": "menstrual",
+  "vague_question": "I feel nervous about starting the period conversation with my daughter. How should I go about it?",
+  "register": "json",
+  "clarifying_question": "Has she already started her period, or are you trying to prepare her ahead of time?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1052",
+  "category": "menstrual",
+  "vague_question": "When exactly is it time to see a doctor about period issues rather than just waiting it out?",
+  "register": "json",
+  "clarifying_question": "Is there a particular symptom prompting this question, like pain, heavy bleeding, or irregular timing?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11032",
+  "category": "menstrual",
+  "vague_question": "My younger sister was kept home from school because she got her period today. Is that the right call?",
+  "register": "json",
+  "clarifying_question": "Is there a specific reason she was kept home, like discomfort, lack of supplies, or a local custom?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11481",
+  "category": "menstrual",
+  "vague_question": "Classmates are gossiping about my sister's period and it's really bothering her. How can I make it stop?",
+  "register": "json",
+  "clarifying_question": "Has this been reported to a teacher or school staff member yet?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10666",
+  "category": "menstrual",
+  "vague_question": "My partner becomes really emotionally sensitive around her period. How do I respond without making things worse?",
+  "register": "json",
+  "clarifying_question": "Can you give an example of a recent moment where you weren't sure how to respond to her?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12004",
+  "category": "menstrual",
+  "vague_question": "What could go wrong if I don't take good care of myself during my period?",
+  "register": "json",
+  "clarifying_question": "Are you asking about physical health risks, or more about social and practical challenges where you live?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10050",
+  "category": "menstrual",
+  "vague_question": "My wife feels too embarrassed to talk to a health worker about her period concerns. What should we do instead?",
+  "register": "json",
+  "clarifying_question": "Is there a female doctor or health worker she might feel more comfortable with, or does she prefer to avoid healthcare workers altogether?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11862",
+  "category": "menstrual",
+  "vague_question": "I don't have a private space to change during my period. Does that actually matter for my health?",
+  "register": "json",
+  "clarifying_question": "What are you currently using to manage your period, and how are you changing or disposing of it now?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12001",
+  "category": "menstrual",
+  "vague_question": "What can I do to help my daughter take better care of herself during her period?",
+  "register": "json",
+  "clarifying_question": "Has she already started her period, and is there a specific area you're concerned about, like hygiene, diet, or pain?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10436",
+  "category": "menstrual",
+  "vague_question": "Do I look or seem less attractive to others while I'm on my period?",
+  "register": "json",
+  "clarifying_question": "Did someone say something to you recently that made you start wondering this?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11721",
+  "category": "menstrual",
+  "vague_question": "Sanitary products are expensive and hard to find where I live. What else can I use to manage my period?",
+  "register": "json",
+  "clarifying_question": "What materials or products, if any, do you currently have access to nearby?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1210",
+  "category": "menstrual",
+  "vague_question": "Besides the cramping itself, what other symptoms often come along with period pain?",
+  "register": "json",
+  "clarifying_question": "Is your wife experiencing any specific new symptom that's concerning you right now?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10758",
+  "category": "menstrual",
+  "vague_question": "My friend got a bad infection that she thinks was related to not staying clean enough during her period. What could have caused that?",
+  "register": "json",
+  "clarifying_question": "Do you know what specific symptoms she had, and how often she was changing her pad or product?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1206",
+  "category": "menstrual",
+  "vague_question": "What generally causes period pain in the first place?",
+  "register": "json",
+  "clarifying_question": "Are you asking generally, or are you trying to understand your own pain, and if so, how severe is it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10431",
+  "category": "menstrual",
+  "vague_question": "I've heard people say women are seen as less beautiful during their period. Is there any truth to that?",
+  "register": "json",
+  "clarifying_question": "Is this something you heard from family, community, or somewhere else, and is it affecting how you feel about yourself?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10511",
+  "category": "menstrual",
+  "vague_question": "A family member acts uncomfortable around me when I'm on my period. Why might that be?",
+  "register": "json",
+  "clarifying_question": "Has he said anything about why, or is this just something you've noticed in his behavior?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11866",
+  "category": "menstrual",
+  "vague_question": "Why does having a private place to change during my period actually matter?",
+  "register": "json",
+  "clarifying_question": "Do you currently have access to a private space, or is this something you're lacking right now?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10754",
+  "category": "menstrual",
+  "vague_question": "What hygiene habits should I be encouraging my sister to follow during her period?",
+  "register": "json",
+  "clarifying_question": "How old is your sister, and has she already started managing her period on her own?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12110",
+  "category": "menstrual",
+  "vague_question": "I was told not to exercise during my period. Is that actually necessary, or can I still work out?",
+  "register": "json",
+  "clarifying_question": "Do you have any symptoms like heavy flow or cramping that make you unsure about exercising, or is this purely based on what you were told?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10344",
+  "category": "menstrual",
+  "vague_question": "I want to go out with friends but my period just started today. Is that okay to do?",
+  "register": "json",
+  "clarifying_question": "Are you worried about a specific symptom like cramping or leaking, or more about a belief that you shouldn't go out at all?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10857",
+  "category": "menstrual",
+  "vague_question": "Is it safe for my teenage daughter to travel while she's on her period?",
+  "register": "json",
+  "clarifying_question": "How long is the trip, and does she typically have any symptoms like heavy flow or cramps that concern you?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10351",
+  "category": "menstrual",
+  "vague_question": "How can I be more supportive of my sister while she's on her period?",
+  "register": "json",
+  "clarifying_question": "Is there something specific she's struggling with right now, like pain, mood, or access to supplies?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10805",
+  "category": "menstrual",
+  "vague_question": "My niece is anxious that her period might cause her to miss school. How can I help ease that worry?",
+  "register": "json",
+  "clarifying_question": "Is she worried about pain, about not having supplies at school, or about an accident happening in class?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10763",
+  "category": "menstrual",
+  "vague_question": "What should I be doing to stay clean and hygienic during my period?",
+  "register": "json",
+  "clarifying_question": "What product are you currently using to manage your period, like pads, tampons, or something else?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11501",
+  "category": "menstrual",
+  "vague_question": "I feel really embarrassed bringing up period concerns with my doctor. Will they judge me for it?",
+  "register": "json",
+  "clarifying_question": "Is there a specific concern you're hesitant to mention, and have you had an uncomfortable experience with a doctor before?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10628",
+  "category": "menstrual",
+  "vague_question": "My partner doesn't seem to get how emotionally exhausted I feel during my period. How can he actually help?",
+  "register": "json",
+  "clarifying_question": "Can you describe a recent moment where he didn't understand what you needed?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12002",
+  "category": "menstrual",
+  "vague_question": "What could happen to my sister's health if she doesn't take good care of herself during her period?",
+  "register": "json",
+  "clarifying_question": "Is there something specific she's currently neglecting, like hygiene, nutrition, or rest?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10281",
+  "category": "menstrual",
+  "vague_question": "What can I do to manage my mood swings around my period?",
+  "register": "json",
+  "clarifying_question": "How many days before or during your period do you notice the mood changes, and how intense are they?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11814",
+  "category": "menstrual",
+  "vague_question": "Does staying active affect how much period pain I feel?",
+  "register": "json",
+  "clarifying_question": "What kind of exercise are you currently doing or considering, and how severe is your usual period pain?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11099",
+  "category": "menstrual",
+  "vague_question": "How can I best support my daughter with her period given where we live and what's available to us?",
+  "register": "json",
+  "clarifying_question": "What products or resources does she currently have access to for managing her period?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11264",
+  "category": "menstrual",
+  "vague_question": "I'm too scared to bring up my period with anyone around me. Is that something I should push past?",
+  "register": "chat",
+  "clarifying_question": "Is there a specific health concern you're worried about, or is it more the social stigma itself that's stopping you?",
+  "chat_reply": "It's completely understandable to feel that way when the topic carries so much stigma around you. Is there a specific health concern driving this, or is it mainly the social discomfort holding you back? If something feels physically off, it's worth finding even one trusted health worker or doctor to talk to privately, since your health matters more than the silence around it."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10393",
+  "category": "menstrual",
+  "vague_question": "What can my partner actually do when I'm exhausted and achy during my period?",
+  "register": "chat",
+  "clarifying_question": "Which symptom bothers you most on those days, the tiredness or the aching?",
+  "chat_reply": "It's great that your partner wants to help during those rough days. Which bothers you more day to day, the tiredness or the aching? A doctor can also suggest specific remedies if the discomfort feels more intense than a typical period."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10851",
+  "category": "menstrual",
+  "vague_question": "Pads at my local shop are too expensive. Is there a cheaper option I could use instead?",
+  "register": "chat",
+  "clarifying_question": "What's your typical monthly budget for period supplies, and what alternatives, if any, have you already tried?",
+  "chat_reply": "Cost being a barrier to basic supplies is a real and common problem. What's your usual monthly budget for this, and have you already tried any alternatives like cloth pads? A local health worker or clinic may also know about low-cost or free options available in your area."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10327",
+  "category": "menstrual",
+  "vague_question": "I feel embarrassed discussing my period with my partner since he's not familiar with how things are done where I'm from. What should I do?",
+  "register": "chat",
+  "clarifying_question": "What specifically feels hardest to bring up with him, discomfort, supplies, or something else?",
+  "chat_reply": "It makes sense that this would feel awkward if you two come from different backgrounds around the topic. What specifically feels hardest to bring up with him, the discomfort itself or something more practical? Starting with the practical side is often easier, and framing it as simply a normal part of health can help too."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11319",
+  "category": "menstrual",
+  "vague_question": "I have an important event coming up and I'm worried about staining my clothes during my period. How can I prevent that?",
+  "register": "chat",
+  "clarifying_question": "How heavy is your flow usually, and what product do you plan on using that day?",
+  "chat_reply": "That's a very reasonable thing to want to plan around ahead of time. How heavy is your flow usually, and what product are you planning to use that day? If your flow tends to be heavy, a doctor can also suggest options to help you feel more secure for the event."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10681",
+  "category": "menstrual",
+  "vague_question": "I want to help cheer up my partner during her period each month. What kind of support would actually help?",
+  "register": "chat",
+  "clarifying_question": "Does she tend to want comfort and company, or more space and quiet during her period?",
+  "chat_reply": "It's really thoughtful that you want to be intentional about this every month. Does she usually prefer comfort and company, or more space and quiet when she's on her period? Paying attention to what she asks for in the moment is often the best guide, though checking in with her directly is always a good start."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11599",
+  "category": "menstrual",
+  "vague_question": "I'm worried my sister might get a stain on her clothes from her period and other people will notice. What can we do to prevent that?",
+  "register": "chat",
+  "clarifying_question": "Is this worry based on something that's already happened once, or more a general fear?",
+  "chat_reply": "That's a caring thing to want to help prevent for her. Has this already happened once, or is this more of a general worry right now? If she has a heavy flow, a doctor can suggest more absorbent products or backup options to help ease that worry."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11560",
+  "category": "menstrual",
+  "vague_question": "How can I help make sure my wife isn't teased by others because of her period?",
+  "register": "chat",
+  "clarifying_question": "Has this teasing already happened, and if so, do you know who is doing it?",
+  "chat_reply": "I'm sorry she's dealing with that, it's a hurtful thing to go through. Has the teasing already happened, and do you know who's involved? Beyond addressing it directly with those responsible, it might help her to talk to a doctor or counselor if it's affecting her more deeply."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10808",
+  "category": "menstrual",
+  "vague_question": "I'm worried about missing school because of my period and the taboos around it where I live. How can I avoid missing class?",
+  "register": "chat",
+  "clarifying_question": "What specifically makes you miss class currently, like pain, lack of supplies, or fear of stigma?",
+  "chat_reply": "That's a difficult situation when stigma is standing between you and your education. What specifically causes you to miss class right now, pain, lack of supplies, or fear of judgment? Depending on which it is, a school nurse or local clinic may be able to help with practical solutions."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11445",
+  "category": "menstrual",
+  "vague_question": "My family doesn't really accept periods as a normal, healthy part of life. How can I help them understand better?",
+  "register": "chat",
+  "clarifying_question": "Is there a specific belief or reaction from them that's the biggest obstacle right now?",
+  "chat_reply": "That must be a hard gap to bridge within your own family. Is there a specific belief or reaction from them that feels like the biggest obstacle right now? Sometimes involving a doctor or health worker to explain things directly can carry more weight than trying to convince them alone."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1048",
+  "category": "menstrual",
+  "vague_question": "My periods are pretty painful with heavy cramping every time. Should I actually go see a doctor about it?",
+  "register": "chat",
+  "clarifying_question": "How many days does the pain last, and does anything at all help relieve it, like heat or pain medication?",
+  "chat_reply": "Heavy cramping every cycle is worth taking seriously. How many days does the pain usually last, and does anything help ease it, like heat or over-the-counter medication? If it's consistently this intense, it would be a good idea to see a doctor to rule out an underlying cause."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11748",
+  "category": "menstrual",
+  "vague_question": "I get really hungry during my period but struggle to actually eat. What should I be doing to take care of myself?",
+  "register": "chat",
+  "clarifying_question": "Is it a lack of appetite, nausea, or something else that's making it hard to eat?",
+  "chat_reply": "That's an uncomfortable combination to deal with each cycle. Is it a lack of appetite, nausea, or something else making it hard to eat? If this pattern is severe or affecting your energy a lot, it's worth mentioning to a doctor along with your other period symptoms."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10316",
+  "category": "menstrual",
+  "vague_question": "I've been told to avoid a certain food during my period. Is that actually necessary?",
+  "register": "chat",
+  "clarifying_question": "What food specifically were you told to avoid, and did they explain why?",
+  "chat_reply": "It's easy to pick up food rules from friends without knowing if they're actually true. What food specifically were you told to avoid, and did they explain the reasoning? A doctor or nutritionist can give you a clearer, evidence-based answer than word of mouth."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10285",
+  "category": "menstrual",
+  "vague_question": "My daughter seems really tired during her period. What can I do to help her feel better?",
+  "register": "chat",
+  "clarifying_question": "How many days does her tiredness last, and does she have other symptoms alongside it, like heavy bleeding?",
+  "chat_reply": "It's caring of you to want to help her feel better. How many days does her tiredness usually last, and does she have other symptoms like heavy bleeding alongside it? If the fatigue seems unusually severe, it would be worth having her checked by a doctor."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1167",
+  "category": "menstrual",
+  "vague_question": "What kind of tests might a doctor run to figure out why my periods are so painful?",
+  "register": "chat",
+  "clarifying_question": "How long have you been experiencing this level of pain, and has it gotten worse over time?",
+  "chat_reply": "That's a good step toward getting real answers. How long have you been dealing with this level of pain, and has it been getting worse over time? A doctor can run tests like an ultrasound or blood work depending on what they find during an exam."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10538",
+  "category": "menstrual",
+  "vague_question": "I feel drained and weak during my period. What could my partner do to make things easier for me?",
+  "register": "chat",
+  "clarifying_question": "Is the weakness mostly physical fatigue, or does it come with other symptoms like dizziness or heavy bleeding?",
+  "chat_reply": "Feeling drained like that every cycle is exhausting to deal with. Is the weakness mostly physical fatigue, or does it come with things like dizziness or heavy bleeding? If it's more than typical tiredness, it would be worth having a doctor check your iron levels and overall health."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11915",
+  "category": "menstrual",
+  "vague_question": "A friend told me she struggled a lot with her periods because she never got proper education about them. How does that happen?",
+  "register": "chat",
+  "clarifying_question": "Are you asking about her personal experience, or about menstrual education gaps more broadly?",
+  "chat_reply": "That kind of gap in education can really shape how difficult periods feel for someone. Are you asking about your friend's personal experience, or menstrual education more broadly? Either way, a doctor or health educator can be a good resource for filling in gaps in accurate information."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10678",
+  "category": "menstrual",
+  "vague_question": "I want to be a better support for my partner during her period. What can I actually do?",
+  "register": "chat",
+  "clarifying_question": "Is there something specific she's mentioned needing, or are you looking for general ideas?",
+  "chat_reply": "It's wonderful that you want to actively show up for her like this. Is there something specific she's mentioned needing, or are you looking for general ideas to start with? Asking her directly what would help most is often the best first step."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10328",
+  "category": "menstrual",
+  "vague_question": "I'm nervous about opening up to my partner about period-related struggles. How can I bring it up?",
+  "register": "chat",
+  "clarifying_question": "What specifically are you hesitant to share with him, and how long have you two been together?",
+  "chat_reply": "It takes courage to even think about bringing this up, so that's a good sign. What specifically are you hesitant to share with him, and how long have you two been together? Starting small, in a calm moment rather than mid-symptom, often makes these conversations easier."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12096",
+  "category": "menstrual",
+  "vague_question": "I'm not sure what I should be eating during my period. What kinds of foods would help?",
+  "register": "chat",
+  "clarifying_question": "Are you dealing with a specific symptom like cramps, fatigue, or bloating that you'd like the food to help with?",
+  "chat_reply": "It's smart to think about how food might help you feel better during your period. Is there a specific symptom, like cramps, fatigue, or bloating, that you're hoping certain foods could help with? A doctor or nutritionist can tailor suggestions to whichever symptom bothers you most."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10357",
+  "category": "menstrual",
+  "vague_question": "My friends all say their partners really pamper them during their periods. What should I realistically expect from mine?",
+  "register": "chat",
+  "clarifying_question": "Has your partner shown any effort so far, or does this feel like new territory for him?",
+  "chat_reply": "It's natural to compare notes with friends, though every relationship looks different. Has your partner shown any effort in this area so far, or does this feel like new territory for him? Letting him know directly what would feel supportive to you is often more effective than hoping he figures it out."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12030",
+  "category": "menstrual",
+  "vague_question": "My school doesn't have pads available. What should I do if my period starts while I'm there?",
+  "register": "chat",
+  "clarifying_question": "Do you have any way to keep a backup product with you, like in your bag, and does the school nurse's office have anything?",
+  "chat_reply": "That's a stressful situation to be in without any backup plan. Do you have any way to carry a spare product with you, and does the school nurse's office keep any supplies? If not, a teacher or the school office may be able to point you toward help, and it's worth asking your school to stock some for emergencies."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:12037",
+  "category": "menstrual",
+  "vague_question": "What can I do if I get my period at school and don't have a pad on hand?",
+  "register": "chat",
+  "clarifying_question": "Is there a school nurse, teacher, or friend nearby you'd feel comfortable asking for help?",
+  "chat_reply": "That's a tough spot to be caught in unexpectedly. Is there a school nurse, teacher, or friend nearby you'd feel comfortable asking for help? Many schools keep spare supplies in the nurse's office specifically for situations like this."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11059",
+  "category": "menstrual",
+  "vague_question": "There are old restrictions in my family around what women can and can't do during their period. How does that kind of stigma actually affect health?",
+  "register": "chat",
+  "clarifying_question": "Are you asking about the health effects in general, or are these restrictions something you personally still deal with?",
+  "chat_reply": "That kind of long-standing stigma can genuinely affect women's willingness to seek care or talk about their health. Are you asking about the health effects in general, or are these restrictions something you're still personally navigating? Either way, a doctor can be a judgment-free resource regardless of what traditions say."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:11612",
+  "category": "menstrual",
+  "vague_question": "My sister is struggling to stay focused on her goals because of period-related issues. How can I encourage her?",
+  "register": "chat",
+  "clarifying_question": "What specifically is getting in her way, like pain, fatigue, or mood?",
+  "chat_reply": "It's kind of you to want to support her through this. What specifically is getting in her way, pain, fatigue, or mood changes? Once you know which one it is, a doctor might have specific suggestions to help manage that particular symptom so it interferes less with her goals."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10811",
+  "category": "menstrual",
+  "vague_question": "I'm worried my period will make me miss school. What can I do to avoid missing class because of it?",
+  "register": "chat",
+  "clarifying_question": "What's the main thing that's caused you to miss class before, pain, lack of supplies, or something else?",
+  "chat_reply": "That worry can really weigh on you, especially around school. What's the main thing that's caused you to miss class before, pain, lack of supplies, or something else? Once we know the main cause, there are usually practical fixes, and a doctor can help if pain is the main issue."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10440",
+  "category": "menstrual",
+  "vague_question": "My wife seems shy about discussing her period with me. How can I help her feel more at ease?",
+  "register": "chat",
+  "clarifying_question": "Has she mentioned any specific reason she feels shy, or is this something you've just observed?",
+  "chat_reply": "It's thoughtful that you want to help her feel more comfortable. Has she mentioned any specific reason she feels shy, or is this something you've mostly just noticed? Creating a low-pressure moment to check in, rather than addressing it head-on, often helps someone open up at their own pace."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10832",
+  "category": "menstrual",
+  "vague_question": "How can I check that my sister is properly taking care of herself during her period?",
+  "register": "chat",
+  "clarifying_question": "Is there a specific area you're concerned about, like hygiene, nutrition, or rest?",
+  "chat_reply": "It's caring of you to want to check in on this. Is there a specific area you're concerned about, like hygiene, nutrition, or rest? Talking to her directly, or involving a doctor if something seems physically off, would give you a clearer picture than guessing."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10799",
+  "category": "menstrual",
+  "vague_question": "Friends keep asking why I get quiet during my period. Should I talk about it even though it makes me uncomfortable?",
+  "register": "chat",
+  "clarifying_question": "What specifically makes you uncomfortable talking about it, is it the topic itself or how they might react?",
+  "chat_reply": "That's a personal decision, and there's no obligation to share more than feels right. What specifically makes you uncomfortable, the topic itself or how they might react? You could also try sharing just a little, like saying you're not feeling great, without going into full detail if you're not ready."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:10500",
+  "category": "menstrual",
+  "vague_question": "I feel really unmotivated to move during my period. Is there any actual benefit to exercising anyway?",
+  "register": "chat",
+  "clarifying_question": "How many days into your period do you usually feel this way, and what level of activity are you considering?",
+  "chat_reply": "That lack of motivation is really common during your period, so you're not alone in that. How many days into your period do you usually feel this way, and what kind of activity are you considering? Even light movement like walking can sometimes ease cramps, but a doctor can advise if your fatigue feels unusually severe."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:103026",
+  "category": "pcos",
+  "vague_question": "I have PCOD and my cycle stopped for a couple months after finishing treatment. When would I actually have a chance of getting pregnant?",
+  "register": "json",
+  "clarifying_question": "How many months has it been since your last period, and what medications is your doctor currently having you take?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:43581",
+  "category": "pcos",
+  "vague_question": "I've gained a lot of weight since getting diagnosed with PCOD and I'm trying to conceive. Should I focus on losing weight first or start fertility treatment right away?",
+  "register": "json",
+  "clarifying_question": "How much weight have you gained, and have your doctors given you a specific weight target before starting fertility treatment?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:5263",
+  "category": "pcos",
+  "vague_question": "I've had excess facial hair for years because of a hormone condition and nothing I've tried has worked. Is there any procedure that could actually get rid of it for good?",
+  "register": "json",
+  "clarifying_question": "What treatments have you already tried, like laser, medication, or creams, and how long did you try each one?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:51109",
+  "category": "pcos",
+  "vague_question": "I'm past menopause and I'm suddenly having symptoms that feel like an old ovarian issue I used to have. Should I wait it out or get checked right away?",
+  "register": "json",
+  "clarifying_question": "What symptoms are you noticing now, and how long have you had them?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:16799",
+  "category": "pcos",
+  "vague_question": "I have PCOS and I'm trying to conceive, but the fertility injections I'm on don't seem to be growing my eggs properly. What's going on?",
+  "register": "json",
+  "clarifying_question": "What medications and doses are you currently taking, and what size have your follicles reached on your last scan?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1506",
+  "category": "pcos",
+  "vague_question": "What lifestyle changes actually make a difference for managing PCOS?",
+  "register": "json",
+  "clarifying_question": "Are you newly diagnosed, or have you been managing PCOS for a while already?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1408",
+  "category": "pcos",
+  "vague_question": "I don't have access to a doctor nearby, so how would I even know if I have a hormonal condition like PCOS?",
+  "register": "json",
+  "clarifying_question": "Which symptoms have you noticed, like irregular periods, acne, or excess hair growth?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:2773",
+  "category": "pcos",
+  "vague_question": "I can't seem to lose weight no matter what I do, and I've got some other symptoms too that are getting me down. Is something hormonal going on?",
+  "register": "json",
+  "clarifying_question": "What other symptoms are you noticing besides the weight, like acne or hair growth, and have you had any hormone testing done?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:15300",
+  "category": "pcos",
+  "vague_question": "My partner and I have been trying for a baby for over a year with no luck, and some of my test results came back abnormal. What could be going on?",
+  "register": "json",
+  "clarifying_question": "Which specific test results came back abnormal, and what treatment has your doctor already started?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:47286",
+  "category": "pcos",
+  "vague_question": "Two doctors gave me different medication recommendations for the same fertility issue. How do I know which one is actually right for me?",
+  "register": "json",
+  "clarifying_question": "What are the two medications you were recommended, and did either doctor explain their specific reasoning?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1369",
+  "category": "pcos",
+  "vague_question": "I live somewhere without much medical care and I think I might have a hormonal condition. Could stress be causing it?",
+  "register": "json",
+  "clarifying_question": "Which symptoms have you noticed, and how long have you been experiencing them?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1501",
+  "category": "pcos",
+  "vague_question": "What changes should I make to my daily life to manage a hormonal condition when I don't have access to medical care?",
+  "register": "json",
+  "clarifying_question": "Have you been formally diagnosed with this condition, or are you going by symptoms alone?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:3791",
+  "category": "pcos",
+  "vague_question": "I've been trying to conceive for months and my doctor keeps changing my medication. Will this next one actually help me get pregnant?",
+  "register": "json",
+  "clarifying_question": "What medications have you already tried, and what did your doctor say changed between each one?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:50584",
+  "category": "pcos",
+  "vague_question": "I had a cyst that my doctor says has cleared up, and now they want me to try for a baby with some medication. Is it safe to go ahead?",
+  "register": "json",
+  "clarifying_question": "What medication has your doctor prescribed, and did they mention any follow-up scan before you start trying?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8706",
+  "category": "pcos",
+  "vague_question": "I was told my hormonal condition actually makes it easier for me to get pregnant. Is there a way to prevent that if I'm not ready?",
+  "register": "json",
+  "clarifying_question": "Are you currently sexually active, and are you looking for a specific method of contraception?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8607",
+  "category": "pcos",
+  "vague_question": "How might a hormonal condition affect someone's periods?",
+  "register": "json",
+  "clarifying_question": "Is this about your own periods or someone else's, and what changes have you noticed so far?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:786",
+  "category": "pcos",
+  "vague_question": "I'm worried about getting pregnant given a hormonal diagnosis I have. Can you help me understand my chances?",
+  "register": "json",
+  "clarifying_question": "How long have you been trying to conceive, and has your doctor mentioned anything about your ovulation specifically?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:109088",
+  "category": "pcos",
+  "vague_question": "I've had a lot of health issues lately, high blood pressure, headaches, fatigue, extra hair growth, and doctors keep telling me my hormones are normal. What could actually be causing all this?",
+  "register": "json",
+  "clarifying_question": "Which of these symptoms bothers you the most right now, and how long have you had the combination of them?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:108196",
+  "category": "pcos",
+  "vague_question": "I was diagnosed with a hormonal condition a year ago and started on medication, but I still haven't conceived. Should I keep taking the same medication?",
+  "register": "json",
+  "clarifying_question": "How long have you been on the current medication, and has your doctor mentioned re-checking your hormone levels recently?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8679",
+  "category": "pcos",
+  "vague_question": "A family member has been dealing with a hormonal condition for a while. Is there a way for her to fully get rid of it?",
+  "register": "json",
+  "clarifying_question": "What symptoms is she experiencing most, and has she had any treatment for it so far?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:779",
+  "category": "pcos",
+  "vague_question": "Can a hormonal condition really change what my periods look like month to month?",
+  "register": "json",
+  "clarifying_question": "Are you asking about your own periods, and if so, how would you describe your current cycle?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1433",
+  "category": "pcos",
+  "vague_question": "What's actually behind a hormonal condition like this?",
+  "register": "json",
+  "clarifying_question": "Are you asking generally, or has someone close to you been recently diagnosed?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8604",
+  "category": "pcos",
+  "vague_question": "Is there any medication that can completely cure a hormonal condition like this?",
+  "register": "json",
+  "clarifying_question": "Are you currently on any treatment for it, and what is your main goal, managing symptoms or trying to conceive?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8898",
+  "category": "pcos",
+  "vague_question": "People around me say a certain hormonal condition raises the risk of heart problems. Is that actually true?",
+  "register": "json",
+  "clarifying_question": "Do you have this condition yourself, and have you had any recent checks on your blood pressure or cholesterol?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1329",
+  "category": "pcos",
+  "vague_question": "Does having a lot of extra facial hair growth usually point to a hormonal condition in women?",
+  "register": "json",
+  "clarifying_question": "How long have you noticed the increased hair growth, and has it been getting worse over time?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:225",
+  "category": "pcos",
+  "vague_question": "What are the signs that someone might have a common hormonal condition affecting periods?",
+  "register": "json",
+  "clarifying_question": "Are you asking because of symptoms you've noticed in yourself, or just out of general curiosity?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8742",
+  "category": "pcos",
+  "vague_question": "There's no specialized care where I live for a hormonal condition. What can I do at home to manage the physical symptoms?",
+  "register": "json",
+  "clarifying_question": "Which physical symptoms are bothering you the most right now?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:40731",
+  "category": "pcos",
+  "vague_question": "I've been on a new medication for my hormonal condition for a week now and I'm feeling really unwell. Is that from the pills?",
+  "register": "json",
+  "clarifying_question": "What symptoms are you experiencing, and have you taken the medication exactly as your doctor prescribed?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:40738",
+  "category": "pcos",
+  "vague_question": "I've had an ongoing dull ache on one side of my abdomen for a while now. Could this be something more serious?",
+  "register": "json",
+  "clarifying_question": "How long has the pain been going on, and does anything make it better or worse, like position or movement?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:104395",
+  "category": "pcos",
+  "vague_question": "I've had sudden severe cramping along with nausea the last couple of nights. What could be causing this?",
+  "register": "json",
+  "clarifying_question": "How long did the severe episode last, and have you had any similar pain before this?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8766",
+  "category": "pcos",
+  "vague_question": "A doctor mentioned a hormonal condition to me and told me some things to watch out for. What exactly should I be paying attention to?",
+  "register": "json",
+  "clarifying_question": "What specific things did the doctor mention, and do you remember if they were about symptoms, lifestyle, or treatment?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:100424",
+  "category": "pcos",
+  "vague_question": "My teenager has been having sudden sharp stomach pain along with vomiting, and one test showed something minor. Should we be worried?",
+  "register": "json",
+  "clarifying_question": "How long has she had this pain, and has it been getting worse or staying the same?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:32093",
+  "category": "pcos",
+  "vague_question": "I've had ongoing concerns about my body's puberty development for a while and it's really bothering me. Is what I'm experiencing normal?",
+  "register": "json",
+  "clarifying_question": "Which specific changes are you concerned haven't happened yet compared to what you'd expect for your age?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:354",
+  "category": "pcos",
+  "vague_question": "I've been overweight for years, dealing with a hormonal condition, and I'm not sure what my next treatment option should be. What should I consider?",
+  "register": "json",
+  "clarifying_question": "What treatments have you already tried, and has your doctor mentioned any options besides continuing to focus on weight loss?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:50808",
+  "category": "pcos",
+  "vague_question": "I've had ovarian cysts on and off for years, including one that required surgery. Now I keep getting new ones and I'm scared it might be something worse. Should I be worried?",
+  "register": "json",
+  "clarifying_question": "How often are the new cysts appearing, and has your doctor mentioned any concerning features on the recent scans?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17111",
+  "category": "pcos",
+  "vague_question": "I've been getting a fertility treatment cycle with injections, but my doctor said the process didn't go as expected this time. Is there still a chance I could be pregnant?",
+  "register": "json",
+  "clarifying_question": "What exactly did your doctor say happened differently this cycle, and on what day did they tell you to try at home?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:28802",
+  "category": "pcos",
+  "vague_question": "I've had ongoing pain on one side that doctors haven't been able to explain for years, and now a scan found something new. Could that be the actual cause?",
+  "register": "json",
+  "clarifying_question": "What did the recent scan specifically find, and has your doctor suggested any treatment for it yet?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "ChatDoctor-iCliniq:34",
+  "category": "pcos",
+  "vague_question": "I've been so on edge my whole life and I finally found out something biological might explain it. How old until things like that fully sort themselves out?",
+  "register": "json",
+  "clarifying_question": "Which specific concern is bothering you the most right now?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:109212",
+  "category": "pcos",
+  "vague_question": "A doctor told me I have symptoms of a hormonal condition. What actually causes it?",
+  "register": "json",
+  "clarifying_question": "Which specific symptoms did the doctor mention, and has any testing been done yet to confirm the diagnosis?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8594",
+  "category": "pcos",
+  "vague_question": "I recently found out about an unusual kidney finding along with ongoing back pain, and I also have a hormonal condition. Could they be connected somehow?",
+  "register": "json",
+  "clarifying_question": "How long have you had the back pain, and has any doctor connected it to either finding so far?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8653",
+  "category": "pcos",
+  "vague_question": "What actually causes a hormonal condition like this to develop in the first place?",
+  "register": "json",
+  "clarifying_question": "Are you asking in general, or have you or someone close to you just been diagnosed?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8777",
+  "category": "pcos",
+  "vague_question": "What might cause a hormonal condition like this to develop in a family member?",
+  "register": "json",
+  "clarifying_question": "How old is she, and what symptoms led to her being evaluated for it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8683",
+  "category": "pcos",
+  "vague_question": "I've been trying to conceive for a year with a hormonal condition, and my recent test came back fine, but I'm still not sure the medication is working. Should I keep going with it?",
+  "register": "json",
+  "clarifying_question": "On which day of your cycle did you ovulate this month, and has your period timing changed since starting the current medication?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1432",
+  "category": "pcos",
+  "vague_question": "I've had sudden intense pain on one side that gets worse when I breathe deeply, and I'm already being tested for a couple of related conditions. What could this new pain mean?",
+  "register": "json",
+  "clarifying_question": "When exactly did this new pain start, and does it change at all when you sit, lie down, or move?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:19765",
+  "category": "pcos",
+  "vague_question": "I've had ongoing pain and a noticeable lump on one side of my stomach for a while now, plus some fever and appetite changes. Is this something urgent?",
+  "register": "json",
+  "clarifying_question": "How long have you had the lump, and has your fever come back since the one episode you mentioned?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:35897",
+  "category": "pcos",
+  "vague_question": "My doctor found something concerning during a scan related to my reproductive organs. Is what they suggested for treatment actually enough?",
+  "register": "json",
+  "clarifying_question": "What exactly did the scan find, and what treatment did the doctor recommend for it?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:15410",
+  "category": "pcos",
+  "vague_question": "I have some abnormal results on a fertility test along with a hormonal condition. Is having a baby still realistically possible for us?",
+  "register": "json",
+  "clarifying_question": "Which specific results came back abnormal, and has a fertility specialist reviewed both partners' results together?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1438",
+  "category": "pcos",
+  "vague_question": "I've had ongoing back and abdominal pain along with numbness down one leg, and I have a history of reproductive issues. What could be causing all of this?",
+  "register": "json",
+  "clarifying_question": "How long have you had the numbness, and has it changed or gotten worse recently?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:37121",
+  "category": "pcos",
+  "vague_question": "Is it possible to fully treat a hormonal condition using medication alone if I don't have easy access to a specialist?",
+  "register": "json",
+  "clarifying_question": "Which symptoms are you hoping to manage most, irregular periods, hair growth, or something else?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8800",
+  "category": "pcos",
+  "vague_question": "A doctor found something unexpected on a scan of my reproductive organs while checking something else entirely. Should I be worried about it?",
+  "register": "json",
+  "clarifying_question": "What exactly did the doctor say the finding was, and have they recommended any follow-up?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1431",
+  "category": "pcos",
+  "vague_question": "I have a hormonal condition and I'm not ovulating regularly. Are my chances of having children realistic?",
+  "register": "json",
+  "clarifying_question": "What did your recent hormone test results show, and how long have you been trying to conceive?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:54976",
+  "category": "pcos",
+  "vague_question": "My community has a lot of cases of a certain hormonal condition. Are there serious long-term risks I should know about?",
+  "register": "json",
+  "clarifying_question": "Have you personally been diagnosed with this condition, or are you asking based on what you've seen around you?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20188",
+  "category": "pcos",
+  "vague_question": "How can I best support someone close to me who's just been diagnosed with a hormonal condition?",
+  "register": "json",
+  "clarifying_question": "What has she told you she's struggling with most so far, physically or emotionally?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:107842",
+  "category": "pcos",
+  "vague_question": "I've heard a hormonal condition is usually treated with medication, but I don't have real access to healthcare where I live. Is there another way to manage it?",
+  "register": "json",
+  "clarifying_question": "Which specific symptoms are affecting you the most day to day?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111421",
+  "category": "pcos",
+  "vague_question": "I have a mild version of a hormonal condition and I'm trying for a baby. Is the treatment I've just started likely to work for me?",
+  "register": "json",
+  "clarifying_question": "What medication have you just started, and have you conceived naturally in the past?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:13565",
+  "category": "pcos",
+  "vague_question": "There's no doctor available where I live and I've been dealing with a hormonal condition. How can it actually be treated in my situation?",
+  "register": "json",
+  "clarifying_question": "Which symptoms bother you the most, and do you have access to any pharmacy or basic clinic nearby?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8597",
+  "category": "pcos",
+  "vague_question": "I was told I have a cyst related to my reproductive system and I'm already dealing with stress about it. Is it something serious, and could I still go for fertility treatment?",
+  "register": "json",
+  "clarifying_question": "What size is the cyst, and has your doctor mentioned whether it needs to be treated before starting fertility treatment?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:45905",
+  "category": "pcos",
+  "vague_question": "I don't want to get pregnant right now given a hormonal condition I have. What are my options?",
+  "register": "json",
+  "clarifying_question": "Are you currently on any medication for the condition, and what kind of contraception are you considering?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:111955",
+  "category": "pcos",
+  "vague_question": "How would I know if I actually have a certain hormonal condition?",
+  "register": "json",
+  "clarifying_question": "Which symptoms have you been noticing, like irregular periods, acne, or weight changes?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1487",
+  "category": "pcos",
+  "vague_question": "I've been diagnosed with a hormonal condition and I'm curious whether one of my supplements could be making a symptom worse.",
+  "register": "json",
+  "clarifying_question": "Which specific supplement are you taking, and which symptom have you noticed has gotten worse?",
+  "chat_reply": null
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8648",
+  "category": "pcos",
+  "vague_question": "A doctor once asked me if I had a hormonal condition. What actually causes something like that?",
+  "register": "chat",
+  "clarifying_question": "Which symptoms prompted the doctor to ask about it, and has any testing been done since then?",
+  "chat_reply": "That's a good thing to want to understand better. Which symptoms prompted the doctor to bring it up, and has any testing been done since? A gynecologist or endocrinologist can run the right bloodwork and imaging to give you a clear diagnosis rather than leaving it as an open question."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1461",
+  "category": "pcos",
+  "vague_question": "I have a hormonal condition and haven't had children yet, and I'm honestly exhausted from years of medication trying to conceive. Is it okay to stop taking it for now?",
+  "register": "chat",
+  "clarifying_question": "Which medication are you currently on, and is it specifically for fertility or for managing your cycle overall?",
+  "chat_reply": "It sounds like you've been carrying a lot for a long time, and that exhaustion is completely valid. Which medication are you currently taking, and is it mainly for fertility or for managing your cycle in general? It's worth having an honest conversation with your doctor about taking a break, since they can help you weigh the trade-offs safely."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:2141",
+  "category": "pcos",
+  "vague_question": "I've heard a hormonal condition can cause sudden weight gain. Is that true?",
+  "register": "chat",
+  "clarifying_question": "Have you noticed a sudden weight change yourself, and if so, over what period of time?",
+  "chat_reply": "That's a common concern, and there is a real connection worth understanding. Have you noticed a sudden weight change yourself, and over what period of time did it happen? A doctor can check your hormone levels to see whether that's what's driving it in your case."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1460",
+  "category": "pcos",
+  "vague_question": "I've had ongoing severe pain on one side along with some other reproductive findings on a scan, and fertility is my main worry. What should I do next?",
+  "register": "chat",
+  "clarifying_question": "What exactly did the scan find, and how long has the pain been going on?",
+  "chat_reply": "Dealing with pain and fertility worries at the same time is a lot to manage. What exactly did the scan find, and how long has the pain been going on? A gynecologist can look at both issues together and figure out whether they're connected and what the safest next step is."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:3023",
+  "category": "pcos",
+  "vague_question": "I haven't gone through puberty in some ways I expected by my age, and I'm also dealing with a habit I'm worried is making it worse. Could that really be slowing things down?",
+  "register": "chat",
+  "clarifying_question": "Which specific changes are you concerned haven't happened yet, and how old are you currently?",
+  "chat_reply": "It's understandable to feel anxious comparing yourself to what you expect for your age. Which specific changes are you concerned haven't happened yet? A doctor can check your hormone levels and development directly rather than leaving you to guess, and can address any specific habit you're worried about too."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8703",
+  "category": "pcos",
+  "vague_question": "I just learned about a hormonal condition but don't really know what it is. Can you explain it simply?",
+  "register": "chat",
+  "clarifying_question": "Did a doctor mention this to you recently, or did you come across the term somewhere else?",
+  "chat_reply": "Happy to walk you through it simply. Did a doctor mention this to you recently, or did you come across the term elsewhere? If a doctor raised it, it's worth asking them directly for your specific results so the explanation applies to your own situation."
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:783",
+  "category": "pcos",
+  "vague_question": "Does a certain vitamin supplement cause increased facial hair growth?",
+  "register": "chat",
+  "clarifying_question": "Are you currently taking that supplement, and have you noticed new hair growth since starting it?",
+  "chat_reply": "That's a fair thing to want clarity on before continuing a supplement. Are you currently taking it, and have you noticed new hair growth since you started? If you're concerned, a doctor can check your hormone levels to see whether something else might be driving the hair growth instead."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8550",
+  "category": "pcos",
+  "vague_question": "Many women where I live deal with a hormonal condition. Does it come with any serious long-term health risks I should know about?",
+  "register": "chat",
+  "clarifying_question": "Have you been diagnosed with this condition yourself, or are you asking based on what you've observed in your community?",
+  "chat_reply": "It's smart to want to understand the bigger picture here. Have you been diagnosed with this yourself, or are you asking based on what you've seen around you? Either way, a doctor can walk you through the specific long-term risks and how they're typically monitored and managed."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:18545",
+  "category": "pcos",
+  "vague_question": "I've heard a hormonal condition can raise the risk of heart disease. Is that true?",
+  "register": "chat",
+  "clarifying_question": "Do you have this condition yourself, and has your doctor mentioned checking your blood pressure or cholesterol?",
+  "chat_reply": "That's a real connection worth taking seriously. Do you have this condition yourself, and has your doctor checked things like your blood pressure or cholesterol recently? If not, it's worth asking for those checks at your next visit so it can be monitored properly."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8717",
+  "category": "pcos",
+  "vague_question": "My doctor prescribed medication for a hormonal condition and I really want to get pregnant. Will taking these pills affect my chances?",
+  "register": "chat",
+  "clarifying_question": "What is the exact medication and dose your doctor prescribed, and did they explain how it relates to your fertility goals?",
+  "chat_reply": "It's a great question to ask before you start. What's the exact medication and dose you were prescribed, and did your doctor explain how it fits with your fertility goals? Some medications for this condition are actually meant to support ovulation, so it's worth confirming that directly with your prescribing doctor."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:19639",
+  "category": "pcos",
+  "vague_question": "My hormone levels have shifted a lot recently and I've been having new abdominal and back pain along with some findings on a scan. Could the hormone change be behind it?",
+  "register": "chat",
+  "clarifying_question": "What specifically changed in your hormone levels, and when did the pain start relative to that change?",
+  "chat_reply": "That's a reasonable thing to connect, given the timing. What specifically changed in your hormone levels, and when did the pain start in relation to that? A doctor can look at your scan findings alongside your hormone levels to see whether they're related, and whether anything needs treatment."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:21332",
+  "category": "pcos",
+  "vague_question": "I was diagnosed with a hormonal condition a while ago and have had ongoing pain along with other symptoms doctors haven't fully explained. Any help would mean a lot.",
+  "register": "chat",
+  "clarifying_question": "Which symptom concerns you the most right now, and how long has it been going on?",
+  "chat_reply": "It sounds like you've been dealing with a lot without clear answers, and that's genuinely hard. Which symptom concerns you the most right now, and how long has it been going on? A specialist who can look at your full history together, rather than one symptom at a time, may be able to connect the dots your other doctors haven't yet."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1396",
+  "category": "pcos",
+  "vague_question": "How can my family best support someone dealing with the long-term effects of a hormonal condition?",
+  "register": "chat",
+  "clarifying_question": "What has she mentioned struggling with the most, physical symptoms, emotional wellbeing, or something else?",
+  "chat_reply": "It's wonderful that you want to be there for her in a meaningful way. What has she mentioned struggling with most, physical symptoms, emotional wellbeing, or something else? Asking her directly what kind of support she wants right now is often the most helpful starting point."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:23799",
+  "category": "pcos",
+  "vague_question": "How can I help someone close to me manage the physical symptoms of a hormonal condition?",
+  "register": "chat",
+  "clarifying_question": "Which physical symptoms is she dealing with most, and has she seen a doctor about them yet?",
+  "chat_reply": "It's caring of you to want to help with this. Which physical symptoms is she dealing with most right now, and has she seen a doctor about them? Supporting her in getting proper medical care, alongside things like healthy meals or exercise together, can make a real difference."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:1488",
+  "category": "pcos",
+  "vague_question": "Is there a reliable way to actually diagnose a hormonal condition like this?",
+  "register": "chat",
+  "clarifying_question": "Are you asking for yourself, and if so, what symptoms have prompted the question?",
+  "chat_reply": "Yes, there are clear ways doctors go about confirming this. Are you asking for yourself, and if so, what symptoms have prompted the question? A doctor typically uses a combination of blood tests and an ultrasound, so it's worth booking an appointment to get a definitive answer rather than guessing from symptoms alone."
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:801",
+  "category": "pcos",
+  "vague_question": "I've had new lower back pain along with bloating and pain on one side, and a recent scan found something on my ovary. Could that be causing all of this?",
+  "register": "chat",
+  "clarifying_question": "What exactly did the scan find on your ovary, and how does the pain change throughout the day?",
+  "chat_reply": "That combination of symptoms is worth taking seriously. What exactly did the scan find on your ovary, and how does the pain change throughout the day? A doctor can determine whether the finding is actually the source of your pain or whether something else also needs to be ruled out."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:28341",
+  "category": "pcos",
+  "vague_question": "I was recently sent home from the hospital after being treated for a burst cyst, and I'm still in a lot of discomfort. Is it safe to just wait for my follow-up appointment?",
+  "register": "chat",
+  "clarifying_question": "How many days ago were you discharged, and has the pain gotten better, stayed the same, or gotten worse since then?",
+  "chat_reply": "It's unsettling to still feel unwell after being sent home. How many days ago were you discharged, and has the pain changed since then? If it's gotten worse or you're developing new symptoms, it's worth going back sooner rather than waiting for the scheduled follow-up, since that's a real safety concern."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:20082",
+  "category": "pcos",
+  "vague_question": "I have a hormonal condition and I've been told my treatment can stop now. Could the condition come back, and could it affect me getting married or having children later?",
+  "register": "chat",
+  "clarifying_question": "How long ago did your doctor say you could stop treatment, and have you had any symptoms return since then?",
+  "chat_reply": "It's completely natural to want reassurance about the future here. How long ago did your doctor say you could stop, and have any symptoms returned since? A follow-up with your doctor can confirm whether things are stable and address your specific questions about future fertility."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:17946",
+  "category": "pcos",
+  "vague_question": "I have a hormonal condition and I'd like to know how to prevent pregnancy while managing it.",
+  "register": "chat",
+  "clarifying_question": "Are you currently taking any medication for the condition, and what type of contraception have you considered so far?",
+  "chat_reply": "It's good that you're thinking about this proactively. Are you currently on any medication for the condition, and what kind of contraception have you considered so far? A doctor can help you pick an option that works well alongside your condition rather than against it."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:12774",
+  "category": "pcos",
+  "vague_question": "I've had an ongoing stabbing pain on one side along with appetite issues, and I already have a couple of relevant diagnoses. What could this new pain be?",
+  "register": "chat",
+  "clarifying_question": "How often does the stabbing pain occur, and does it happen around a particular point in your cycle?",
+  "chat_reply": "That's a specific enough pattern that it's worth digging into. How often does the stabbing pain occur, and does it line up with a particular point in your cycle? A doctor familiar with your existing diagnoses can help figure out whether this new pain is related or something separate."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8803",
+  "category": "pcos",
+  "vague_question": "What actually causes a hormonal condition like this?",
+  "register": "chat",
+  "clarifying_question": "Are you asking in general, or have you recently been diagnosed or noticed symptoms yourself?",
+  "chat_reply": "That's a good foundational question. Are you asking in general, or have you recently noticed symptoms or been diagnosed yourself? If it's personal, a doctor can explain the likely contributing factors in your specific case rather than just the general picture."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8738",
+  "category": "pcos",
+  "vague_question": "What are the usual signs that someone might have a common hormonal condition?",
+  "register": "chat",
+  "clarifying_question": "Are you noticing these signs in yourself, and if so, which ones stand out the most?",
+  "chat_reply": "Good to get a clear picture of this. Are you noticing these signs in yourself, and if so, which ones stand out most? If several apply to you, it's worth seeing a doctor for proper testing rather than trying to self-diagnose from a list of symptoms."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8669",
+  "category": "pcos",
+  "vague_question": "I keep getting cysts and abdominal pain along with some other symptoms, and I'm not sure if it's related to my kidneys or something else. Am I overreacting by being concerned?",
+  "register": "chat",
+  "clarifying_question": "Which symptom is bothering you the most right now, and has it changed in intensity recently?",
+  "chat_reply": "You're not overreacting at all, this sounds like a genuinely confusing and uncomfortable situation. Which symptom is bothering you the most right now, and has it changed in intensity recently? Given how many different findings are involved, it's worth asking for a coordinated review between your specialists rather than seeing each one separately."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:29483",
+  "category": "pcos",
+  "vague_question": "I'm unmarried and have a hormonal condition that was treated and resolved. Should I be worried about it affecting my future marriage or ability to have children?",
+  "register": "chat",
+  "clarifying_question": "How long ago did your doctor confirm the condition had resolved, and have you had any follow-up scans since then?",
+  "chat_reply": "That's a very understandable thing to want peace of mind about. How long ago did your doctor confirm it had resolved, and have you had any follow-up scans since? A gynecologist can reassess your current status and answer your specific questions about future fertility directly."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:33638",
+  "category": "pcos",
+  "vague_question": "I have a hormonal condition and I'm looking for ways to avoid getting pregnant right now.",
+  "register": "chat",
+  "clarifying_question": "What form of contraception have you already considered, and are you currently on any medication for your condition?",
+  "chat_reply": "It's smart to plan ahead here. What form of contraception have you already considered, and are you currently on any medication for your condition? A doctor can recommend an option that works well alongside your treatment rather than complicating it."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:46148",
+  "category": "pcos",
+  "vague_question": "I've had an ongoing stabbing pain on one side along with appetite problems, and I have a couple of related diagnoses already. What's going on?",
+  "register": "chat",
+  "clarifying_question": "How long has this specific pain been happening, and is it constant or does it come and go?",
+  "chat_reply": "That's worth sorting out given your existing diagnoses. How long has this specific pain been going on, and is it constant or does it come and go? A doctor who has your full history can help determine if it's connected to your known conditions or something new."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8708",
+  "category": "pcos",
+  "vague_question": "What actually causes a certain common hormonal condition?",
+  "register": "chat",
+  "clarifying_question": "Is this a general question, or has a doctor mentioned this term to you recently?",
+  "chat_reply": "That's a good question to get clarity on. Is this something you're curious about generally, or did a doctor mention it to you recently? If a doctor raised it, following up with them directly will give you an answer tailored to your own test results."
+ },
+ {
+  "source_row_id": "HealthCareMagic-100k:50825",
+  "category": "pcos",
+  "vague_question": "What are some common symptoms people notice with a hormonal condition like this?",
+  "register": "chat",
+  "clarifying_question": "Are you asking because you've noticed some of these symptoms yourself?",
+  "chat_reply": "Glad to walk through the common signs. Are you asking because you've noticed some of these yourself? If so, it's worth seeing a doctor for blood tests and an ultrasound, since several of these symptoms overlap with other conditions too."
+ },
+ {
+  "source_row_id": "MENST_training2K:training2K:774",
+  "category": "pcos",
+  "vague_question": "I have a hormonal condition and my periods have become really unpredictable lately. Could stress be making it worse?",
+  "register": "chat",
+  "clarifying_question": "How irregular have your cycles been recently, and has anything particularly stressful been going on in your life?",
+  "chat_reply": "Stress and hormonal conditions can definitely feed into each other. How irregular have your cycles been recently, and has anything particularly stressful been going on? A doctor can check whether your hormone levels have shifted and help you find ways to manage both the stress and the symptoms."
+ },
+ {
+  "source_row_id": "MENST_train24K:train24K:8566",
+  "category": "pcos",
+  "vague_question": "I've been diagnosed with a hormonal condition and I'm worried about how it might affect my life in the long run. What should I actually be watching out for?",
+  "register": "chat",
+  "clarifying_question": "Which specific long-term effects are you most worried about, like fertility, weight, or heart health?",
+  "chat_reply": "It's completely reasonable to want to plan ahead here. Which long-term effects are you most worried about, fertility, weight, or heart health? A doctor can put together a monitoring plan tailored to whichever of these matters most to you."
+ }
+]
