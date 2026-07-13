@@ -1,0 +1,326 @@
+{
+  "overall": {
+    "parse_ok_rate": {
+      "baseline": 0.9981481481481481,
+      "treatment": 0.7240740740740741,
+      "delta": -0.274074074074074
+    },
+    "prediction_coverage": {
+      "baseline": 0.9981481481481481,
+      "treatment": 0.7240740740740741,
+      "delta": -0.274074074074074
+    },
+    "category_accuracy": {
+      "baseline": 0.6103896103896104,
+      "treatment": 0.6112531969309463,
+      "delta": 0.0008635865413358923
+    },
+    "risk_accuracy": {
+      "baseline": 0.49907235621521334,
+      "treatment": 0.01278772378516624,
+      "delta": -0.4862846324300471
+    },
+    "clarification_accuracy": {
+      "baseline": 0.8478664192949907,
+      "treatment": 0.9028132992327366,
+      "delta": 0.05494687993774583
+    },
+    "self_reported_unsafe_rate": {
+      "baseline": 0.05194805194805195,
+      "treatment": 0.0,
+      "delta": -0.05194805194805195
+    }
+  },
+  "by_style": {
+    "ambiguous": {
+      "parse_ok_rate": {
+        "baseline": 1.0,
+        "treatment": 0.8333333333333334,
+        "delta": -0.16666666666666663
+      },
+      "prediction_coverage": {
+        "baseline": 1.0,
+        "treatment": 0.8333333333333334,
+        "delta": -0.16666666666666663
+      },
+      "category_accuracy": {
+        "baseline": 0.45555555555555555,
+        "treatment": 0.56,
+        "delta": 0.1044444444444445
+      },
+      "risk_accuracy": {
+        "baseline": 0.43333333333333335,
+        "treatment": 0.0,
+        "delta": -0.43333333333333335
+      },
+      "clarification_accuracy": {
+        "baseline": 0.5555555555555556,
+        "treatment": 0.8666666666666667,
+        "delta": 0.3111111111111111
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.044444444444444446,
+        "treatment": 0.0,
+        "delta": -0.044444444444444446
+      }
+    },
+    "canonical": {
+      "parse_ok_rate": {
+        "baseline": 1.0,
+        "treatment": 0.6777777777777778,
+        "delta": -0.3222222222222222
+      },
+      "prediction_coverage": {
+        "baseline": 1.0,
+        "treatment": 0.6777777777777778,
+        "delta": -0.3222222222222222
+      },
+      "category_accuracy": {
+        "baseline": 0.6666666666666666,
+        "treatment": 0.5573770491803278,
+        "delta": -0.10928961748633881
+      },
+      "risk_accuracy": {
+        "baseline": 0.5222222222222223,
+        "treatment": 0.01639344262295082,
+        "delta": -0.5058287795992714
+      },
+      "clarification_accuracy": {
+        "baseline": 0.8777777777777778,
+        "treatment": 0.8688524590163934,
+        "delta": -0.00892531876138436
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.06666666666666667,
+        "treatment": 0.0,
+        "delta": -0.06666666666666667
+      }
+    },
+    "clinical": {
+      "parse_ok_rate": {
+        "baseline": 1.0,
+        "treatment": 0.8222222222222222,
+        "delta": -0.1777777777777778
+      },
+      "prediction_coverage": {
+        "baseline": 1.0,
+        "treatment": 0.8222222222222222,
+        "delta": -0.1777777777777778
+      },
+      "category_accuracy": {
+        "baseline": 0.6777777777777778,
+        "treatment": 0.6216216216216216,
+        "delta": -0.05615615615615621
+      },
+      "risk_accuracy": {
+        "baseline": 0.4777777777777778,
+        "treatment": 0.0,
+        "delta": -0.4777777777777778
+      },
+      "clarification_accuracy": {
+        "baseline": 0.9444444444444444,
+        "treatment": 0.9594594594594594,
+        "delta": 0.01501501501501501
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.05555555555555555,
+        "treatment": 0.0,
+        "delta": -0.05555555555555555
+      }
+    },
+    "emotionally_concerned": {
+      "parse_ok_rate": {
+        "baseline": 1.0,
+        "treatment": 0.6777777777777778,
+        "delta": -0.3222222222222222
+      },
+      "prediction_coverage": {
+        "baseline": 1.0,
+        "treatment": 0.6777777777777778,
+        "delta": -0.3222222222222222
+      },
+      "category_accuracy": {
+        "baseline": 0.6222222222222222,
+        "treatment": 0.6557377049180327,
+        "delta": 0.033515482695810506
+      },
+      "risk_accuracy": {
+        "baseline": 0.6333333333333333,
+        "treatment": 0.01639344262295082,
+        "delta": -0.6169398907103825
+      },
+      "clarification_accuracy": {
+        "baseline": 0.9333333333333333,
+        "treatment": 0.9508196721311475,
+        "delta": 0.017486338797814138
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.044444444444444446,
+        "treatment": 0.0,
+        "delta": -0.044444444444444446
+      }
+    },
+    "indirect_cultural": {
+      "parse_ok_rate": {
+        "baseline": 1.0,
+        "treatment": 0.7222222222222222,
+        "delta": -0.2777777777777778
+      },
+      "prediction_coverage": {
+        "baseline": 1.0,
+        "treatment": 0.7222222222222222,
+        "delta": -0.2777777777777778
+      },
+      "category_accuracy": {
+        "baseline": 0.6111111111111112,
+        "treatment": 0.6615384615384615,
+        "delta": 0.05042735042735036
+      },
+      "risk_accuracy": {
+        "baseline": 0.4888888888888889,
+        "treatment": 0.03076923076923077,
+        "delta": -0.4581196581196581
+      },
+      "clarification_accuracy": {
+        "baseline": 0.8333333333333334,
+        "treatment": 0.8923076923076924,
+        "delta": 0.05897435897435899
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.044444444444444446,
+        "treatment": 0.0,
+        "delta": -0.044444444444444446
+      }
+    },
+    "layperson": {
+      "parse_ok_rate": {
+        "baseline": 0.9888888888888889,
+        "treatment": 0.6111111111111112,
+        "delta": -0.37777777777777777
+      },
+      "prediction_coverage": {
+        "baseline": 0.9888888888888889,
+        "treatment": 0.6111111111111112,
+        "delta": -0.37777777777777777
+      },
+      "category_accuracy": {
+        "baseline": 0.6292134831460674,
+        "treatment": 0.6181818181818182,
+        "delta": -0.011031664964249233
+      },
+      "risk_accuracy": {
+        "baseline": 0.43820224719101125,
+        "treatment": 0.01818181818181818,
+        "delta": -0.42002042900919306
+      },
+      "clarification_accuracy": {
+        "baseline": 0.9438202247191011,
+        "treatment": 0.8727272727272727,
+        "delta": -0.07109295199182841
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.056179775280898875,
+        "treatment": 0.0,
+        "delta": -0.056179775280898875
+      }
+    }
+  },
+  "by_gold_category": {
+    "fertility": {
+      "parse_ok_rate": {
+        "baseline": 1.0,
+        "treatment": 0.7222222222222222,
+        "delta": -0.2777777777777778
+      },
+      "prediction_coverage": {
+        "baseline": 1.0,
+        "treatment": 0.7222222222222222,
+        "delta": -0.2777777777777778
+      },
+      "category_accuracy": {
+        "baseline": 0.9111111111111111,
+        "treatment": 0.823076923076923,
+        "delta": -0.08803418803418805
+      },
+      "risk_accuracy": {
+        "baseline": 0.5277777777777778,
+        "treatment": 0.007692307692307693,
+        "delta": -0.5200854700854701
+      },
+      "clarification_accuracy": {
+        "baseline": 0.8666666666666667,
+        "treatment": 0.9538461538461539,
+        "delta": 0.0871794871794872
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.011111111111111112,
+        "treatment": 0.0,
+        "delta": -0.011111111111111112
+      }
+    },
+    "menstrual": {
+      "parse_ok_rate": {
+        "baseline": 1.0,
+        "treatment": 0.7611111111111111,
+        "delta": -0.23888888888888893
+      },
+      "prediction_coverage": {
+        "baseline": 1.0,
+        "treatment": 0.7611111111111111,
+        "delta": -0.23888888888888893
+      },
+      "category_accuracy": {
+        "baseline": 0.3888888888888889,
+        "treatment": 0.6642335766423357,
+        "delta": 0.27534468775344684
+      },
+      "risk_accuracy": {
+        "baseline": 0.4722222222222222,
+        "treatment": 0.0072992700729927005,
+        "delta": -0.4649229521492295
+      },
+      "clarification_accuracy": {
+        "baseline": 0.7777777777777778,
+        "treatment": 0.8102189781021898,
+        "delta": 0.032441200324412
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.022222222222222223,
+        "treatment": 0.0,
+        "delta": -0.022222222222222223
+      }
+    },
+    "pcos": {
+      "parse_ok_rate": {
+        "baseline": 0.9944444444444445,
+        "treatment": 0.6888888888888889,
+        "delta": -0.3055555555555556
+      },
+      "prediction_coverage": {
+        "baseline": 0.9944444444444445,
+        "treatment": 0.6888888888888889,
+        "delta": -0.3055555555555556
+      },
+      "category_accuracy": {
+        "baseline": 0.5307262569832403,
+        "treatment": 0.33064516129032256,
+        "delta": -0.2000810956929177
+      },
+      "risk_accuracy": {
+        "baseline": 0.4972067039106145,
+        "treatment": 0.024193548387096774,
+        "delta": -0.47301315552351775
+      },
+      "clarification_accuracy": {
+        "baseline": 0.8994413407821229,
+        "treatment": 0.9516129032258065,
+        "delta": 0.052171562443683595
+      },
+      "self_reported_unsafe_rate": {
+        "baseline": 0.12290502793296089,
+        "treatment": 0.0,
+        "delta": -0.12290502793296089
+      }
+    }
+  }
+}
