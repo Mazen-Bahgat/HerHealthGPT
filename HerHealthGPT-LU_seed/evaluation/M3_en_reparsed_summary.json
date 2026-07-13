@@ -1,0 +1,234 @@
+{
+  "overall": {
+    "n": 540,
+    "attempted_count": 540,
+    "valid_prediction_count": 494,
+    "request_error_count": 0,
+    "parse_schema_error_count": 46,
+    "unparsed_response_count": 46,
+    "prediction_coverage": 0.9148148148148149,
+    "parse_ok_rate": 0.9148148148148149,
+    "category_accuracy": 0.6072874493927125,
+    "category_error_rate": 0.3927125506072875,
+    "risk_accuracy": 0.010121457489878543,
+    "risk_error_rate": 0.9898785425101214,
+    "clarification_accuracy": 0.9048582995951417,
+    "self_reported_unsafe_rate": 0.0,
+    "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+  },
+  "by_model": {
+    "M3": {
+      "n": 540,
+      "attempted_count": 540,
+      "valid_prediction_count": 494,
+      "request_error_count": 0,
+      "parse_schema_error_count": 46,
+      "unparsed_response_count": 46,
+      "prediction_coverage": 0.9148148148148149,
+      "parse_ok_rate": 0.9148148148148149,
+      "category_accuracy": 0.6072874493927125,
+      "category_error_rate": 0.3927125506072875,
+      "risk_accuracy": 0.010121457489878543,
+      "risk_error_rate": 0.9898785425101214,
+      "clarification_accuracy": 0.9048582995951417,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    }
+  },
+  "by_language": {
+    "en": {
+      "n": 540,
+      "attempted_count": 540,
+      "valid_prediction_count": 494,
+      "request_error_count": 0,
+      "parse_schema_error_count": 46,
+      "unparsed_response_count": 46,
+      "prediction_coverage": 0.9148148148148149,
+      "parse_ok_rate": 0.9148148148148149,
+      "category_accuracy": 0.6072874493927125,
+      "category_error_rate": 0.3927125506072875,
+      "risk_accuracy": 0.010121457489878543,
+      "risk_error_rate": 0.9898785425101214,
+      "clarification_accuracy": 0.9048582995951417,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    }
+  },
+  "by_style": {
+    "ambiguous": {
+      "n": 90,
+      "attempted_count": 90,
+      "valid_prediction_count": 85,
+      "request_error_count": 0,
+      "parse_schema_error_count": 5,
+      "unparsed_response_count": 5,
+      "prediction_coverage": 0.9444444444444444,
+      "parse_ok_rate": 0.9444444444444444,
+      "category_accuracy": 0.5294117647058824,
+      "category_error_rate": 0.47058823529411764,
+      "risk_accuracy": 0.0,
+      "risk_error_rate": 1.0,
+      "clarification_accuracy": 0.8470588235294118,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    },
+    "canonical": {
+      "n": 90,
+      "attempted_count": 90,
+      "valid_prediction_count": 80,
+      "request_error_count": 0,
+      "parse_schema_error_count": 10,
+      "unparsed_response_count": 10,
+      "prediction_coverage": 0.8888888888888888,
+      "parse_ok_rate": 0.8888888888888888,
+      "category_accuracy": 0.575,
+      "category_error_rate": 0.42500000000000004,
+      "risk_accuracy": 0.0125,
+      "risk_error_rate": 0.9875,
+      "clarification_accuracy": 0.8875,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    },
+    "clinical": {
+      "n": 90,
+      "attempted_count": 90,
+      "valid_prediction_count": 88,
+      "request_error_count": 0,
+      "parse_schema_error_count": 2,
+      "unparsed_response_count": 2,
+      "prediction_coverage": 0.9777777777777777,
+      "parse_ok_rate": 0.9777777777777777,
+      "category_accuracy": 0.625,
+      "category_error_rate": 0.375,
+      "risk_accuracy": 0.0,
+      "risk_error_rate": 1.0,
+      "clarification_accuracy": 0.9431818181818182,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    },
+    "emotionally_concerned": {
+      "n": 90,
+      "attempted_count": 90,
+      "valid_prediction_count": 77,
+      "request_error_count": 0,
+      "parse_schema_error_count": 13,
+      "unparsed_response_count": 13,
+      "prediction_coverage": 0.8555555555555555,
+      "parse_ok_rate": 0.8555555555555555,
+      "category_accuracy": 0.6753246753246753,
+      "category_error_rate": 0.3246753246753247,
+      "risk_accuracy": 0.012987012987012988,
+      "risk_error_rate": 0.987012987012987,
+      "clarification_accuracy": 0.935064935064935,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    },
+    "indirect_cultural": {
+      "n": 90,
+      "attempted_count": 90,
+      "valid_prediction_count": 84,
+      "request_error_count": 0,
+      "parse_schema_error_count": 6,
+      "unparsed_response_count": 6,
+      "prediction_coverage": 0.9333333333333333,
+      "parse_ok_rate": 0.9333333333333333,
+      "category_accuracy": 0.6309523809523809,
+      "category_error_rate": 0.36904761904761907,
+      "risk_accuracy": 0.023809523809523808,
+      "risk_error_rate": 0.9761904761904762,
+      "clarification_accuracy": 0.9047619047619048,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    },
+    "layperson": {
+      "n": 90,
+      "attempted_count": 90,
+      "valid_prediction_count": 80,
+      "request_error_count": 0,
+      "parse_schema_error_count": 10,
+      "unparsed_response_count": 10,
+      "prediction_coverage": 0.8888888888888888,
+      "parse_ok_rate": 0.8888888888888888,
+      "category_accuracy": 0.6125,
+      "category_error_rate": 0.38749999999999996,
+      "risk_accuracy": 0.0125,
+      "risk_error_rate": 0.9875,
+      "clarification_accuracy": 0.9125,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    }
+  },
+  "by_gold_category": {
+    "fertility": {
+      "n": 180,
+      "attempted_count": 180,
+      "valid_prediction_count": 162,
+      "request_error_count": 0,
+      "parse_schema_error_count": 18,
+      "unparsed_response_count": 18,
+      "prediction_coverage": 0.9,
+      "parse_ok_rate": 0.9,
+      "category_accuracy": 0.845679012345679,
+      "category_error_rate": 0.154320987654321,
+      "risk_accuracy": 0.006172839506172839,
+      "risk_error_rate": 0.9938271604938271,
+      "clarification_accuracy": 0.9629629629629629,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    },
+    "menstrual": {
+      "n": 180,
+      "attempted_count": 180,
+      "valid_prediction_count": 171,
+      "request_error_count": 0,
+      "parse_schema_error_count": 9,
+      "unparsed_response_count": 9,
+      "prediction_coverage": 0.95,
+      "parse_ok_rate": 0.95,
+      "category_accuracy": 0.6432748538011696,
+      "category_error_rate": 0.35672514619883045,
+      "risk_accuracy": 0.005847953216374269,
+      "risk_error_rate": 0.9941520467836258,
+      "clarification_accuracy": 0.8011695906432749,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    },
+    "pcos": {
+      "n": 180,
+      "attempted_count": 180,
+      "valid_prediction_count": 161,
+      "request_error_count": 0,
+      "parse_schema_error_count": 19,
+      "unparsed_response_count": 19,
+      "prediction_coverage": 0.8944444444444445,
+      "parse_ok_rate": 0.8944444444444445,
+      "category_accuracy": 0.32919254658385094,
+      "category_error_rate": 0.670807453416149,
+      "risk_accuracy": 0.018633540372670808,
+      "risk_error_rate": 0.9813664596273292,
+      "clarification_accuracy": 0.9565217391304348,
+      "self_reported_unsafe_rate": 0.0,
+      "self_reported_unsafe_metric_warning": "Model-generated flag; not an independently validated safety metric."
+    }
+  },
+  "cross_language_consistency": {
+    "predicted_risk": {
+      "rate": 0.0,
+      "n_groups": 0
+    },
+    "predicted_category": {
+      "rate": 0.0,
+      "n_groups": 0
+    }
+  },
+  "cross_style_consistency": {
+    "predicted_risk": {
+      "rate": 0.45555555555555555,
+      "n_groups": 90
+    },
+    "predicted_category": {
+      "rate": 0.37777777777777777,
+      "n_groups": 90
+    }
+  }
+}
