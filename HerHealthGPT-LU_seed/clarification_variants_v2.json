@@ -1738,425 +1738,425 @@
  {
   "source_row_id": "ChatDoctor-iCliniq:34",
   "category": "pcos",
-  "vague_question": "I've been so on edge my whole life and I finally found out something biological might explain it. How old until things like that fully sort themselves out?",
+  "vague_question": "I took emergency contraception more than once in a short span and now my body isn't responding the way it did the first time. Should I be worried?",
   "register": "json",
-  "clarifying_question": "Which specific concern is bothering you the most right now?",
+  "clarifying_question": "How many days has it been since you took the second pill, and have you taken a pregnancy test yet?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:109212",
   "category": "pcos",
-  "vague_question": "A doctor told me I have symptoms of a hormonal condition. What actually causes it?",
+  "vague_question": "I've had an infection in my womb treated in the past and some problems found with my tubes, and now a small cyst too. How can I still have a baby?",
   "register": "json",
-  "clarifying_question": "Which specific symptoms did the doctor mention, and has any testing been done yet to confirm the diagnosis?",
+  "clarifying_question": "What did your tube test show on each side, and has your doctor discussed options like IVF given the blockage?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:8594",
   "category": "pcos",
-  "vague_question": "I recently found out about an unusual kidney finding along with ongoing back pain, and I also have a hormonal condition. Could they be connected somehow?",
+  "vague_question": "My wife takes medication for her ovary condition and we keep wondering whether it can ever make the condition go away for good.",
   "register": "json",
-  "clarifying_question": "How long have you had the back pain, and has any doctor connected it to either finding so far?",
+  "clarifying_question": "What medication is she currently taking, and which symptom is it mainly meant to control?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:8653",
   "category": "pcos",
-  "vague_question": "What actually causes a hormonal condition like this to develop in the first place?",
+  "vague_question": "I keep hearing that this ovary condition throws hormones off in lots of ways. What does it actually end up doing to the body?",
   "register": "json",
-  "clarifying_question": "Are you asking in general, or have you or someone close to you just been diagnosed?",
+  "clarifying_question": "Are you asking about effects you're noticing in yourself, and if so, which changes have you observed so far?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:8777",
   "category": "pcos",
-  "vague_question": "What might cause a hormonal condition like this to develop in a family member?",
+  "vague_question": "My teenage daughter has an ovary condition and I want to know what else to watch for beyond what we already know about.",
   "register": "json",
-  "clarifying_question": "How old is she, and what symptoms led to her being evaluated for it?",
+  "clarifying_question": "Which symptoms has she already been experiencing, and how long ago was she diagnosed?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:8683",
   "category": "pcos",
-  "vague_question": "I've been trying to conceive for a year with a hormonal condition, and my recent test came back fine, but I'm still not sure the medication is working. Should I keep going with it?",
+  "vague_question": "Are there actual medicines for this ovary condition, or is managing it all just lifestyle advice?",
   "register": "json",
-  "clarifying_question": "On which day of your cycle did you ovulate this month, and has your period timing changed since starting the current medication?",
+  "clarifying_question": "Have you been formally diagnosed, and is your main concern your periods, fertility, or other symptoms?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:1432",
   "category": "pcos",
-  "vague_question": "I've had sudden intense pain on one side that gets worse when I breathe deeply, and I'm already being tested for a couple of related conditions. What could this new pain mean?",
+  "vague_question": "My wife was told she has this ovary condition and we can't stop wondering whether something specific brought it on.",
   "register": "json",
-  "clarifying_question": "When exactly did this new pain start, and does it change at all when you sit, lie down, or move?",
+  "clarifying_question": "Does she have any family history of the condition, and when did her symptoms first appear?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:19765",
   "category": "pcos",
-  "vague_question": "I've had ongoing pain and a noticeable lump on one side of my stomach for a while now, plus some fever and appetite changes. Is this something urgent?",
+  "vague_question": "I have an ovary condition, my egg released quite late this cycle, and my doctor gave me a hormone tablet to take afterward. Could I still get pregnant this month?",
   "register": "json",
-  "clarifying_question": "How long have you had the lump, and has your fever come back since the one episode you mentioned?",
+  "clarifying_question": "On which cycle day did the follicle rupture, and what dose of the hormone tablet were you prescribed?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:35897",
   "category": "pcos",
-  "vague_question": "My doctor found something concerning during a scan related to my reproductive organs. Is what they suggested for treatment actually enough?",
+  "vague_question": "I'm pregnant and had major surgery partway through, and I also have an ovary condition. What extra care should I be taking for the rest of the pregnancy?",
   "register": "json",
-  "clarifying_question": "What exactly did the scan find, and what treatment did the doctor recommend for it?",
+  "clarifying_question": "How many weeks along are you now, and what has your obstetrician said about monitoring after the surgery?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:15410",
   "category": "pcos",
-  "vague_question": "I have some abnormal results on a fertility test along with a hormonal condition. Is having a baby still realistically possible for us?",
+  "vague_question": "My facial hair is coming in slowly and unevenly and I'm worried it will stay patchy forever. What actually affects how it grows in?",
   "register": "json",
-  "clarifying_question": "Which specific results came back abnormal, and has a fertility specialist reviewed both partners' results together?",
+  "clarifying_question": "How old are you, and has your facial hair changed at all over the past year or stayed exactly the same?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:1438",
   "category": "pcos",
-  "vague_question": "I've had ongoing back and abdominal pain along with numbness down one leg, and I have a history of reproductive issues. What could be causing all of this?",
+  "vague_question": "My doctor thinks my symptoms fit a certain ovary condition and now I can't stop wondering why this happened to me.",
   "register": "json",
-  "clarifying_question": "How long have you had the numbness, and has it changed or gotten worse recently?",
+  "clarifying_question": "Which symptoms did your doctor point to, and has any bloodwork or ultrasound been done to confirm it yet?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:37121",
   "category": "pcos",
-  "vague_question": "Is it possible to fully treat a hormonal condition using medication alone if I don't have easy access to a specialist?",
+  "vague_question": "I've just been told about an unusual kidney formation, and I've had long-standing back and leg problems on top of an ovary condition. Could any of this be connected?",
   "register": "json",
-  "clarifying_question": "Which symptoms are you hoping to manage most, irregular periods, hair growth, or something else?",
+  "clarifying_question": "Which symptom is affecting you most day to day, and what did your imaging tests show so far?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:8800",
   "category": "pcos",
-  "vague_question": "A doctor found something unexpected on a scan of my reproductive organs while checking something else entirely. Should I be worried about it?",
+  "vague_question": "What actually makes someone develop that common ovary condition in the first place?",
   "register": "json",
-  "clarifying_question": "What exactly did the doctor say the finding was, and have they recommended any follow-up?",
+  "clarifying_question": "Are you asking out of general interest, or because you or someone close to you has been diagnosed?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:1431",
   "category": "pcos",
-  "vague_question": "I have a hormonal condition and I'm not ovulating regularly. Are my chances of having children realistic?",
+  "vague_question": "My daughter's been diagnosed with an ovary condition and I keep asking myself where it could have come from.",
   "register": "json",
-  "clarifying_question": "What did your recent hormone test results show, and how long have you been trying to conceive?",
+  "clarifying_question": "How old is your daughter, and did she have symptoms like irregular periods or weight changes before the diagnosis?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:54976",
   "category": "pcos",
-  "vague_question": "My community has a lot of cases of a certain hormonal condition. Are there serious long-term risks I should know about?",
+  "vague_question": "I've done several medicated cycles for my ovary condition with confirmed ovulation and clear tubes, but still no pregnancy, and now I'm starting a new tablet. Will it actually help?",
   "register": "json",
-  "clarifying_question": "Have you personally been diagnosed with this condition, or are you asking based on what you've seen around you?",
+  "clarifying_question": "How many medicated cycles have you completed in total, and did your doctor explain what the new tablet does differently?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:20188",
   "category": "pcos",
-  "vague_question": "How can I best support someone close to me who's just been diagnosed with a hormonal condition?",
+  "vague_question": "I've got sudden intense back pain on one side that gets worse when I breathe deeply or cough, and I'm midway through testing for a couple of gynaecological conditions. What could this be?",
   "register": "json",
-  "clarifying_question": "What has she told you she's struggling with most so far, physically or emotionally?",
+  "clarifying_question": "When exactly did this pain start, and does it ease at all with rest or changing position?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:107842",
   "category": "pcos",
-  "vague_question": "I've heard a hormonal condition is usually treated with medication, but I don't have real access to healthcare where I live. Is there another way to manage it?",
+  "vague_question": "A scan showed a burst cyst with fluid inside me, and I was just told to use warm soaks and painkillers. Is that honestly all that's needed?",
   "register": "json",
-  "clarifying_question": "Which specific symptoms are affecting you the most day to day?",
+  "clarifying_question": "How severe is your pain right now, and have you had any fever or worsening symptoms since the scan?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:111421",
   "category": "pcos",
-  "vague_question": "I have a mild version of a hormonal condition and I'm trying for a baby. Is the treatment I've just started likely to work for me?",
+  "vague_question": "My fertility test came back with a complicated diagnosis, and my wife has her own hormone conditions too. Is having a baby still possible for us?",
   "register": "json",
-  "clarifying_question": "What medication have you just started, and have you conceived naturally in the past?",
+  "clarifying_question": "What did the semen analysis show for count and motility, and is your wife's condition currently well controlled?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:13565",
   "category": "pcos",
-  "vague_question": "There's no doctor available where I live and I've been dealing with a hormonal condition. How can it actually be treated in my situation?",
+  "vague_question": "I've got a new kind of ache in my back and belly with numbness down one leg, and I have a long history of pelvic problems. This pain feels different from anything before — what could it be?",
   "register": "json",
-  "clarifying_question": "Which symptoms bother you the most, and do you have access to any pharmacy or basic clinic nearby?",
+  "clarifying_question": "How long has the leg numbness been present, and is the pain constant or does it come and go?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:8597",
   "category": "pcos",
-  "vague_question": "I was told I have a cyst related to my reproductive system and I'm already dealing with stress about it. Is it something serious, and could I still go for fertility treatment?",
+  "vague_question": "Out where I live, can this ovary condition really be sorted out with just the medicines available locally?",
   "register": "json",
-  "clarifying_question": "What size is the cyst, and has your doctor mentioned whether it needs to be treated before starting fertility treatment?",
+  "clarifying_question": "Which medicines do you currently have access to, and which symptoms are you trying to treat?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:45905",
   "category": "pcos",
-  "vague_question": "I don't want to get pregnant right now given a hormonal condition I have. What are my options?",
+  "vague_question": "A cyst was found on my ovary by accident during a scan for something else, and nobody scheduled a follow-up even though my periods are heavy and all over the place. Am I worrying over nothing?",
   "register": "json",
-  "clarifying_question": "Are you currently on any medication for the condition, and what kind of contraception are you considering?",
+  "clarifying_question": "How heavy and irregular are your periods exactly, and did the doctor mention the size or type of the cyst?",
   "chat_reply": null
  },
  {
   "source_row_id": "HealthCareMagic-100k:111955",
   "category": "pcos",
-  "vague_question": "How would I know if I actually have a certain hormonal condition?",
+  "vague_question": "I have an ovary condition, my hormone tests came back really low, and I've just started a new medication. Do you think having children is still possible for me?",
   "register": "json",
-  "clarifying_question": "Which symptoms have you been noticing, like irregular periods, acne, or weight changes?",
+  "clarifying_question": "Which hormones came back low and at what values, and has your doctor explained what they think is stopping ovulation?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:1487",
   "category": "pcos",
-  "vague_question": "I've been diagnosed with a hormonal condition and I'm curious whether one of my supplements could be making a symptom worse.",
+  "vague_question": "This ovary condition is everywhere in my community and I want to understand what it could mean for us years down the line.",
   "register": "json",
-  "clarifying_question": "Which specific supplement are you taking, and which symptom have you noticed has gotten worse?",
+  "clarifying_question": "Are you asking about risks for yourself specifically, and have you been diagnosed or screened for it?",
   "chat_reply": null
  },
  {
   "source_row_id": "MENST_train24K:train24K:8648",
   "category": "pcos",
-  "vague_question": "A doctor once asked me if I had a hormonal condition. What actually causes something like that?",
+  "vague_question": "Someone very close to me just got diagnosed with an ovary condition and I want to be there for her properly. Where do I even start?",
   "register": "chat",
-  "clarifying_question": "Which symptoms prompted the doctor to ask about it, and has any testing been done since then?",
-  "chat_reply": "That's a good thing to want to understand better. Which symptoms prompted the doctor to bring it up, and has any testing been done since? A gynecologist or endocrinologist can run the right bloodwork and imaging to give you a clear diagnosis rather than leaving it as an open question."
+  "clarifying_question": "What part of the diagnosis seems to be weighing on her most right now?",
+  "chat_reply": "It's lovely that you want to show up for her like this. What part of the diagnosis seems to be weighing on her most right now? Encouraging her to keep up with her doctor's follow-ups while you handle some of the day-to-day support is often the most helpful combination."
  },
  {
   "source_row_id": "MENST_train24K:train24K:1461",
   "category": "pcos",
-  "vague_question": "I have a hormonal condition and haven't had children yet, and I'm honestly exhausted from years of medication trying to conceive. Is it okay to stop taking it for now?",
+  "vague_question": "People say hormone treatment is the answer for this ovary condition, but that's simply not available where I live. Is there anything else that actually works?",
   "register": "chat",
-  "clarifying_question": "Which medication are you currently on, and is it specifically for fertility or for managing your cycle overall?",
-  "chat_reply": "It sounds like you've been carrying a lot for a long time, and that exhaustion is completely valid. Which medication are you currently taking, and is it mainly for fertility or for managing your cycle in general? It's worth having an honest conversation with your doctor about taking a break, since they can help you weigh the trade-offs safely."
+  "clarifying_question": "Which symptoms are troubling you the most, and do you have access to any basic clinic or pharmacy at all?",
+  "chat_reply": "That's a genuinely difficult position to be in, and your question makes complete sense. Which symptoms trouble you the most, and do you have access to any basic clinic or pharmacy at all? Lifestyle measures can genuinely help, but it's still worth trying to reach even a visiting health worker so a professional can guide them."
  },
  {
   "source_row_id": "HealthCareMagic-100k:2141",
   "category": "pcos",
-  "vague_question": "I've heard a hormonal condition can cause sudden weight gain. Is that true?",
+  "vague_question": "I've got a mild ovary issue and I'm on a supplement for it while trying for another baby. I conceived easily the first time — will it happen for me again?",
   "register": "chat",
-  "clarifying_question": "Have you noticed a sudden weight change yourself, and if so, over what period of time?",
-  "chat_reply": "That's a common concern, and there is a real connection worth understanding. Have you noticed a sudden weight change yourself, and over what period of time did it happen? A doctor can check your hormone levels to see whether that's what's driving it in your case."
+  "clarifying_question": "How long have you been trying this time, and how long have you been on the supplement?",
+  "chat_reply": "Having conceived naturally before is genuinely encouraging news for you. How long have you been trying this time around, and how long have you been on the supplement? If it's been more than a year of trying, a fertility check with your gynaecologist would be a sensible next step."
  },
  {
   "source_row_id": "MENST_train24K:train24K:1460",
   "category": "pcos",
-  "vague_question": "I've had ongoing severe pain on one side along with some other reproductive findings on a scan, and fertility is my main worry. What should I do next?",
+  "vague_question": "There's no doctor anywhere near me and I'm fairly sure I have that ovary condition. How does someone in my position even get treated?",
   "register": "chat",
-  "clarifying_question": "What exactly did the scan find, and how long has the pain been going on?",
-  "chat_reply": "Dealing with pain and fertility worries at the same time is a lot to manage. What exactly did the scan find, and how long has the pain been going on? A gynecologist can look at both issues together and figure out whether they're connected and what the safest next step is."
+  "clarifying_question": "Which symptoms make you suspect the condition, and how far away is the nearest health facility?",
+  "chat_reply": "It's hard managing a health worry without a doctor close by. Which symptoms make you suspect the condition, and how far is the nearest health facility from you? Even a single visit for blood tests and a scan would give you a proper diagnosis to build a plan around."
  },
  {
   "source_row_id": "HealthCareMagic-100k:3023",
   "category": "pcos",
-  "vague_question": "I haven't gone through puberty in some ways I expected by my age, and I'm also dealing with a habit I'm worried is making it worse. Could that really be slowing things down?",
+  "vague_question": "I've got a cyst on my ovary and I'm on medication for it, and after a past loss I'm stressed about whether I can still pursue fertility treatment. Is my situation fixable?",
   "register": "chat",
-  "clarifying_question": "Which specific changes are you concerned haven't happened yet, and how old are you currently?",
-  "chat_reply": "It's understandable to feel anxious comparing yourself to what you expect for your age. Which specific changes are you concerned haven't happened yet? A doctor can check your hormone levels and development directly rather than leaving you to guess, and can address any specific habit you're worried about too."
+  "clarifying_question": "What size is the cyst currently, and has your doctor said whether it needs to resolve before fertility treatment starts?",
+  "chat_reply": "I'm sorry you're carrying this much stress on top of a past loss. What size is the cyst currently, and has your doctor said whether it needs to resolve before fertility treatment can begin? A gynaecologist can usually lay out a clear plan for both the cyst and your next steps toward pregnancy."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8703",
   "category": "pcos",
-  "vague_question": "I just learned about a hormonal condition but don't really know what it is. Can you explain it simply?",
+  "vague_question": "Given the ovary condition I have, I really don't want a pregnancy right now. What can I do to make sure that doesn't happen?",
   "register": "chat",
-  "clarifying_question": "Did a doctor mention this to you recently, or did you come across the term somewhere else?",
-  "chat_reply": "Happy to walk you through it simply. Did a doctor mention this to you recently, or did you come across the term elsewhere? If a doctor raised it, it's worth asking them directly for your specific results so the explanation applies to your own situation."
+  "clarifying_question": "Are you on any treatment for the condition at the moment, and do you prefer hormonal or non-hormonal contraception?",
+  "chat_reply": "It's very sensible to plan this properly rather than leave it to chance. Are you on any treatment for the condition right now, and do you lean toward hormonal or non-hormonal options? A doctor can match a contraceptive to your condition so it supports your symptoms instead of complicating them."
  },
  {
   "source_row_id": "MENST_training2K:training2K:783",
   "category": "pcos",
-  "vague_question": "Does a certain vitamin supplement cause increased facial hair growth?",
+  "vague_question": "Something feels off with my body lately and a friend mentioned that ovary condition. How would I actually find out if that's what I have?",
   "register": "chat",
-  "clarifying_question": "Are you currently taking that supplement, and have you noticed new hair growth since starting it?",
-  "chat_reply": "That's a fair thing to want clarity on before continuing a supplement. Are you currently taking it, and have you noticed new hair growth since you started? If you're concerned, a doctor can check your hormone levels to see whether something else might be driving the hair growth instead."
+  "clarifying_question": "What changes have you noticed, like irregular cycles, skin changes, or unusual hair growth?",
+  "chat_reply": "It's good that you're paying attention to what your body is telling you. What changes have you noticed so far, like irregular cycles, skin changes, or unusual hair growth? A doctor can confirm or rule it out quite quickly with a blood panel and an ultrasound."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8550",
   "category": "pcos",
-  "vague_question": "Many women where I live deal with a hormonal condition. Does it come with any serious long-term health risks I should know about?",
+  "vague_question": "A doctor once asked whether I'd ever been checked for that ovary condition, and it's made me curious about what actually causes it.",
   "register": "chat",
-  "clarifying_question": "Have you been diagnosed with this condition yourself, or are you asking based on what you've observed in your community?",
-  "chat_reply": "It's smart to want to understand the bigger picture here. Have you been diagnosed with this yourself, or are you asking based on what you've seen around you? Either way, a doctor can walk you through the specific long-term risks and how they're typically monitored and managed."
+  "clarifying_question": "What symptoms were you seeing the doctor about when they asked you that?",
+  "chat_reply": "That's a fair thing to be curious about after a comment like that. What symptoms were you seeing the doctor about when they raised it? It would be worth going back for the actual tests, since a confirmed answer is far better than wondering."
  },
  {
   "source_row_id": "HealthCareMagic-100k:18545",
   "category": "pcos",
-  "vague_question": "I've heard a hormonal condition can raise the risk of heart disease. Is that true?",
+  "vague_question": "I've stopped all my treatment for an ovary condition because I was worn out by years of medication, and now my period only comes if I take tablets. Is it harmful to just let the periods stop?",
   "register": "chat",
-  "clarifying_question": "Do you have this condition yourself, and has your doctor mentioned checking your blood pressure or cholesterol?",
-  "chat_reply": "That's a real connection worth taking seriously. Do you have this condition yourself, and has your doctor checked things like your blood pressure or cholesterol recently? If not, it's worth asking for those checks at your next visit so it can be monitored properly."
+  "clarifying_question": "How many months do you typically go without a period when you're off the tablets?",
+  "chat_reply": "That treatment fatigue after so many years is completely understandable. How many months do you typically go without a period when you're off the tablets? Going a very long time without cycles can affect the womb lining, so it's important to agree a safe minimum plan with your gynaecologist even if you pause everything else."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8717",
   "category": "pcos",
-  "vague_question": "My doctor prescribed medication for a hormonal condition and I really want to get pregnant. Will taking these pills affect my chances?",
+  "vague_question": "I've heard this ovary condition can pile weight on quickly. Is there anything to that?",
   "register": "chat",
-  "clarifying_question": "What is the exact medication and dose your doctor prescribed, and did they explain how it relates to your fertility goals?",
-  "chat_reply": "It's a great question to ask before you start. What's the exact medication and dose you were prescribed, and did your doctor explain how it fits with your fertility goals? Some medications for this condition are actually meant to support ovulation, so it's worth confirming that directly with your prescribing doctor."
+  "clarifying_question": "Have you experienced sudden weight changes yourself, and if so, over what timeframe?",
+  "chat_reply": "It's a really common question, and there is a real link worth understanding. Have you noticed sudden weight changes yourself, and over what kind of timeframe? A doctor can test whether the condition is behind it or whether something else, like thyroid function, is contributing."
  },
  {
   "source_row_id": "HealthCareMagic-100k:19639",
   "category": "pcos",
-  "vague_question": "My hormone levels have shifted a lot recently and I've been having new abdominal and back pain along with some findings on a scan. Could the hormone change be behind it?",
+  "vague_question": "I've been through months of hormone and fertility treatment, and now I've developed constant pain on one side with a scan suspecting a growth on my ovary. Fertility matters most to me — what should happen next?",
   "register": "chat",
-  "clarifying_question": "What specifically changed in your hormone levels, and when did the pain start relative to that change?",
-  "chat_reply": "That's a reasonable thing to connect, given the timing. What specifically changed in your hormone levels, and when did the pain start in relation to that? A doctor can look at your scan findings alongside your hormone levels to see whether they're related, and whether anything needs treatment."
+  "clarifying_question": "What size is the suspected growth, and has your fertility doctor discussed whether to treat it before continuing treatment?",
+  "chat_reply": "That's a lot to face at once when your heart is set on a baby. What size is the suspected growth, and has your fertility doctor said whether it needs treating before you continue? Getting your gynaecologist and fertility specialist to agree a combined plan is the safest way forward."
  },
  {
   "source_row_id": "HealthCareMagic-100k:21332",
   "category": "pcos",
-  "vague_question": "I was diagnosed with a hormonal condition a while ago and have had ongoing pain along with other symptoms doctors haven't fully explained. Any help would mean a lot.",
+  "vague_question": "I feel like my body is way behind everyone else my age in development, and I'm worried something I'm doing is holding it back. Is that even possible?",
   "register": "chat",
-  "clarifying_question": "Which symptom concerns you the most right now, and how long has it been going on?",
-  "chat_reply": "It sounds like you've been dealing with a lot without clear answers, and that's genuinely hard. Which symptom concerns you the most right now, and how long has it been going on? A specialist who can look at your full history together, rather than one symptom at a time, may be able to connect the dots your other doctors haven't yet."
+  "clarifying_question": "Which specific developmental changes haven't you noticed yet, and how old are you now?",
+  "chat_reply": "It's very normal to compare yourself and worry at your age, but bodies develop on hugely different timelines. Which changes specifically haven't you noticed yet, and how old are you exactly? A doctor can check your development and hormone levels properly and put your mind at rest — everyday habits aren't known to stall puberty."
  },
  {
   "source_row_id": "MENST_train24K:train24K:1396",
   "category": "pcos",
-  "vague_question": "How can my family best support someone dealing with the long-term effects of a hormonal condition?",
+  "vague_question": "People keep mentioning this ovary condition around me and I honestly have no idea what it even is. Could you fill me in?",
   "register": "chat",
-  "clarifying_question": "What has she mentioned struggling with the most, physical symptoms, emotional wellbeing, or something else?",
-  "chat_reply": "It's wonderful that you want to be there for her in a meaningful way. What has she mentioned struggling with most, physical symptoms, emotional wellbeing, or something else? Asking her directly what kind of support she wants right now is often the most helpful starting point."
+  "clarifying_question": "Did you hear about it from a doctor in relation to your own health, or just in conversation?",
+  "chat_reply": "Of course — it's a really common condition and well worth understanding. Did you hear about it from a doctor in relation to your own health, or just in conversation? If it came up about you personally, a quick appointment can tell you whether it applies to you at all."
  },
  {
   "source_row_id": "HealthCareMagic-100k:23799",
   "category": "pcos",
-  "vague_question": "How can I help someone close to me manage the physical symptoms of a hormonal condition?",
+  "vague_question": "I've been taking a supplement for my hair and nails, and now I'm wondering if it could make hair sprout where I don't want it, like my face.",
   "register": "chat",
-  "clarifying_question": "Which physical symptoms is she dealing with most, and has she seen a doctor about them yet?",
-  "chat_reply": "It's caring of you to want to help with this. Which physical symptoms is she dealing with most right now, and has she seen a doctor about them? Supporting her in getting proper medical care, alongside things like healthy meals or exercise together, can make a real difference."
+  "clarifying_question": "Which supplement and dose are you taking, and have you actually noticed new facial hair since starting it?",
+  "chat_reply": "That's a sensible thing to check before continuing. Which supplement and dose are you taking, and have you actually noticed new facial hair since you started? If unwanted hair is genuinely appearing, a doctor can test whether hormones rather than the supplement are the real cause."
  },
  {
   "source_row_id": "MENST_train24K:train24K:1488",
   "category": "pcos",
-  "vague_question": "Is there a reliable way to actually diagnose a hormonal condition like this?",
+  "vague_question": "So many women around me live with this ovary condition, and none of us really know whether it's dangerous over a lifetime.",
   "register": "chat",
-  "clarifying_question": "Are you asking for yourself, and if so, what symptoms have prompted the question?",
-  "chat_reply": "Yes, there are clear ways doctors go about confirming this. Are you asking for yourself, and if so, what symptoms have prompted the question? A doctor typically uses a combination of blood tests and an ultrasound, so it's worth booking an appointment to get a definitive answer rather than guessing from symptoms alone."
+  "clarifying_question": "Has anyone in your community, including you, been formally diagnosed and had things like blood sugar or blood pressure checked?",
+  "chat_reply": "It's really valuable that you're asking this on behalf of your whole community. Has anyone, including you, been formally diagnosed and had blood sugar or blood pressure checked? Those checks matter, because the long-term risks are very manageable when a doctor monitors them early."
  },
  {
   "source_row_id": "MENST_training2K:training2K:801",
   "category": "pcos",
-  "vague_question": "I've had new lower back pain along with bloating and pain on one side, and a recent scan found something on my ovary. Could that be causing all of this?",
+  "vague_question": "Someone told me this ovary condition can be hard on the heart over time. Should I take that seriously?",
   "register": "chat",
-  "clarifying_question": "What exactly did the scan find on your ovary, and how does the pain change throughout the day?",
-  "chat_reply": "That combination of symptoms is worth taking seriously. What exactly did the scan find on your ovary, and how does the pain change throughout the day? A doctor can determine whether the finding is actually the source of your pain or whether something else also needs to be ruled out."
+  "clarifying_question": "Do you have the condition yourself, and when were your blood pressure and cholesterol last measured?",
+  "chat_reply": "Yes, it's worth taking seriously rather than brushing off. Do you have the condition yourself, and when were your blood pressure and cholesterol last checked? A doctor can set up simple regular monitoring so that any heart-related risk gets caught early."
  },
  {
   "source_row_id": "HealthCareMagic-100k:28341",
   "category": "pcos",
-  "vague_question": "I was recently sent home from the hospital after being treated for a burst cyst, and I'm still in a lot of discomfort. Is it safe to just wait for my follow-up appointment?",
+  "vague_question": "I'm on two long-term tablets for my ovary condition and I badly want a baby. Can I even get pregnant while taking them?",
   "register": "chat",
-  "clarifying_question": "How many days ago were you discharged, and has the pain gotten better, stayed the same, or gotten worse since then?",
-  "chat_reply": "It's unsettling to still feel unwell after being sent home. How many days ago were you discharged, and has the pain changed since then? If it's gotten worse or you're developing new symptoms, it's worth going back sooner rather than waiting for the scheduled follow-up, since that's a real safety concern."
+  "clarifying_question": "Which two medications are you taking, and does your doctor know you're hoping to conceive now?",
+  "chat_reply": "That eagerness is completely understandable, and the answer really depends on the specific tablets. Which two medications are you on, and does your doctor know you're hoping to conceive now? Some treatments for this condition actually prevent pregnancy, so your prescriber needs to adjust the plan before you start trying."
  },
  {
   "source_row_id": "HealthCareMagic-100k:20082",
   "category": "pcos",
-  "vague_question": "I have a hormonal condition and I've been told my treatment can stop now. Could the condition come back, and could it affect me getting married or having children later?",
+  "vague_question": "My hormone levels shot up a lot on a therapy I've been taking, and now I've got pain and some growths showing on a scan. Could the therapy have caused all of this?",
   "register": "chat",
-  "clarifying_question": "How long ago did your doctor say you could stop treatment, and have you had any symptoms return since then?",
-  "chat_reply": "It's completely natural to want reassurance about the future here. How long ago did your doctor say you could stop, and have any symptoms returned since? A follow-up with your doctor can confirm whether things are stable and address your specific questions about future fertility."
+  "clarifying_question": "How high did the hormone level go compared to your baseline, and has it been rechecked since you stopped?",
+  "chat_reply": "That's a very reasonable connection to want investigated. How high did the level go compared to your baseline, and has it been rechecked since you stopped? Your prescribing doctor should review the scan findings alongside those levels to decide what needs treating and what may settle on its own."
  },
  {
   "source_row_id": "HealthCareMagic-100k:17946",
   "category": "pcos",
-  "vague_question": "I have a hormonal condition and I'd like to know how to prevent pregnancy while managing it.",
+  "vague_question": "I'm young, I've developed a lot of cysts within months, and I keep being told my pain and nausea are just from my contraception. Nothing improved even after switching — what should I do?",
   "register": "chat",
-  "clarifying_question": "Are you currently taking any medication for the condition, and what type of contraception have you considered so far?",
-  "chat_reply": "It's good that you're thinking about this proactively. Are you currently on any medication for the condition, and what kind of contraception have you considered so far? A doctor can help you pick an option that works well alongside your condition rather than against it."
+  "clarifying_question": "How long has it been since you switched, and are the symptoms better, worse, or the same as before?",
+  "chat_reply": "Being dismissed while you're still in pain is really frustrating. How long has it been since the switch, and are your symptoms better, worse, or unchanged? If nothing has improved, it's completely fair to ask for a re-evaluation or a second gynaecological opinion rather than waiting longer."
  },
  {
   "source_row_id": "HealthCareMagic-100k:12774",
   "category": "pcos",
-  "vague_question": "I've had an ongoing stabbing pain on one side along with appetite issues, and I already have a couple of relevant diagnoses. What could this new pain be?",
+  "vague_question": "I've been to emergency care over and over for pain on one side, they keep finding small things but say none of them explain it, and I'm getting dizzier and more nauseous. I'm starting to feel like it's all in my head.",
   "register": "chat",
-  "clarifying_question": "How often does the stabbing pain occur, and does it happen around a particular point in your cycle?",
-  "chat_reply": "That's a specific enough pattern that it's worth digging into. How often does the stabbing pain occur, and does it line up with a particular point in your cycle? A doctor familiar with your existing diagnoses can help figure out whether this new pain is related or something separate."
+  "clarifying_question": "What did the most recent visit find, and is there any way to see a gynaecologist sooner than your current referral allows?",
+  "chat_reply": "Your pain is real, and repeated visits without answers would wear anyone down. What did the most recent visit find, and is there any way to reach a gynaecologist sooner than your current referral allows? If the dizziness and nausea keep worsening in the meantime, going back to emergency care is the right call, not an overreaction."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8803",
   "category": "pcos",
-  "vague_question": "What actually causes a hormonal condition like this?",
+  "vague_question": "I worry about what this ovary condition could mean for the women in my family as the years go on.",
   "register": "chat",
-  "clarifying_question": "Are you asking in general, or have you recently been diagnosed or noticed symptoms yourself?",
-  "chat_reply": "That's a good foundational question. Are you asking in general, or have you recently noticed symptoms or been diagnosed yourself? If it's personal, a doctor can explain the likely contributing factors in your specific case rather than just the general picture."
+  "clarifying_question": "Has your wife or daughter already been diagnosed, and is either of them having symptoms now?",
+  "chat_reply": "It's caring of you to think about their long-term health like this. Has your wife or daughter already been diagnosed, and is either of them having symptoms right now? A doctor can outline exactly what to monitor over time, which keeps most of the long-term risks well controlled."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8738",
   "category": "pcos",
-  "vague_question": "What are the usual signs that someone might have a common hormonal condition?",
+  "vague_question": "My daughter struggles physically because of her ovary condition and I hate feeling useless. How can I actually help her?",
   "register": "chat",
-  "clarifying_question": "Are you noticing these signs in yourself, and if so, which ones stand out the most?",
-  "chat_reply": "Good to get a clear picture of this. Are you noticing these signs in yourself, and if so, which ones stand out most? If several apply to you, it's worth seeing a doctor for proper testing rather than trying to self-diagnose from a list of symptoms."
+  "clarifying_question": "Which physical symptom hits her hardest — the periods, the fatigue, the skin, or something else?",
+  "chat_reply": "You're clearly far from useless — asking this question is already a form of help. Which symptom hits her hardest: the periods, fatigue, skin changes, or something else? Once you know that, you can support the routines that matter most, and her doctor can aim treatment at that same symptom."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8669",
   "category": "pcos",
-  "vague_question": "I keep getting cysts and abdominal pain along with some other symptoms, and I'm not sure if it's related to my kidneys or something else. Am I overreacting by being concerned?",
+  "vague_question": "If someone suspected they had that ovary condition, what would getting an actual diagnosis involve?",
   "register": "chat",
-  "clarifying_question": "Which symptom is bothering you the most right now, and has it changed in intensity recently?",
-  "chat_reply": "You're not overreacting at all, this sounds like a genuinely confusing and uncomfortable situation. Which symptom is bothering you the most right now, and has it changed in intensity recently? Given how many different findings are involved, it's worth asking for a coordinated review between your specialists rather than seeing each one separately."
+  "clarifying_question": "Is this for yourself, and if so, what signs have made you suspect it?",
+  "chat_reply": "Good question — there is a clear path to a proper answer here. Is this for yourself, and if so, what signs made you suspect it? Diagnosis usually combines a symptom history, blood tests, and an ultrasound, all of which a gynaecologist can arrange within a visit or two."
  },
  {
   "source_row_id": "HealthCareMagic-100k:29483",
   "category": "pcos",
-  "vague_question": "I'm unmarried and have a hormonal condition that was treated and resolved. Should I be worried about it affecting my future marriage or ability to have children?",
+  "vague_question": "I've been having back pain with bloating and discomfort on one side that flares around eating and urination, and I had gynaecological surgery years ago. Could this still be something ovarian?",
   "register": "chat",
-  "clarifying_question": "How long ago did your doctor confirm the condition had resolved, and have you had any follow-up scans since then?",
-  "chat_reply": "That's a very understandable thing to want peace of mind about. How long ago did your doctor confirm it had resolved, and have you had any follow-up scans since? A gynecologist can reassess your current status and answer your specific questions about future fertility directly."
+  "clarifying_question": "Do you still have your ovaries after that surgery, and how long has this current pain pattern been going on?",
+  "chat_reply": "That's a smart question, because the answer changes what should be checked. Do you still have your ovaries after your surgery, and how long has this pain pattern been going on? A doctor can scan the ovaries if they remain and look into digestive causes in parallel."
  },
  {
   "source_row_id": "HealthCareMagic-100k:33638",
   "category": "pcos",
-  "vague_question": "I have a hormonal condition and I'm looking for ways to avoid getting pregnant right now.",
+  "vague_question": "I was discharged quickly after a burst cyst even though my pain never really settled, and my stomach is still swollen days later. Is it safe to just wait for my follow-up appointment?",
   "register": "chat",
-  "clarifying_question": "What form of contraception have you already considered, and are you currently on any medication for your condition?",
-  "chat_reply": "It's smart to plan ahead here. What form of contraception have you already considered, and are you currently on any medication for your condition? A doctor can recommend an option that works well alongside your treatment rather than complicating it."
+  "clarifying_question": "How many days has it been since discharge, and is the pain and swelling getting worse or staying level?",
+  "chat_reply": "Being sent home while still feeling that unwell is genuinely unsettling. How many days has it been since discharge, and is the pain and swelling getting worse or holding steady? Worsening pain, a swollen abdomen, and no bowel movement together are good reasons to go back and be reassessed now rather than waiting weeks."
  },
  {
   "source_row_id": "HealthCareMagic-100k:46148",
   "category": "pcos",
-  "vague_question": "I've had an ongoing stabbing pain on one side along with appetite problems, and I have a couple of related diagnoses already. What's going on?",
+  "vague_question": "My ovary condition was treated and my doctor says I'm fine now, but I keep worrying it will come back and affect my plans for marriage and children. Should I be worried?",
   "register": "chat",
-  "clarifying_question": "How long has this specific pain been happening, and is it constant or does it come and go?",
-  "chat_reply": "That's worth sorting out given your existing diagnoses. How long has this specific pain been going on, and is it constant or does it come and go? A doctor who has your full history can help determine if it's connected to your known conditions or something new."
+  "clarifying_question": "How long ago did you stop the medication, and have any symptoms returned since then?",
+  "chat_reply": "Wanting certainty before big life plans is completely natural. How long ago did you stop the medication, and have any symptoms come back since? This condition can recur, so periodic check-ins with your gynaecologist are wise — but it's very manageable and shouldn't derail your plans."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8708",
   "category": "pcos",
-  "vague_question": "What actually causes a certain common hormonal condition?",
+  "vague_question": "With the ovary condition I've got, I'd like to understand which methods would work best for me to avoid a pregnancy.",
   "register": "chat",
-  "clarifying_question": "Is this a general question, or has a doctor mentioned this term to you recently?",
-  "chat_reply": "That's a good question to get clarity on. Is this something you're curious about generally, or did a doctor mention it to you recently? If a doctor raised it, following up with them directly will give you an answer tailored to your own test results."
+  "clarifying_question": "Have you used any contraception before, and are you also taking anything for the condition itself?",
+  "chat_reply": "It's great that you're thinking about how the two fit together. Have you used any contraception before, and are you taking anything for the condition itself right now? A doctor can suggest a method that prevents pregnancy while also helping your symptoms, which is a useful two-for-one."
  },
  {
   "source_row_id": "HealthCareMagic-100k:50825",
   "category": "pcos",
-  "vague_question": "What are some common symptoms people notice with a hormonal condition like this?",
+  "vague_question": "I get this stabbing pain on one side of my stomach that comes and goes, and I already have a couple of hormone-related diagnoses. What might be going on?",
   "register": "chat",
-  "clarifying_question": "Are you asking because you've noticed some of these symptoms yourself?",
-  "chat_reply": "Glad to walk through the common signs. Are you asking because you've noticed some of these yourself? If so, it's worth seeing a doctor for blood tests and an ultrasound, since several of these symptoms overlap with other conditions too."
+  "clarifying_question": "Does the pain connect to meals or your cycle at all, and how long does each episode last?",
+  "chat_reply": "Recurring stabbing pain deserves a proper look, especially with your history. Does the pain connect to meals or your cycle at all, and how long does each episode last? Tracking that pattern for a couple of weeks and bringing it to your doctor will make the cause much easier to pin down."
  },
  {
   "source_row_id": "MENST_training2K:training2K:774",
   "category": "pcos",
-  "vague_question": "I have a hormonal condition and my periods have become really unpredictable lately. Could stress be making it worse?",
+  "vague_question": "I'd love to finally understand why this ovary condition happens to people at all.",
   "register": "chat",
-  "clarifying_question": "How irregular have your cycles been recently, and has anything particularly stressful been going on in your life?",
-  "chat_reply": "Stress and hormonal conditions can definitely feed into each other. How irregular have your cycles been recently, and has anything particularly stressful been going on? A doctor can check whether your hormone levels have shifted and help you find ways to manage both the stress and the symptoms."
+  "clarifying_question": "Is there a personal reason behind the question, like a recent diagnosis for you or someone close to you?",
+  "chat_reply": "It's a great question, and the honest answer is that several factors combine. Is there a personal reason behind it, like a recent diagnosis for you or someone close? If so, a doctor can talk through which contributing factors — genetics, insulin, hormones — seem most relevant in that specific case."
  },
  {
   "source_row_id": "MENST_train24K:train24K:8566",
   "category": "pcos",
-  "vague_question": "I've been diagnosed with a hormonal condition and I'm worried about how it might affect my life in the long run. What should I actually be watching out for?",
+  "vague_question": "What kinds of things do women usually notice first when they have that common ovary condition?",
   "register": "chat",
-  "clarifying_question": "Which specific long-term effects are you most worried about, like fertility, weight, or heart health?",
-  "chat_reply": "It's completely reasonable to want to plan ahead here. Which long-term effects are you most worried about, fertility, weight, or heart health? A doctor can put together a monitoring plan tailored to whichever of these matters most to you."
+  "clarifying_question": "Are you asking because you've started noticing some of these changes yourself?",
+  "chat_reply": "Happy to go through the typical early signs with you. Are you asking because you've started noticing some of these changes yourself? If a few of them sound familiar, a simple check-up with blood tests and a scan can tell you for sure."
  }
 ]
