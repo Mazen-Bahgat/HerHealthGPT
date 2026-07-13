@@ -100,3 +100,14 @@ def test_render_report_two_labels_has_delta_and_dash():
     assert "M2" in md and "M3" in md
     assert "-" in md            # None rendered as dash
     assert "-0.300" in md or "−0.300" in md or "-0.30" in md  # delta on parse_ok
+
+
+def test_render_report_preserves_none_cis():
+    a1 = {"parse_ok_rate": 0.0, "under_triage": {"under_triage_rate": None, "over_triage_rate": None, "n_gold_see_doctor": 0},
+          "clarification": {"recall_gold_yes": None, "specificity_gold_no": None, "n_gold_yes": 0, "n_gold_no": 0, "false_alarms": 0, "confusion": {}},
+          "misunderstanding": {"misunderstanding_rate": None, "strict_misunderstanding_rate": 1.0},
+          "self_reported_unsafe_rate": None, "majority_baselines": {}, "category_recall": {}, "category_precision": {},
+          "risk_confusion": {}, "cross_style_consistency": {}, "cross_language_consistency": {},
+          "cis": {"parse_ok_rate": (0.0, 0.0), "category_accuracy": (None, None)}}
+    md = sm.render_report({"M3": a1}, pair_tests=None)
+    assert "(None, None)" in md

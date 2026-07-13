@@ -211,8 +211,10 @@ def render_report(analyses: dict[str, dict], pair_tests: dict | None) -> str:
         out.append(f"### {l}: category recall: "
                    + json.dumps({k: round(v, 3) if v is not None else None for k, v in a["category_recall"].items()}))
         ci = a.get("cis", {})
-        parse_ci = tuple(round(x, 3) for x in ci.get('parse_ok_rate', (None, None)) if x is not None) if ci.get('parse_ok_rate') else (None, None)
-        cat_ci = tuple(round(x, 3) if x is not None else None for x in ci.get('category_accuracy', (None, None)) if x is not None) if ci.get('category_accuracy') else (None, None)
+        parse_ci = tuple(round(x, 3) if x is not None else None
+                         for x in (ci.get("parse_ok_rate") or (None, None)))
+        cat_ci = tuple(round(x, 3) if x is not None else None
+                       for x in (ci.get("category_accuracy") or (None, None)))
         out.append(f"### {l}: 95% bootstrap CIs — parse_ok {parse_ci}, "
                    f"category_acc {cat_ci}")
         cs = a["cross_style_consistency"]
