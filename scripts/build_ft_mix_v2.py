@@ -103,7 +103,9 @@ def make_style_example(v: dict, answer_by_id: dict) -> dict:
 def build(corpus: list[dict], clarifs: list[dict], styles: list[dict], seed: int) -> dict:
     rng = random.Random(seed)
     train_rows, val_rows = prep.split_train_val(corpus, val_frac=0.05, seed=42)
-    answer_by_id = {f"{r['source_dataset']}:{r['source_row_id']}": r for r in corpus}
+    # Keyed off train rows ONLY: style rewrites whose source lives in the val
+    # split are silently dropped below, so no val answer can leak into train.
+    answer_by_id = {f"{r['source_dataset']}:{r['source_row_id']}": r for r in train_rows}
 
     chat = [prep.to_chat_record(r) for r in train_rows]
 
@@ -140,7 +142,10 @@ def build(corpus: list[dict], clarifs: list[dict], styles: list[dict], seed: int
                                     "content": inf.FIXED_PROMPT_TEMPLATE.format(text=v["vague_question"])}],
                       "category": v["category"], "probe_kind": "clarification"})
 
-    return {"train": train, "val": [prep.to_chat_record(r) for r in val_rows], "probe": probe}
+    stats = {"chat": len(chat), "json": len(json_examples),
+             "clarification": len(train_clarifs), "style": len(style_examples)}
+    return {"train": train, "val": [prep.to_chat_record(r) for r in val_rows],
+            "probe": probe, "stats": stats}
 
 
 def main() -> None:
@@ -151,12 +156,14 @@ def main() -> None:
     clarifs = json.loads(CLARIFS.read_text(encoding="utf-8"))
     styles = json.loads(STYLES.read_text(encoding="utf-8"))
     out = build(corpus, clarifs, styles, args.seed)
+    breakdown = out.pop("stats")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for name, rows in out.items():
         with (OUT_DIR / f"{name}.jsonl").open("w", encoding="utf-8") as f:
             for r in rows:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
     stats = {name: len(rows) for name, rows in out.items()}
+    stats["components"] = breakdown
     (OUT_DIR / "mix_stats.json").write_text(json.dumps(stats, indent=2), encoding="utf-8")
     print(json.dumps(stats))
 

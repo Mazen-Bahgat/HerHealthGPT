@@ -53,10 +53,26 @@ def test_build_counts_balance_and_determinism(tmp_path):
                "rewritten_question": f"rewritten {i}"} for i in range(6)]
     out1 = bm.build(corpus, clarifs, styles, seed=42)
     out2 = bm.build(corpus, clarifs, styles, seed=42)
-    assert out1.keys() == {"train", "val", "probe"}
+    assert out1.keys() == {"train", "val", "probe", "stats"}
     assert json.dumps(out1["train"][:5]) == json.dumps(out2["train"][:5])  # deterministic
     kinds = [r.get("probe_kind") for r in out1["probe"]]
     assert "clarification" in kinds and "triage" in kinds
     probe_texts = {r["messages"][0]["content"] for r in out1["probe"]}
     train_texts = {r["messages"][0]["content"] for r in out1["train"]}
     assert not (probe_texts & train_texts)  # probe disjoint from train
+
+
+def test_no_val_answers_in_train():
+    corpus = ([_corpus_row("menstrual", i, answer=f"Please see a doctor about issue {i}.") for i in range(400)]
+              + [_corpus_row("pcos", 1000 + i, answer=f"Please see a doctor about issue {1000 + i}.") for i in range(400)]
+              + [_corpus_row("fertility", 2000 + i, answer=f"Please see a doctor about issue {2000 + i}.") for i in range(400)])
+    # style rewrites pointing at EVERY corpus row; val-sourced ones must be dropped
+    styles = [{"source_row_id": f"MENST:{r['source_row_id']}", "category": r["category"],
+               "style": "layperson", "rewritten_question": f"rw {r['source_row_id']}"}
+              for r in corpus]
+    import prepare_ft_data as prep
+    _, val_rows = prep.split_train_val(corpus, val_frac=0.05, seed=42)
+    val_answers = {r["output"] for r in val_rows}
+    out = bm.build(corpus, [], styles, seed=42)
+    train_answers = {rec["messages"][-1]["content"] for rec in out["train"]}
+    assert not (val_answers & train_answers)
