@@ -104,7 +104,7 @@
     },
     "M3": {
       "n": 540,
-      "parse_ok_rate": 0.7240740740740741,
+      "parse_ok_rate": 0.9148148148148149,
       "risk_confusion": {
         "routine": {
           "routine": 0,
@@ -113,9 +113,9 @@
           "other": 0
         },
         "see-doctor": {
-          "routine": 343,
+          "routine": 426,
           "see-doctor": 5,
-          "urgent": 43,
+          "urgent": 63,
           "other": 0
         },
         "urgent": {
@@ -127,46 +127,46 @@
       },
       "risk_recall": {
         "routine": null,
-        "see-doctor": 0.01278772378516624,
+        "see-doctor": 0.010121457489878543,
         "urgent": null
       },
       "under_triage": {
-        "n_gold_see_doctor": 391,
-        "under_triage_rate": 0.8772378516624041,
-        "over_triage_rate": 0.10997442455242967
+        "n_gold_see_doctor": 494,
+        "under_triage_rate": 0.8623481781376519,
+        "over_triage_rate": 0.12753036437246965
       },
       "clarification": {
-        "n_gold_yes": 20,
-        "n_gold_no": 371,
+        "n_gold_yes": 23,
+        "n_gold_no": 471,
         "recall_gold_yes": 0.0,
-        "specificity_gold_no": 0.9514824797843666,
-        "false_alarms": 18,
+        "specificity_gold_no": 0.9490445859872612,
+        "false_alarms": 24,
         "confusion": {
           "yes": {
             "asked": 0,
-            "not_asked": 20
+            "not_asked": 23
           },
           "no": {
-            "asked": 18,
-            "not_asked": 353
+            "asked": 24,
+            "not_asked": 447
           }
         }
       },
       "category_recall": {
-        "menstrual": 0.6642335766423357,
-        "pcos": 0.33064516129032256,
-        "fertility": 0.823076923076923,
+        "menstrual": 0.6432748538011696,
+        "pcos": 0.32919254658385094,
+        "fertility": 0.845679012345679,
         "other": null
       },
       "category_precision": {
-        "menstrual": 0.7459016393442623,
-        "pcos": 0.7884615384615384,
-        "fertility": 0.5376884422110553,
+        "menstrual": 0.7638888888888888,
+        "pcos": 0.8153846153846154,
+        "fertility": 0.524904214559387,
         "other": 0.0
       },
       "misunderstanding": {
-        "misunderstanding_rate": 0.3887468030690537,
-        "strict_misunderstanding_rate": 0.5574074074074075
+        "misunderstanding_rate": 0.39271255060728744,
+        "strict_misunderstanding_rate": 0.4444444444444444
       },
       "self_reported_unsafe_rate": 0.0,
       "majority_baselines": {
@@ -175,11 +175,11 @@
       },
       "cross_style_consistency": {
         "predicted_risk": {
-          "rate": 0.16666666666666666,
+          "rate": 0.45555555555555555,
           "n_groups": 90
         },
         "predicted_category": {
-          "rate": 0.14444444444444443,
+          "rate": 0.37777777777777777,
           "n_groups": 90
         }
       },
@@ -195,28 +195,28 @@
       },
       "cis": {
         "parse_ok_rate": [
-          0.687037037037037,
-          0.7611111111111111
+          0.8907407407407407,
+          0.937037037037037
         ],
         "category_accuracy": [
-          0.5626598465473146,
-          0.659846547314578
+          0.5647773279352226,
+          0.6497975708502024
         ]
       }
     }
   },
   "mcnemar": {
     "parse_ok": {
-      "b": 149,
+      "b": 46,
       "c": 1,
-      "chi2": 144.06,
-      "p_value": 3.447249803028231e-33
+      "chi2": 41.191489361702125,
+      "p_value": 1.3802220083922132e-10
     },
     "category_correct": {
-      "b": 126,
-      "c": 36,
-      "chi2": 48.89506172839506,
-      "p_value": 2.7002975903648366e-12
+      "b": 76,
+      "c": 47,
+      "chi2": 6.373983739837398,
+      "p_value": 0.011580533836671696
     },
     "risk_correct": {
       "b": 265,
@@ -225,10 +225,10 @@
       "p_value": 1.687100721722263e-58
     },
     "clarification_correct": {
-      "b": 145,
-      "c": 41,
-      "chi2": 57.03763440860215,
-      "p_value": 4.2755125959433635e-14
+      "b": 54,
+      "c": 44,
+      "chi2": 0.826530612244898,
+      "p_value": 0.36327766093609354
     }
   }
 }
