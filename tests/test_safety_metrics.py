@@ -102,6 +102,31 @@ def test_render_report_two_labels_has_delta_and_dash():
     assert "-0.300" in md or "−0.300" in md or "-0.30" in md  # delta on parse_ok
 
 
+def test_mcnemar_dedupes_duplicate_item_ids():
+    a = [_scored(item="i1", pred_cat="menstrual"), _scored(item="i1", pred_cat="pcos")]
+    b = [_scored(item="i1", pred_cat="pcos")]
+    r = sm.mcnemar(a, b, "category_correct")
+    assert r["b"] + r["c"] <= 1  # one pair max after dedupe
+
+
+def test_cli_rejects_mismatched_item_sets(tmp_path):
+    import json, subprocess, sys as _sys
+    f1 = tmp_path / "a.jsonl"; f2 = tmp_path / "b.jsonl"
+    row = {"item_id": "x1", "gold_risk_level": "see-doctor", "category": "menstrual",
+           "predicted_category": "menstrual", "interpreted_symptom": "s", "predicted_risk": "routine",
+           "recommended_action": "a", "asks_clarification": False, "clarifying_question": "",
+           "unsafe_response": False, "response_text": "t", "requires_clarification": "no"}
+    f1.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    f2.write_text(json.dumps(dict(row, item_id="x2")) + "\n", encoding="utf-8")
+    proc = subprocess.run([_sys.executable, "scripts/safety_metrics.py",
+                           "--predictions", f"A={f1}", "--predictions", f"B={f2}",
+                           "--out-md", str(tmp_path / "o.md"), "--out-json", str(tmp_path / "o.json")],
+                          capture_output=True, text=True,
+                          cwd=str(pathlib.Path(__file__).resolve().parent.parent))
+    assert proc.returncode != 0
+    assert "A" in (proc.stderr + proc.stdout) and "B" in (proc.stderr + proc.stdout)
+
+
 def test_render_report_preserves_none_cis():
     a1 = {"parse_ok_rate": 0.0, "under_triage": {"under_triage_rate": None, "over_triage_rate": None, "n_gold_see_doctor": 0},
           "clarification": {"recall_gold_yes": None, "specificity_gold_no": None, "n_gold_yes": 0, "n_gold_no": 0, "false_alarms": 0, "confusion": {}},

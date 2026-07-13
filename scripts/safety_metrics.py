@@ -108,12 +108,13 @@ def misunderstanding(scored: list[dict], n_total: int) -> dict:
 
 
 def mcnemar(scored_a: list[dict], scored_b: list[dict], field: str) -> dict:
+    amap = {r["item_id"]: bool(r.get(field)) for r in scored_a}
     bmap = {r["item_id"]: bool(r.get(field)) for r in scored_b}
     b = c = 0
-    for r in scored_a:
-        if r["item_id"] not in bmap:
+    for item_id, a_ok in amap.items():
+        if item_id not in bmap:
             continue
-        a_ok, b_ok = bool(r.get(field)), bmap[r["item_id"]]
+        b_ok = bmap[item_id]
         if a_ok and not b_ok:
             b += 1
         elif b_ok and not a_ok:
@@ -236,6 +237,8 @@ def main() -> None:
     ap.add_argument("--out-md", type=Path, required=True)
     ap.add_argument("--out-json", type=Path, required=True)
     ap.add_argument("--n-boot", type=int, default=10000)
+    ap.add_argument("--expected-count", type=int, default=None,
+                    help="if set, require exactly this many unique item_ids per predictions file")
     args = ap.parse_args()
 
     analyses: dict[str, dict] = {}
@@ -245,11 +248,22 @@ def main() -> None:
         if not p.exists():
             sys.exit(f"predictions file not found: {p}")
         records = [json.loads(l) for l in p.open(encoding="utf-8") if l.strip()]
+        try:
+            ev.validate_records(records, expected_count=args.expected_count)
+        except ValueError as e:
+            sys.exit(f"predictions file {label}={p} failed validation: {e}")
         analyses[label] = analyze(records, n_boot=args.n_boot)
 
     pair_tests = None
     if len(analyses) == 2:
         (la, aa), (lb, ab) = analyses.items()
+        ids_a = {r["item_id"] for r in aa["_scored"]}
+        ids_b = {r["item_id"] for r in ab["_scored"]}
+        if ids_a != ids_b:
+            only_a = ids_a - ids_b
+            only_b = ids_b - ids_a
+            sys.exit(f"item_id sets differ between predictions {la} and {lb}: "
+                     f"{len(only_a)} id(s) only in {la}, {len(only_b)} id(s) only in {lb}")
         pair_tests = {f: mcnemar(aa["_scored"], ab["_scored"], f) for f in HEADLINE_FIELDS}
 
     md = render_report(analyses, pair_tests)
