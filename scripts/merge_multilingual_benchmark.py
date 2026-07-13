@@ -35,12 +35,27 @@ from pathlib import Path
 
 SEED_DIR = Path(__file__).resolve().parent.parent / "HerHealthGPT-LU_seed"
 EN_PATH = SEED_DIR / "seeds_en_v1.csv"
-AR_PATH = SEED_DIR / "translation_handoff" / "arabic_translation_with_egyptian_slang.csv"
-# v2 = the agency's revised delivery (2026-07-13; 470/540 rows differ from v1).
-# Prefer it when present so the benchmark always reflects the newest FR text.
-_FR_V2 = SEED_DIR / "translation_handoff" / "fr_agency_handoff_translated_fr_v2.csv"
-_FR_V1 = SEED_DIR / "translation_handoff" / "fr_agency_handoff_translated_fr.csv"
-FR_PATH = _FR_V2 if _FR_V2.exists() else _FR_V1
+_HANDOFF = SEED_DIR / "translation_handoff"
+
+
+def _first_existing(*names: str) -> Path:
+    for name in names:
+        path = _HANDOFF / name
+        if path.exists():
+            return path
+    raise FileNotFoundError(f"none of {names} found under {_HANDOFF}")
+
+
+# Newest-first: team-reviewed deliveries supersede raw/v2/v1 translations.
+AR_PATH = _first_existing(
+    "arabic_translation_with_egyptian_slang_reviewed.csv",
+    "arabic_translation_with_egyptian_slang.csv",
+)
+FR_PATH = _first_existing(
+    "fr_agency_handoff_translated_fr_reviewed.csv",
+    "fr_agency_handoff_translated_fr_v2.csv",
+    "fr_agency_handoff_translated_fr.csv",
+)
 OUT_CSV = SEED_DIR / "benchmark_multilingual_v1.csv"
 OUT_JSONL = SEED_DIR / "benchmark_multilingual_v1.jsonl"
 
