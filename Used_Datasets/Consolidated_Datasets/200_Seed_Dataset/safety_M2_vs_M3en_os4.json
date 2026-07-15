@@ -1,0 +1,234 @@
+{
+  "analyses": {
+    "M2gss": {
+      "n": 540,
+      "parse_ok_rate": 1.0,
+      "risk_confusion": {
+        "routine": {
+          "routine": 312,
+          "see-doctor": 32,
+          "urgent": 4,
+          "other": 0
+        },
+        "see-doctor": {
+          "routine": 125,
+          "see-doctor": 46,
+          "urgent": 3,
+          "other": 0
+        },
+        "urgent": {
+          "routine": 10,
+          "see-doctor": 6,
+          "urgent": 2,
+          "other": 0
+        }
+      },
+      "risk_recall": {
+        "routine": 0.896551724137931,
+        "see-doctor": 0.26436781609195403,
+        "urgent": 0.1111111111111111
+      },
+      "under_triage": {
+        "n_gold_see_doctor": 174,
+        "under_triage_rate": 0.7183908045977011,
+        "over_triage_rate": 0.017241379310344827
+      },
+      "clarification": {
+        "n_gold_yes": 90,
+        "n_gold_no": 450,
+        "recall_gold_yes": 0.8555555555555555,
+        "specificity_gold_no": 0.8622222222222222,
+        "false_alarms": 62,
+        "confusion": {
+          "yes": {
+            "asked": 77,
+            "not_asked": 13
+          },
+          "no": {
+            "asked": 62,
+            "not_asked": 388
+          }
+        }
+      },
+      "category_recall": {
+        "menstrual": 0.7592592592592593,
+        "pcos": 0.6944444444444444,
+        "fertility": 0.4666666666666667,
+        "other": null
+      },
+      "category_precision": {
+        "menstrual": 0.5394736842105263,
+        "pcos": 0.946969696969697,
+        "fertility": 0.8155339805825242,
+        "other": 0.0
+      },
+      "misunderstanding": {
+        "misunderstanding_rate": 0.46111111111111114,
+        "strict_misunderstanding_rate": 0.46111111111111114
+      },
+      "self_reported_unsafe_rate": 0.005555555555555556,
+      "majority_baselines": {
+        "risk": 0.6444444444444445,
+        "clarification": 0.8333333333333334
+      },
+      "cross_style_consistency": {
+        "predicted_risk": {
+          "rate": 0.6444444444444445,
+          "n_groups": 90
+        },
+        "predicted_category": {
+          "rate": 0.15555555555555556,
+          "n_groups": 90
+        }
+      },
+      "cross_language_consistency": {
+        "predicted_risk": {
+          "rate": 0.0,
+          "n_groups": 0
+        },
+        "predicted_category": {
+          "rate": 0.0,
+          "n_groups": 0
+        }
+      },
+      "cis": {
+        "parse_ok_rate": [
+          1.0,
+          1.0
+        ],
+        "category_accuracy": [
+          0.4962962962962963,
+          0.5796296296296296
+        ]
+      }
+    },
+    "M3os4": {
+      "n": 540,
+      "parse_ok_rate": 0.9962962962962963,
+      "risk_confusion": {
+        "routine": {
+          "routine": 289,
+          "see-doctor": 59,
+          "urgent": 0,
+          "other": 0
+        },
+        "see-doctor": {
+          "routine": 104,
+          "see-doctor": 68,
+          "urgent": 0,
+          "other": 0
+        },
+        "urgent": {
+          "routine": 10,
+          "see-doctor": 7,
+          "urgent": 1,
+          "other": 0
+        }
+      },
+      "risk_recall": {
+        "routine": 0.8304597701149425,
+        "see-doctor": 0.3953488372093023,
+        "urgent": 0.05555555555555555
+      },
+      "under_triage": {
+        "n_gold_see_doctor": 172,
+        "under_triage_rate": 0.6046511627906976,
+        "over_triage_rate": 0.0
+      },
+      "clarification": {
+        "n_gold_yes": 89,
+        "n_gold_no": 449,
+        "recall_gold_yes": 0.0,
+        "specificity_gold_no": 1.0,
+        "false_alarms": 0,
+        "confusion": {
+          "yes": {
+            "asked": 0,
+            "not_asked": 89
+          },
+          "no": {
+            "asked": 0,
+            "not_asked": 449
+          }
+        }
+      },
+      "category_recall": {
+        "menstrual": 0.9074074074074074,
+        "pcos": 0.75,
+        "fertility": 0.3539325842696629,
+        "other": null
+      },
+      "category_precision": {
+        "menstrual": 0.4375,
+        "pcos": 0.8766233766233766,
+        "fertility": 0.7159090909090909,
+        "other": null
+      },
+      "misunderstanding": {
+        "misunderstanding_rate": 0.44981412639405205,
+        "strict_misunderstanding_rate": 0.45185185185185184
+      },
+      "self_reported_unsafe_rate": 0.0,
+      "majority_baselines": {
+        "risk": 0.6444444444444445,
+        "clarification": 0.8333333333333334
+      },
+      "cross_style_consistency": {
+        "predicted_risk": {
+          "rate": 0.4444444444444444,
+          "n_groups": 90
+        },
+        "predicted_category": {
+          "rate": 0.37777777777777777,
+          "n_groups": 90
+        }
+      },
+      "cross_language_consistency": {
+        "predicted_risk": {
+          "rate": 0.0,
+          "n_groups": 0
+        },
+        "predicted_category": {
+          "rate": 0.0,
+          "n_groups": 0
+        }
+      },
+      "cis": {
+        "parse_ok_rate": [
+          0.9907407407407407,
+          1.0
+        ],
+        "category_accuracy": [
+          0.5092936802973977,
+          0.5910780669144982
+        ]
+      }
+    }
+  },
+  "mcnemar": {
+    "parse_ok": {
+      "b": 2,
+      "c": 0,
+      "chi2": 0.5,
+      "p_value": 0.4795001221869534
+    },
+    "category_correct": {
+      "b": 53,
+      "c": 58,
+      "chi2": 0.14414414414414414,
+      "p_value": 0.7041954416607011
+    },
+    "risk_correct": {
+      "b": 50,
+      "c": 48,
+      "chi2": 0.01020408163265306,
+      "p_value": 0.9195383508138885
+    },
+    "clarification_correct": {
+      "b": 78,
+      "c": 62,
+      "chi2": 1.6071428571428572,
+      "p_value": 0.2048938938163786
+    }
+  }
+}
