@@ -153,11 +153,15 @@ Decisions made with Mazen when the styled EN dataset landed:
 - **FT input is styled-only** — the plain canonical CSVs are superseded.
 - **EN run: 2 epochs** (not 3): 2,880 rows ≈ 1.9 h, and the 6 style variants
   per seed already act as augmentation.
-- **Stage 3 (handoff templates) dropped:** the team translates the three
-  styled files themselves in the same schema; `prepare_ft_data_v2.py --lang
-  fr|ar --train/--val <translated csv>` consumes them directly (the
-  `*_translated`-column path remains only as a fallback if handoff-style
-  files ever appear).
+- **Stage 3 (handoff templates) reinstated (2026-07-15, later same day):**
+  with fine-tuning now running on a separate PC, translation needs to proceed
+  in parallel, so the row_id/`*_translated`-column handoff template is back
+  in use instead of translating the full styled CSVs in place. Generated via
+  `scripts/build_translation_handoff_v2.py` ->
+  `translation_handoff_v2/{fr,ar}.csv` (3,580 rows each = leakage-cleaned
+  train+val over the styled splits, 2,862 train / 718 val). Ingest path is
+  `prepare_ft_data_v2.py --lang fr|ar --train/--val <returned csv>` (handoff
+  path, not the fallback).
 - Answer-level leakage verified zero: none of the 90 benchmark seeds'
   answers appear in the styled train/val files.
 
