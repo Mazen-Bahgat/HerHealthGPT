@@ -1,16 +1,19 @@
-"""Prepare the 200_Seed_Dataset canonical QA splits for Qwen QLoRA training.
+"""Prepare the 200_Seed_Dataset styled QA splits for Qwen QLoRA training.
 
-Reads train_canonical.csv / validation_canonical.csv (plain Question/Answer
-QA), drops rows whose Question appears verbatim (case-insensitive) in the
-styled benchmark, dedups questions shared between train and val (val wins so
-the validation set stays untouched), and emits Qwen chat-message JSONL in the
-same record shape as prepare_ft_data.py. Every dropped row is written to
-leakage_log.csv with its reason.
+Reads Train/train_canonical_styled.csv / validate/validation_canonical_styled.csv
+(Question/Answer/Topic/Keywords/Style), drops rows whose Question appears
+verbatim (case-insensitive) in the styled benchmark
+(Test/gold_seeds_styled_labeled.csv), dedups questions shared between train
+and val (val wins so the validation set stays untouched), and emits Qwen
+chat-message JSONL in the same record shape as prepare_ft_data.py. Every
+dropped row is written to leakage_log.csv with its reason.
 
-FR/AR: pass --lang fr --train <returned fr.csv> --val <same file> where the
-returned handoff CSV carries Question_translated / Answer_translated columns
-(see build_translation_handoff_v2.py); rows are mapped onto Question/Answer
-before the same cleaning, and split membership comes from the row_id prefix.
+FR/AR: the team translates the styled CSVs in place (same schema), so pass
+--lang fr --train <fr train csv> --val <fr val csv> and the files are used
+directly. If a file instead carries Question_translated / Answer_translated
+columns (handoff-template style), those are mapped onto Question/Answer
+first, with split membership from the row_id prefix when train and val are
+the same file.
 
 Run (EN):
     python scripts/prepare_ft_data_v2.py --lang en
@@ -27,9 +30,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_inference as inf  # noqa: E402
 
 DATA_DIR = Path("Used_Datasets/Consolidated_Datasets/200_Seed_Dataset")
-DEFAULT_TRAIN = DATA_DIR / "train_canonical.csv"
-DEFAULT_VAL = DATA_DIR / "validation_canonical.csv"
-DEFAULT_BENCHMARK = DATA_DIR / "gold_seeds_styled_labeled.csv"
+DEFAULT_TRAIN = DATA_DIR / "Train" / "train_canonical_styled.csv"
+DEFAULT_VAL = DATA_DIR / "validate" / "validation_canonical_styled.csv"
+DEFAULT_BENCHMARK = DATA_DIR / "Test" / "gold_seeds_styled_labeled.csv"
 
 SYSTEM_PROMPT = (
     "You are HerHealthGPT, a women's-health assistant. Answer the user's "
@@ -124,15 +127,17 @@ def main() -> None:
     val_rows = read_csv(args.val)
     if args.lang != "en":
         if args.train == DEFAULT_TRAIN:
-            raise SystemExit("--lang fr/ar requires --train pointing at the returned handoff CSV")
-        if args.train == args.val:
+            raise SystemExit("--lang fr/ar requires --train pointing at the translated CSV")
+        has_handoff_cols = train_rows and "Question_translated" in train_rows[0]
+        if has_handoff_cols and args.train == args.val:
             # single returned handoff file: split membership from row_id prefix
             all_rows = apply_translation(read_csv(args.train))
             train_rows = [r for r in all_rows if r["row_id"].startswith("train-")]
             val_rows = [r for r in all_rows if r["row_id"].startswith("val-")]
-        else:
+        elif has_handoff_cols:
             train_rows = apply_translation(train_rows)
             val_rows = apply_translation(val_rows)
+        # else: fully translated styled CSVs in the standard schema — use directly
 
     bench_questions = {norm_q(r["Question"]) for r in read_csv(args.benchmark)}
     ctrain, cval, log = clean_splits(train_rows, val_rows, bench_questions)

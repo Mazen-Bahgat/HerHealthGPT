@@ -141,6 +141,26 @@ the next stage starts.
   green.
 - GPU stages verified by smoke gate + run manifest + post-run eval metrics.
 
+## Addendum (2026-07-15, after team delivered styled splits)
+
+Decisions made with Mazen when the styled EN dataset landed:
+
+- **Canonical file layout changed:** benchmark = `200_Seed_Dataset/Test/gold_seeds_styled_labeled.csv`
+  (verified byte-identical conversion to the Stage-1 benchmark JSONL, so
+  Stage-1 results stand); FT train = `Train/train_canonical_styled.csv`
+  (2,880 rows = 480 seeds x 6 styles); FT val =
+  `validate/validation_canonical_styled.csv` (720 rows = 120 x 6).
+- **FT input is styled-only** — the plain canonical CSVs are superseded.
+- **EN run: 2 epochs** (not 3): 2,880 rows ≈ 1.9 h, and the 6 style variants
+  per seed already act as augmentation.
+- **Stage 3 (handoff templates) dropped:** the team translates the three
+  styled files themselves in the same schema; `prepare_ft_data_v2.py --lang
+  fr|ar --train/--val <translated csv>` consumes them directly (the
+  `*_translated`-column path remains only as a fallback if handoff-style
+  files ever appear).
+- Answer-level leakage verified zero: none of the 90 benchmark seeds'
+  answers appear in the styled train/val files.
+
 ## Out of scope (noted as paper limitations, not built today)
 
 - FR/AR translation of the 540-row benchmark itself — both fine-tuned models
