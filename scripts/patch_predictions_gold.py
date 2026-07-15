@@ -29,7 +29,12 @@ GOLD_FIELDS = ["gold_category", "gold_risk_level", "gold_action",
 def patch_records(preds: list[dict], bench_rows: list[dict],
                   language: str = "en") -> list[dict]:
     bench_by_id = {f"{b['seed_id']}_{b['style']}_{language}": b for b in bench_rows}
-    missing_preds = sorted(set(bench_by_id) - {p["item_id"] for p in preds})
+    pred_ids = {p["item_id"] for p in preds}
+    unknown = sorted(pred_ids - set(bench_by_id))
+    if unknown:
+        raise ValueError(f"prediction item_id not in benchmark: {unknown[:5]} "
+                         f"({len(unknown)} total)")
+    missing_preds = sorted(set(bench_by_id) - pred_ids)
     if missing_preds:
         raise ValueError(f"benchmark items with no prediction: {missing_preds[:5]} "
                          f"({len(missing_preds)} total)")
