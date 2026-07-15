@@ -4,6 +4,14 @@ Reviewer stance: professional Arabic↔English medical translator, MSA register.
 Scope: `translation_handoff_v2/ar.csv`, 3,580 rows (2,862 train / 718 val,
 600 unique underlying answers × up to 6 style-variant questions each).
 
+**Status: Findings A, B, and C below have been fixed in `ar.csv` directly**
+(targeted string replacement per unique affected text, not a blind
+find-replace — each occurrence's full sentence context was checked before
+writing the correction). Findings D, E, F are left as-is per the original
+recommendation (low-severity/cosmetic or a judgment call for a native
+reviewer). See "Fixes applied" at the end of this report for exact counts
+and verification.
+
 ## Methodology
 
 1. **Structural integrity (all 3,580 rows):** resolved every `row_id` back to
@@ -160,6 +168,42 @@ vs. "menses" has an unambiguous correct reading from context.
 4. This report doesn't replace native-Arabic human review before any
    "benchmark-quality" claim, per the same standard already applied to the
    French delivery.
+
+## Fixes applied
+
+Applied directly to `ar.csv` (2026-07-15), each as a targeted string
+replacement keyed on the exact unique affected text (verified in full
+context first, not a blind global find-replace):
+
+- **Finding A (30/30 rows fixed):** `براءة اختراع` / `براءة الاختراق`
+  ("intellectual-property patent") → `سالك`/`سالكة`/`سالكية` ("patent" in
+  the medical/patency sense), across the 5 unique underlying answers
+  affected. `val-0492`'s sentence also had "patency" mistranslated as
+  `حساسية` ("sensitivity") twice in the same clause — rewritten in full
+  rather than a term swap. `train-2784` additionally had a stray
+  `التيستوسترونية` (testosterone-adjective, an unrelated instance of the
+  same "T → testosterone" confusion as Finding B) and a leftover
+  untranslated `not.my` merged across a sentence boundary — both corrected
+  in the same pass since they were part of the same clause.
+- **Finding B (6/6 rows fixed, 18 term occurrences):** `التستوستيرون
+  النحاسي` / `لتستوستيرون النحاس` ("copper testosterone") →
+  `اللولب النحاسي` / `للولب النحاسي` ("copper IUD"), across all 6 style
+  variants of the one affected seed.
+- **Finding C (117 occurrences fixed):** immediate Arabic word-duplications
+  collapsed to a single occurrence via
+  `([Arabic-script]{3,})\s+\1\b → \1`, restricted to Arabic-script tokens so
+  the one legitimate Latin-script repeat (`AAAAAA AAAAAA`, a redacted-name
+  artifact already present in the English source) was correctly left
+  alone. One additional case was manually checked and correctly left
+  alone: `train-1962`–`1967`'s `أكثر أكثر` ("...40 or older, more
+  likely...") is two distinct, unrelated words that happen to be adjacent,
+  not a duplication artifact — confirmed against the English source before
+  deciding not to touch it.
+
+**Post-fix verification:** 0 remaining instances of Finding A's or B's
+mistranslation pattern; row count, `row_id` alignment, and non-empty
+translation cells all unchanged (3,580 rows, 0 empty cells). Findings D, E,
+F were intentionally left unfixed per the recommendation above.
 
 ## Reproducing this review
 
