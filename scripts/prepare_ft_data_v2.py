@@ -87,6 +87,34 @@ def apply_translation(rows: list[dict]) -> list[dict]:
     return out
 
 
+def load_style_by_row_id() -> dict[str, str]:
+    """row_id -> Style from the canonical EN styled sources. The FR/AR
+    handoff schema carries translations but no Style column, and every
+    downstream clarify decision (oversampling, asks_clarification) keys
+    on Style."""
+    return {r["row_id"]: r["Style"]
+            for r in read_csv(DEFAULT_TRAIN) + read_csv(DEFAULT_VAL)}
+
+
+def recover_styles(rows: list[dict], style_by_row_id: dict[str, str]) -> list[dict]:
+    """Attach Style by row_id join; rows that already carry a Style keep it."""
+    missing = [r.get("row_id", "?") for r in rows
+               if not (r.get("Style") or "").strip()
+               and r.get("row_id") not in style_by_row_id]
+    if missing:
+        raise ValueError(
+            f"{len(missing)} rows with no recoverable Style, e.g. {missing[:5]}")
+    out = []
+    for r in rows:
+        if (r.get("Style") or "").strip():
+            out.append(r)
+        else:
+            mapped = dict(r)
+            mapped["Style"] = style_by_row_id[r["row_id"]]
+            out.append(mapped)
+    return out
+
+
 def is_degenerate_ambiguous(row: dict) -> bool:
     """Ambiguity rewrites that erased the content words entirely
     ("What is something? I'm not really sure...") — training on these pairs a
@@ -250,6 +278,9 @@ def main() -> None:
             train_rows = apply_translation(train_rows)
             val_rows = apply_translation(val_rows)
         # else: fully translated styled CSVs in the standard schema — use directly
+        styles = load_style_by_row_id()
+        train_rows = recover_styles(train_rows, styles)
+        val_rows = recover_styles(val_rows, styles)
 
     bench_questions = {norm_q(r["Question"]) for r in read_csv(args.benchmark)}
     degenerate_ids = load_degenerate_row_ids()

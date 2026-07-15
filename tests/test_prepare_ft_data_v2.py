@@ -131,3 +131,34 @@ def test_json_record_ambiguous_asks_clarification():
     assert obj["asks_clarification"] is True
     assert obj["clarifying_question"].strip() != ""
     assert obj["response_text"] == obj["clarifying_question"]
+
+
+def test_recover_styles_attaches_style_by_row_id():
+    # Simulates the FR/AR handoff schema: rows carry row_id but no Style,
+    # so clarify behaviour (oversampling + asks_clarification) silently
+    # zeroes out unless Style is recovered from the EN styled source.
+    handoff = {"row_id": "train-0004", "Question": "Question vague ?",
+               "Answer": "Une réponse.", "Topic": "PCOS", "Keywords": "k"}
+    styles = {"train-0004": "ambiguous"}
+    out = prep.recover_styles([handoff], styles)
+    assert out[0]["Style"] == "ambiguous"
+    # and the recovered style drives both downstream clarify mechanisms
+    assert len(prep.oversample_ambiguous(out, factor=2)) == 2
+    import json
+    obj = json.loads(prep.to_json_record(out[0])["messages"][1]["content"])
+    assert obj["asks_clarification"] is True
+
+
+def test_recover_styles_keeps_existing_style():
+    row = {"row_id": "train-0001", "Question": "Q?", "Answer": "A.",
+           "Topic": "PCOS", "Keywords": "k", "Style": "clinical"}
+    out = prep.recover_styles([row], {"train-0001": "ambiguous"})
+    assert out[0]["Style"] == "clinical"
+
+
+def test_recover_styles_fails_on_unknown_row_id():
+    import pytest
+    row = {"row_id": "train-9999", "Question": "Q?", "Answer": "A.",
+           "Topic": "PCOS", "Keywords": "k"}
+    with pytest.raises(ValueError):
+        prep.recover_styles([row], {"train-0001": "ambiguous"})
