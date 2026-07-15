@@ -97,6 +97,25 @@ def is_degenerate_ambiguous(row: dict) -> bool:
     return bool(re.search(r"\bsomething\b", q, re.I)) and "not really sure" in q.lower()
 
 
+def load_style_by_row_id() -> dict[str, str]:
+    """Map row_id -> Style from the canonical EN styled source. Handoff files
+    carry row_id but not Style, so FR/AR translations must recover Style from
+    the aligned EN row; without it every translated row looks non-ambiguous and
+    the clarification/oversample signal silently vanishes for those languages."""
+    en_train = read_csv(DEFAULT_TRAIN)
+    en_val = read_csv(DEFAULT_VAL)
+    return {r["row_id"]: r.get("Style", "") for r in en_train + en_val if r.get("row_id")}
+
+
+def attach_style_by_row_id(rows: list[dict], style_map: dict[str, str]) -> list[dict]:
+    """Fill Style on rows that lack it, keyed by row_id. Rows that already have
+    a Style are left untouched (styled CSVs pass through unchanged)."""
+    for r in rows:
+        if not (r.get("Style") or "").strip():
+            r["Style"] = style_map.get(r.get("row_id", ""), "")
+    return rows
+
+
 def load_degenerate_row_ids() -> set[str]:
     """Row_ids of degenerate-ambiguous rows in the canonical EN styled source.
     Used to drop the matching row in ANY language: a French/Arabic translation
@@ -250,6 +269,11 @@ def main() -> None:
             train_rows = apply_translation(train_rows)
             val_rows = apply_translation(val_rows)
         # else: fully translated styled CSVs in the standard schema — use directly
+        # Handoff files lack Style; recover it from the aligned EN row by row_id
+        # so clarification/oversample behaviour survives translation.
+        style_map = load_style_by_row_id()
+        train_rows = attach_style_by_row_id(train_rows, style_map)
+        val_rows = attach_style_by_row_id(val_rows, style_map)
 
     bench_questions = {norm_q(r["Question"]) for r in read_csv(args.benchmark)}
     degenerate_ids = load_degenerate_row_ids()

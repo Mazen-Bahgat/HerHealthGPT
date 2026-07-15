@@ -79,6 +79,19 @@ def test_degenerate_ids_defaults_to_empty_when_omitted():
     assert len(ctrain) == 1 and log == []
 
 
+def test_attach_style_fills_only_missing_from_row_id_map():
+    style_map = {"train-0001": "ambiguous", "train-0002": "clinical"}
+    rows = [
+        {"row_id": "train-0001", "Question": "q1"},                 # no Style -> filled
+        {"row_id": "train-0002", "Style": "layperson", "Question": "q2"},  # has Style -> kept
+        {"row_id": "train-9999", "Question": "q3"},                 # unknown -> empty
+    ]
+    out = prep.attach_style_by_row_id(rows, style_map)
+    assert out[0]["Style"] == "ambiguous"
+    assert out[1]["Style"] == "layperson"
+    assert out[2]["Style"] == ""
+
+
 def test_chat_record_shape():
     rec = prep.to_chat_record(_row("Q?", "A."))
     roles = [m["role"] for m in rec["messages"]]
