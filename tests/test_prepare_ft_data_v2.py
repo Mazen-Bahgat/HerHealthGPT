@@ -31,6 +31,29 @@ def test_train_val_dup_dropped_from_train_val_wins():
     assert log[0]["split"] == "train"
 
 
+def test_degenerate_ambiguous_rows_dropped_from_both_splits():
+    deg = _row("What is something? I'm not really sure how to explain it exactly.")
+    deg["Style"] = "ambiguous"
+    ok = _row("My period is late and I'm not sure what that means. What should I do?")
+    ok["Style"] = "ambiguous"
+    deg_val = _row("Why is something important? I'm not really sure how to explain it exactly.")
+    deg_val["Style"] = "ambiguous"
+    ctrain, cval, log = prep.clean_splits([deg, ok], [deg_val], set())
+    assert [r["Question"] for r in ctrain] == [ok["Question"]]
+    assert cval == []
+    reasons = {(l["split"], l["reason"]) for l in log}
+    assert ("train", "degenerate_ambiguous") in reasons
+    assert ("val", "degenerate_ambiguous") in reasons
+
+
+def test_degenerate_filter_only_applies_to_ambiguous_style():
+    # same wording but a non-ambiguous style is kept (filter is style-gated)
+    row = _row("What is something? I'm not really sure how to explain it exactly.")
+    row["Style"] = "layperson"
+    ctrain, _, log = prep.clean_splits([row], [], set())
+    assert len(ctrain) == 1 and log == []
+
+
 def test_chat_record_shape():
     rec = prep.to_chat_record(_row("Q?", "A."))
     roles = [m["role"] for m in rec["messages"]]

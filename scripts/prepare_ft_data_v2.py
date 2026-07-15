@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -67,9 +68,32 @@ def apply_translation(rows: list[dict]) -> list[dict]:
     return out
 
 
+def is_degenerate_ambiguous(row: dict) -> bool:
+    """Ambiguity rewrites that erased the content words entirely
+    ("What is something? I'm not really sure...") — training on these pairs a
+    content-free question with a confident specific answer."""
+    if (row.get("Style") or "").strip().lower() != "ambiguous":
+        return False
+    q = row.get("Question", "")
+    return bool(re.search(r"\bsomething\b", q, re.I)) and "not really sure" in q.lower()
+
+
 def clean_splits(train_rows: list[dict], val_rows: list[dict],
                  bench_questions: set[str]) -> tuple[list[dict], list[dict], list[dict]]:
     log: list[dict] = []
+
+    def drop_degenerate(rows: list[dict], split: str) -> list[dict]:
+        kept = []
+        for r in rows:
+            if is_degenerate_ambiguous(r):
+                log.append({"split": split, "reason": "degenerate_ambiguous",
+                            "Question": r["Question"]})
+            else:
+                kept.append(r)
+        return kept
+
+    train_rows = drop_degenerate(train_rows, "train")
+    val_rows = drop_degenerate(val_rows, "val")
 
     def drop_leaks(rows: list[dict], split: str) -> list[dict]:
         kept = []
