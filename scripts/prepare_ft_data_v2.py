@@ -138,6 +138,20 @@ def clean_splits(train_rows: list[dict], val_rows: list[dict],
     return kept_train, val_rows, log
 
 
+def oversample_ambiguous(rows: list[dict], factor: int) -> list[dict]:
+    """Repeat ambiguous-style (clarification) rows `factor` times so the
+    clarify signal is strong enough to survive fine-tuning. factor=1 is a
+    no-op. Non-ambiguous rows are untouched; order is preserved."""
+    if factor <= 1:
+        return rows
+    out = []
+    for r in rows:
+        out.append(r)
+        if (r.get("Style") or "").strip().lower() == "ambiguous":
+            out.extend([r] * (factor - 1))
+    return out
+
+
 def to_chat_record(row: dict) -> dict:
     return {
         "messages": [
@@ -201,6 +215,8 @@ def main() -> None:
     ap.add_argument("--benchmark", type=Path, default=DEFAULT_BENCHMARK)
     ap.add_argument("--format", choices=["chat", "json"], default="chat",
                     help="chat = plain Q->A; json = eval-shaped JSON triage target")
+    ap.add_argument("--oversample-clarify", type=int, default=1,
+                    help="repeat ambiguous/clarify train rows N times (json format only)")
     ap.add_argument("--out-dir", type=Path, default=None)
     args = ap.parse_args()
     suffix = "_json" if args.format == "json" else ""
@@ -224,6 +240,11 @@ def main() -> None:
 
     bench_questions = {norm_q(r["Question"]) for r in read_csv(args.benchmark)}
     ctrain, cval, log = clean_splits(train_rows, val_rows, bench_questions)
+
+    if args.format == "json" and args.oversample_clarify > 1:
+        before = len(ctrain)
+        ctrain = oversample_ambiguous(ctrain, args.oversample_clarify)
+        print(f"oversample-clarify x{args.oversample_clarify}: train {before} -> {len(ctrain)}")
 
     write_jsonl(out_dir / "train.jsonl", ctrain, args.format)
     write_jsonl(out_dir / "val.jsonl", cval, args.format)

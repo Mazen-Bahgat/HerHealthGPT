@@ -81,6 +81,22 @@ def test_json_record_non_ambiguous_is_valid_eval_schema():
     assert obj["clarifying_question"] == ""
 
 
+def test_oversample_ambiguous_repeats_only_ambiguous():
+    amb = _row("Vague one?"); amb["Style"] = "ambiguous"
+    direct = _row("Clear one?"); direct["Style"] = "clinical"
+    out = prep.oversample_ambiguous([amb, direct], factor=3)
+    styles = [r["Style"] for r in out]
+    assert styles.count("ambiguous") == 3
+    assert styles.count("clinical") == 1
+    assert len(out) == 4
+
+
+def test_oversample_factor_one_is_noop():
+    amb = _row("Vague?"); amb["Style"] = "ambiguous"
+    out = prep.oversample_ambiguous([amb], factor=1)
+    assert out == [amb]
+
+
 def test_json_record_ambiguous_asks_clarification():
     import json
     row = _row("My period is late and I'm not sure what that means. What should I do?",
