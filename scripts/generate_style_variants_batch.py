@@ -69,11 +69,10 @@ EMOTIONAL_OPENERS = [
     "I've been really stressed about this and need some reassurance.",
 ]
 
-AMBIGUOUS_PLACEHOLDERS = ["this", "it", "that", "something"]
-
 _SENTENCE_SPLIT = re.compile(r"(?<=[.?!])\s+")
 _MIN_SUBSTANTIVE_SENTENCE_LEN = 20
 _AMBIGUOUS_WORD_FALLBACK = 25
+_LEADING_ARTICLE = re.compile(r"(the|an?|my|its)\s+$", re.IGNORECASE)
 
 
 def _rotate(options: list[str], index: int) -> str:
@@ -107,8 +106,14 @@ def make_ambiguous(question: str, topic: str, keywords: str) -> str:
         pattern = re.compile(re.escape(term), re.IGNORECASE)
         match = pattern.search(q)
         if match:
-            placeholder = AMBIGUOUS_PLACEHOLDERS[hash(term) % len(AMBIGUOUS_PLACEHOLDERS)]
-            q = q[: match.start()] + placeholder + q[match.end():]
+            # Consume a leading article/possessive too ("the menstrual cycle" ->
+            # "something", not "the something") so the placeholder reads as a
+            # complete noun phrase instead of leaving an orphaned article.
+            start = match.start()
+            article = _LEADING_ARTICLE.search(q[:start])
+            if article:
+                start = article.start()
+            q = q[:start] + "something" + q[match.end():]
             break  # one redaction is enough to blur the specific condition
 
     # Pick the first sentence that's actually substantive -- short greeting
