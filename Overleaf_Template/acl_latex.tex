@@ -85,25 +85,27 @@ variance in interpretation.
 \begin{table}[t]
 \centering
 \small
-\begin{tabular}{lcccc}
+\begin{tabular}{lccccc}
 \hline
-Metric & M2 & M3$_\text{QA}$ & M3$_\text{JSON}$ & Base \\
+Metric & M2 & M3$_\text{QA}$ & M3$_\text{J}$ & M3$_\text{J+O}$ & Base \\
 \hline
-parse\_ok            & 1.000 & 0.865 & \textbf{0.998} & --- \\
-risk accuracy        & \textbf{0.667} & 0.625 & 0.623 & 0.644 \\
-under-triage $\downarrow$  & 0.718 & 0.800 & \textbf{0.647} & --- \\
-clarification recall & \textbf{0.856} & 0.174 & 0.044 & --- \\
-category accuracy    & 0.539 & 0.499 & \textbf{0.549} & --- \\
-consistency (risk)   & \textbf{0.644} & 0.456 & 0.433 & --- \\
-consistency (cat.)   & 0.156 & 0.189 & \textbf{0.344} & --- \\
+parse\_ok            & 1.000 & 0.865 & \textbf{0.998} & 0.996 & --- \\
+risk accuracy        & \textbf{0.667} & 0.625 & 0.623 & 0.665 & 0.644 \\
+under-triage $\downarrow$ & 0.718 & 0.800 & 0.647 & \textbf{0.605} & --- \\
+clarif. recall       & \textbf{0.856} & 0.174 & 0.044 & 0.000 & --- \\
+category accuracy    & 0.539 & 0.499 & 0.549 & \textbf{0.550} & --- \\
+consistency (risk)   & \textbf{0.644} & 0.456 & 0.433 & 0.444 & --- \\
+consistency (cat.)   & 0.156 & 0.189 & 0.344 & \textbf{0.378} & --- \\
 \hline
 \end{tabular}
 \caption{English benchmark results ($n=540$). M2 = zero-shot baseline;
 M3$_\text{QA}$ = QLoRA fine-tune on plain question--answer pairs;
-M3$_\text{JSON}$ = QLoRA fine-tune on eval-shaped structured targets.
-``Base'' = majority-class baseline. Arrows: lower is better for under-triage.
-Best per row in \textbf{bold}. Consistency = fraction of seed groups given the
-same label across all six styles.}
+M3$_\text{J}$ = fine-tune on eval-shaped structured (JSON) targets;
+M3$_\text{J+O}$ = structured targets with 4$\times$ oversampling of the
+clarification (ambiguous-style) training rows. ``Base'' = majority-class
+baseline. Arrows: lower is better for under-triage. Best per row in
+\textbf{bold}. Consistency = fraction of seed groups given the same label
+across all six styles.}
 \label{tab:main}
 \end{table}
 
@@ -129,14 +131,28 @@ significantly on risk (p$=$0.03, favoring M2) but not on category (p$=$0.71) or
 clarification (p$=$0.30) correctness; parse compliance is statistically
 unchanged (p$=$1.0).
 
-A cost remains: even in the correct format, fine-tuning erodes
-clarification-seeking (recall 0.044). The adaptation distribution is dominated
-by direct-answer targets, which overwrite the base model's willingness to ask
-for clarification on vague input. This isolates the tension cleanly: fine-tuning
-buys triage safety and cross-style consistency but, at this data mixture, at the
-expense of clarification behavior. We are evaluating an oversampling remedy that
-rebalances the clarification signal in the training mixture; those numbers are
-pending and will be added on completion.
+\subsection{Clarification-seeking does not survive fine-tuning}
+
+Adding structured targets recovers format but not clarification: M3$_\text{J}$
+asks for clarification on almost none of the 90 items that require it (recall
+0.044). We tested whether this is a simple data-balance problem by
+oversampling the ambiguous (clarification) training rows four-fold, raising them
+from 10.5\% to 32\% of the mixture (M3$_\text{J+O}$). Oversampling further
+improves triage---M3$_\text{J+O}$ matches the zero-shot baseline on risk
+accuracy (0.665 vs.\ 0.667), attains the lowest under-triage of any model
+(0.605), and the highest cross-style category consistency (0.378)---but
+clarification recall does not recover; it falls to 0.000. Every fine-tuned
+variant, regardless of format or clarification-oversampling, drives
+clarification-seeking to near zero while pushing specificity toward 1.0: the
+adapted models simply stop asking and always answer. Clarification-seeking on
+genuinely ambiguous input thus behaves as a fragile, emergent instruction-following
+capability of the base model that supervised fine-tuning on answer-style data
+robustly erases, and that naive rebalancing of the training mixture does not
+restore. By McNemar's test, M3$_\text{J+O}$ is statistically indistinguishable
+from M2 on risk (p$=$0.92), category (p$=$0.70), and clarification (p$=$0.21)
+correctness, and on parse compliance (p$=$0.48); its gains are concentrated in
+the safety-oriented rate metrics (under-triage, over-triage) and cross-style
+consistency rather than in raw accuracy.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -148,14 +164,23 @@ differently depending only on how a patient phrases it. The benchmark's
 style-controlled design makes this measurable, since each seed appears in six
 registers with a single gold interpretation.
 
-Second, adaptation is a double-edged tool. Fine-tuning can reduce under-triage
-and stabilize interpretation across styles, but it is acutely sensitive to how
-training targets are formatted and mixed: a naive question--answer objective
-silently destroys both output-format compliance and the model's clarification
-behavior. For a safety-relevant domain, this argues for evaluating adaptation
-on the same structured behaviors one cares about at deployment, rather than on
-answer quality alone, and for explicitly budgeting the training mixture for
-behaviors, such as asking for clarification, that direct-answer data suppresses.
+Second, adaptation is a double-edged tool. Fine-tuning on our data reliably
+reduces under-triage and stabilizes interpretation across styles, and with
+structured targets it matches the strong zero-shot baseline on risk accuracy
+while improving the safety-oriented rate metrics. But it is acutely sensitive to
+target format---a naive question--answer objective silently destroys
+output-format compliance---and, more strikingly, it erases clarification-seeking
+regardless of format or data balance. Oversampling clarification examples to
+nearly a third of the training mixture did not restore the behavior. This
+suggests clarification-seeking on ambiguous input is not a skill that
+answer-style supervised fine-tuning can teach by example; recovering it likely
+requires objectives that explicitly reward abstention or asking, such as
+preference optimization or a dedicated clarification-vs-answer decision head,
+rather than more clarification demonstrations. For a safety-relevant domain, the
+practical lesson is to evaluate adaptation on the structured behaviors one cares
+about at deployment---triage calibration \emph{and} clarification---rather than
+on answer quality alone, since a model can improve on the former while silently
+losing the latter.
 
 \section*{Limitations}
 
