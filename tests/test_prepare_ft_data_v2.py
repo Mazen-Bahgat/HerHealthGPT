@@ -54,6 +54,31 @@ def test_degenerate_filter_only_applies_to_ambiguous_style():
     assert len(ctrain) == 1 and log == []
 
 
+def test_degenerate_ids_drop_translated_rows_the_text_regex_cant_catch():
+    # Simulates FR/AR: Question is already-translated text, so the English
+    # "something"/"not really sure" regex can't match it -- only the
+    # precomputed row_id set (from the EN source) can catch it.
+    translated = _row("Qu'est-ce que quelque chose? Je ne suis pas sure.")
+    translated["row_id"] = "train-0042"
+    kept = _row("Quelle est la cause de mes crampes?")
+    kept["row_id"] = "train-0043"
+    ctrain, _, log = prep.clean_splits(
+        [translated, kept], [], set(), degenerate_ids={"train-0042"}
+    )
+    assert [r["row_id"] for r in ctrain] == ["train-0043"]
+    assert ("train", "degenerate_ambiguous") in {(l["split"], l["reason"]) for l in log}
+
+
+def test_degenerate_ids_defaults_to_empty_when_omitted():
+    # Backward compatibility: callers that don't pass degenerate_ids (e.g.
+    # existing EN-only tests) get the same behavior as before this parameter
+    # existed -- no row is dropped just for having an unmatched row_id.
+    row = _row("Quelle est la cause de mes crampes?")
+    row["row_id"] = "train-0099"
+    ctrain, _, log = prep.clean_splits([row], [], set())
+    assert len(ctrain) == 1 and log == []
+
+
 def test_chat_record_shape():
     rec = prep.to_chat_record(_row("Q?", "A."))
     roles = [m["role"] for m in rec["messages"]]
