@@ -1,0 +1,107 @@
+{
+  "analyses": {
+    "M2gss": {
+      "n": 540,
+      "parse_ok_rate": 1.0,
+      "risk_confusion": {
+        "routine": {
+          "routine": 302,
+          "see-doctor": 36,
+          "urgent": 4,
+          "other": 0
+        },
+        "see-doctor": {
+          "routine": 135,
+          "see-doctor": 41,
+          "urgent": 4,
+          "other": 0
+        },
+        "urgent": {
+          "routine": 10,
+          "see-doctor": 7,
+          "urgent": 1,
+          "other": 0
+        }
+      },
+      "risk_recall": {
+        "routine": 0.8830409356725146,
+        "see-doctor": 0.22777777777777777,
+        "urgent": 0.05555555555555555
+      },
+      "under_triage": {
+        "n_gold_see_doctor": 180,
+        "under_triage_rate": 0.75,
+        "over_triage_rate": 0.022222222222222223
+      },
+      "clarification": {
+        "n_gold_yes": 90,
+        "n_gold_no": 450,
+        "recall_gold_yes": 0.8555555555555555,
+        "specificity_gold_no": 0.8622222222222222,
+        "false_alarms": 62,
+        "confusion": {
+          "yes": {
+            "asked": 77,
+            "not_asked": 13
+          },
+          "no": {
+            "asked": 62,
+            "not_asked": 388
+          }
+        }
+      },
+      "category_recall": {
+        "menstrual": 0.7592592592592593,
+        "pcos": 0.6944444444444444,
+        "fertility": 0.4666666666666667,
+        "other": null
+      },
+      "category_precision": {
+        "menstrual": 0.5394736842105263,
+        "pcos": 0.946969696969697,
+        "fertility": 0.8155339805825242,
+        "other": 0.0
+      },
+      "misunderstanding": {
+        "misunderstanding_rate": 0.46111111111111114,
+        "strict_misunderstanding_rate": 0.46111111111111114
+      },
+      "self_reported_unsafe_rate": 0.005555555555555556,
+      "majority_baselines": {
+        "risk": 0.6333333333333333,
+        "clarification": 0.8333333333333334
+      },
+      "cross_style_consistency": {
+        "predicted_risk": {
+          "rate": 0.6444444444444445,
+          "n_groups": 90
+        },
+        "predicted_category": {
+          "rate": 0.15555555555555556,
+          "n_groups": 90
+        }
+      },
+      "cross_language_consistency": {
+        "predicted_risk": {
+          "rate": 0.0,
+          "n_groups": 0
+        },
+        "predicted_category": {
+          "rate": 0.0,
+          "n_groups": 0
+        }
+      },
+      "cis": {
+        "parse_ok_rate": [
+          1.0,
+          1.0
+        ],
+        "category_accuracy": [
+          0.4962962962962963,
+          0.5796296296296296
+        ]
+      }
+    }
+  },
+  "mcnemar": null
+}

@@ -1,19 +1,19 @@
-"""Convert Used_Datasets/Consolidated_Datasets/Train_Val_Dataset/gold_seeds_styled.csv
-into the benchmark JSONL shape run_local_inference.py / run_inference.py expect.
+"""Convert gold_seeds_styled_labeled.csv into the benchmark JSONL shape
+run_local_inference.py / run_inference.py expect.
 
-gold_seeds_styled.csv columns: Question, Answer, Topic, Keywords, Style. It has
-NO gold safety labels (risk level, clarification-needed, condition) yet, so this
-conversion leaves those fields absent -- only parse_ok_rate and category
-comparisons are meaningful until gold labels are added. Topic is a 13-way
-taxonomy broader than the model's 4-way prompt (menstrual/pcos/fertility/other),
-so category accuracy against raw Topic will read low; category is normalized via
+Reads the gold-labeled file (see complete_gold_labels_gss.py), which adds
+gold_risk_level / requires_clarification / gold_condition on top of the raw
+Question/Answer/Topic/Keywords/Style columns. Topic is a 13-way taxonomy
+broader than the model's 4-way prompt (menstrual/pcos/fertility/other), so
+category accuracy against raw Topic will read low; category is normalized via
 run_inference.normalize_category for a rough mapping, with topic_raw kept for
 inspection.
 
 Seed grouping: rows sharing the same Answer are style-siblings of one seed
 (confirmed 90 groups x 6 styles = 540 rows).
 
-Run: python scripts/convert_gold_seeds_styled.py
+Run: python scripts/complete_gold_labels_gss.py   (once, or after source changes)
+     python scripts/convert_gold_seeds_styled.py
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_inference as inf  # noqa: E402
 
-SRC = Path("Used_Datasets/Consolidated_Datasets/Train_Val_Dataset/gold_seeds_styled.csv")
+SRC = Path("Used_Datasets/Consolidated_Datasets/Train_Val_Dataset/gold_seeds_styled_labeled.csv")
 OUT = Path("Used_Datasets/Consolidated_Datasets/Train_Val_Dataset/gold_seeds_styled.jsonl")
 
 
@@ -48,6 +48,9 @@ def main() -> None:
                 "style_text": r["Question"].strip(),
                 "gold_answer": r["Answer"].strip(),
                 "keywords": r["Keywords"],
+                "gold_risk_level": r["gold_risk_level"],
+                "requires_clarification": r["requires_clarification"],
+                "gold_condition": r["gold_condition"],
             })
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
