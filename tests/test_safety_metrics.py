@@ -102,6 +102,20 @@ def test_render_report_two_labels_has_delta_and_dash():
     assert "-0.300" in md or "−0.300" in md or "-0.30" in md  # delta on parse_ok
 
 
+def test_skew_caveat_is_computed_not_hardcoded():
+    a1 = {"parse_ok_rate": 1.0, "under_triage": {"under_triage_rate": 0.1, "over_triage_rate": 0.0, "n_gold_see_doctor": 10},
+          "clarification": {"recall_gold_yes": 0.5, "specificity_gold_no": 0.9, "n_gold_yes": 10, "n_gold_no": 10, "false_alarms": 0, "confusion": {}},
+          "misunderstanding": {"misunderstanding_rate": 0.1, "strict_misunderstanding_rate": 0.1},
+          "self_reported_unsafe_rate": 0.0,
+          "majority_baselines": {"risk": 0.633, "clarification": 0.833},
+          "category_recall": {}, "category_precision": {}, "risk_confusion": {},
+          "cross_style_consistency": {}, "cross_language_consistency": {}, "cis": {}}
+    md = sm.render_report({"M2gss": a1}, pair_tests=None)
+    assert "0.633" in md and "0.833" in md
+    assert "100% see-doctor" not in md  # old hardcoded text must be gone
+    assert "95.6%" not in md
+
+
 def test_mcnemar_dedupes_duplicate_item_ids():
     a = [_scored(item="i1", pred_cat="menstrual"), _scored(item="i1", pred_cat="pcos")]
     b = [_scored(item="i1", pred_cat="pcos")]

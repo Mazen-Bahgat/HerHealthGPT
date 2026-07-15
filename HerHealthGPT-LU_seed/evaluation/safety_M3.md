@@ -1,6 +1,6 @@
 # Safety metrics — M3
 
-Gold-label skew caveat: risk gold is 100% see-doctor; clarification gold ~95.6% no. Accuracy-style numbers are shown next to majority baselines; per-class recall and under-triage are the honest headlines.
+Gold-label skew caveat: risk majority-class baseline 1.000; clarification majority-class baseline 0.956. Accuracy-style numbers are shown next to majority baselines; per-class recall and under-triage are the honest headlines.
 
 | metric | M3 |
 |---|---|
