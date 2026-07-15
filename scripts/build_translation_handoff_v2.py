@@ -107,7 +107,7 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for lang in LANGS:
         path = OUT_DIR / f"{lang}.csv"
-        with path.open("w", encoding="utf-8", newline="") as f:
+        with path.open("w", encoding="utf-8-sig", newline="") as f:
             w = csv.DictWriter(f, fieldnames=FIELDS)
             w.writeheader()
             w.writerows(rows)
