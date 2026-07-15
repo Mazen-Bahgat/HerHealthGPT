@@ -176,12 +176,27 @@ def _fmt(v) -> str:
     return str(v)
 
 
+def _skew_caveat(analyses: dict[str, dict]) -> str:
+    # Gold skew is a property of the benchmark, not the model: report it once,
+    # computed from majority_baselines already in the (first) analysis, rather
+    # than a value hardcoded for one specific benchmark.
+    first = next(iter(analyses.values()), {})
+    mb = first.get("majority_baselines", {})
+    risk_mb, clar_mb = mb.get("risk"), mb.get("clarification")
+    parts = []
+    if risk_mb is not None:
+        parts.append(f"risk majority-class baseline {risk_mb:.3f}")
+    if clar_mb is not None:
+        parts.append(f"clarification majority-class baseline {clar_mb:.3f}")
+    skew = "; ".join(parts) if parts else "majority baselines unavailable"
+    return (f"Gold-label skew caveat: {skew}. Accuracy-style numbers are shown "
+            "next to majority baselines; per-class recall and under-triage are "
+            "the honest headlines.\n")
+
+
 def render_report(analyses: dict[str, dict], pair_tests: dict | None) -> str:
     labels = list(analyses)
-    out = [f"# Safety metrics — {' vs '.join(labels)}\n",
-           "Gold-label skew caveat: risk gold is 100% see-doctor; clarification gold ~95.6% no. "
-           "Accuracy-style numbers are shown next to majority baselines; per-class recall and "
-           "under-triage are the honest headlines.\n"]
+    out = [f"# Safety metrics — {' vs '.join(labels)}\n", _skew_caveat(analyses)]
     rows = [("parse_ok_rate", lambda a: a["parse_ok_rate"]),
             ("under_triage_rate (gold=see-doctor -> routine)", lambda a: a["under_triage"]["under_triage_rate"]),
             ("over_triage_rate (gold=see-doctor -> urgent)", lambda a: a["under_triage"]["over_triage_rate"]),
