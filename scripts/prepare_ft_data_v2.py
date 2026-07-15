@@ -8,12 +8,12 @@ and val (val wins so the validation set stays untouched), and emits Qwen
 chat-message JSONL in the same record shape as prepare_ft_data.py. Every
 dropped row is written to leakage_log.csv with its reason.
 
-FR/AR: the team translates the styled CSVs in place (same schema), so pass
---lang fr --train <fr train csv> --val <fr val csv> and the files are used
-directly. If a file instead carries Question_translated / Answer_translated
-columns (handoff-template style), those are mapped onto Question/Answer
-first, with split membership from the row_id prefix when train and val are
-the same file.
+FR/AR: pass translated styled CSVs directly, or pass a returned handoff file
+carrying Question_translated / Answer_translated columns. Handoff translations
+are mapped onto Question/Answer first, with split membership recovered from the
+row_id prefix when --train and --val point to the same combined file. Translation
+provenance is documented beside each returned handoff; the ingest path does not
+assume a particular human or model translation provider.
 
 Run (EN):
     python scripts/prepare_ft_data_v2.py --lang en
