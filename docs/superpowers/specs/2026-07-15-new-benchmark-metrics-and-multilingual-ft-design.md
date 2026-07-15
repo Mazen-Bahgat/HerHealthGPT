@@ -153,11 +153,15 @@ Decisions made with Mazen when the styled EN dataset landed:
 - **FT input is styled-only** — the plain canonical CSVs are superseded.
 - **EN run: 2 epochs** (not 3): 2,880 rows ≈ 1.9 h, and the 6 style variants
   per seed already act as augmentation.
-- **Stage 3 (handoff templates) dropped:** the team translates the three
-  styled files themselves in the same schema; `prepare_ft_data_v2.py --lang
-  fr|ar --train/--val <translated csv>` consumes them directly (the
-  `*_translated`-column path remains only as a fallback if handoff-style
-  files ever appear).
+- **Stage 3 (handoff templates) reinstated (2026-07-15, later same day):**
+  with fine-tuning now running on a separate PC, translation needs to proceed
+  in parallel, so the row_id/`*_translated`-column handoff template is back
+  in use instead of translating the full styled CSVs in place. Generated via
+  `scripts/build_translation_handoff_v2.py` ->
+  `translation_handoff_v2/{fr,ar}.csv` (3,580 rows each = leakage-cleaned
+  train+val over the styled splits, 2,862 train / 718 val). Ingest path is
+  `prepare_ft_data_v2.py --lang fr|ar --train/--val <returned csv>` (handoff
+  path, not the fallback).
 - Answer-level leakage verified zero: none of the 90 benchmark seeds'
   answers appear in the styled train/val files.
 
@@ -167,3 +171,35 @@ Decisions made with Mazen when the styled EN dataset landed:
   are evaluated on the English benchmark only.
 - Re-running M3/M3-v2 (old adapters) on the new benchmark.
 - Any JSON-task or mixed-format FT corpus (M3-v2 recipe).
+
+## French Stage-3 execution record (2026-07-15)
+
+The original Stage-3 decision above described a team-translation handoff. The
+actual French v2 handoff was completed as **LLM-assisted silver fine-tuning
+data** using OpenAI's Responses API with `gpt-5.6-sol`, low reasoning effort,
+Structured Outputs, and `store: false`. This execution note supersedes the
+planned provider for French only; it does not rewrite the historical decision
+or change the separate Arabic handoff.
+
+- Delivered artifact: `translation_handoff_v2/fr.csv`, 3,580 rows (2,862 train
+  and 718 validation).
+- Only `Question_translated` and `Answer_translated` were filled; source fields,
+  order, and stable row IDs were preserved.
+- All six registers were recovered from row IDs. Identical English answers were
+  translated once and reused consistently.
+- QA: corpus-wide deterministic validation, exhaustive triage of 404 unique
+  source-vs-translation review jobs, and AI-assisted stratified review of 180
+  rows (5.03%) across every style and topic. The final validator has zero
+  blocking errors; natural number/punctuation surface differences remain review
+  warnings.
+- Verified ingest emits 2,858 train / 718 validation records. Four training
+  rows are logged and removed as `train_val_dup` because synonymous English
+  questions collapse to identical natural French across splits.
+- Native-French human review remains pending. This delivery must not be labeled
+  professional-agency, human-reviewed, gold, or benchmark-quality data.
+- The 540-row French evaluation benchmark remains out of scope; `fr.csv` is for
+  multilingual fine-tuning only.
+
+Machine-readable details are in
+`translation_handoff_v2/fr_translation_provenance.json` and
+`translation_handoff_v2/fr_translation_qa_report.json`.

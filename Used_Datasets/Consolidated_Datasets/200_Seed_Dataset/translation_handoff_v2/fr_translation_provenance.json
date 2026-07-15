@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "artifact": "Used_Datasets/Consolidated_Datasets/200_Seed_Dataset/translation_handoff_v2/fr.csv",
+  "language": "fr",
+  "corpus_role": "silver multilingual fine-tuning data",
+  "generated_at": "2026-07-15T11:08:49.165Z",
+  "finalized_at": "2026-07-15T11:57:00.872600+00:00",
+  "generation": {
+    "provider": "OpenAI",
+    "api": "Responses API",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "low",
+    "structured_outputs": true,
+    "store": false,
+    "prompt_sha256": "d09f40a01900596e354c8df4598895131b600ce6f6b42ad8686c81e19e6edf2d",
+    "usage": {
+      "response_count": 72,
+      "input_tokens": 437157,
+      "output_tokens": 363087,
+      "total_tokens": 800244
+    }
+  },
+  "method": {
+    "style_recovered_from_stable_row_id": true,
+    "question_registers": [
+      "canonical",
+      "clinical",
+      "layperson",
+      "indirect_cultural",
+      "ambiguous",
+      "emotionally_concerned"
+    ],
+    "identical_english_answers_translated_once_and_reused": true,
+    "only_translation_columns_filled": true,
+    "translation_was_not_fact_checking": true,
+    "post_generation_qa_report": "Used_Datasets/Consolidated_Datasets/200_Seed_Dataset/translation_handoff_v2/fr_translation_qa_report.json"
+  },
+  "counts": {
+    "rows": 3580,
+    "train": 2862,
+    "validation": 718,
+    "unique_question_jobs": 3573,
+    "unique_answer_jobs": 600,
+    "style_rows": {
+      "canonical": 593,
+      "clinical": 596,
+      "layperson": 600,
+      "indirect_cultural": 600,
+      "ambiguous": 591,
+      "emotionally_concerned": 600
+    }
+  },
+  "integrity": {
+    "blank_template_sha256": "3ab480c4a195293d61b56596b5e1d55e38cb73de26f39ce8fbef0cedbc66e379",
+    "train_styled_source_sha256": "75154c9242acf328143bc091588e9b9a24c5b4f83e6dde74250b0556bf84e4e5",
+    "validation_styled_source_sha256": "f6c393e5b2eb4d30ca85c857937107af752ec86ac6097a071c8ddae8ced4d04f",
+    "initial_generated_csv_sha256": "f9f179783e373ae4b10ba90ddf52d388fabc1e4c1a33e2594f95b9319fabaa02",
+    "final_csv_sha256": "939bc0c6d568c57b27ec09cfb1fa75fc34e9c6cb5ec473327f8549a80f7ea7f1",
+    "post_cleanup_csv_sha256": "bd01ebccd6c0d655fef4953b7d3a9ef086f8752c5038528da52f69529a84bc37",
+    "post_bom_fix_csv_sha256": "c99e14b3e9f85556f2f3266e1a1c6b94120b76e60156f1c28ef892b3834faca6"
+  },
+  "review": {
+    "automated_structural_validation": {
+      "status": "passed",
+      "validator": "scripts/validate_translation_handoff_v2.py",
+      "rows": 3580,
+      "split_counts": {
+        "train": 2862,
+        "val": 718
+      },
+      "blocking_errors": 0,
+      "non_blocking_review_flags": {
+        "digit_surface_form": 506,
+        "question_or_exclamation_punctuation": 96
+      }
+    },
+    "ai_assisted_qa": {
+      "status": "completed",
+      "deterministic_review_jobs_triaged": 404,
+      "stratified_rows_reviewed": 180,
+      "sample_fraction": 0.05027932960893855,
+      "sample_critical_safety_reversals": 0,
+      "fail_closed_correction_rules": 71,
+      "changed_translation_cells": 1022,
+      "snippet_replacements": 1120,
+      "line_end_whitespace_cells": 18,
+      "trimmed_translated_line_endings": 144
+    },
+    "downstream_ingest_verification": {
+      "status": "passed",
+      "train_rows": 2858,
+      "validation_rows": 718,
+      "dropped_train_val_duplicates": 4,
+      "drop_reason": "Synonymous English questions collapsed to identical natural French across splits and were removed by the existing train_val_dup guard."
+    },
+    "native_french_human_review": "pending",
+    "benchmark_quality_claim": false,
+    "source_adjudication_pending": [
+      "train-1370: CSI may be a source corruption of ICSI",
+      "train-2175: GAEC doctor may be a source corruption of gynae doctor",
+      "train-1512/train-1513/train-1514/train-1515/train-1517: malformed source date '1 October 31st'",
+      "train-1773 and train-1791: ambiguous source date formats"
+    ],
+    "post_delivery_cleanup": {
+      "status": "completed",
+      "fixes_applied": 3,
+      "changed_cells": 1428,
+      "replacements": 5450,
+      "report": "Used_Datasets/Consolidated_Datasets/200_Seed_Dataset/translation_handoff_v2/fr_translation_qa_report.json",
+      "utf8_bom_added": true
+    }
+  }
+}

@@ -1,0 +1,1777 @@
+{
+  "schema_version": 1,
+  "artifact": "Used_Datasets/Consolidated_Datasets/200_Seed_Dataset/translation_handoff_v2/fr.csv",
+  "generated_at": "2026-07-15T11:57:00.872600+00:00",
+  "input": "Used_Datasets/Consolidated_Datasets/200_Seed_Dataset/translation_handoff_v2/fr.generated.csv",
+  "input_sha256": "f9f179783e373ae4b10ba90ddf52d388fabc1e4c1a33e2594f95b9319fabaa02",
+  "output_sha256": "939bc0c6d568c57b27ec09cfb1fa75fc34e9c6cb5ec473327f8549a80f7ea7f1",
+  "review_method": {
+    "corpus_wide_deterministic_validation": true,
+    "deterministic_review_jobs_triaged": 404,
+    "ai_assisted_stratified_rows_reviewed": 180,
+    "ai_assisted_sample_fraction": 0.05027932960893855,
+    "sample_critical_safety_reversals": 0,
+    "native_french_human_review": "pending",
+    "downstream_ingest_verification": {
+      "status": "passed",
+      "train_rows": 2858,
+      "validation_rows": 718,
+      "dropped_train_val_duplicates": 4,
+      "note": "Four synonymous English questions collapse to identical natural French across splits and are removed by the existing leakage guard."
+    }
+  },
+  "corrections": {
+    "rule_count": 71,
+    "changed_cell_count": 1022,
+    "snippet_replacement_count": 1120,
+    "rules": [
+      {
+        "rule_id": "clinical-prefix-masculine",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1321",
+          "train-1369",
+          "train-1405",
+          "train-1411",
+          "train-1435",
+          "train-1453",
+          "train-1483",
+          "train-1495",
+          "train-1525",
+          "train-1537",
+          "train-1591",
+          "train-1603",
+          "train-1639",
+          "train-1693",
+          "train-1807",
+          "train-1873",
+          "train-1963",
+          "train-1975",
+          "train-1981",
+          "train-1993",
+          "train-1999",
+          "train-2011",
+          "train-2017",
+          "train-2023",
+          "train-2041",
+          "train-2047",
+          "train-2059",
+          "train-2065",
+          "train-2077",
+          "train-2083",
+          "train-2089",
+          "train-2095",
+          "train-2101",
+          "train-2107",
+          "train-2119",
+          "train-2125",
+          "train-2131",
+          "train-2137",
+          "train-2143",
+          "train-2155",
+          "train-2161",
+          "train-2167",
+          "train-2173",
+          "train-2185",
+          "train-2191",
+          "train-2197",
+          "train-2203",
+          "train-2209",
+          "train-2215",
+          "train-2221",
+          "train-2227",
+          "train-2233",
+          "train-2239",
+          "train-2245",
+          "train-2251",
+          "train-2257",
+          "train-2263",
+          "train-2269",
+          "train-2275",
+          "train-2281",
+          "train-2287",
+          "train-2293",
+          "train-2299",
+          "train-2305",
+          "train-2311",
+          "train-2323",
+          "train-2329",
+          "train-2335",
+          "train-2341",
+          "train-2347",
+          "train-2353",
+          "train-2359",
+          "train-2365",
+          "train-2371",
+          "train-2377",
+          "train-2383",
+          "train-2389",
+          "train-2395",
+          "train-2401",
+          "train-2407",
+          "train-2413",
+          "train-2419",
+          "train-2425",
+          "train-2431",
+          "train-2437",
+          "train-2443",
+          "train-2449",
+          "train-2461",
+          "train-2467",
+          "train-2473",
+          "train-2479",
+          "train-2485",
+          "train-2491",
+          "train-2497",
+          "train-2503",
+          "train-2509",
+          "train-2515",
+          "train-2521",
+          "train-2527",
+          "train-2533",
+          "train-2539",
+          "train-2545",
+          "train-2551",
+          "train-2557",
+          "train-2563",
+          "train-2569",
+          "train-2575",
+          "train-2581",
+          "train-2587",
+          "train-2593",
+          "train-2599",
+          "train-2605",
+          "train-2611",
+          "train-2617",
+          "train-2623",
+          "train-2629",
+          "train-2635",
+          "train-2641",
+          "train-2647",
+          "train-2653",
+          "train-2659",
+          "train-2665",
+          "train-2671",
+          "train-2677",
+          "train-2683",
+          "train-2689",
+          "train-2695",
+          "train-2701",
+          "train-2707",
+          "train-2713",
+          "train-2719",
+          "train-2725",
+          "train-2731",
+          "train-2737",
+          "train-2743",
+          "train-2749",
+          "train-2755",
+          "train-2761",
+          "train-2767",
+          "train-2773",
+          "train-2779",
+          "train-2785",
+          "train-2791",
+          "train-2797",
+          "train-2803",
+          "train-2809",
+          "train-2815",
+          "train-2821",
+          "train-2827",
+          "train-2833",
+          "train-2839",
+          "train-2845",
+          "train-2851",
+          "train-2857",
+          "train-2863",
+          "train-2869",
+          "train-2875",
+          "val-0001",
+          "val-0007",
+          "val-0013",
+          "val-0019",
+          "val-0025",
+          "val-0031",
+          "val-0037",
+          "val-0043",
+          "val-0049",
+          "val-0055",
+          "val-0061",
+          "val-0067",
+          "val-0073",
+          "val-0079",
+          "val-0085",
+          "val-0091",
+          "val-0097",
+          "val-0103",
+          "val-0109",
+          "val-0115",
+          "val-0121",
+          "val-0127",
+          "val-0133",
+          "val-0139",
+          "val-0145",
+          "val-0151",
+          "val-0157",
+          "val-0163",
+          "val-0169",
+          "val-0175",
+          "val-0181",
+          "val-0187",
+          "val-0193",
+          "val-0199",
+          "val-0205",
+          "val-0211",
+          "val-0217",
+          "val-0223",
+          "val-0229",
+          "val-0235",
+          "val-0241",
+          "val-0247",
+          "val-0253",
+          "val-0259",
+          "val-0265",
+          "val-0271",
+          "val-0277",
+          "val-0283",
+          "val-0289",
+          "val-0295",
+          "val-0301",
+          "val-0307",
+          "val-0313",
+          "val-0319",
+          "val-0325",
+          "val-0331",
+          "val-0337",
+          "val-0343",
+          "val-0349",
+          "val-0355",
+          "val-0361",
+          "val-0367",
+          "val-0373",
+          "val-0379",
+          "val-0385",
+          "val-0391",
+          "val-0397",
+          "val-0403",
+          "val-0409",
+          "val-0415",
+          "val-0421",
+          "val-0427",
+          "val-0433",
+          "val-0439",
+          "val-0445",
+          "val-0451",
+          "val-0457",
+          "val-0463",
+          "val-0469",
+          "val-0475",
+          "val-0481",
+          "val-0487",
+          "val-0493",
+          "val-0499",
+          "val-0505",
+          "val-0511",
+          "val-0517",
+          "val-0523",
+          "val-0529",
+          "val-0535",
+          "val-0541",
+          "val-0547",
+          "val-0553",
+          "val-0559",
+          "val-0565",
+          "val-0571",
+          "val-0577",
+          "val-0583",
+          "val-0589",
+          "val-0595",
+          "val-0601",
+          "val-0607",
+          "val-0613",
+          "val-0619",
+          "val-0625",
+          "val-0631",
+          "val-0637",
+          "val-0643",
+          "val-0649",
+          "val-0655",
+          "val-0661",
+          "val-0667",
+          "val-0673",
+          "val-0679",
+          "val-0685",
+          "val-0691",
+          "val-0697",
+          "val-0703",
+          "val-0709",
+          "val-0715"
+        ],
+        "replacement_count": 277
+      },
+      {
+        "rule_id": "clinical-prefix-feminine",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-0007",
+          "train-0013",
+          "train-0019",
+          "train-0025",
+          "train-0031",
+          "train-0037",
+          "train-0043",
+          "train-0049",
+          "train-0055",
+          "train-0061",
+          "train-0067",
+          "train-0073",
+          "train-0079",
+          "train-0085",
+          "train-0091",
+          "train-0097",
+          "train-0103",
+          "train-0109",
+          "train-0115",
+          "train-0127",
+          "train-0133",
+          "train-0139",
+          "train-0145",
+          "train-0151",
+          "train-0157",
+          "train-0163",
+          "train-0169",
+          "train-0175",
+          "train-0181",
+          "train-0187",
+          "train-0193",
+          "train-0199",
+          "train-0211",
+          "train-0217",
+          "train-0223",
+          "train-0229",
+          "train-0235",
+          "train-0241",
+          "train-0247",
+          "train-0253",
+          "train-0259",
+          "train-0265",
+          "train-0271",
+          "train-0277",
+          "train-0283",
+          "train-0289",
+          "train-0295",
+          "train-0301",
+          "train-0307",
+          "train-0313",
+          "train-0319",
+          "train-0325",
+          "train-0331",
+          "train-0337",
+          "train-0343",
+          "train-0349",
+          "train-0355",
+          "train-0361",
+          "train-0367",
+          "train-0373",
+          "train-0379",
+          "train-0385",
+          "train-0391",
+          "train-0397",
+          "train-0403",
+          "train-0409",
+          "train-0415",
+          "train-0421",
+          "train-0427",
+          "train-0433",
+          "train-0439",
+          "train-0445",
+          "train-0451",
+          "train-0889",
+          "train-0895",
+          "train-0901",
+          "train-0907",
+          "train-0913",
+          "train-0919",
+          "train-0925",
+          "train-0931",
+          "train-0937",
+          "train-0943",
+          "train-0949",
+          "train-0955",
+          "train-0961",
+          "train-0967",
+          "train-0973",
+          "train-0979",
+          "train-0985",
+          "train-0991",
+          "train-0997",
+          "train-1003",
+          "train-1009",
+          "train-1015",
+          "train-1021",
+          "train-1027",
+          "train-1033",
+          "train-1039",
+          "train-1045",
+          "train-1051",
+          "train-1057",
+          "train-1063",
+          "train-1069",
+          "train-1075",
+          "train-1081",
+          "train-1087",
+          "train-1093",
+          "train-1099",
+          "train-1105",
+          "train-1111",
+          "train-1117",
+          "train-1123",
+          "train-1129",
+          "train-1135",
+          "train-1141",
+          "train-1147",
+          "train-1153",
+          "train-1159",
+          "train-1165",
+          "train-1171",
+          "train-1177",
+          "train-1183",
+          "train-1189",
+          "train-1195",
+          "train-1201",
+          "train-1207",
+          "train-1213",
+          "train-1219",
+          "train-1225",
+          "train-1231",
+          "train-1237",
+          "train-1243",
+          "train-1249",
+          "train-1255",
+          "train-1261",
+          "train-1267",
+          "train-1273",
+          "train-1279",
+          "train-1285",
+          "train-1291",
+          "train-1297",
+          "train-1303",
+          "train-1309",
+          "train-1315",
+          "train-1327",
+          "train-1333",
+          "train-1339",
+          "train-1345",
+          "train-1351",
+          "train-1357",
+          "train-1363",
+          "train-1375",
+          "train-1381",
+          "train-1387",
+          "train-1393",
+          "train-1399",
+          "train-1417",
+          "train-1423",
+          "train-1429",
+          "train-1441",
+          "train-1447",
+          "train-1459",
+          "train-1465",
+          "train-1471",
+          "train-1477",
+          "train-1489",
+          "train-1501",
+          "train-1507",
+          "train-1513",
+          "train-1519",
+          "train-1531",
+          "train-1543",
+          "train-1549",
+          "train-1555",
+          "train-1561",
+          "train-1567",
+          "train-1573",
+          "train-1579",
+          "train-1585",
+          "train-1597",
+          "train-1609",
+          "train-1615",
+          "train-1621",
+          "train-1627",
+          "train-1633",
+          "train-1645",
+          "train-1651",
+          "train-1657",
+          "train-1663",
+          "train-1669",
+          "train-1675",
+          "train-1681",
+          "train-1687",
+          "train-1699",
+          "train-1705",
+          "train-1711",
+          "train-1717",
+          "train-1723",
+          "train-1729",
+          "train-1735",
+          "train-1741",
+          "train-1747",
+          "train-1753",
+          "train-1759",
+          "train-1765",
+          "train-1771",
+          "train-1777",
+          "train-1783",
+          "train-1789",
+          "train-1795",
+          "train-1801",
+          "train-1813",
+          "train-1819",
+          "train-1825",
+          "train-1831",
+          "train-1837",
+          "train-1843",
+          "train-1849",
+          "train-1855",
+          "train-1861",
+          "train-1867",
+          "train-1879",
+          "train-1885",
+          "train-1891",
+          "train-1897",
+          "train-1903",
+          "train-1909",
+          "train-1915",
+          "train-1921",
+          "train-1927",
+          "train-1933",
+          "train-1939",
+          "train-1945",
+          "train-1951",
+          "train-1957",
+          "train-1969",
+          "train-1987",
+          "train-2005",
+          "train-2029",
+          "train-2035",
+          "train-2053",
+          "train-2071",
+          "train-2113",
+          "train-2149",
+          "train-2179"
+        ],
+        "replacement_count": 246
+      },
+      {
+        "rule_id": "clinical-prefix-consultation",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-0001"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "reassurance-wrapper-feminine",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-0023",
+          "train-0047",
+          "train-0071",
+          "train-0095",
+          "train-0119",
+          "train-0143",
+          "train-0167",
+          "train-0191",
+          "train-0215",
+          "train-0239",
+          "train-0263",
+          "train-0287",
+          "train-0311",
+          "train-0335",
+          "train-0359",
+          "train-0383",
+          "train-0407",
+          "train-0431",
+          "train-0455",
+          "train-0503",
+          "train-0527",
+          "train-0551",
+          "train-0575",
+          "train-0599",
+          "train-0623",
+          "train-0647",
+          "train-0671",
+          "train-0695",
+          "train-0719",
+          "train-0743",
+          "train-0767",
+          "train-0791",
+          "train-0815",
+          "train-0839",
+          "train-0863",
+          "train-0887",
+          "train-0911",
+          "train-0935",
+          "train-0959",
+          "train-0983",
+          "train-1007",
+          "train-1031",
+          "train-1079",
+          "train-1103",
+          "train-1127",
+          "train-1199",
+          "train-1223",
+          "train-1271",
+          "train-1295",
+          "train-1319",
+          "train-1343",
+          "train-1367",
+          "train-1391",
+          "train-1415",
+          "train-1439",
+          "train-1463",
+          "train-1511",
+          "train-1535",
+          "train-1559",
+          "train-1583",
+          "train-1631",
+          "train-1655",
+          "train-1679",
+          "train-1703",
+          "train-1727",
+          "train-1751",
+          "train-1775",
+          "train-1799",
+          "train-1823",
+          "train-1847",
+          "train-1871",
+          "train-1895",
+          "train-1919",
+          "train-1943",
+          "train-1967",
+          "train-1991",
+          "train-2039",
+          "train-2183",
+          "train-2351",
+          "train-2471",
+          "train-2567",
+          "train-2639",
+          "train-2807",
+          "train-2855",
+          "train-2879",
+          "val-0023",
+          "val-0047",
+          "val-0071",
+          "val-0095",
+          "val-0119",
+          "val-0143",
+          "val-0167",
+          "val-0191",
+          "val-0215",
+          "val-0239",
+          "val-0263",
+          "val-0287",
+          "val-0311",
+          "val-0335",
+          "val-0383",
+          "val-0407",
+          "val-0431",
+          "val-0479",
+          "val-0623",
+          "val-0647"
+        ],
+        "replacement_count": 105
+      },
+      {
+        "rule_id": "reassurance-wrapper-masculine",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-0479",
+          "train-1055",
+          "train-1151",
+          "train-1175",
+          "train-1247",
+          "train-1487",
+          "train-1607",
+          "train-2015",
+          "train-2063",
+          "train-2087",
+          "train-2111",
+          "train-2135",
+          "train-2159",
+          "train-2207",
+          "train-2231",
+          "train-2255",
+          "train-2279",
+          "train-2303",
+          "train-2327",
+          "train-2375",
+          "train-2399",
+          "train-2423",
+          "train-2447",
+          "train-2495",
+          "train-2519",
+          "train-2543",
+          "train-2591",
+          "train-2615",
+          "train-2663",
+          "train-2687",
+          "train-2711",
+          "train-2735",
+          "train-2759",
+          "train-2783",
+          "train-2831",
+          "val-0359",
+          "val-0455",
+          "val-0503",
+          "val-0527",
+          "val-0551",
+          "val-0575",
+          "val-0599",
+          "val-0671",
+          "val-0695",
+          "val-0719"
+        ],
+        "replacement_count": 45
+      },
+      {
+        "rule_id": "neutral-help-closing",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0978",
+          "train-0979",
+          "train-0980",
+          "train-0981",
+          "train-0982",
+          "train-0983",
+          "train-1500",
+          "train-1501",
+          "train-1502",
+          "train-1503",
+          "train-1504",
+          "train-1505",
+          "train-2160",
+          "train-2161",
+          "train-2162",
+          "train-2163",
+          "train-2164",
+          "train-2165",
+          "train-2394",
+          "train-2395",
+          "train-2396",
+          "train-2397",
+          "train-2398",
+          "train-2399",
+          "train-2496",
+          "train-2497",
+          "train-2498",
+          "train-2499",
+          "train-2500",
+          "train-2501",
+          "train-2550",
+          "train-2551",
+          "train-2552",
+          "train-2553",
+          "train-2554",
+          "train-2555",
+          "train-2592",
+          "train-2593",
+          "train-2594",
+          "train-2595",
+          "train-2596",
+          "train-2597",
+          "val-0330",
+          "val-0331",
+          "val-0332",
+          "val-0333",
+          "val-0334",
+          "val-0335"
+        ],
+        "replacement_count": 48
+      },
+      {
+        "rule_id": "neutral-uppercase-gratitude",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1171",
+          "train-1172"
+        ],
+        "replacement_count": 2
+      },
+      {
+        "rule_id": "neutral-uppercase-gratitude-pouvoir",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1170",
+          "train-1173"
+        ],
+        "replacement_count": 2
+      },
+      {
+        "rule_id": "neutral-uppercase-gratitude-conditionnel",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1174"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "neutral-menopause-activity",
+        "column": "Answer_translated",
+        "row_ids": [
+          "val-0156",
+          "val-0157",
+          "val-0158",
+          "val-0159",
+          "val-0160",
+          "val-0161"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-doctor-reference",
+        "column": "Answer_translated",
+        "row_ids": [
+          "val-0156",
+          "val-0157",
+          "val-0158",
+          "val-0159",
+          "val-0160",
+          "val-0161"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-positive-advice",
+        "column": "Answer_translated",
+        "row_ids": [
+          "val-0492",
+          "val-0493",
+          "val-0494",
+          "val-0495",
+          "val-0496",
+          "val-0497"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-assurance-advice",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1896",
+          "train-1897",
+          "train-1898",
+          "train-1899",
+          "train-1900",
+          "train-1901"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "idiomatic-emotional-wrapper",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0173",
+          "val-0197",
+          "val-0221",
+          "val-0245",
+          "val-0269",
+          "val-0293",
+          "val-0317",
+          "val-0341",
+          "val-0365",
+          "val-0389",
+          "val-0413",
+          "val-0437",
+          "val-0461",
+          "val-0485",
+          "val-0509",
+          "val-0533",
+          "val-0557",
+          "val-0581"
+        ],
+        "replacement_count": 18
+      },
+      {
+        "rule_id": "repair-csomething-token",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-0598",
+          "train-0784"
+        ],
+        "replacement_count": 2
+      },
+      {
+        "rule_id": "hair-fall-not-hairball-initial",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1518",
+          "train-1519",
+          "train-1520",
+          "train-1521",
+          "train-1522",
+          "train-1523"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "hair-fall-not-hairball-later",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1518",
+          "train-1519",
+          "train-1520",
+          "train-1521",
+          "train-1522",
+          "train-1523"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-vegetarian-phrase",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1518",
+          "train-1519",
+          "train-1520",
+          "train-1521",
+          "train-1522",
+          "train-1523"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "contextual-pod-train-1356",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1356",
+          "train-1357",
+          "train-1358",
+          "train-1359",
+          "train-1360",
+          "train-1361"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "contextual-pod-train-0997",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0996",
+          "train-0997",
+          "train-0998",
+          "train-0999",
+          "train-1000",
+          "train-1001"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "contextual-pcs-train-0997",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0996",
+          "train-0997",
+          "train-0998",
+          "train-0999",
+          "train-1000",
+          "train-1001"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "contextual-pod-train-1703",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1698",
+          "train-1699",
+          "train-1700",
+          "train-1701",
+          "train-1702",
+          "train-1703"
+        ],
+        "replacement_count": 12
+      },
+      {
+        "rule_id": "restore-uncertainty-train-1703",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1698",
+          "train-1699",
+          "train-1700",
+          "train-1701",
+          "train-1702",
+          "train-1703"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "contextual-pod-train-1892",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1890",
+          "train-1891",
+          "train-1892",
+          "train-1893",
+          "train-1894",
+          "train-1895"
+        ],
+        "replacement_count": 18
+      },
+      {
+        "rule_id": "remove-invented-dose-form-train-1892",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1890",
+          "train-1891",
+          "train-1892",
+          "train-1893",
+          "train-1894",
+          "train-1895"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-patient-variation-train-1892",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1890",
+          "train-1891",
+          "train-1892",
+          "train-1893",
+          "train-1894",
+          "train-1895"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "complete-conceive-phrase-train-1645",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1645"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "repair-endometriosis-grammar-train-0293",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-0293"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "neutral-adolescence-question-train-0412",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-0412"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "neutral-adolescence-answer-train-0412",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0408",
+          "train-0409",
+          "train-0410",
+          "train-0411",
+          "train-0412",
+          "train-0413"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "all-means-everyone-train-0814",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0810",
+          "train-0811",
+          "train-0812",
+          "train-0813",
+          "train-0814",
+          "train-0815"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-worry-train-2800",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-2800"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "french-ibuprofen-train-0694",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0690",
+          "train-0691",
+          "train-0692",
+          "train-0693",
+          "train-0694",
+          "train-0695"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-emergency-evaluation-train-1563",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1560",
+          "train-1561",
+          "train-1562",
+          "train-1563",
+          "train-1564",
+          "train-1565"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-irritability-train-0465",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0462",
+          "train-0463",
+          "train-0464",
+          "train-0465",
+          "train-0466",
+          "train-0467"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "word-form-one-hour-train-1172",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1170",
+          "train-1171",
+          "train-1172",
+          "train-1173",
+          "train-1174",
+          "train-1175"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "restore-ambiguous-final-time-train-1054",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1054"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "keep-symptoms-in-one-question-train-1600",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1600"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "restore-elliptical-question-train-2706",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-2706"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "preserve-incomplete-semen-question-val-0246",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0246"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "idiomatic-conception-val-0246",
+        "column": "Answer_translated",
+        "row_ids": [
+          "val-0246",
+          "val-0247",
+          "val-0248",
+          "val-0249",
+          "val-0250",
+          "val-0251"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "french-metformin-val-0242",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0242"
+        ],
+        "replacement_count": 2
+      },
+      {
+        "rule_id": "restore-past-pcos-val-0330",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0330"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "preserve-vague-scopy-val-0331",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0331"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "contextual-pod-val-0330-answer",
+        "column": "Answer_translated",
+        "row_ids": [
+          "val-0330",
+          "val-0331",
+          "val-0332",
+          "val-0333",
+          "val-0334",
+          "val-0335"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "restore-timing-reference-val-0470",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0470"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "neutral-kneeling-val-0661-0664-0665",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0661",
+          "val-0664",
+          "val-0665"
+        ],
+        "replacement_count": 3
+      },
+      {
+        "rule_id": "neutral-landing-val-0663",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0663"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "neutral-landing-val-0665",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0665"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "preserve-emotion-val-0665",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0665"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "preserve-hpf-unit-val-0706",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0706"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "retain-womb-synonym-val-0000-answer",
+        "column": "Answer_translated",
+        "row_ids": [
+          "val-0000",
+          "val-0001",
+          "val-0002",
+          "val-0003",
+          "val-0004",
+          "val-0005"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "retain-womb-synonym-val-0084-question",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0084"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "idiomatic-delayed-periods-val-0114",
+        "column": "Answer_translated",
+        "row_ids": [
+          "val-0114",
+          "val-0115",
+          "val-0116",
+          "val-0117",
+          "val-0118",
+          "val-0119"
+        ],
+        "replacement_count": 6
+      },
+      {
+        "rule_id": "neutral-period-expectation-straight-apostrophe",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0384",
+          "val-0386"
+        ],
+        "replacement_count": 2
+      },
+      {
+        "rule_id": "neutral-period-expectation-curly-apostrophe",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0385",
+          "val-0387",
+          "val-0389"
+        ],
+        "replacement_count": 3
+      },
+      {
+        "rule_id": "preserve-ipill-case-val-0385",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0385"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "preserve-ipill-form-val-0387-0389",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0387",
+          "val-0388",
+          "val-0389"
+        ],
+        "replacement_count": 3
+      },
+      {
+        "rule_id": "preserve-meprate-case-val-0385-0389",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0385",
+          "val-0387",
+          "val-0389"
+        ],
+        "replacement_count": 3
+      },
+      {
+        "rule_id": "preserve-unwanted-case-val-0468-0473",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0468",
+          "val-0469",
+          "val-0471",
+          "val-0472",
+          "val-0473"
+        ],
+        "replacement_count": 5
+      },
+      {
+        "rule_id": "remove-inferred-diazen-count-lowercase",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0294"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "remove-inferred-diazen-count-titlecase",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0295",
+          "val-0297",
+          "val-0299"
+        ],
+        "replacement_count": 3
+      },
+      {
+        "rule_id": "preserve-vague-months-val-0450",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0450"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "preserve-vague-months-val-0455",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0455"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "contextual-pod-all-remaining-answers",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-1020",
+          "train-1021",
+          "train-1022",
+          "train-1023",
+          "train-1024",
+          "train-1025",
+          "train-1026",
+          "train-1027",
+          "train-1028",
+          "train-1029",
+          "train-1030",
+          "train-1031",
+          "train-1350",
+          "train-1351",
+          "train-1352",
+          "train-1353",
+          "train-1354",
+          "train-1355",
+          "train-1470",
+          "train-1471",
+          "train-1472",
+          "train-1473",
+          "train-1474",
+          "train-1475",
+          "train-1488",
+          "train-1489",
+          "train-1490",
+          "train-1491",
+          "train-1492",
+          "train-1493",
+          "train-1500",
+          "train-1501",
+          "train-1502",
+          "train-1503",
+          "train-1504",
+          "train-1505",
+          "train-1584",
+          "train-1585",
+          "train-1586",
+          "train-1587",
+          "train-1588",
+          "train-1589",
+          "train-1680",
+          "train-1681",
+          "train-1682",
+          "train-1683",
+          "train-1684",
+          "train-1685",
+          "train-1710",
+          "train-1711",
+          "train-1712",
+          "train-1713",
+          "train-1714",
+          "train-1715",
+          "train-1722",
+          "train-1723",
+          "train-1724",
+          "train-1725",
+          "train-1726",
+          "train-1727",
+          "train-1872",
+          "train-1873",
+          "train-1874",
+          "train-1875",
+          "train-1876",
+          "train-1877",
+          "train-1878",
+          "train-1879",
+          "train-1880",
+          "train-1881",
+          "train-1882",
+          "train-1883",
+          "val-0438",
+          "val-0439",
+          "val-0440",
+          "val-0441",
+          "val-0442",
+          "val-0443"
+        ],
+        "replacement_count": 90
+      },
+      {
+        "rule_id": "contextual-pcs-all-remaining-answers",
+        "column": "Answer_translated",
+        "row_ids": [
+          "train-0972",
+          "train-0973",
+          "train-0974",
+          "train-0975",
+          "train-0976",
+          "train-0977",
+          "train-1578",
+          "train-1579",
+          "train-1580",
+          "train-1581",
+          "train-1582",
+          "train-1583",
+          "train-2262",
+          "train-2263",
+          "train-2264",
+          "train-2265",
+          "train-2266",
+          "train-2267",
+          "val-0312",
+          "val-0313",
+          "val-0314",
+          "val-0315",
+          "val-0316",
+          "val-0317",
+          "val-0378",
+          "val-0379",
+          "val-0380",
+          "val-0381",
+          "val-0382",
+          "val-0383",
+          "val-0390",
+          "val-0391",
+          "val-0392",
+          "val-0393",
+          "val-0394",
+          "val-0395",
+          "val-0426",
+          "val-0427",
+          "val-0428",
+          "val-0429",
+          "val-0430",
+          "val-0431",
+          "val-0462",
+          "val-0463",
+          "val-0464",
+          "val-0465",
+          "val-0466",
+          "val-0467"
+        ],
+        "replacement_count": 54
+      },
+      {
+        "rule_id": "preserve-i-pill-spacing-train-1051-1055",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1051",
+          "train-1052",
+          "train-1053",
+          "train-1054",
+          "train-1055"
+        ],
+        "replacement_count": 5
+      },
+      {
+        "rule_id": "preserve-ipill-form-train-1753",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1753"
+        ],
+        "replacement_count": 1
+      },
+      {
+        "rule_id": "preserve-i-pill-spacing-train-1885-1888",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-1885",
+          "train-1888"
+        ],
+        "replacement_count": 2
+      },
+      {
+        "rule_id": "preserve-unwanted-case-val-0264-0269",
+        "column": "Question_translated",
+        "row_ids": [
+          "val-0264",
+          "val-0265",
+          "val-0267",
+          "val-0269"
+        ],
+        "replacement_count": 4
+      },
+      {
+        "rule_id": "translate-pouch-of-douglas-scan-label-train-2592-2597",
+        "column": "Question_translated",
+        "row_ids": [
+          "train-2592",
+          "train-2593",
+          "train-2594",
+          "train-2595",
+          "train-2597"
+        ],
+        "replacement_count": 5
+      }
+    ],
+    "line_end_whitespace_normalization": {
+      "changed_cell_count": 18,
+      "trimmed_line_count": 144,
+      "cells": [
+        {
+          "row_id": "train-0288",
+          "column": "Answer_translated",
+          "trimmed_line_count": 18
+        },
+        {
+          "row_id": "train-0289",
+          "column": "Answer_translated",
+          "trimmed_line_count": 18
+        },
+        {
+          "row_id": "train-0290",
+          "column": "Answer_translated",
+          "trimmed_line_count": 18
+        },
+        {
+          "row_id": "train-0291",
+          "column": "Answer_translated",
+          "trimmed_line_count": 18
+        },
+        {
+          "row_id": "train-0292",
+          "column": "Answer_translated",
+          "trimmed_line_count": 18
+        },
+        {
+          "row_id": "train-0293",
+          "column": "Answer_translated",
+          "trimmed_line_count": 18
+        },
+        {
+          "row_id": "train-1926",
+          "column": "Answer_translated",
+          "trimmed_line_count": 2
+        },
+        {
+          "row_id": "train-1927",
+          "column": "Answer_translated",
+          "trimmed_line_count": 2
+        },
+        {
+          "row_id": "train-1928",
+          "column": "Answer_translated",
+          "trimmed_line_count": 2
+        },
+        {
+          "row_id": "train-1929",
+          "column": "Answer_translated",
+          "trimmed_line_count": 2
+        },
+        {
+          "row_id": "train-1930",
+          "column": "Answer_translated",
+          "trimmed_line_count": 2
+        },
+        {
+          "row_id": "train-1931",
+          "column": "Answer_translated",
+          "trimmed_line_count": 2
+        },
+        {
+          "row_id": "val-0480",
+          "column": "Answer_translated",
+          "trimmed_line_count": 4
+        },
+        {
+          "row_id": "val-0481",
+          "column": "Answer_translated",
+          "trimmed_line_count": 4
+        },
+        {
+          "row_id": "val-0482",
+          "column": "Answer_translated",
+          "trimmed_line_count": 4
+        },
+        {
+          "row_id": "val-0483",
+          "column": "Answer_translated",
+          "trimmed_line_count": 4
+        },
+        {
+          "row_id": "val-0484",
+          "column": "Answer_translated",
+          "trimmed_line_count": 4
+        },
+        {
+          "row_id": "val-0485",
+          "column": "Answer_translated",
+          "trimmed_line_count": 4
+        }
+      ]
+    }
+  },
+  "adjudication_left_pending": [
+    "train-1370: source CSI in an assisted-reproduction list may mean ICSI",
+    "train-2175: source GAEC doctor may be a corruption of gynae doctor",
+    "train-1512/train-1513/train-1514/train-1515/train-1517: malformed date '1 October 31st'",
+    "train-1773 and train-1791: ambiguous date formatting/localization"
+  ],
+  "post_delivery_cleanup": {
+    "schema_version": 1,
+    "generated_at": "2026-07-15T12:52:36.110049+00:00",
+    "trigger": "professional French-translator review of the shipped fr.csv",
+    "input_sha256": "939bc0c6d568c57b27ec09cfb1fa75fc34e9c6cb5ec473327f8549a80f7ea7f1",
+    "output_sha256": "bd01ebccd6c0d655fef4953b7d3a9ef086f8752c5038528da52f69529a84bc37",
+    "changed_cell_count": 1428,
+    "replacement_count": 5450,
+    "fixes": [
+      {
+        "fix_id": "literal-nbsp-escape",
+        "row_ids": [
+          "val-0354",
+          "val-0355",
+          "val-0356",
+          "val-0357",
+          "val-0358",
+          "val-0359",
+          "val-0402",
+          "val-0403",
+          "val-0404",
+          "val-0405",
+          "val-0406",
+          "val-0407",
+          "val-0456",
+          "val-0457",
+          "val-0458",
+          "val-0459",
+          "val-0460",
+          "val-0461",
+          "val-0528",
+          "val-0529",
+          "val-0530",
+          "val-0531",
+          "val-0532",
+          "val-0533"
+        ],
+        "replacement_count": 36
+      },
+      {
+        "fix_id": "stray-backslash-quote",
+        "row_ids": [
+          "val-0462",
+          "val-0465",
+          "val-0466"
+        ],
+        "replacement_count": 3
+      },
+      {
+        "fix_id": "apostrophe-typography",
+        "row_count": 1257,
+        "replacement_count": 5411
+      }
+    ],
+    "utf8_bom_added": {
+      "reason": "fr.csv had no UTF-8 BOM. Windows tools that guess encoding from content instead of a declared one (notably Excel's default Open behavior) fell back to a Windows ANSI code page, misreading every non-ASCII byte and displaying accented letters and guillemets as mojibake on screen even though the underlying bytes were already correct, valid UTF-8.",
+      "fix": "prepended the 3-byte UTF-8 BOM (EF BB BF) via scripts/add_utf8_bom.py",
+      "content_changed": false,
+      "verified_compatible_with": [
+        "scripts/validate_translation_handoff_v2.py (decodes utf-8-sig)",
+        "scripts/prepare_ft_data_v2.py read_csv() (opens utf-8-sig)"
+      ],
+      "final_csv_sha256": "c99e14b3e9f85556f2f3266e1a1c6b94120b76e60156f1c28ef892b3834faca6"
+    }
+  }
+}
