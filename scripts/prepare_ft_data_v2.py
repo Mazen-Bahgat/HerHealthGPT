@@ -97,14 +97,27 @@ def is_degenerate_ambiguous(row: dict) -> bool:
     return bool(re.search(r"\bsomething\b", q, re.I)) and "not really sure" in q.lower()
 
 
+def load_degenerate_row_ids() -> set[str]:
+    """Row_ids of degenerate-ambiguous rows in the canonical EN styled source.
+    Used to drop the matching row in ANY language: a French/Arabic translation
+    of a content-erased ambiguous rewrite has the same emptied-content
+    problem, but is_degenerate_ambiguous's English-word regex can't detect it
+    once Question has already been overwritten with translated text."""
+    en_train = read_csv(DEFAULT_TRAIN)
+    en_val = read_csv(DEFAULT_VAL)
+    return {r["row_id"] for r in en_train + en_val if is_degenerate_ambiguous(r)}
+
+
 def clean_splits(train_rows: list[dict], val_rows: list[dict],
-                 bench_questions: set[str]) -> tuple[list[dict], list[dict], list[dict]]:
+                 bench_questions: set[str],
+                 degenerate_ids: set[str] | None = None) -> tuple[list[dict], list[dict], list[dict]]:
     log: list[dict] = []
+    degenerate_ids = degenerate_ids or set()
 
     def drop_degenerate(rows: list[dict], split: str) -> list[dict]:
         kept = []
         for r in rows:
-            if is_degenerate_ambiguous(r):
+            if is_degenerate_ambiguous(r) or r.get("row_id") in degenerate_ids:
                 log.append({"split": split, "reason": "degenerate_ambiguous",
                             "Question": r["Question"]})
             else:
@@ -239,7 +252,8 @@ def main() -> None:
         # else: fully translated styled CSVs in the standard schema — use directly
 
     bench_questions = {norm_q(r["Question"]) for r in read_csv(args.benchmark)}
-    ctrain, cval, log = clean_splits(train_rows, val_rows, bench_questions)
+    degenerate_ids = load_degenerate_row_ids()
+    ctrain, cval, log = clean_splits(train_rows, val_rows, bench_questions, degenerate_ids)
 
     if args.format == "json" and args.oversample_clarify > 1:
         before = len(ctrain)
