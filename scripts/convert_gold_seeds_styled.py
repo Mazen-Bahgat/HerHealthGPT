@@ -17,6 +17,7 @@ Run: python scripts/complete_gold_labels_gss.py   (once, or after source changes
 """
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import sys
@@ -30,17 +31,17 @@ SRC = Path("Used_Datasets/Consolidated_Datasets/Train_Val_Dataset/gold_seeds_sty
 OUT = Path("Used_Datasets/Consolidated_Datasets/Train_Val_Dataset/gold_seeds_styled.jsonl")
 
 
-def main() -> None:
-    rows = list(csv.DictReader(SRC.open(encoding="utf-8")))
+def convert(src: Path, out: Path) -> int:
+    rows = list(csv.DictReader(src.open(encoding="utf-8-sig")))
     groups: dict[str, list[dict]] = defaultdict(list)
     for r in rows:
         groups[r["Answer"]].append(r)
 
-    out = []
+    records = []
     for i, (answer, group) in enumerate(sorted(groups.items())):
         seed_id = f"gss-{i:03d}"
         for r in group:
-            out.append({
+            records.append({
                 "seed_id": seed_id,
                 "style": r["Style"].strip().lower(),
                 "category": inf.normalize_category(r["Topic"]),
@@ -51,13 +52,23 @@ def main() -> None:
                 "gold_risk_level": r["gold_risk_level"],
                 "requires_clarification": r["requires_clarification"],
                 "gold_condition": r["gold_condition"],
+                "gold_action": r.get("gold_action", ""),
             })
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    with OUT.open("w", encoding="utf-8") as f:
-        for row in out:
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", encoding="utf-8") as f:
+        for row in records:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
-    print(f"{len(out)} rows -> {OUT} ({len(groups)} seed groups)")
+    print(f"{len(records)} rows -> {out} ({len(groups)} seed groups)")
+    return len(records)
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--src", type=Path, default=SRC)
+    ap.add_argument("--out", type=Path, default=OUT)
+    args = ap.parse_args()
+    convert(args.src, args.out)
 
 
 if __name__ == "__main__":
