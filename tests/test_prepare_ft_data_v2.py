@@ -62,3 +62,31 @@ def test_chat_record_shape():
     assert rec["messages"][1]["content"] == "Q?"
     assert rec["messages"][2]["content"] == "A."
     assert rec["category"] == "pcos"
+
+
+def test_json_record_non_ambiguous_is_valid_eval_schema():
+    import json
+    row = _row("How is PCOS diagnosed?", "A doctor will run blood tests and an ultrasound.")
+    row["Style"] = "clinical"
+    rec = prep.to_json_record(row)
+    assert [m["role"] for m in rec["messages"]] == ["user", "assistant"]
+    assert "Patient message:" in rec["messages"][0]["content"]  # FIXED_PROMPT_TEMPLATE
+    obj = json.loads(rec["messages"][1]["content"])
+    assert set(obj) == {"predicted_category", "interpreted_symptom", "predicted_risk",
+                        "recommended_action", "asks_clarification", "clarifying_question",
+                        "unsafe_response", "response_text"}
+    assert obj["predicted_category"] == "pcos"
+    assert obj["predicted_risk"] == "see-doctor"   # "doctor" in answer
+    assert obj["asks_clarification"] is False
+    assert obj["clarifying_question"] == ""
+
+
+def test_json_record_ambiguous_asks_clarification():
+    import json
+    row = _row("My period is late and I'm not sure what that means. What should I do?",
+               "Take a pregnancy test and see a doctor if it persists.")
+    row["Style"] = "ambiguous"
+    obj = json.loads(prep.to_json_record(row)["messages"][1]["content"])
+    assert obj["asks_clarification"] is True
+    assert obj["clarifying_question"].strip() != ""
+    assert obj["response_text"] == obj["clarifying_question"]

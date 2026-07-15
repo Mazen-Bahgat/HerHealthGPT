@@ -29,6 +29,25 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_inference as inf  # noqa: E402
+from build_ft_mix_v2 import risk_heuristic, _first_sentence  # noqa: E402
+
+CLARIFYING_QUESTION = (
+    "Could you tell me a bit more — for example how long this has been going on "
+    "and any other symptoms you've noticed — so I can help more accurately?"
+)
+
+CATEGORY_ENUM = {"menstrual", "pcos", "fertility", "other"}
+
+
+def enum_category(topic: str | None) -> str:
+    """Clamp the 13-way Topic taxonomy onto the model's 4-way enum so training
+    targets never carry an out-of-enum predicted_category."""
+    c = inf.normalize_category(topic)
+    if c in CATEGORY_ENUM:
+        return c
+    if c in {"menstruation", "menarche", "menopause", "pms"}:
+        return "menstrual"
+    return "other"
 
 DATA_DIR = Path("Used_Datasets/Consolidated_Datasets/200_Seed_Dataset")
 DEFAULT_TRAIN = DATA_DIR / "Train" / "train_canonical_styled.csv"
@@ -130,11 +149,48 @@ def to_chat_record(row: dict) -> dict:
     }
 
 
-def write_jsonl(path: Path, rows: list[dict]) -> None:
+def to_json_record(row: dict) -> dict:
+    """Eval-shaped training target: user = FIXED_PROMPT_TEMPLATE(question),
+    assistant = the 8-key JSON object evaluate.py scores. Ambiguous-style rows
+    model clarification behaviour (matching the benchmark's requires_clarification
+    label for that style); all other styles answer directly."""
+    q = row["Question"].strip()
+    a = row["Answer"].strip()
+    cat = enum_category(row.get("Topic"))
+    if (row.get("Style") or "").strip().lower() == "ambiguous":
+        obj = {
+            "predicted_category": cat,
+            "interpreted_symptom": "The description is too vague to interpret confidently",
+            "predicted_risk": "see-doctor",
+            "recommended_action": "Ask for more detail, then advise consulting a clinician",
+            "asks_clarification": True,
+            "clarifying_question": CLARIFYING_QUESTION,
+            "unsafe_response": False,
+            "response_text": CLARIFYING_QUESTION,
+        }
+    else:
+        obj = {
+            "predicted_category": cat,
+            "interpreted_symptom": _first_sentence(a),
+            "predicted_risk": risk_heuristic(a),
+            "recommended_action": _first_sentence(a),
+            "asks_clarification": False,
+            "clarifying_question": "",
+            "unsafe_response": False,
+            "response_text": a[:800],
+        }
+    return {"messages": [
+        {"role": "user", "content": inf.FIXED_PROMPT_TEMPLATE.format(text=q)},
+        {"role": "assistant", "content": json.dumps(obj, ensure_ascii=False, indent=2)},
+    ], "category": cat}
+
+
+def write_jsonl(path: Path, rows: list[dict], fmt: str = "chat") -> None:
+    builder = to_json_record if fmt == "json" else to_chat_record
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         for r in rows:
-            f.write(json.dumps(to_chat_record(r), ensure_ascii=False) + "\n")
+            f.write(json.dumps(builder(r), ensure_ascii=False) + "\n")
 
 
 def main() -> None:
@@ -143,9 +199,12 @@ def main() -> None:
     ap.add_argument("--train", type=Path, default=DEFAULT_TRAIN)
     ap.add_argument("--val", type=Path, default=DEFAULT_VAL)
     ap.add_argument("--benchmark", type=Path, default=DEFAULT_BENCHMARK)
+    ap.add_argument("--format", choices=["chat", "json"], default="chat",
+                    help="chat = plain Q->A; json = eval-shaped JSON triage target")
     ap.add_argument("--out-dir", type=Path, default=None)
     args = ap.parse_args()
-    out_dir = args.out_dir or Path(f"data/ft/{args.lang}_v2")
+    suffix = "_json" if args.format == "json" else ""
+    out_dir = args.out_dir or Path(f"data/ft/{args.lang}_v2{suffix}")
 
     train_rows = read_csv(args.train)
     val_rows = read_csv(args.val)
@@ -166,8 +225,8 @@ def main() -> None:
     bench_questions = {norm_q(r["Question"]) for r in read_csv(args.benchmark)}
     ctrain, cval, log = clean_splits(train_rows, val_rows, bench_questions)
 
-    write_jsonl(out_dir / "train.jsonl", ctrain)
-    write_jsonl(out_dir / "val.jsonl", cval)
+    write_jsonl(out_dir / "train.jsonl", ctrain, args.format)
+    write_jsonl(out_dir / "val.jsonl", cval, args.format)
     out_dir.mkdir(parents=True, exist_ok=True)
     with (out_dir / "leakage_log.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["split", "reason", "Question"])
