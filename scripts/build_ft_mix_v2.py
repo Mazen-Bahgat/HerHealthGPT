@@ -27,8 +27,19 @@ OUT_DIR = Path("data/ft/en_v2")
 
 URGENT_WORDS = ["emergency", "immediately", "call 911", "go to the er",
                 "severe bleeding", "unbearable"]
-CONSULT_WORDS = ["doctor", "clinician", "gynecologist", "provider",
-                 "medical attention", "check-up", "checkup", "healthcare professional"]
+# Conservative, disclosed expansion (2026-07): the original list only fired on
+# a handful of literal nouns, so answers that clearly advise clinical follow-up
+# in other words were mislabeled "routine" -- the main driver of under-triage.
+# Every phrase below unambiguously implies seeing a clinician; everyday
+# reassurance ("normal", "warm compress") deliberately stays routine.
+CONSULT_WORDS = ["doctor", "clinician", "gynecologist", "gynaecologist",
+                 "provider", "specialist", "nurse", "pharmacist",
+                 "medical attention", "medical advice", "medical help",
+                 "seek medical", "health professional", "healthcare professional",
+                 "consult", "diagnos", "get it checked", "getting this checked",
+                 "get checked", "checked to rule out", "seek care",
+                 "appointment", "evaluation", "evaluated",
+                 "check-up", "checkup"]
 N_JSON_PER_CAT = 300
 N_PROBE_TRIAGE = 75
 N_PROBE_CLARIF = 15

@@ -14,6 +14,35 @@ def test_risk_heuristic_mapping():
     assert bm.risk_heuristic("See a gynecologist; if severe bleeding occurs call 911") == "urgent"  # urgent wins
 
 
+def test_risk_heuristic_catches_genuine_consult_language():
+    # Conservative expansion: answers that clearly advise clinical follow-up
+    # without the literal word "doctor" were previously mislabeled "routine",
+    # driving under-triage. Each of these should now map to see-doctor.
+    consult_answers = [
+        "It's best to consult a healthcare provider about these symptoms.",
+        "A gynaecologist can help you figure out the cause.",  # British spelling
+        "You may need to see a specialist for further evaluation.",
+        "Testing is needed to diagnose the underlying condition.",
+        "Please seek medical advice if this continues.",
+        "It's worth getting this checked to rule out anything serious.",
+        "Book an appointment to have it properly evaluated.",
+        "A nurse or health professional can advise on next steps.",
+    ]
+    for a in consult_answers:
+        assert bm.risk_heuristic(a) == "see-doctor", a
+
+
+def test_risk_heuristic_keeps_genuinely_routine_routine():
+    # Guard against over-broadening: everyday reassurance must stay routine.
+    routine_answers = [
+        "Mild cramps in the first days of your period are completely normal.",
+        "Using a warm compress and staying hydrated usually helps.",
+        "This is a common experience and typically settles on its own.",
+    ]
+    for a in routine_answers:
+        assert bm.risk_heuristic(a) == "routine", a
+
+
 def _corpus_row(cat="menstrual", n=0, answer="Please see a doctor about this."):
     return {"instruction": "sys", "input": f"question {n}", "output": answer,
             "category": cat, "source_dataset": "MENST", "source_row_id": str(n)}
