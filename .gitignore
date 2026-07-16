@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .superpowers/
+.worktrees/
 HerHealthGPT-RF3.pdf
 *.egg-info/
 Dataset.zip
