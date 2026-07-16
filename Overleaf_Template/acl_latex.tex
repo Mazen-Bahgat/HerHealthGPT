@@ -205,8 +205,8 @@ Model & Lang & interp.\ acc & under-triage $\downarrow$ & clar.\ recall \\
 M2 (base)   & EN & \tbd & \tbd & \tbd \\
             & FR & \tbd & \tbd & \tbd \\
             & AR & \tbd & \tbd & \tbd \\
-\mlvone{}   & FR & 0.605 & $\sim$1.000 & \tbd \\
-            & AR & \tbd & \tbd & \tbd \\
+\mlvone{}   & FR & 0.605 & 1.000 & 0.000 \\
+            & AR & 0.618 & 0.998 & 0.000 \\
 \mlvtwo{}   & EN & \tbd & \tbd & \tbd \\
             & FR & \tbd & \tbd & \tbd \\
             & AR & \tbd & \tbd & \tbd \\
@@ -227,7 +227,11 @@ ablation. \mlvone{} \emph{understands} French: on the French benchmark it parses
 at 0.998 and reaches category accuracy 0.605 (higher than its English
 category accuracy), yet it routes $539/540$ French items to \texttt{routine}
 (under-triage $\approx 1.0$) --- it almost never recommends seeing a doctor in
-French. The cause is not comprehension but supervision: the fine-tuning
+French. The identical pattern holds for Arabic (parse 0.998, category accuracy
+0.618, under-triage 0.998), and the French and Arabic predictions agree on the
+(collapsed) risk verdict for $99.4\%$ of seeds ($n=540$): the model
+under-triages non-English input \emph{systematically and consistently}, not
+sporadically. The cause is not comprehension but supervision: the fine-tuning
 pipeline derived risk labels by matching \emph{English} consult words against
 the \emph{translated} answers, so $99.8\%$ of French (and Arabic) training rows
 were labeled \texttt{routine}. Recovering risk from the English source by

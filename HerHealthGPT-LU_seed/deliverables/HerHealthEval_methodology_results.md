@@ -112,16 +112,39 @@ Additional cross-cutting analyses (the "why they misunderstand" contribution):
 *(Filled as evals complete. All on `benchmark_multilingual_v1`; N=540/language;
 expected item_ids `menst-XXX_<style>_<lang>`.)*
 
-### 4.1 Model × language — headline table (TBD)
-| Model | Lang | parse_ok | interp. acc (category) | under-triage ↓ | clar. recall | clar. specificity | cross-lang consistency (risk) |
-|---|---|---|---|---|---|---|---|
-| M2 | en/fr/ar | … | … | … | … | … | … |
-| M3ml-v1 | fr/ar | … | … | ~1.00 (bug) | … | … | … |
-| M3ml-v2 | en/fr/ar | … | … | … | … | … | … |
+### 4.1 Model × language — headline table
+All on `benchmark_multilingual_v1`, N=540/language. interp = category accuracy;
+under-triage = P(routine | gold see-doctor); clar recall on 24 gold=yes items.
 
-### 4.2 Cross-language consistency (TBD)
-### 4.3 Per-style error analysis (TBD)
-### 4.4 M3ml-v1 → v2 ablation: cross-lingual under-triage (TBD)
+| Model | Lang | parse_ok | interp. acc | under-triage ↓ | clar. recall | clar. spec. | indirect-cultural interp. |
+|---|---|---|---|---|---|---|---|
+| M2 (base) | en | *running* | | | | | |
+| M2 (base) | fr | *running* | | | | | |
+| M2 (base) | ar | *running* | | | | | |
+| M3ml-v1 | fr | 0.998 | 0.605 | **1.000** | 0.000 | 1.000 | 0.618 |
+| M3ml-v1 | ar | 0.998 | 0.618 | **0.998** | 0.000 | 0.998 | 0.578 |
+| M3ml-v2 | en/fr/ar | *pending retrain* | | | | | |
+
+### 4.2 Cross-language consistency
+- **M3ml-v1 FR↔AR:** risk 0.994 (n=540), category 0.880 (n=540). High risk
+  "consistency" is an artifact of *both* languages collapsing to routine — the
+  model is consistently unsafe. Category consistency 0.880 shows genuine
+  cross-lingual condition understanding.
+- M2 base and M3ml-v2 (EN/FR/AR triples): *pending*.
+
+### 4.3 Per-style error analysis
+- Cross-style risk consistency (M3ml-v1): FR 0.978, AR 0.978 (n=90) — verdict
+  barely varies with register (because it is uniformly routine).
+- indirect_cultural interpretation (category acc): FR 0.618, AR 0.578 — culturally
+  indirect phrasing is understood at roughly the language average, not worse.
+
+### 4.4 M3ml-v1 → v2 ablation: cross-lingual under-triage
+**Confirmed (both non-English languages):** M3ml-v1 under-triages 100%/99.8% of
+FR/AR see-doctor items while parsing at 0.998 and interpreting category at
+0.605/0.618 — it understands the input but was trained to under-triage it,
+because the English-word risk heuristic mislabeled 99.8% of FR/AR training rows
+routine. v2 (risk recovered from EN source by row_id) is the corrected arm;
+retrain + eval pending.
 
 **Confirmed finding so far (M3ml-v1, on this benchmark):** French fine-tuned
 predictions collapse to "routine" on 539/540 items (under-triage ≈ 1.00) while
