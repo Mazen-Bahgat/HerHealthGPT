@@ -84,7 +84,13 @@ def main() -> None:
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--max-new-tokens", type=int, default=512)
+    ap.add_argument("--language", default="en",
+                    help="benchmark language; select_input_text picks {language}_text "
+                         "(e.g. fr_text/ar_text on the multilingual benchmark)")
     args = ap.parse_args()
+
+    global LANGUAGE
+    LANGUAGE = args.language
 
     rows = iter_benchmark(args.benchmark)
     if args.limit:

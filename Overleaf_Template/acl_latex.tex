@@ -60,7 +60,104 @@ Rather than claiming comprehensive clinical coverage, this preliminary study est
 \section{Results}
 \label{sec:results}
 
+<<<<<<< HEAD
+All results below are on the frozen English benchmark ($n=540$: 90 seeds
+$\times$ 6 communication styles). Gold labels are skewed, so we report
+majority-class baselines alongside accuracy-style numbers and treat per-class
+recall, under-triage, and clarification recall as the honest headlines. The
+risk majority-class baseline is 0.644 and the clarification majority-class
+baseline is 0.833.
+
+\subsection{Zero-shot baseline (M2)}
+
+Table~\ref{tab:main} reports the zero-shot baseline (M2), an instruction-tuned
+Qwen3.5-9B prompted with our structured triage schema. M2 parses at 100\% and
+reaches 0.667 risk accuracy, only marginally above the 0.644 majority baseline.
+The safety-critical weakness is \emph{under-triage}: of 174 items whose gold
+risk is \texttt{see-doctor}, M2 routes 71.8\% to \texttt{routine}
+(per-class recall for \texttt{see-doctor} is only 0.264, versus 0.897 for
+\texttt{routine}). M2 does, however, retain strong clarification-seeking:
+recall of 0.856 on the 90 items that require clarification, at 0.862
+specificity. Category accuracy is 0.539, with fertility weakest (recall 0.467).
+The model gives a consistent risk label to only 64.4\% of seed groups across
+their six phrasings, and a consistent category to just 15.6\%, direct evidence
+that surface communication style, not clinical content, drives much of the
+variance in interpretation.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccccc}
+\hline
+Metric & M2 & M3$_\text{QA}$ & M3$_\text{J}$ & M3$_\text{J+O}$ & Base \\
+\hline
+parse\_ok            & 1.000 & 0.865 & \textbf{0.998} & 0.996 & --- \\
+risk accuracy        & \textbf{0.667} & 0.625 & 0.623 & 0.665 & 0.644 \\
+under-triage $\downarrow$ & 0.718 & 0.800 & 0.647 & \textbf{0.605} & --- \\
+clarif. recall       & \textbf{0.856} & 0.174 & 0.044 & 0.000 & --- \\
+category accuracy    & 0.539 & 0.499 & 0.549 & \textbf{0.550} & --- \\
+consistency (risk)   & \textbf{0.644} & 0.456 & 0.433 & 0.444 & --- \\
+consistency (cat.)   & 0.156 & 0.189 & 0.344 & \textbf{0.378} & --- \\
+\hline
+\end{tabular}
+\caption{English benchmark results ($n=540$). M2 = zero-shot baseline;
+M3$_\text{QA}$ = QLoRA fine-tune on plain question--answer pairs;
+M3$_\text{J}$ = fine-tune on eval-shaped structured (JSON) targets;
+M3$_\text{J+O}$ = structured targets with 4$\times$ oversampling of the
+clarification (ambiguous-style) training rows. ``Base'' = majority-class
+baseline. Arrows: lower is better for under-triage. Best per row in
+\textbf{bold}. Consistency = fraction of seed groups given the same label
+across all six styles.}
+\label{tab:main}
+\end{table}
+
+\subsection{Fine-tuning is highly sensitive to target format}
+
+We fine-tune Qwen3.5-9B with QLoRA on leakage-controlled adaptation data drawn
+from the same seed pool as the benchmark but disjoint from it (verbatim-question
+and shared-answer overlaps are removed before training). We compare two target
+formats. M3$_\text{QA}$ trains on plain question$\rightarrow$answer text;
+M3$_\text{JSON}$ trains on targets wrapped in the exact structured schema the
+benchmark scores.
+
+Target format dominates the outcome. Training on plain answers
+(M3$_\text{QA}$) degrades every structured behavior: JSON parse compliance
+falls to 0.865, under-triage \emph{worsens} to 0.800, and clarification-seeking
+collapses from 0.856 to 0.174, because the plain-answer targets never model the
+structured triage act the benchmark measures. Reformatting the identical
+training content into the eval schema (M3$_\text{JSON}$) restores parse
+compliance to 0.998, reduces under-triage below the zero-shot baseline to 0.647,
+and more than doubles cross-style category consistency (0.156 to 0.344). By
+McNemar's paired test on the 540 items, M3$_\text{JSON}$ differs from M2
+significantly on risk (p$=$0.03, favoring M2) but not on category (p$=$0.71) or
+clarification (p$=$0.30) correctness; parse compliance is statistically
+unchanged (p$=$1.0).
+
+\subsection{Clarification-seeking does not survive fine-tuning}
+
+Adding structured targets recovers format but not clarification: M3$_\text{J}$
+asks for clarification on almost none of the 90 items that require it (recall
+0.044). We tested whether this is a simple data-balance problem by
+oversampling the ambiguous (clarification) training rows four-fold, raising them
+from 10.5\% to 32\% of the mixture (M3$_\text{J+O}$). Oversampling further
+improves triage---M3$_\text{J+O}$ matches the zero-shot baseline on risk
+accuracy (0.665 vs.\ 0.667), attains the lowest under-triage of any model
+(0.605), and the highest cross-style category consistency (0.378)---but
+clarification recall does not recover; it falls to 0.000. Every fine-tuned
+variant, regardless of format or clarification-oversampling, drives
+clarification-seeking to near zero while pushing specificity toward 1.0: the
+adapted models simply stop asking and always answer. Clarification-seeking on
+genuinely ambiguous input thus behaves as a fragile, emergent instruction-following
+capability of the base model that supervised fine-tuning on answer-style data
+robustly erases, and that naive rebalancing of the training mixture does not
+restore. By McNemar's test, M3$_\text{J+O}$ is statistically indistinguishable
+from M2 on risk (p$=$0.92), category (p$=$0.70), and clarification (p$=$0.20)
+correctness, and on parse compliance (p$=$0.48); its gains are concentrated in
+the safety-oriented rate metrics (under-triage, over-triage) and cross-style
+consistency rather than in raw accuracy.
+=======
 % TODO: Main quantitative results, ablations, and error analysis.
+>>>>>>> 431411c1bb35941d8b668644fde22e4c32cafa92
 
 \section{Discussion}
 \label{sec:discussion}

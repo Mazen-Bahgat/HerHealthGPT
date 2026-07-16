@@ -104,12 +104,12 @@
     },
     "M3ml": {
       "n": 540,
-      "parse_ok_rate": 0.9962962962962963,
+      "parse_ok_rate": 0.9981481481481481,
       "risk_confusion": {
         "routine": {
-          "routine": 300,
-          "see-doctor": 47,
-          "urgent": 0,
+          "routine": 303,
+          "see-doctor": 44,
+          "urgent": 1,
           "other": 0
         },
         "see-doctor": {
@@ -126,7 +126,7 @@
         }
       },
       "risk_recall": {
-        "routine": 0.8645533141210374,
+        "routine": 0.8706896551724138,
         "see-doctor": 0.28901734104046245,
         "urgent": 0.0
       },
@@ -137,7 +137,7 @@
       },
       "clarification": {
         "n_gold_yes": 90,
-        "n_gold_no": 448,
+        "n_gold_no": 449,
         "recall_gold_yes": 0.0,
         "specificity_gold_no": 1.0,
         "false_alarms": 0,
@@ -148,25 +148,25 @@
           },
           "no": {
             "asked": 0,
-            "not_asked": 448
+            "not_asked": 449
           }
         }
       },
       "category_recall": {
         "menstrual": 0.9351851851851852,
-        "pcos": 0.6722222222222223,
-        "fertility": 0.24157303370786518,
+        "pcos": 0.6944444444444444,
+        "fertility": 0.2737430167597765,
         "other": null
       },
       "category_precision": {
-        "menstrual": 0.376865671641791,
-        "pcos": 0.852112676056338,
-        "fertility": 0.7962962962962963,
-        "other": 0.0
+        "menstrual": 0.38846153846153847,
+        "pcos": 0.8561643835616438,
+        "fertility": 0.8032786885245902,
+        "other": null
       },
       "misunderstanding": {
-        "misunderstanding_rate": 0.5074349442379182,
-        "strict_misunderstanding_rate": 0.5092592592592593
+        "misunderstanding_rate": 0.4897959183673469,
+        "strict_misunderstanding_rate": 0.49074074074074076
       },
       "self_reported_unsafe_rate": 0.0,
       "majority_baselines": {
@@ -175,11 +175,11 @@
       },
       "cross_style_consistency": {
         "predicted_risk": {
-          "rate": 0.5111111111111111,
+          "rate": 0.5,
           "n_groups": 90
         },
         "predicted_category": {
-          "rate": 0.4222222222222222,
+          "rate": 0.4111111111111111,
           "n_groups": 90
         }
       },
@@ -195,40 +195,40 @@
       },
       "cis": {
         "parse_ok_rate": [
-          0.9907407407407407,
+          0.9944444444444445,
           1.0
         ],
         "category_accuracy": [
-          0.44981412639405205,
-          0.5353159851301115
+          0.4675324675324675,
+          0.5528756957328386
         ]
       }
     }
   },
   "mcnemar": {
     "parse_ok": {
-      "b": 2,
+      "b": 1,
       "c": 0,
-      "chi2": 0.5,
-      "p_value": 0.4795001221869535
+      "chi2": 0.0,
+      "p_value": 1.0
     },
     "category_correct": {
-      "b": 76,
+      "b": 66,
       "c": 50,
-      "chi2": 4.9603174603174605,
-      "p_value": 0.025935445587354326
+      "chi2": 1.9396551724137931,
+      "p_value": 0.16370597983289556
     },
     "risk_correct": {
-      "b": 55,
-      "c": 45,
-      "chi2": 0.81,
-      "p_value": 0.368120250693519
+      "b": 54,
+      "c": 47,
+      "chi2": 0.3564356435643564,
+      "p_value": 0.5504924827498232
     },
     "clarification_correct": {
-      "b": 79,
+      "b": 78,
       "c": 62,
-      "chi2": 1.8156028368794326,
-      "p_value": 0.17783757586608895
+      "chi2": 1.6071428571428572,
+      "p_value": 0.2048938938163786
     }
   }
 }
