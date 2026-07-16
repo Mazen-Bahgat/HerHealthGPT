@@ -1,0 +1,59 @@
+% HerHealthEval — Figure 1 (conceptual overview).
+% Requires in the preamble: \usepackage{tikz} and
+% \usetikzlibrary{arrows.meta,positioning}.
+% Compiles under pdflatex (acl_latex.tex): the Arabic example is romanized here
+% so no Arabic font is needed. To show native script, enable an Arabic font in
+% the lualatex build (uncomment the babel Arabic lines in acl_lualatex.tex) and
+% replace the romanized line with the native string given in the comment below.
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={rounded corners, draw, align=center, inner sep=6pt,
+              text width=0.84\textwidth},
+  arr/.style={-{Latex[length=2.6mm]}, thick},
+]
+\node[box, fill=black!5] (state)
+  {\textbf{Same underlying clinical state}\\[1pt]
+   (e.g., irregular menstruation / amenorrhea)};
+
+\node[box, below=4mm of state, fill=blue!4, align=left] (vars)
+  {\textbf{English (clinical):} ``My menstrual cycle has become irregular.''\\
+   \textbf{English (lay):} ``My periods are all over the place lately.''\\
+   \textbf{English (emotional):} ``I think my hormones are broken.''\\
+   \textbf{French:} ``Mes r\`egles sont tr\`es irr\'eguli\`eres.''\\
+   % Native Arabic (use with an Arabic font / lualatex build):
+   %   \RL{\<لم تأتني الدورة منذ أشهر>}  (or paste: لم تأتني الدورة منذ أشهر)
+   \textbf{Arabic (romanized):} ``lam ta'tini d-dawra mundu ashhur''
+   \emph{(my period hasn't come in months)}};
+
+\node[box, below=4mm of vars, fill=black!8] (lm)
+  {\textbf{Language model}\\[1pt]
+   base multilingual LLM \emph{vs.}\ multilingual fine-tuned (Qwen3.5-9B)};
+
+\node[box, below=4mm of lm, fill=green!6] (interp)
+  {\textbf{Structured interpretation}\\[1pt]
+   condition inference $\cdot$ risk assessment $\cdot$
+   clarification decision $\cdot$ recommended action};
+
+\node[box, below=4mm of interp, fill=orange!7] (metrics)
+  {\textbf{Understanding metrics}\\[1pt]
+   interpretation accuracy $\cdot$ under-triage rate $\cdot$
+   unsafe-reassurance rate $\cdot$ clarification appropriateness $\cdot$
+   cross-language consistency};
+
+\draw[arr] (state)  -- (vars);
+\draw[arr] (vars)   -- (lm);
+\draw[arr] (lm)     -- (interp);
+\draw[arr] (interp) -- (metrics);
+\end{tikzpicture}
+\caption{\textbf{HerHealthEval overview.} The same underlying clinical state is
+expressed across languages (English, French, Arabic) and communication registers
+(clinical, lay, emotional, indirect/cultural, ambiguous). The central question is
+whether a model \emph{understands what the patient means}---inferring condition,
+risk, and the need for clarification---\emph{before} deciding how to respond. We
+measure this with language-understanding metrics (interpretation accuracy,
+under-triage / unsafe-reassurance, clarification appropriateness, and
+cross-language consistency) rather than answer accuracy.}
+\label{fig:overview}
+\end{figure*}

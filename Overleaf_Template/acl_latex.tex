@@ -30,6 +30,8 @@
 %Including images in your LaTeX document requires adding
 %additional package(s)
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
 
 % If the title and author information does not fit in the area allocated, uncomment the following
 %
@@ -57,6 +59,8 @@ The protocol requires native-speaker validation of Arabic and French for meaning
 The experimental design centers Qwen3.5-9B and specifies a general-purpose baseline, English domain adaptation, and subsequent Arabic/French adaptation, evaluated through misunderstanding, under-triage, clarification, unsafe-response, and cross-style/cross-language consistency measures.
 Rather than claiming comprehensive clinical coverage, this preliminary study establishes a failure-oriented protocol for testing women's-health language understanding beyond answer generation.
 \end{abstract}
+
+\input{fig1_overview}
 
 \input{overleaf_intro_related}
 
