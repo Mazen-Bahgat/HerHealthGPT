@@ -1,0 +1,44 @@
+% !TEX root = ../acl_latex.tex
+% Panel (a): under-triage regression, English vs French (dumbbell).
+% \input from overleaf_results_discussion.tex inside a figure environment.
+% Requires tikz + \usetikzlibrary{arrows.meta}; xcolor ships with tikz.
+% Single-column width; value axis 0..1 mapped to x 1.6..7.2.
+\centering
+\definecolor{critred}{HTML}{C0392B}
+\definecolor{neutralgray}{HTML}{8A8F98}
+\definecolor{bandred}{HTML}{F3D9D5}
+\begin{tikzpicture}[every node/.style={font=\scriptsize}, line cap=round]
+  \node[anchor=south, font=\footnotesize\bfseries] at (4.0,1.92)
+    {(a)~~Under-triage rate --- higher is worse};
+  % danger band: under-triage >= 0.8  (x 6.08..7.2)
+  \fill[bandred] (6.08,0.15) rectangle (7.2,1.7);
+  \node[anchor=north, text=critred, font=\scriptsize\bfseries, align=center]
+    at (6.64,1.66) {missed-\\care};
+  % ticks (value 0..1 -> x 1.6..7.2)
+  \foreach \v/\x in {0/1.6, 0.25/3.0, 0.5/4.4, 0.75/5.8, 1.0/7.2}{
+    \draw[neutralgray!45, line width=0.3pt] (\x,0.2) -- (\x,1.65);
+    \node[anchor=north, text=neutralgray] at (\x,0.16) {\v};
+  }
+  \node[anchor=north, text=neutralgray, font=\scriptsize\itshape]
+    at (4.4,-0.18) {share of see-doctor cases routed to routine};
+  % English row (y=1.2): essentially unchanged
+  \node[anchor=east, font=\scriptsize\bfseries] at (1.5,1.2) {English};
+  \draw[neutralgray, line width=1.6pt] (5.582,1.2) -- (5.621,1.2);
+  \filldraw[fill=white, draw=neutralgray, line width=1.2pt] (5.621,1.2) circle (2.4pt);
+  \filldraw[fill=neutralgray, draw=neutralgray] (5.582,1.2) circle (2.4pt);
+  \node[anchor=south, text=neutralgray] at (5.6,1.36) {0.718\,$\to$\,0.711};
+  \node[anchor=north, text=neutralgray] at (5.6,1.05) {$-0.007$};
+  % French row (y=0.6): collapse into danger band
+  \node[anchor=east, font=\scriptsize\bfseries] at (1.5,0.6) {French};
+  \draw[critred, -{Latex[length=2mm]}, line width=2.2pt] (5.139,0.6) -- (7.06,0.6);
+  \filldraw[fill=white, draw=critred, line width=1.2pt] (5.139,0.6) circle (2.4pt);
+  \filldraw[fill=critred, draw=critred] (7.166,0.6) circle (2.4pt);
+  \node[anchor=south, text=neutralgray] at (5.139,0.75) {0.632};
+  \node[anchor=south, text=critred, font=\scriptsize\bfseries] at (7.02,0.75) {0.994};
+  \node[anchor=north, text=critred, font=\scriptsize\bfseries] at (6.1,0.46) {$+0.362$};
+  % legend
+  \filldraw[fill=white, draw=neutralgray, line width=1.2pt] (1.7,-0.5) circle (2.4pt);
+  \node[anchor=west, text=neutralgray] at (1.85,-0.5) {M2 (zero-shot)};
+  \filldraw[fill=neutralgray, draw=neutralgray] (4.2,-0.5) circle (2.4pt);
+  \node[anchor=west, text=neutralgray] at (4.35,-0.5) {M3-ML (fine-tuned)};
+\end{tikzpicture}

@@ -49,7 +49,7 @@ Adaptation reliably trades one behavior for another. All three adapted models ke
 \subsection{French evaluation exposes a safety regression invisible in English}
 \label{sec:fr-results}
 
-Table~\ref{tab:fr} compares M2 and M3-ML on identical items scored in English and French. Aggregate accuracy shifts by similar, modest amounts in both languages (risk accuracy $-$0.012 English, $-$0.039 French; category accuracy $-$0.029 English, $-$0.049 French) --- the kind of difference that would look unremarkable if accuracy were the only metric reported. The safety-relevant metrics tell a different story. Under-triage is roughly flat in English (0.718$\to$0.711) but collapses in French: M3-MLfr routes 173 of 174 \texttt{see-doctor} items to \texttt{routine} (under-triage 0.632$\to$0.994), a near-total loss of the model's ability to flag care-warranting French input. Clarification recall collapses to 0.000 in \emph{both} languages, so that failure is language-independent, but the triage collapse is not: it is specific to French and would be invisible from the English results alone. By McNemar's test, M3-MLfr is significantly worse than M2fr on both category correctness (p$=$0.017) and risk correctness (p$=$0.045), whereas the same English comparison (M3-ML vs.\ M2) is not significant on either field (p$=$0.164, p$=$0.550; Table~\ref{tab:main}). Cross-style risk consistency appears to \emph{improve} in French (0.544$\to$0.978) even more than in English, but this is the same collapse viewed through the consistency metric: a model that predicts \texttt{routine} for nearly every case is trivially consistent across its six register variants. Taken together, French M3-ML is simultaneously the most internally consistent and the least safe configuration we evaluate. Arabic evaluation is in progress and will extend this table once scored.
+Table~\ref{tab:fr} compares M2 and M3-ML on identical items scored in English and French. Aggregate accuracy shifts by similar, modest amounts in both languages (risk accuracy $-$0.012 English, $-$0.039 French; category accuracy $-$0.029 English, $-$0.049 French) --- the kind of difference that would look unremarkable if accuracy were the only metric reported. The safety-relevant metrics tell a different story. Under-triage is roughly flat in English (0.718$\to$0.711) but collapses in French: M3-MLfr routes 173 of 174 \texttt{see-doctor} items to \texttt{routine} (under-triage 0.632$\to$0.994), a near-total loss of the model's ability to flag care-warranting French input (Figure~\ref{fig:regression}a). Clarification recall collapses to 0.000 in \emph{both} languages, so that failure is language-independent, but the triage collapse is not: it is specific to French and would be invisible from the English results alone (Figure~\ref{fig:regression}b). By McNemar's test, M3-MLfr is significantly worse than M2fr on both category correctness (p$=$0.017) and risk correctness (p$=$0.045), whereas the same English comparison (M3-ML vs.\ M2) is not significant on either field (p$=$0.164, p$=$0.550; Table~\ref{tab:main}). Cross-style risk consistency appears to \emph{improve} in French (0.544$\to$0.978) even more than in English, but this is the same collapse viewed through the consistency metric: a model that predicts \texttt{routine} for nearly every case is trivially consistent across its six register variants. Taken together, French M3-ML is simultaneously the most internally consistent and the least safe configuration we evaluate. Arabic evaluation is in progress and will extend this table once scored.
 
 \begin{table}[t!]
 \centering
@@ -74,6 +74,22 @@ collapses to 0.000 in both languages; French risk consistency rises only
 because the model collapses onto a single label (\S\ref{sec:fr-results}).}
 \label{tab:fr}
 \end{table}
+
+\begin{figure}[t]
+\centering
+\input{figures/dumbbell_undertriage}\\[8pt]
+\input{figures/dumbbell_clarif}
+\caption{Two failure modes of the multilingual fine-tune, each tracing the
+zero-shot baseline (M2, hollow) to the adapted model (M3-ML, filled) on the
+$n=540$ evaluation items. \textbf{(a)} Under-triage of care-warranting cases
+is essentially unchanged in English but collapses in French, into the
+shaded missed-care zone (0.632$\to$0.994) --- a language-specific safety
+regression. \textbf{(b)} Clarification-seeking collapses to zero in
+\emph{both} languages --- a language-independent failure. Marks that move the
+wrong way are drawn in red; direction and the shaded zones encode good/bad so
+the figure reads without color.}
+\label{fig:regression}
+\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
