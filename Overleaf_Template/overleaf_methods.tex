@@ -7,9 +7,16 @@
 
 This is an initial-exploration study: the protocol below describes a general procedure rather than a finished, fixed instrument. Design and construction are described qualitatively; exact item and split counts are intentionally omitted (\ref{sec:limitations}).
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{figures/concept_overview.png}
+\caption{\footnotesize Conceptual overview. Clinical content is held constant while linguistic form and language vary, separating interpretation failures from changes in the underlying case. All three languages (English, Arabic, French) are scored under the same evaluation protocol.}
+\label{fig:concept}
+\end{figure}
+
 \subsection{Design philosophy: matched cases, controlled register}
 
-The evaluation is built around one idea: express a single underlying women's-health concern in several ways a real patient might, while keeping the clinical facts fixed. Each case is written once in a canonical, evidence-anchored form and rewritten into five further \emph{registers} --- clinical, lay, indirect/culturally hedged, ambiguous/under-specified, and emotionally concerned --- so that any change in predicted concern category, risk level, or clarification need can be attributed to \emph{how} the case is phrased (Figure~\ref{fig:concept}, Figure~\ref{fig:pipeline}). Every case carries a predefined target for category, risk, action, and clarification need, so scoring never compares free text directly. For example, a case about heavy menstrual bleeding might appear as a clinical chart-note question in its \emph{clinical} register and as a short, worried, under-specified message in its \emph{ambiguous} register; only the ambiguous variant targets clarification, since it is specifically constructed to omit a detail a clinician would need to ask for (\S\ref{sec:gold-labels}).
+The evaluation is built around one idea: express a single underlying women's-health concern in several ways a real patient might, while keeping the clinical facts fixed. Each case is written once in a canonical, evidence-anchored form and rewritten into five further \emph{registers} --- clinical, lay, indirect/culturally hedged, ambiguous/under-specified, and emotionally concerned --- so that any change in predicted concern category, risk level, or clarification need can be attributed to \emph{how} the case is phrased (Figure~\ref{fig:concept}, Figure~\ref{fig:pipeline}). Every case carries a predefined target for category, risk, action, and clarification need, so scoring never compares free text directly. For example, a case about heavy menstrual bleeding might appear as a clinical chart-note question in its \emph{clinical} register and as a short, worried, under-specified message in its \emph{ambiguous} register; only the ambiguous variant targets clarification, since it is specifically constructed to omit a detail a clinician would need to ask for (\ref{sec:gold-labels}).
 
 \begin{figure}[t]
 \input{figures/pipeline}
