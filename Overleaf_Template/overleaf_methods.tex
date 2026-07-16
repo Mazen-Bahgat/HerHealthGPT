@@ -1,7 +1,53 @@
+% !TEX root = acl_latex.tex
 % HerHealthGPT-LU / LUHME 2026 — Methods
 % Double-blind safe. Included from acl_latex.tex / acl_lualatex.tex via \input.
 
 \section{Methods}
 \label{sec:methods}
 
-% TODO: Benchmark construction, annotation protocol, evaluation metrics, and fine-tuning setup.
+This is an initial-exploration study: the protocol below describes a general procedure rather than a finished, fixed instrument. Design and construction are described qualitatively; exact item and split counts are intentionally omitted (\ref{sec:limitations}).
+
+\subsection{Design philosophy: matched cases, controlled register}
+
+The evaluation is built around one idea: express a single underlying women's-health concern in several ways a real patient might, while keeping the clinical facts fixed. Each case is written once in a canonical, evidence-anchored form and rewritten into five further \emph{registers} --- clinical, lay, indirect/culturally hedged, ambiguous/under-specified, and emotionally concerned --- so that any change in predicted concern category, risk level, or clarification need can be attributed to \emph{how} the case is phrased (Figure~\ref{fig:concept}, Figure~\ref{fig:pipeline}). Every case carries a predefined target for category, risk, action, and clarification need, so scoring never compares free text directly. For example, a case about heavy menstrual bleeding might appear as a clinical chart-note question in its \emph{clinical} register and as a short, worried, under-specified message in its \emph{ambiguous} register; only the ambiguous variant targets clarification, since it is specifically constructed to omit a detail a clinician would need to ask for (\S\ref{sec:gold-labels}).
+
+\begin{figure}[t]
+\input{figures/pipeline}
+\caption{Data construction pipeline (schematic).}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Seed curation}
+
+Candidate patient-authored questions for PCOS/hormonal and fertility content were drawn from the HealthCareMagic-100k and iCliniq-10k patient--doctor dialogue datasets \citep{li-etal-2023-chatdoctor,li-2023-chatdoctor-repo}, accessed via a Hugging Face repackaging \citep{malikeh1375-2023-medical}, supplemented by additional patient-question corpora for menstrual-health content. Candidates were filtered by keyword for the three categories; cleaned of a recurring text-substitution artifact present in a subset of ChatDoctor-derived answers; filtered for authentic first-person framing against near-duplicate, myth-only, or off-topic content; and balanced across categories. Where a case's claim mapped to a public-health-authority page, its category was anchored to that source --- NHS and NICHD guidance broadly, with CDC guidance used specifically for fertility content where NHS/NICHD coverage was thin; unmapped claims were flagged rather than assigned an invented category. This anchoring pass is deterministic and rule-based, not model-generated.
+
+\subsection{Register construction}
+
+Each canonical text is rewritten into the remaining five registers under a meaning-preservation constraint: vocabulary, directness, hedging, and affect may vary, but no clinical claim may be added or removed. An early template-based rewriter collapsed distinct cases onto near-identical clinical-register text and was replaced with a pass that verifies distinctness and meaning preservation. Every register variant is flagged for human spot-check.
+
+\subsection{Gold risk and clarification targets}
+\label{sec:gold-labels}
+
+An early approach tried to ground the risk-level target in the same evidence pages used for category anchoring; this was abandoned once it produced a single, non-discriminating label for effectively every case. The risk target used here instead comes from a disclosed, deterministic keyword rule over the case's answer text, computed once per case so all of its register variants share one ground-truth risk label. The clarification target is register-determined by construction: \emph{yes} exactly for a case's ambiguous-register row, \emph{no} otherwise. Both targets are explicitly \emph{silver} --- heuristic, not clinician-adjudicated --- and used identically for the evaluation set and the adaptation data.
+
+\subsection{Multilingual localization}
+
+Matched English cases are localized into French and Modern Standard Arabic (MSA) rather than a regional dialect, so terminology generalizes across Arabic-speaking audiences. Both corpora were produced with the same LLM translation pipeline (OpenAI's Responses API, \texttt{gpt-5.6-sol}, low reasoning effort, structured outputs), preserving each row's register label rather than flattening every register into one translation. Output then passes an automated linguistic screen (structural integrity, encoding, source--target alignment) and native-speaker confirmation of meaning and register; for Arabic this is a professional Arabic$\leftrightarrow$English medical translator working in MSA, checking terminology and grammar (including gender agreement in patient-directed phrasing).
+
+\subsection{Evaluation/adaptation separation}
+
+Evaluation items are held out from every adaptation corpus by two keys: exact (case-insensitive) question match, and shared source-provenance identity, which also removes paraphrase-family overlap. The rule applies uniformly across English, French, and Arabic, and train/validation duplicates are resolved so the same case cannot inform both.
+
+\begin{figure}[t]
+\input{figures/lineage}
+\caption{Model adaptation lineage (schematic).}
+\label{fig:lineage}
+\end{figure}
+
+\subsection{Models and adaptation protocol}
+
+All experiments use Qwen3.5-9B. We report a zero-shot baseline (M2): the base model prompted with a structured triage schema for category, risk, action, and clarification. We then adapt with QLoRA, wrapping each training target in the exact structured schema the evaluation items score against, so adaptation and evaluation speak the same format; an alternative plain question--answer target format was explored during development but is not reported here, as it degraded both format compliance and clarification behavior. The structured targets themselves are derived, not hand-annotated: category is mapped onto the four-way schema, risk reuses the same disclosed keyword heuristic as the gold targets, and the ambiguous register is set to ask for clarification (\ref{sec:gold-labels}). Because clarification examples are a small minority of the data and adaptation tends to suppress clarification-seeking, we also train a variant that oversamples the clarification (ambiguous-register) examples several-fold to strengthen that signal (M3+O). A joint English+French+Arabic run (M3-ML) follows the same recipe on the merged, leakage-controlled trilingual corpus, keeping each row's register label under translation so the clarification signal is preserved in every language; it is scored on English here, with French/Arabic evaluation pending translated, native-validated evaluation items (Figure~\ref{fig:lineage}).
+
+\subsection{Metrics}
+
+We score four predefined-label dimensions rather than free-text quality: \emph{category accuracy}; \emph{risk accuracy}, reported against the majority-class baseline since labels are skewed; \emph{under-/over-triage rate}, the safety-relevant direction of risk error; and \emph{clarification recall/specificity}. We also report \emph{parse compliance} and a \emph{cross-style consistency} rate (the fraction of a case's register variants given the same label); an analogous cross-language rate applies once a scored multilingual item set exists. A model-self-reported \texttt{unsafe\_response} flag is logged but treated as weak, non-validated signal. Paired differences between the baseline and each recipe use McNemar's test on matched per-item correctness.

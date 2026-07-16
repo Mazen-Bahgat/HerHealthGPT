@@ -1,0 +1,13 @@
+flowchart LR
+    Qw["Qwen3.5-9B<br/>instruction-tuned base"] --> M2["M2<br/>zero-shot baseline"]
+    L2["Leakage-controlled<br/>EN adaptation data"] --> QL["QLoRA fine-tune<br/>structured (JSON) targets"]
+    QL --> MJ["M3<br/>JSON-schema targets"]
+    MJ --> MJO["M3+O<br/>+4x clarification oversample"]
+    MJO --> ML["M3-ML<br/>joint EN+FR+AR (M3+O recipe)"]
+    M2 -.-> T1[("English evaluation set<br/>results, Table 1")]
+    MJ -.-> T1
+    MJO -.-> T1
+    ML -.-> T1
+    ML --> FRAR[("FR / AR evaluation sets<br/>pending translation + validation")]
+
+    style FRAR stroke-dasharray: 4 3

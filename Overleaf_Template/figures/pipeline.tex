@@ -1,0 +1,25 @@
+% !TEX root = ../acl_latex.tex
+% Data construction pipeline figure. \input from overleaf_methods.tex inside
+% a figure environment. Requires \usetikzlibrary{arrows.meta,positioning}
+% in the preamble of the compiling main file. Single-column width (~8.4cm);
+% laid out as a vertical chain to stay robust without a local compiler.
+\centering
+\begin{tikzpicture}[
+  node distance=2.2mm,
+  every node/.style={font=\scriptsize},
+  box/.style={rectangle, draw, rounded corners, align=center,
+              minimum height=6.5mm, text width=6.3cm, inner sep=2.5pt},
+  arr/.style={-{Latex[length=1.8mm]}, thick}
+]
+\node[box] (s1) {Candidate questions: HealthCareMagic/iCliniq (PCOS, fertility) + menstrual corpus; keyword-filtered, artifact-cleaned};
+\node[box, below=of s1] (s2) {Category anchored to NHS/NICHD guidance; CDC specifically for fertility where coverage was thin};
+\node[box, below=of s2] (s3) {Rewritten into 6 matched registers (meaning-preservation checked)};
+\node[box, below=of s3] (s4) {Risk \& clarification targets: keyword heuristic over answer text, not grounding; clarification = ambiguous-register row only};
+\node[box, below=of s4] (s5) {Split: evaluation set vs.\ leakage-excluded adaptation pool};
+\node[box, below=of s5] (s6) {Adaptation pool translated to French \& MSA (LLM), then QA + native-speaker confirmation};
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (s3);
+\draw[arr] (s3) -- (s4);
+\draw[arr] (s4) -- (s5);
+\draw[arr] (s5) -- (s6);
+\end{tikzpicture}
