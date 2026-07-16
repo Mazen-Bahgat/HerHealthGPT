@@ -37,19 +37,20 @@
 %
 % and set <dim> to something 5cm or larger.
 
-\title{HerHealthGPT-LU: A Multilingual Benchmark for LLM Understanding of Women's-Health Symptom Communication}
-
-% Double-blind submission: omit author names until camera-ready.
+\title{HerHealthEval: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?}
+%HerHealthGPT: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?Double-blind submission: omit author names until camera-ready.
 \author{Anonymous ACL submission}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-Large language models are increasingly used for women's-health patient education, yet most evaluations target answer \emph{generation} rather than safe \emph{interpretation} of symptom language across registers and languages.
-We present \textbf{HerHealthGPT-LU}, a multilingual benchmark for evaluating LLM understanding of women's-health symptom communication in English, Arabic, and French.
-The benchmark comprises 540 style-controlled items spanning menstruation, PCOS/hormonal concerns, and fertility, with gold labels for condition inference, risk calibration, recommended action, and clarification need.
-We separate a frozen evaluation benchmark from leakage-controlled adaptation data and propose metrics targeting misunderstanding, unsafe responses, and cross-lingual consistency.
-We report baseline and fine-tuned model results together with a systematic error taxonomy for women's-health language understanding.
+Large language models are increasingly used to answer women's-health questions, but fluent answers do not establish that a model has correctly understood what a patient is trying to communicate.
+We present HerHealthEval, a multilingual benchmark and evaluation framework for studying language understanding in women’s-health communication across languages and linguistic registers.
+
+Our controlled evaluation suite covers menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility in English, Arabic, and French, pairing clinical, lay, indirect, ambiguous, and emotionally concerned expressions with predefined targets for concern category, risk level, recommended action, and clarification need.
+The protocol requires native-speaker validation of Arabic and French for meaning preservation, naturalness, and register before cross-lingual evaluation or adaptation, while evaluation cases remain separated from leakage-controlled adaptation data.
+The experimental design centers Qwen3.5-9B and specifies a general-purpose baseline, English domain adaptation, and subsequent Arabic/French adaptation, evaluated through misunderstanding, under-triage, clarification, unsafe-response, and cross-style/cross-language consistency measures.
+Rather than claiming comprehensive clinical coverage, this preliminary study establishes a failure-oriented protocol for testing women's-health language understanding beyond answer generation.
 \end{abstract}
 
 \input{overleaf_intro_related}
@@ -59,6 +60,7 @@ We report baseline and fine-tuned model results together with a systematic error
 \section{Results}
 \label{sec:results}
 
+<<<<<<< HEAD
 All results below are on the frozen English benchmark ($n=540$: 90 seeds
 $\times$ 6 communication styles). Gold labels are skewed, so we report
 majority-class baselines alongside accuracy-style numbers and treat per-class
@@ -153,57 +155,24 @@ from M2 on risk (p$=$0.92), category (p$=$0.70), and clarification (p$=$0.20)
 correctness, and on parse compliance (p$=$0.48); its gains are concentrated in
 the safety-oriented rate metrics (under-triage, over-triage) and cross-style
 consistency rather than in raw accuracy.
+=======
+% TODO: Main quantitative results, ablations, and error analysis.
+>>>>>>> 431411c1bb35941d8b668644fde22e4c32cafa92
 
 \section{Discussion}
 \label{sec:discussion}
 
-Two findings stand out. First, women's-health symptom \emph{understanding} is
-not solved by strong general models: our zero-shot baseline under-triages the
-majority of care-warranting cases and interprets the same clinical situation
-differently depending only on how a patient phrases it. The benchmark's
-style-controlled design makes this measurable, since each seed appears in six
-registers with a single gold interpretation.
-
-Second, adaptation is a double-edged tool. Fine-tuning on our data reliably
-reduces under-triage and stabilizes interpretation across styles, and with
-structured targets it matches the strong zero-shot baseline on risk accuracy
-while improving the safety-oriented rate metrics. But it is acutely sensitive to
-target format---a naive question--answer objective silently destroys
-output-format compliance---and, more strikingly, it erases clarification-seeking
-regardless of format or data balance. Oversampling clarification examples to
-nearly a third of the training mixture did not restore the behavior. This
-suggests clarification-seeking on ambiguous input is not a skill that
-answer-style supervised fine-tuning can teach by example; recovering it likely
-requires objectives that explicitly reward abstention or asking, such as
-preference optimization or a dedicated clarification-vs-answer decision head,
-rather than more clarification demonstrations. For a safety-relevant domain, the
-practical lesson is to evaluate adaptation on the structured behaviors one cares
-about at deployment---triage calibration \emph{and} clarification---rather than
-on answer quality alone, since a model can improve on the former while silently
-losing the latter.
+% TODO: Interpretation of findings, limitations, ethics, and future work.
 
 \section*{Limitations}
 
-The results reported here are on the English benchmark only; the Arabic and
-French arms of the benchmark, and the multilingual fine-tune, are in progress
-and not yet reported. Gold labels are skewed toward \texttt{routine} risk and
-\texttt{no}-clarification, which is why we foreground majority baselines,
-per-class recall, and under-triage rather than raw accuracy. Silver risk and
-clarification labels used for the adaptation data are derived heuristically from
-answer text and are not clinician-adjudicated; they are used only for training,
-never for benchmark scoring. The benchmark covers three women's-health areas
-(menstruation, PCOS/hormonal, fertility) and a single 9B model family, so
-generalization to other conditions and model scales is untested. The
-\texttt{unsafe\_response} flag is model-self-reported and is not an independently
-validated safety measure. Finally, this work evaluates language understanding
-and triage calibration; it is not a clinical decision tool and must not be used
-for diagnosis or treatment.
+This initial study covers three symptom categories and three languages and therefore does not represent the full diversity of women's-health concerns, dialects, cultures, or care settings. Native-speaker validation assesses translation quality and preservation of register; it is not a substitute for clinical validation of every gold target. The current risk and clarification labels are clinically motivated but require further expert review, and their class imbalance limits conclusions drawn from aggregate accuracy. Finally, model outputs are evaluated as evidence of linguistic understanding in a controlled research setting, not as medical advice or proof of readiness for clinical deployment.
 
 % Bibliography: journal articles in custom.bib; ACL proceedings in anthology shards.
 % In Overleaf: New File -> From External URL
 %   https://aclanthology.org/anthology-1.bib
 %   https://aclanthology.org/anthology-2.bib
-% LUHME'25 keys (mohammadi-etal-2025-large, nicholls-alperin-2025-cross) resolve from shards.
+% LUHME'25 citation keys used in this paper resolve from the anthology shards.
 \bibliography{custom,anthology-1,anthology-2}
 
 \end{document}
