@@ -75,8 +75,9 @@ Findings, in one line each (full numbers in `results/00_ALL_MODELS_COMPARISON.md
   zero-shot, lowest under-triage) but does **not** restore clarification recall,
   which collapses under every fine-tune variant.
 - The multilingual model gives the **highest cross-style category consistency**
-  but, on English, does not beat the English-only model (expected — its value is
-  in FR/AR, not yet measurable).
+  but, on English, does not beat the English-only model; on French and Arabic it
+  **collapses to near-constant `routine`** (under-triage 0.994), a systematic
+  failure traced to language-asymmetric training labels (§7).
 
 The target-format ablation is the core adaptation result; see
 `docs/m3_json_design_choices.md`.
@@ -94,8 +95,10 @@ Computed by `scripts/evaluate.py` and `scripts/safety_metrics.py`:
 - **misunderstanding rate**, **self-reported-unsafe** (model-flagged, not
   independently validated — labeled as such).
 - **cross-style consistency** — same label across all 6 styles of a seed.
-- **cross-language consistency** — same label across languages of a seed
-  (currently 0/n=0 because only English exists; unlocked by §6).
+- **cross-language consistency** — same label across languages of a seed. Now
+  computed across EN/FR/AR (§7): the zero-shot baseline agrees with itself
+  across all three languages 84.6% of the time on risk; the multilingual
+  fine-tune drops to 0.804 (§7).
 - **McNemar paired tests** vs M2 and **95% bootstrap CIs**.
 
 ## 6. Multilingual adaptation (EN + FR + AR)
@@ -121,11 +124,27 @@ merged and shuffled deterministically by `scripts/merge_ft_langs.py` into a
 
 To report genuine multilingual results and cross-language consistency, the 540
 benchmark **questions** (not answers, and never the labels) are translated into
-FR and AR and validated before use. The translated benchmarks are now built:
+FR and AR and validated before use. The translated benchmarks are built:
 `gold_seeds_styled_fr.jsonl` and `gold_seeds_styled_ar.jsonl`, 540 items each,
 carrying the **canonical English gold labels** unchanged (verified: gold
 identical to English row-for-row; all FR rows in Latin script, all AR rows in
-Arabic script). Evaluation of M2 and M3-ML on both languages is in progress.
+Arabic script).
+
+**Results (M2 zero-shot vs M3-ML, matched EN/FR/AR sets).** The zero-shot
+baseline transfers to both non-English languages — it is slightly *safer* in FR
+and AR (under-triage 0.632 / 0.638 vs 0.718 EN) and keeps clarification-seeking
+(recall 0.811 FR, 0.889 AR). The multilingual fine-tune **collapses** on both:
+it predicts `routine` for 538/540 FR and 537/540 AR items (99.6% / 99.4%),
+under-triage 0.994 in each, clarification recall ~0. Three-way cross-language
+risk agreement drops from 0.846 (M2) to 0.804 (M3-ML); the model's near-perfect
+FR–AR agreement (0.991) is an artifact of the double collapse, not robustness.
+**Root cause:** the silver risk labels for FR/AR *training* targets were derived
+by an English-keyed keyword heuristic (`risk_heuristic`) applied to translated
+text, which under-fires and skews those targets toward `routine`; joint
+fine-tuning amplifies this into a "non-English → routine" shortcut. This is a
+cautionary finding — language-symmetric target construction (derive risk from
+the English source, attach to translated rows by `row_id`) is the fix and is
+future work. Full numbers: `results/06_cross_lingual_FR_AR.md`.
 
 The pipeline is:
 
