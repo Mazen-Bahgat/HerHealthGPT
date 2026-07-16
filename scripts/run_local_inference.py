@@ -53,7 +53,8 @@ def record_for_row(row: dict, raw_response: str, model: str, label: str, row_num
 
 
 class LocalGenerator:
-    def __init__(self, model_path: str, adapter: str | None, max_new_tokens: int) -> None:
+    def __init__(self, model_path: str, adapter: str | None, max_new_tokens: int,
+                 max_time: float | None = None) -> None:
         from unsloth import FastLanguageModel
         import torch
         self.torch = torch
@@ -62,15 +63,25 @@ class LocalGenerator:
             model_name=load_from, max_seq_length=MAX_SEQ, load_in_4bit=True, dtype=None)
         FastLanguageModel.for_inference(self.model)
         self.max_new_tokens = max_new_tokens
+        # Per-row wall-clock safety bound: greedy decoding on some FR/AR inputs
+        # can spin in the (Python-level) generation loop without emitting EOS,
+        # stalling a multi-hour run on a single row. transformers checks max_time
+        # between decode steps, so a stuck row is cut off and marked instead of
+        # hanging. Rows that finish under the bound are byte-identical to a run
+        # without it, so EN/FR/AR stay comparable.
+        self.max_time = max_time
 
     def __call__(self, prompt: str) -> str:
         inputs = self.tokenizer.apply_chat_template(
             [{"role": "user", "content": [{"type": "text", "text": prompt}]}],
             tokenize=True, add_generation_prompt=True, enable_thinking=False,
             return_tensors="pt", return_dict=True).to("cuda")
+        gen_kwargs = dict(max_new_tokens=self.max_new_tokens,
+                          do_sample=False, use_cache=True)
+        if self.max_time:
+            gen_kwargs["max_time"] = self.max_time
         with self.torch.inference_mode():
-            out = self.model.generate(**inputs, max_new_tokens=self.max_new_tokens,
-                                      do_sample=False, use_cache=True)
+            out = self.model.generate(**inputs, **gen_kwargs)
         prompt_len = inputs["input_ids"].shape[1]
         return self.tokenizer.decode(out[0][prompt_len:], skip_special_tokens=True)
 
@@ -87,6 +98,9 @@ def main() -> None:
     ap.add_argument("--language", default="en",
                     help="benchmark language; select_input_text picks {language}_text "
                          "(e.g. fr_text/ar_text on the multilingual benchmark)")
+    ap.add_argument("--gen-max-time", type=float, default=None,
+                    help="per-row wall-clock cap (s) for generation; guards against "
+                         "non-terminating greedy decode stalling the run")
     args = ap.parse_args()
 
     global LANGUAGE
@@ -99,7 +113,7 @@ def main() -> None:
     already = done_item_ids(args.output)
     print(f"{len(rows)} rows -> {args.label} ({args.adapter or args.model}); {len(already)} already done")
 
-    gen = LocalGenerator(args.model, args.adapter, args.max_new_tokens)
+    gen = LocalGenerator(args.model, args.adapter, args.max_new_tokens, args.gen_max_time)
     with args.output.open("a", encoding="utf-8") as out:
         for i, row in enumerate(rows, start=1):
             item_id = inf.build_item_id(row, i, LANGUAGE)
