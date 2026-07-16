@@ -117,13 +117,17 @@ The three per-language corpora (`--format json --oversample-clarify 4`) are
 merged and shuffled deterministically by `scripts/merge_ft_langs.py` into a
 10,538-row joint corpus, then fine-tuned with the M3_J+O recipe.
 
-## 7. Next step — FR/AR *benchmark* translation
+## 7. FR/AR *benchmark* translation
 
-The *benchmark* itself (the 540 Test questions) is still English-only; only the
-adaptation data has been translated. To report genuine multilingual results and
-cross-language consistency, the 540 benchmark **questions** (not answers, and
-never the labels) must be translated into FR and AR and **validated by native
-speakers** before use. The pipeline for this is:
+To report genuine multilingual results and cross-language consistency, the 540
+benchmark **questions** (not answers, and never the labels) are translated into
+FR and AR and validated before use. The translated benchmarks are now built:
+`gold_seeds_styled_fr.jsonl` and `gold_seeds_styled_ar.jsonl`, 540 items each,
+carrying the **canonical English gold labels** unchanged (verified: gold
+identical to English row-for-row; all FR rows in Latin script, all AR rows in
+Arabic script). Evaluation of M2 and M3-ML on both languages is in progress.
+
+The pipeline is:
 
 1. `scripts/build_benchmark_translation_handoff.py` → per-language handoff CSVs
    (English question + empty translation column, keyed by seed+style), for the

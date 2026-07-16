@@ -75,6 +75,35 @@ class LocalGenerator:
         prompt_len = inputs["input_ids"].shape[1]
         return self.tokenizer.decode(out[0][prompt_len:], skip_special_tokens=True)
 
+    def generate_batch(self, prompts: list[str]) -> list[str]:
+        """Greedy-decode several prompts at once. Left-padded so each sequence's
+        generation starts immediately after its own prompt. batch of 1 defers to
+        the single-prompt path so the default (--batch-size 1) is byte-identical
+        to every previously reported run."""
+        if len(prompts) == 1:
+            return [self(prompts[0])]
+        texts = [
+            self.tokenizer.apply_chat_template(
+                [{"role": "user", "content": [{"type": "text", "text": p}]}],
+                tokenize=False, add_generation_prompt=True, enable_thinking=False)
+            for p in prompts
+        ]
+        prev_side = self.tokenizer.padding_side
+        self.tokenizer.padding_side = "left"
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+        try:
+            enc = self.tokenizer(texts, return_tensors="pt", padding=True,
+                                 add_special_tokens=False).to("cuda")
+            with self.torch.inference_mode():
+                out = self.model.generate(**enc, max_new_tokens=self.max_new_tokens,
+                                          do_sample=False, use_cache=True)
+            prompt_len = enc["input_ids"].shape[1]
+            return [self.tokenizer.decode(seq[prompt_len:], skip_special_tokens=True)
+                    for seq in out]
+        finally:
+            self.tokenizer.padding_side = prev_side
+
 
 def main() -> None:
     ap = argparse.ArgumentParser()
@@ -87,6 +116,9 @@ def main() -> None:
     ap.add_argument("--max-new-tokens", type=int, default=512)
     ap.add_argument("--language", default=LANGUAGE,
                     help="benchmark language; stamps item_id and picks input text (default en)")
+    ap.add_argument("--batch-size", type=int, default=1,
+                    help="prompts generated per forward pass. 1 (default) reproduces "
+                         "all previously reported runs exactly; >1 is faster")
     args = ap.parse_args()
 
     rows = iter_benchmark(args.benchmark)
@@ -97,25 +129,31 @@ def main() -> None:
     print(f"{len(rows)} rows -> {args.label} ({args.adapter or args.model}); {len(already)} already done")
 
     gen = LocalGenerator(args.model, args.adapter, args.max_new_tokens)
+    pending = [(i, row) for i, row in enumerate(rows, start=1)
+               if inf.build_item_id(row, i, args.language) not in already]
+
     with args.output.open("a", encoding="utf-8") as out:
-        for i, row in enumerate(rows, start=1):
-            item_id = inf.build_item_id(row, i, args.language)
-            if item_id in already:
-                continue
-            text = inf.select_input_text(row, None, args.language)
+        for start in range(0, len(pending), args.batch_size):
+            chunk = pending[start:start + args.batch_size]
+            prompts = [inf.FIXED_PROMPT_TEMPLATE.format(
+                text=inf.select_input_text(row, None, args.language)) for _, row in chunk]
             try:
-                raw = gen(inf.FIXED_PROMPT_TEMPLATE.format(text=text))
-            except Exception as exc:  # keep going; mark the row
-                raw = ""
-                record = inf.build_output_record(
-                    row, {"_error": str(exc), "_parse_error": "generation_error"},
-                    raw, args.model, args.label, args.language, i)
-            else:
-                record = record_for_row(row, raw, args.model, args.label, i, args.language)
-            out.write(json.dumps(record, ensure_ascii=False) + "\n")
+                raws = gen.generate_batch(prompts)
+            except Exception as exc:  # keep going; mark the whole chunk
+                raws = None
+                for i, row in chunk:
+                    record = inf.build_output_record(
+                        row, {"_error": str(exc), "_parse_error": "generation_error"},
+                        "", args.model, args.label, args.language, i)
+                    out.write(json.dumps(record, ensure_ascii=False) + "\n")
+            if raws is not None:
+                for (i, row), raw in zip(chunk, raws):
+                    record = record_for_row(row, raw, args.model, args.label, i, args.language)
+                    out.write(json.dumps(record, ensure_ascii=False) + "\n")
             out.flush()
-            if i % 25 == 0:
-                print(f"[{i}/{len(rows)}] ...")
+            done = start + len(chunk)
+            if done % 25 < args.batch_size:
+                print(f"[{done}/{len(pending)}] ...")
     print(f"done -> {args.output}")
 
 
