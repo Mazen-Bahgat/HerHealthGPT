@@ -119,7 +119,7 @@ under-triage = P(routine | gold see-doctor); clar recall on 24 gold=yes items.
 | Model | Lang | parse_ok | interp. acc | under-triage ↓ | clar. recall | clar. spec. | indirect-cultural interp. |
 |---|---|---|---|---|---|---|---|
 | M2 (base) | en | 1.000 | 0.617 | 0.463 | 0.208 | 0.878 | 0.611 |
-| M2 (base) | fr | *running* | | | | | |
+| M2 (base) | fr | 0.998 | 0.614 | 0.440 | 0.333 | 0.862 | 0.600 |
 | M2 (base) | ar | *running* | | | | | |
 | M3ml-v1 | fr | 0.998 | 0.605 | **1.000** | 0.000 | 1.000 | 0.618 |
 | M3ml-v1 | ar | 0.998 | 0.618 | **0.998** | 0.000 | 0.998 | 0.578 |
