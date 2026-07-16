@@ -59,16 +59,145 @@ We report baseline and fine-tuned model results together with a systematic error
 \section{Results}
 \label{sec:results}
 
-% TODO: Main quantitative results, ablations, and error analysis.
+All results below are on the frozen English benchmark ($n=540$: 90 seeds
+$\times$ 6 communication styles). Gold labels are skewed, so we report
+majority-class baselines alongside accuracy-style numbers and treat per-class
+recall, under-triage, and clarification recall as the honest headlines. The
+risk majority-class baseline is 0.644 and the clarification majority-class
+baseline is 0.833.
+
+\subsection{Zero-shot baseline (M2)}
+
+Table~\ref{tab:main} reports the zero-shot baseline (M2), an instruction-tuned
+Qwen3.5-9B prompted with our structured triage schema. M2 parses at 100\% and
+reaches 0.667 risk accuracy, only marginally above the 0.644 majority baseline.
+The safety-critical weakness is \emph{under-triage}: of 174 items whose gold
+risk is \texttt{see-doctor}, M2 routes 71.8\% to \texttt{routine}
+(per-class recall for \texttt{see-doctor} is only 0.264, versus 0.897 for
+\texttt{routine}). M2 does, however, retain strong clarification-seeking:
+recall of 0.856 on the 90 items that require clarification, at 0.862
+specificity. Category accuracy is 0.539, with fertility weakest (recall 0.467).
+The model gives a consistent risk label to only 64.4\% of seed groups across
+their six phrasings, and a consistent category to just 15.6\%, direct evidence
+that surface communication style, not clinical content, drives much of the
+variance in interpretation.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccccc}
+\hline
+Metric & M2 & M3$_\text{QA}$ & M3$_\text{J}$ & M3$_\text{J+O}$ & Base \\
+\hline
+parse\_ok            & 1.000 & 0.865 & \textbf{0.998} & 0.996 & --- \\
+risk accuracy        & \textbf{0.667} & 0.625 & 0.623 & 0.665 & 0.644 \\
+under-triage $\downarrow$ & 0.718 & 0.800 & 0.647 & \textbf{0.605} & --- \\
+clarif. recall       & \textbf{0.856} & 0.174 & 0.044 & 0.000 & --- \\
+category accuracy    & 0.539 & 0.499 & 0.549 & \textbf{0.550} & --- \\
+consistency (risk)   & \textbf{0.644} & 0.456 & 0.433 & 0.444 & --- \\
+consistency (cat.)   & 0.156 & 0.189 & 0.344 & \textbf{0.378} & --- \\
+\hline
+\end{tabular}
+\caption{English benchmark results ($n=540$). M2 = zero-shot baseline;
+M3$_\text{QA}$ = QLoRA fine-tune on plain question--answer pairs;
+M3$_\text{J}$ = fine-tune on eval-shaped structured (JSON) targets;
+M3$_\text{J+O}$ = structured targets with 4$\times$ oversampling of the
+clarification (ambiguous-style) training rows. ``Base'' = majority-class
+baseline. Arrows: lower is better for under-triage. Best per row in
+\textbf{bold}. Consistency = fraction of seed groups given the same label
+across all six styles.}
+\label{tab:main}
+\end{table}
+
+\subsection{Fine-tuning is highly sensitive to target format}
+
+We fine-tune Qwen3.5-9B with QLoRA on leakage-controlled adaptation data drawn
+from the same seed pool as the benchmark but disjoint from it (verbatim-question
+and shared-answer overlaps are removed before training). We compare two target
+formats. M3$_\text{QA}$ trains on plain question$\rightarrow$answer text;
+M3$_\text{JSON}$ trains on targets wrapped in the exact structured schema the
+benchmark scores.
+
+Target format dominates the outcome. Training on plain answers
+(M3$_\text{QA}$) degrades every structured behavior: JSON parse compliance
+falls to 0.865, under-triage \emph{worsens} to 0.800, and clarification-seeking
+collapses from 0.856 to 0.174, because the plain-answer targets never model the
+structured triage act the benchmark measures. Reformatting the identical
+training content into the eval schema (M3$_\text{JSON}$) restores parse
+compliance to 0.998, reduces under-triage below the zero-shot baseline to 0.647,
+and more than doubles cross-style category consistency (0.156 to 0.344). By
+McNemar's paired test on the 540 items, M3$_\text{JSON}$ differs from M2
+significantly on risk (p$=$0.03, favoring M2) but not on category (p$=$0.71) or
+clarification (p$=$0.30) correctness; parse compliance is statistically
+unchanged (p$=$1.0).
+
+\subsection{Clarification-seeking does not survive fine-tuning}
+
+Adding structured targets recovers format but not clarification: M3$_\text{J}$
+asks for clarification on almost none of the 90 items that require it (recall
+0.044). We tested whether this is a simple data-balance problem by
+oversampling the ambiguous (clarification) training rows four-fold, raising them
+from 10.5\% to 32\% of the mixture (M3$_\text{J+O}$). Oversampling further
+improves triage---M3$_\text{J+O}$ matches the zero-shot baseline on risk
+accuracy (0.665 vs.\ 0.667), attains the lowest under-triage of any model
+(0.605), and the highest cross-style category consistency (0.378)---but
+clarification recall does not recover; it falls to 0.000. Every fine-tuned
+variant, regardless of format or clarification-oversampling, drives
+clarification-seeking to near zero while pushing specificity toward 1.0: the
+adapted models simply stop asking and always answer. Clarification-seeking on
+genuinely ambiguous input thus behaves as a fragile, emergent instruction-following
+capability of the base model that supervised fine-tuning on answer-style data
+robustly erases, and that naive rebalancing of the training mixture does not
+restore. By McNemar's test, M3$_\text{J+O}$ is statistically indistinguishable
+from M2 on risk (p$=$0.92), category (p$=$0.70), and clarification (p$=$0.21)
+correctness, and on parse compliance (p$=$0.48); its gains are concentrated in
+the safety-oriented rate metrics (under-triage, over-triage) and cross-style
+consistency rather than in raw accuracy.
 
 \section{Discussion}
 \label{sec:discussion}
 
-% TODO: Interpretation of findings, limitations, ethics, and future work.
+Two findings stand out. First, women's-health symptom \emph{understanding} is
+not solved by strong general models: our zero-shot baseline under-triages the
+majority of care-warranting cases and interprets the same clinical situation
+differently depending only on how a patient phrases it. The benchmark's
+style-controlled design makes this measurable, since each seed appears in six
+registers with a single gold interpretation.
+
+Second, adaptation is a double-edged tool. Fine-tuning on our data reliably
+reduces under-triage and stabilizes interpretation across styles, and with
+structured targets it matches the strong zero-shot baseline on risk accuracy
+while improving the safety-oriented rate metrics. But it is acutely sensitive to
+target format---a naive question--answer objective silently destroys
+output-format compliance---and, more strikingly, it erases clarification-seeking
+regardless of format or data balance. Oversampling clarification examples to
+nearly a third of the training mixture did not restore the behavior. This
+suggests clarification-seeking on ambiguous input is not a skill that
+answer-style supervised fine-tuning can teach by example; recovering it likely
+requires objectives that explicitly reward abstention or asking, such as
+preference optimization or a dedicated clarification-vs-answer decision head,
+rather than more clarification demonstrations. For a safety-relevant domain, the
+practical lesson is to evaluate adaptation on the structured behaviors one cares
+about at deployment---triage calibration \emph{and} clarification---rather than
+on answer quality alone, since a model can improve on the former while silently
+losing the latter.
 
 \section*{Limitations}
 
-% TODO: Required ACL limitations paragraph (dataset scope, languages, clinical disclaimer, etc.).
+The results reported here are on the English benchmark only; the Arabic and
+French arms of the benchmark, and the multilingual fine-tune, are in progress
+and not yet reported. Gold labels are skewed toward \texttt{routine} risk and
+\texttt{no}-clarification, which is why we foreground majority baselines,
+per-class recall, and under-triage rather than raw accuracy. Silver risk and
+clarification labels used for the adaptation data are derived heuristically from
+answer text and are not clinician-adjudicated; they are used only for training,
+never for benchmark scoring. The benchmark covers three women's-health areas
+(menstruation, PCOS/hormonal, fertility) and a single 9B model family, so
+generalization to other conditions and model scales is untested. The
+\texttt{unsafe\_response} flag is model-self-reported and is not an independently
+validated safety measure. Finally, this work evaluates language understanding
+and triage calibration; it is not a clinical decision tool and must not be used
+for diagnosis or treatment.
 
 % Bibliography: journal articles in custom.bib; ACL proceedings in anthology shards.
 % In Overleaf: New File -> From External URL
