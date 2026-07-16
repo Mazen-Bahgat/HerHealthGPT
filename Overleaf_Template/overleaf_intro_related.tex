@@ -72,6 +72,7 @@ Our setting brings these concerns together in matched English, Arabic, and Frenc
 
 The resulting gap is an evaluation framework that separates understanding the input from generating an appealing answer.
 Clarification research treats detecting the need to ask, selecting an informative question, and responding after clarification as distinct capabilities; current language models continue to struggle with when clarification is warranted \citep{testoni-fernandez-2024-asking,zhang-choi-2025-clarify}.
+Framing clarification as an expression of calibrated uncertainty connects this to work on estimating and linguistically expressing uncertainty in language models \citep{huang-etal-2024-uncertainty,lin-etal-linguistic-uncertainty}: a model that cannot signal uncertainty on ambiguous input will answer rather than ask.
 Such a framework must (i) hold the underlying concern constant across register and language, (ii) score concern interpretation, risk/action, and clarification need separately, (iii) expose under-triage and unsafe advice rather than rely on aggregate accuracy, and (iv) prevent overlap between evaluation and adaptation families.
 Our controlled suite is positioned around these requirements.
 Native-speaker review targets semantic and register preservation in Arabic and French, while source- and paraphrase-family exclusions separate evaluation from training.
