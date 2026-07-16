@@ -45,10 +45,11 @@ def done_item_ids(path: Path) -> set[str]:
     return ids
 
 
-def record_for_row(row: dict, raw_response: str, model: str, label: str, row_number: int) -> dict:
+def record_for_row(row: dict, raw_response: str, model: str, label: str,
+                   row_number: int, language: str = LANGUAGE) -> dict:
     parsed = inf.parse_model_content(raw_response)
-    record = inf.build_output_record(row, parsed, raw_response, model, label, LANGUAGE, row_number)
-    record["input_text"] = inf.select_input_text(row, None, LANGUAGE)
+    record = inf.build_output_record(row, parsed, raw_response, model, label, language, row_number)
+    record["input_text"] = inf.select_input_text(row, None, language)
     return record
 
 
@@ -84,6 +85,8 @@ def main() -> None:
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--max-new-tokens", type=int, default=512)
+    ap.add_argument("--language", default=LANGUAGE,
+                    help="benchmark language; stamps item_id and picks input text (default en)")
     args = ap.parse_args()
 
     rows = iter_benchmark(args.benchmark)
@@ -96,19 +99,19 @@ def main() -> None:
     gen = LocalGenerator(args.model, args.adapter, args.max_new_tokens)
     with args.output.open("a", encoding="utf-8") as out:
         for i, row in enumerate(rows, start=1):
-            item_id = inf.build_item_id(row, i, LANGUAGE)
+            item_id = inf.build_item_id(row, i, args.language)
             if item_id in already:
                 continue
-            text = inf.select_input_text(row, None, LANGUAGE)
+            text = inf.select_input_text(row, None, args.language)
             try:
                 raw = gen(inf.FIXED_PROMPT_TEMPLATE.format(text=text))
             except Exception as exc:  # keep going; mark the row
                 raw = ""
                 record = inf.build_output_record(
                     row, {"_error": str(exc), "_parse_error": "generation_error"},
-                    raw, args.model, args.label, LANGUAGE, i)
+                    raw, args.model, args.label, args.language, i)
             else:
-                record = record_for_row(row, raw, args.model, args.label, i)
+                record = record_for_row(row, raw, args.model, args.label, i, args.language)
             out.write(json.dumps(record, ensure_ascii=False) + "\n")
             out.flush()
             if i % 25 == 0:
