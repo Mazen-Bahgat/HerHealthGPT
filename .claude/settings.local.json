@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wsl.exe -l -v)",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc \"ls -la /home/sw2/ 2>&1 | head -30\")",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc 'whoami; echo HOME=$HOME; ls -la /home/ 2>&1')",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc \"nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv 2>&1; echo '---'; python3 --version; echo '---'; ls -la /home/hassan/ 2>&1; echo '---'; command -v uv; uv --version 2>&1; echo '---'; ls /home/hassan/.cache/huggingface/hub 2>&1\")",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc \"ls '/mnt/e/Grad project-paper/HerHealthGPT' 2>&1 | head; echo '---compiler---'; command -v gcc cc g++ 2>&1; echo '---disk---'; df -h / /mnt/e 2>&1\")",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc \"sudo -n true 2>&1 && echo 'passwordless sudo OK' || echo 'sudo needs password'; cat /etc/os-release | grep -E 'PRETTY_NAME|VERSION_ID'\")",
+      "Bash(wsl.exe -d Ubuntu -- bash -lc 'set -euo pipefail; export PATH=$HOME/.local/bin:$PATH; command -v uv >/dev/null 2>&1 && uv --version || { curl -LsSf https://astral.sh/uv/install.sh -o /tmp/uv-install.sh && sh /tmp/uv-install.sh && $HOME/.local/bin/uv --version; }')",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
