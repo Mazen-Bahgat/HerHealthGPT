@@ -1,63 +1,81 @@
+% !TEX root = acl_lualatex.tex
 % HerHealthGPT-LU / LUHME 2026 — Introduction and Related Work
-% Double-blind safe. Included from acl_latex.tex via \input.
+% Double-blind safe. Included from acl_lualatex.tex via \input.
 
 \section{Introduction}
+\label{sec:intro}
 
-The central question in this work is not whether a large language model (LLM) can produce a plausible answer to a women's-health question, but whether it first understands what the patient is trying to communicate.
-The same concern may be stated clinically (``I have irregular menstrual bleeding''), colloquially (``my period is all over the place''), or indirectly (``my monthly problem has changed'').
-Although these expressions can point to the same underlying concern, they differ in explicitness, emotion, and cultural register.
-Misreading that variation can lead a model to confuse the concern, understate urgency, offer false reassurance, or answer when it should first ask for missing information \cite{recker-etal-2025-large,devries-etal-2025-enhancing}.
+The central question in this work is not whether a large language model (LLM)
+can produce a plausible answer to a women's-health question, but whether it
+first understands what the patient is trying to communicate.
+The same concern may be expressed clinically (``I have irregular menstrual
+bleeding''), colloquially (``my period is all over the place''), or indirectly
+(``what happens to me each month has changed'').
+Although these formulations communicate the same underlying concern, they
+differ in explicitness, emotion, linguistic register, and sociocultural
+framing.
 
-Most women's-health LLM studies, however, evaluate the generated answer: its accuracy, readability, empathy, or user preference.
-For example, MenstLLaMA evaluates domain adaptation for menstrual-health education, while recent expert-led women's-health evaluations probe response safety across clinical scenarios \cite{adhikary-etal-2025-menstrual,maurya-etal-2026-whbench}.
-These studies are important, but they do not isolate whether a matched clinical intent survives changes in surface form.
-Multilingual health QA adds a second concern: models can give inconsistent health information when the same question is posed in different languages \cite{schlicht-etal-2025-consistent}.
-Work from LUHME similarly shows that LLMs may compress cross-cultural variation, that sociocultural context affects how meaning should be adapted, and that successful dialogue depends on establishing common ground \cite{mohammadi-etal-2025-large,freitas-cardoso-2025-nightmare,anikina-etal-2025-building}.
-Together, these findings motivate a controlled evaluation of \emph{interpretation} rather than another medical answer-generation study.
+Comparable variation occurs across languages.
+For example, the same irregular-menstruation concern may be expressed
+clinically in French as
+\foreignlanguage{french}{« Quelles sont les étiologies courantes des saignements
+menstruels irréguliers ? »}
+(``What are the common causes of irregular menstrual bleeding?''),
+or more indirectly as
+\foreignlanguage{french}{« Qu'est-ce qui pourrait expliquer un cycle menstruel qui change
+sans cesse et n'est pas stable ? »}
+(``What might explain a menstrual cycle that keeps changing and is not
+stable?'').
+In Modern Standard Arabic, the corresponding clinical formulation is
+\foreignlanguage{arabic}{ما هي الأسباب الشائعة لنزيف الدورة الشهرية غير المنتظم؟}
+(``What are the common causes of irregular menstrual bleeding?''),
+whereas a more indirect formulation is
+\foreignlanguage{arabic}{ما الذي قد يكون وراء دورة الحيض التي تتغير باستمرار وليست مستقرة؟}
+(``What might be behind a menstrual cycle that keeps changing and is not
+stable?'').
+These examples are drawn from the matched, validated variants in our
+evaluation suite.
 
-We therefore present \textbf{HerHealthEval}, an initial investigation of language understanding in multilingual women's-health communication.
-The controlled evaluation suite spans menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility; it holds the underlying case fixed while varying canonical, clinical, layperson, indirect/culturally sensitive, ambiguous, and emotionally concerned expression.
-Matched English cases are localized into Arabic and French under a protocol that requires native-speaker approval of semantic preservation, naturalness, and register before they enter cross-lingual evaluation or adaptation.
-Each item has predefined targets for concern category, risk level, recommended action, and clarification need.
-The evaluation lineage is frozen separately from the adaptation corpus, with exclusions based on both source provenance and paraphrase-family identity.
+Misinterpreting such variation can cause a model to confuse the underlying
+concern, understate its urgency, offer false reassurance, recommend an
+inappropriate action, or respond directly when it should first request
+missing information
+\cite{recker-etal-2025-large,devries-etal-2025-enhancing}.
+These failures are especially consequential in women's-health communication,
+where stigma, uncertainty, limited health literacy, and culturally indirect
+language may shape how a person describes a sensitive concern.
+
+Most women's-health LLM studies instead evaluate the generated answer rather than whether the input was understood, and multilingual health QA work shows the same question can elicit inconsistent information across languages. Together, these gaps motivate a controlled evaluation of \emph{interpretation} rather than another answer-generation study; Section \ref{sec:related} reviews this literature in full.
+
+
+This paper presents \textbf{HerHealthEval}, an initial investigation of language understanding in multilingual women's-health communication.
+The evaluation suite spans menstruation, PCOS/hormonal concerns, and fertility, holding each underlying case fixed while varying canonical, clinical, layperson, indirect/culturally sensitive, ambiguous, and emotionally concerned expression.
+Matched English cases are localized into Arabic and French under several native-speakers-approved protocol before entering cross-lingual evaluation or adaptation.
+Each item has predefined targets for concern category, risk level, recommended action, and clarification need, and the evaluation lineage is kept separate from the adaptation corpus by source- and paraphrase-family exclusion.
 
 We organize the study around three research questions:
 \begin{enumerate}
-    %\item \textbf{RQ1 (register):} How reliably do models preserve concern category, risk calibration, and action when the same case shifts from clinical to lay, indirect, ambiguous, or emotionally concerned language?
-    %\item \textbf{RQ2 (language):} Are misunderstanding, under-triage, and clarification failures consistent across English, Arabic, and French?
-    %\item \textbf{RQ3 (adaptation):} Compared with general-purpose Qwen3.5-9B, how do English domain adaptation and subsequent Arabic/French adaptation affect robust interpretation, especially appropriate clarification on under-specified inputs?
-     \item \textbf{RQ1:}
-    How robust are LLM-based clinical reasoning systems to variation in linguistic register when interpreting semantically equivalent women’s health concerns?
+    \item \textbf{RQ1:}
+    How robust are LLMs to variation in linguistic register when interpreting
+    semantically equivalent women's-health concerns?
     \item \textbf{RQ2:}
-    Do multilingual LLMs exhibit systematic differences in interpretation, triage calibration, and clarification behavior across English, Arabic, and French?
+    Do LLMs exhibit systematic differences in concern interpretation, triage
+    calibration, recommended action, and clarification behavior across
+    English, Arabic, and French?
     \item \textbf{RQ3:}
-    What is the impact of domain-specific and multilingual adaptation on linguistic robustness, uncertainty handling, and clarification generation in women’s health symptom understanding?
-    
+    How do English domain adaptation and joint English--Arabic--French
+    adaptation affect linguistic robustness, uncertainty handling, and
+    clarification behavior in women's-health communication?
 \end{enumerate}
 
 \begin{figure*}[t]
-\centering
-\fbox{\parbox{0.96\textwidth}{
-\centering
-\textbf{One underlying women's-health concern}
-$\longrightarrow$
-\textbf{matched registers} (clinical, lay, indirect, ambiguous, emotional)
-$\longrightarrow$
-\textbf{EN / AR / FR with native-speaker validation gate}
-$\longrightarrow$
-\textbf{Qwen3.5-9B adaptation stages}
-$\longrightarrow$
-\textbf{interpretation and safety analysis}\\[2pt]
-Concern category $\mid$ risk/action $\mid$ clarification $\mid$ unsafe response $\mid$ cross-style and cross-language consistency
-}}
+\input{figures/concept}
 \caption{Conceptual overview. Clinical content is held constant while linguistic form and language vary, separating interpretation failures from changes in the underlying case.}
 \label{fig:concept}
 \end{figure*}
 
-The contributions align with these questions: (1) a formulation of women's-health interaction as a controlled language-understanding problem across register; (2) a multilingual evaluation framework with matched language variants, a native-speaker validation gate, and leakage-separated adaptation data; and (3) a reproducible, failure-oriented protocol for comparing general-purpose and sequentially adapted models using misunderstanding, triage, clarification, safety, and consistency measures.
-These contributions are deliberately preliminary: the study establishes an evaluation protocol and supports analysis of early failure patterns rather than claiming comprehensive coverage or clinical readiness.
-
-The remainder of this paper reviews related work (\S\ref{sec:related}), describes the evaluation suite and experimental protocol (\S\ref{sec:methods}), presents results and error analysis (\S\ref{sec:results}), and discusses limitations and ethical considerations (\S\ref{sec:discussion}).
+The contributions align with these questions: (1) women's-health interaction framed as a controlled language-understanding problem across register; (2) a multilingual evaluation protocol with matched language variants, a native-speaker validation gate, and leakage-separated adaptation data; and (3) a reproducible, failure-oriented comparison of general-purpose and sequentially adapted models on misunderstanding, triage, clarification, safety, and consistency.
+These contributions are deliberately preliminary: an evaluation protocol and early failure patterns, not comprehensive coverage or clinical readiness.
 
 \section{Related Work}
 \label{sec:related}
@@ -67,29 +85,46 @@ We cluster the closest work into three lines: women's-health answer evaluation, 
 \subsection{Women's-Health Answer Evaluation}
 
 Women's-health LLM research primarily asks whether generated answers are accurate, readable, empathetic, or safe \citep{recker-etal-2025-large,devries-etal-2025-enhancing}.
-\citet{adhikary-etal-2025-menstrual} introduce MenstLLaMA, the closest domain-adaptation system, by fine-tuning LLaMA-3-8B on menstrual-health question--answer data and evaluating educational response quality in English.
-\citet{mughal-etal-2025-mai} develop Mai, domain-specific menstrual-health dialogue systems in English and Roman Urdu; they explicitly motivate adaptation through local language, stigma, religious norms, and sociocultural barriers, but evaluate generated dialogue through automatic metrics and user ratings rather than matched tests of interpretation.
-For PCOS, \citet{devranoglu-etal-2024-chatgpt} evaluate ChatGPT on clinician-authored questions about PCOS-related infertility, and \citet{graca-etal-2026-assessing} conduct an international blinded survey of health-professional ratings of ChatGPT and evidence-based self-management responses.
-For fertility, \citet{chervenak-etal-2023-promise} compare ChatGPT counseling answers with public-health and professional sources, while \citet{gely-etal-2026-large} compare LLM answers to infertility FAQs with specialist answers on quality, accuracy, and empathy.
-\citet{maurya-etal-2026-whbench} broaden women's-health coverage through WHBench, using expert-crafted scenarios and a safety-aware rubric.
-Together, these studies motivate domain-specific adaptation and careful response evaluation, but they generally treat the input question as fixed; they do not test whether the same concern is interpreted consistently when its register or language changes.
+\citet{adhikary-etal-2025-menstrual} introduce MenstLLaMA, one of the closest domain-adaptation systems, fine-tuning LLaMA-3-8B on menstrual-health QA data and evaluating educational response quality in English.
+\citet{mughal-etal-2025-mai} develop Mai, a menstrual-health dialogue system in English and Roman Urdu motivated by stigma and sociocultural barriers, but evaluated through automatic metrics and user ratings rather than matched interpretation tests.
+For PCOS, \citet{devranoglu-etal-2024-chatgpt} evaluate ChatGPT on clinician-authored questions and \citet{graca-etal-2026-assessing} run an international blinded survey of health-professional ratings; a systematic review of 80 PCOS AI studies finds the broader field still dominated by imaging and structured predictive modeling \citep{ghaderzadeh-etal-2025-artificial}, so conversational LLM evaluation is a small slice of that literature.
+For fertility, \citet{chervenak-etal-2023-promise} compare ChatGPT counseling with public-health sources, and \citet{gely-etal-2026-large} compare LLM answers to infertility FAQs against specialist answers.
+\citet{maurya-etal-2026-whbench} broaden coverage through WHBench, an expert-crafted, safety-aware rubric.
+These studies motivate domain-specific adaptation and careful response evaluation but treat the input question as fixed; none tests whether the same concern is interpreted consistently as its register or language changes.
 
 \subsection{Multilingual and Sociocultural Understanding}
 
-\citet{jin-etal-2024-better} introduce XLingEval to assess correctness, consistency, and verifiability on naturalistic healthcare questions across English, Spanish, Chinese, and Hindi, finding substantial cross-language disparities.
-Subsequent multilingual health QA work likewise reports that equivalent questions can elicit inconsistent information across languages \citep{schlicht-etal-2025-consistent}.
-Foundational cross-cultural NLP work distinguishes linguistic diversity from cultural variation and identifies linguistic form, common ground, topic relevance, and communicative objectives as separate dimensions of culturally situated language use \citep{hershcovich-etal-2022-challenges,adilazuarda-etal-2024-towards}.
-In reproductive health specifically, participatory work with underserved women shows that culturally appropriate responses require local context beyond literal translation \citep{deva-etal-2025-family}, while evaluation rubrics built around Western assumptions can underrate responses judged appropriate by trained annotators and public-health experts \citep{dey-etal-2025-beyond}.
-The LUHME literature identifies related problems: models compress observed cultural variation \citep{mohammadi-etal-2025-large}, text adaptation can fail when sociocultural context is ignored \citep{freitas-cardoso-2025-nightmare}, and dialogue systems require mechanisms for establishing common ground \citep{anikina-etal-2025-building}.
+\citet{jin-etal-2024-better} introduce XLingEval to assess correctness, consistency, and verifiability on healthcare questions across English, Spanish, Chinese, and Hindi, finding substantial cross-language disparities; subsequent work likewise reports inconsistent information across languages for equivalent questions \citep{schlicht-etal-2025-consistent}.
+Foundational cross-cultural NLP work distinguishes linguistic diversity from cultural variation, identifying linguistic form, common ground, topic relevance, and communicative objectives as separate dimensions \citep{hershcovich-etal-2022-challenges,adilazuarda-etal-2024-towards}.
+In reproductive health, participatory work with underserved women shows culturally appropriate responses require local context beyond literal translation \citep{deva-etal-2025-family}, while Western-centric rubrics can underrate responses trained annotators judge appropriate \citep{dey-etal-2025-beyond}.
+LUHME work identifies related problems: models compress cultural variation \citep{mohammadi-etal-2025-large}, adaptation can fail when sociocultural context is ignored \citep{freitas-cardoso-2025-nightmare}, and dialogue systems need mechanisms for common ground \citep{anikina-etal-2025-building}.
+Concept-level terminological precision, not surface fluency, matters most where domain mismatches can alter meaning, as in healthcare \citep{heinisch-2025-terminologists}.
 Cross-register transfer work further motivates holding semantic content constant when measuring sensitivity to linguistic form \cite{nicholls-alperin-2025-cross}.
 Our setting brings these concerns together in matched English, Arabic, and French women's-health descriptions rather than testing general medical knowledge alone.
 
 \subsection{Gap and Evaluation Requirements}
 
-The resulting gap is an evaluation framework that separates understanding the input from generating an appealing answer.
-Clarification research treats detecting the need to ask, selecting an informative question, and responding after clarification as distinct capabilities; current language models continue to struggle with when clarification is warranted \citep{testoni-fernandez-2024-asking,zhang-choi-2025-clarify}.
-Such a framework must (i) hold the underlying concern constant across register and language, (ii) score concern interpretation, risk/action, and clarification need separately, (iii) expose under-triage and unsafe advice rather than rely on aggregate accuracy, and (iv) prevent overlap between evaluation and adaptation families.
-Our controlled suite is positioned around these requirements.
+The resulting gap is a framework that separates understanding the input from generating an appealing answer.
+Clarification research treats detecting the need to ask, selecting an informative question, and responding after clarification as distinct capabilities that current models still struggle with \citep{testoni-fernandez-2024-asking,zhang-choi-2025-clarify}; structured, stateful dialogue that elicits missing information turn by turn is one practical direction \citep{demarco-etal-2024-converso}.
+Such a framework must (i) hold the underlying concern constant across register and language, (ii) score interpretation, risk/action, and clarification need separately, (iii) expose under-triage and unsafe advice rather than rely on aggregate accuracy, and (iv) prevent overlap between evaluation and adaptation data.
 Native-speaker review targets semantic and register preservation in Arabic and French, while source- and paraphrase-family exclusions separate evaluation from training.
-The blinded clinical-rating designs used in PCOS and fertility studies motivate independent review of response quality \citep{graca-etal-2026-assessing,gely-etal-2026-large}, but our primary understanding measures remain tied to predefined item labels.
-Because LLM judges can show only moderate agreement and systematic rubric biases \citep{donati-etal-2025-large}, rubric-scored cultural sensitivity, helpfulness, clarity, and safety are reported separately from deterministic label metrics and should be calibrated against independently reviewed responses.
+The blinded clinical-rating designs used in PCOS and fertility studies motivate independent review of response quality \citep{graca-etal-2026-assessing,gely-etal-2026-large}, but our primary measures remain tied to predefined item labels.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.16\textwidth}p{0.20\textwidth}p{0.14\textwidth}p{0.18\textwidth}p{0.20\textwidth}}
+\hline
+\textbf{Study} & \textbf{Primary target} & \textbf{Languages} & \textbf{Matched register variants} & \textbf{Explicit triage / clarification targets} \\
+\hline
+MenstLLaMA \citep{adhikary-etal-2025-menstrual} & Educational answer generation & English & No & No \\
+Mai \citep{mughal-etal-2025-mai} & Menstrual-health dialogue generation & English, Roman Urdu & No & No \\
+WHBench \citep{maurya-etal-2026-whbench} & Expert-scored clinical responses & English & No & Safety rubric; no clarification target \\
+HerHealthEval (this work) & Symptom-language understanding & English (FR/AR: adaptation data) & Yes & Yes \\
+\hline
+\end{tabular}
+\caption{Positioning against the closest women's-health LLM systems. French and Arabic here refer to the adaptation-data languages; the scored evaluation set is English (\S\ref{sec:limitations}).}
+\label{tab:positioning}
+\end{table*}
+
+LLM judges show only moderate agreement and systematic rubric biases \citep{donati-etal-2025-large}, so rubric-scored cultural sensitivity, helpfulness, clarity, and safety are reported separately from deterministic label metrics; pairing an LLM judge with a human-verification step is one proposed mitigation \citep{griebhaber-etal-2025-toolbox}.

@@ -17,6 +17,13 @@
 % This assumes your files are encoded as UTF8
 \usepackage[utf8]{inputenc}
 
+% Needed for \text{} inside math mode (model-name subscripts, e.g. M3$_\text{QA}$)
+\usepackage{amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{french}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Noto Naskh Arabic}
 % This is not strictly necessary, and may be commented out,
 % but it will improve the layout of the manuscript,
 % and will typically save some space.
@@ -31,45 +38,31 @@
 %additional package(s)
 \usepackage{graphicx}
 
+% Native vector figures (no external image files needed):
+% see figures/*.tex, \input from overleaf_intro_related.tex / overleaf_methods.tex
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
 % If the title and author information does not fit in the area allocated, uncomment the following
 %
 %\setlength\titlebox{<dim>}
 %
 % and set <dim> to something 5cm or larger.
 
-\title{HerHealthEval: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?}
-%HerHealthGPT: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?Double-blind submission: omit author names until camera-ready.
-\author{Anonymous ACL submission}
+% Title/author, abstract, and Results+Discussion+Limitations are shared with
+% acl_lualatex.tex via \input so the two compile entry points can never
+% silently diverge — edit only the shared files, never inline here.
+\input{overleaf_titleauthor}
 
 \begin{document}
 \maketitle
-\begin{abstract}
-Large language models are increasingly used to answer women's-health questions, but fluent answers do not establish that a model has correctly understood what a patient is trying to communicate.
-We present HerHealthEval, a multilingual benchmark and evaluation framework for studying language understanding in women’s-health communication across languages and linguistic registers.
-
-Our controlled evaluation suite covers menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility in English, Arabic, and French, pairing clinical, lay, indirect, ambiguous, and emotionally concerned expressions with predefined targets for concern category, risk level, recommended action, and clarification need.
-The protocol requires native-speaker validation of Arabic and French for meaning preservation, naturalness, and register before cross-lingual evaluation or adaptation, while evaluation cases remain separated from leakage-controlled adaptation data.
-The experimental design centers Qwen3.5-9B and specifies a general-purpose baseline, English domain adaptation, and subsequent Arabic/French adaptation, evaluated through misunderstanding, under-triage, clarification, unsafe-response, and cross-style/cross-language consistency measures.
-Rather than claiming comprehensive clinical coverage, this preliminary study establishes a failure-oriented protocol for testing women's-health language understanding beyond answer generation.
-\end{abstract}
+\input{overleaf_abstract}
 
 \input{overleaf_intro_related}
 
 \input{overleaf_methods}
 
-\section{Results}
-\label{sec:results}
-
-% TODO: Main quantitative results, ablations, and error analysis.
-
-\section{Discussion}
-\label{sec:discussion}
-
-% TODO: Interpretation of findings, limitations, ethics, and future work.
-
-\section*{Limitations}
-
-This initial study covers three symptom categories and three languages and therefore does not represent the full diversity of women's-health concerns, dialects, cultures, or care settings. Native-speaker validation assesses translation quality and preservation of register; it is not a substitute for clinical validation of every gold target. The current risk and clarification labels are clinically motivated but require further expert review, and their class imbalance limits conclusions drawn from aggregate accuracy. Finally, model outputs are evaluated as evidence of linguistic understanding in a controlled research setting, not as medical advice or proof of readiness for clinical deployment.
+\input{overleaf_results_discussion}
 
 % Bibliography: journal articles in custom.bib; ACL proceedings in anthology shards.
 % In Overleaf: New File -> From External URL

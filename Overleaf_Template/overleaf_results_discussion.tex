@@ -1,0 +1,68 @@
+% !TEX root = acl_latex.tex
+% HerHealthGPT-LU / LUHME 2026 — Results, Discussion, Limitations
+% Double-blind safe. \input from acl_latex.tex / acl_lualatex.tex, after
+% overleaf_methods, so both entry points always show the same reported
+% results. This is the single source of truth for these sections — do not
+% duplicate this content inline in either main file.
+
+\section{Results}
+\label{sec:results}
+
+We report results on the English evaluation set ($n=540$) for Qwen3.5-9B: a zero-shot baseline (M2) and three QLoRA adaptations --- structured (JSON) targets (M3), the same with 4$\times$ oversampling of clarification examples (M3+O), and a joint English+French+Arabic adaptation (M3-ML) that follows the M3+O recipe and is scored here on English. French and Arabic evaluation-set results will be reported separately once the evaluation items are translated and native-validated. Gold labels are skewed, so we foreground majority-class baselines alongside accuracy-style numbers and treat per-class recall, under-triage, and clarification recall as the honest headlines. The risk majority-class baseline is 0.644 and the clarification majority-class baseline is 0.833.
+
+\subsection{Zero-shot baseline (M2)}
+
+Table~\ref{tab:main} reports the zero-shot baseline (M2), an instruction-tuned Qwen3.5-9B prompted with our structured triage schema. M2 parses at 100\% and reaches 0.667 risk accuracy, only marginally above the 0.644 majority baseline. The safety-critical weakness is \emph{under-triage}: of 174 items whose gold risk is \texttt{see-doctor}, M2 routes 71.8\% to \texttt{routine} (per-class recall 0.264, versus 0.897 for \texttt{routine}). M2 retains strong clarification-seeking, however: recall 0.856 on the 90 items requiring clarification, at 0.862 specificity. Category accuracy is 0.539, with fertility weakest (recall 0.467). The model gives a consistent risk label to only 64.4\% of case groups across their six phrasings, and a consistent category to just 15.6\% --- direct evidence that surface communication style, not clinical content, drives much of the interpretation variance (RQ1, \S\ref{sec:rq-answers}).
+
+\begin{table}[t!]
+\centering
+\small
+\begin{tabular}{lccccc}
+\hline
+Metric & M2 & M3 & M3+O & M3-ML & Base \\
+\hline
+parse\_ok            & \textbf{1.000} & 0.998 & 0.996 & 0.998 & --- \\
+risk accuracy        & \textbf{0.667} & 0.623 & 0.665 & 0.655 & 0.644 \\
+under-triage $\downarrow$ & 0.718 & 0.647 & \textbf{0.605} & 0.711 & --- \\
+clarif. recall       & \textbf{0.856} & 0.044 & 0.000 & 0.000 & --- \\
+category accuracy    & 0.539 & 0.549 & \textbf{0.550} & 0.510 & --- \\
+consistency (risk)   & \textbf{0.644} & 0.433 & 0.444 & 0.500 & --- \\
+consistency (cat.)   & 0.156 & 0.344 & 0.378 & \textbf{0.411} & --- \\
+\hline
+\end{tabular}
+\caption{Results on the English evaluation set ($n=540$). M2 = zero-shot
+baseline; M3 = QLoRA on structured (JSON) targets; M3+O = M3 with 4$\times$
+oversampling of clarification examples; M3-ML = joint English+French+Arabic
+adaptation (M3+O recipe), scored on English. ``Base'' = majority-class
+baseline. Arrows: lower is better for under-triage. Best per row in
+\textbf{bold}. Consistency = fraction of case groups given the same label
+across all six styles.}
+\label{tab:main}
+\end{table}
+
+\subsection{Fine-tuning reduces under-triage but erases clarification-seeking}
+
+We adapt Qwen3.5-9B with QLoRA on leakage-controlled data drawn from the same case pool as the evaluation set but disjoint from it, using targets wrapped in the exact structured schema the evaluation items score against.
+
+Adaptation reliably trades one behavior for another. All three adapted models keep near-perfect parse compliance ($\geq$0.996) and reduce under-triage below or near the zero-shot baseline, while more than doubling cross-style category consistency (0.156 for M2, rising to 0.344/0.378/0.411 for M3/M3+O/M3-ML). The best English triage is M3+O, which recovers risk accuracy to zero-shot parity (0.665 vs.\ 0.667) and attains the lowest under-triage of any model (0.605). But clarification-seeking collapses: from 0.856 for the zero-shot baseline to 0.044 for M3, and to 0.000 once the clarification examples are oversampled --- oversampling improves triage yet does \emph{not} restore clarification. Every adapted model drives clarification recall to near zero while pushing specificity toward 1.0; the adapted models simply stop asking and always answer. By McNemar's test, M3 is significantly worse than M2 on risk correctness (p$=$0.03) but not on category (p$=$0.71) or clarification (p$=$0.30); M3+O and M3-ML are statistically indistinguishable from M2 on every field ($p>0.16$), with their gains concentrated in the rate metrics (under-triage, consistency) rather than paired per-item accuracy. The multilingual model M3-ML, scored on English, gives the highest cross-style category consistency (0.411) but does not improve English triage over the English-only M3+O --- expected, since its added French/Arabic data carries no English triage signal and its intended payoff is on the (not-yet-built) French/Arabic evaluation sets.
+
+\section{Discussion}
+\label{sec:discussion}
+
+Two results stand out. General-purpose Qwen3.5-9B under-triages the majority of care-warranting cases and interprets the same case differently depending only on phrasing (RQ1, \S\ref{sec:rq-answers}). Adaptation is a double-edged tool: it reduces under-triage and stabilizes category interpretation, and with clarification oversampling it recovers risk accuracy to baseline parity --- but across every variant, including the multilingual one, it erases clarification-seeking almost entirely, and oversampling the clarification examples to nearly a third of the training mixture does not bring it back. This suggests clarification on ambiguous input is not a skill that answer-style supervised fine-tuning teaches by example; recovering it likely needs objectives that explicitly reward abstention or asking --- preference optimization, or a dedicated clarification-vs-answer decision head --- rather than more demonstrations. The practical lesson for safety-relevant domains: evaluate adaptation on the structured behaviors that matter at deployment, triage \emph{and} clarification, not answer quality alone, since a model can improve on one while silently losing another.
+
+\subsection{Preliminary answers to the research questions}
+\label{sec:rq-answers}
+
+We revisit the three research questions against the evidence available at this stage; all are answered only as far as current results allow.
+
+\paragraph{RQ1 (register robustness).} \emph{Partially answered, English only.} Holding a case fixed and varying only its phrasing changes the predicted risk label for 35.6\% of cases and the predicted category for 84.4\% (cross-style consistency 0.644 and 0.156). Adaptation partly redistributes this: category consistency more than doubles (to 0.344--0.411 across the adapted models) while risk consistency falls (to 0.433--0.500), so robustness gains are not uniform across target types.
+
+\paragraph{RQ2 (cross-lingual differences).} \emph{Not yet answerable.} All results here are on the English evaluation set; the French and Arabic evaluation sets are not yet built (their items require translation and native-speaker validation, \S\ref{sec:methods}), so cross-language consistency is undefined and we do not extrapolate English findings to other languages.
+
+\paragraph{RQ3 (adaptation impact).} \emph{Partially answered, English evaluation.} Domain adaptation reduces under-triage (0.718 to 0.605 for the best recipe) and improves cross-style category consistency, at some cost to risk consistency and with clarification recall collapsing to near zero. The joint English+French+Arabic adaptation (M3-ML), scored on English, preserves English triage near the English-only recipe and gives the highest cross-style category consistency, but its multilingual payoff cannot be measured until the French/Arabic evaluation sets exist.
+
+\section*{Limitations}
+\label{sec:limitations}
+
+Results reported here are on the English evaluation set; the French and Arabic evaluation sets are not yet built, so all cross-lingual claims await those. Gold labels are skewed toward \texttt{routine} risk and \texttt{no}-clarification, which is why we foreground majority baselines, per-class recall, and under-triage over raw accuracy. Risk and clarification targets are a disclosed heuristic rather than clinician adjudication, applied identically to the evaluation set and the adaptation data (\S\ref{sec:gold-labels}); the adaptation targets in particular are silver labels used only for training, never for scoring. The \texttt{unsafe\_response} flag is model-self-reported, not an independently validated safety measure. The Arabic adaptation data uses Modern Standard Arabic only. Since Qwen3.5-9B is itself a multilingual model with pretrained exposure to Arabic dialects, this is a gap in our controlled data coverage rather than evidence that the model cannot handle dialectal input --- but we have not directly measured dialectal performance, and extending evaluation to dialectal Arabic (e.g., Egyptian, Gulf, Levantine) is a natural direction for future work. This initial study covers three symptom categories, three languages, and a single 9B model family, so generalization to other conditions, cultures, care settings, and model scales is untested. Arabic and French adaptation text was produced by LLM machine translation and confirmed by native-speaker/professional review for meaning and register (\S\ref{sec:methods}); this validates translation quality, not the clinical accuracy of gold targets. Model outputs are evidence of linguistic understanding in a controlled research setting, not medical advice or proof of clinical-deployment readiness.

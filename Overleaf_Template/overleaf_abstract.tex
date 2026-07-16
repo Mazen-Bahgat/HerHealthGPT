@@ -1,0 +1,14 @@
+% !TEX root = acl_latex.tex
+% HerHealthGPT-LU / LUHME 2026 — Abstract
+% \input from the document body (right after \maketitle) of acl_latex.tex
+% and acl_lualatex.tex, so both entry points always show the same abstract.
+
+\begin{abstract}
+Large language models are increasingly used to answer women's-health questions, but fluent answers do not establish that a model has correctly understood what a patient is trying to communicate.
+We present HerHealthEval, a preliminary multilingual evaluation framework and protocol for studying language understanding in women’s-health communication across languages and linguistic registers.
+
+Our controlled evaluation suite covers menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility in English, Arabic, and French, pairing clinical, lay, indirect, ambiguous, and emotionally concerned expressions with predefined targets for concern category, risk level, recommended action, and clarification need.
+The protocol requires native-speaker validation of Arabic and French for meaning preservation, naturalness, and register before cross-lingual evaluation or adaptation, while evaluation cases remain separated from leakage-controlled adaptation data.
+The experimental design centers Qwen3.5-9B and specifies a general-purpose baseline, English domain adaptation, and subsequent Arabic/French adaptation, evaluated through misunderstanding, under-triage, clarification, unsafe-response, and cross-style/cross-language consistency measures.
+Rather than claiming comprehensive clinical coverage, this preliminary study establishes a failure-oriented protocol for testing women's-health language understanding beyond answer generation.
+\end{abstract}

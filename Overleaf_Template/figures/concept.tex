@@ -1,0 +1,23 @@
+% !TEX root = ../acl_latex.tex
+% Conceptual overview figure. \input from overleaf_intro_related.tex inside
+% a figure* environment. Requires \usetikzlibrary{arrows.meta,positioning}
+% in the preamble of the compiling main file (acl_latex.tex / acl_lualatex.tex).
+\centering
+\begin{tikzpicture}[
+  node distance=3.5mm,
+  every node/.style={font=\scriptsize},
+  box/.style={rectangle, draw, rounded corners, align=center,
+              minimum height=9mm, text width=2.3cm, inner sep=2pt},
+  arr/.style={-{Latex[length=2mm]}, thick}
+]
+\node[box] (a) {One concern};
+\node[box, right=of a] (b) {6 matched registers};
+\node[box, right=of b] (c) {EN / FR / AR (MSA), native-confirmed};
+\node[box, right=of c] (d) {Qwen3.5-9B adaptation};
+\node[box, right=of d] (e) {Interpretation \& safety analysis};
+\draw[arr] (a) -- (b);
+\draw[arr] (b) -- (c);
+\draw[arr] (c) -- (d);
+\draw[arr] (d) -- (e);
+\end{tikzpicture}\\[3pt]
+{\scriptsize Category $\mid$ risk/action $\mid$ clarification $\mid$ unsafe response $\mid$ cross-style/cross-language consistency}

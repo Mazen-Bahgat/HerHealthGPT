@@ -1,0 +1,15 @@
+flowchart TD
+    A["HealthCareMagic-100k / iCliniq-10k<br/>(PCOS, fertility) + menstrual corpus"] --> B["Keyword filter per category;<br/>clean text-substitution artifacts"]
+    B --> C{"Category match to<br/>NHS / NICHD / CDC guidance?"}
+    C -->|mapped| D["Category anchored to source<br/>(CDC used for fertility specifically)"]
+    C -->|not mapped| E["Flagged, no invented category"]
+    D --> F["Canonical case text"]
+    E --> F
+    F --> G["Register rewriting<br/>6 registers, meaning-preserving"]
+    G --> H["Risk / clarification targets:<br/>keyword heuristic over answer text<br/>(grounding-based risk was tried and<br/>rejected -- monotone label);<br/>clarification = ambiguous register only"]
+    H --> I["Split: evaluation set<br/>vs. leakage-excluded adaptation pool"]
+    I --> J["Adaptation pool"]
+    J --> K["LLM translation to<br/>French and Modern Standard Arabic"]
+    K --> L["Automated QA screen"]
+    L --> M["Native-speaker confirmation<br/>of meaning + register"]
+    M --> N["Multilingual adaptation corpus"]
