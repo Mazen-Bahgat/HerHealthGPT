@@ -37,6 +37,11 @@
 %
 % and set <dim> to something 5cm or larger.
 
+% --- HerHealthEval macros (model names and pending-value placeholder) ---
+\newcommand{\mlvone}{M3ml\textsubscript{v1}}
+\newcommand{\mlvtwo}{M3ml\textsubscript{v2}}
+\newcommand{\tbd}{--}
+
 \title{HerHealthEval: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?}
 %HerHealthGPT: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?Double-blind submission: omit author names until camera-ready.
 \author{Anonymous ACL submission}
@@ -60,15 +65,24 @@ Rather than claiming comprehensive clinical coverage, this preliminary study est
 \section{Results}
 \label{sec:results}
 
-<<<<<<< HEAD
-All results below are on the frozen English benchmark ($n=540$: 90 seeds
-$\times$ 6 communication styles). Gold labels are skewed, so we report
-majority-class baselines alongside accuracy-style numbers and treat per-class
-recall, under-triage, and clarification recall as the honest headlines. The
-risk majority-class baseline is 0.644 and the clarification majority-class
-baseline is 0.833.
+We report two complementary evaluations. Section~\ref{sec:results-en-pilot} is
+an English-only pilot that isolates how supervised fine-tuning reshapes
+structured triage behavior (target-format sensitivity and clarification
+collapse). Section~\ref{sec:results-multilingual} is the main multilingual
+evaluation on the aligned HerHealthEval benchmark (English, French, Arabic on
+the same seeds), which measures cross-language consistency and cross-lingual
+under-triage. Gold labels are skewed toward \texttt{see-doctor}, so throughout
+we report majority-class baselines alongside accuracy and treat per-class
+recall, under-triage, and clarification recall as the honest headlines.
 
-\subsection{Zero-shot baseline (M2)}
+\subsection{English pilot: fine-tuning reshapes triage behavior}
+\label{sec:results-en-pilot}
+
+The pilot uses a frozen English benchmark ($n=540$: 90 seeds $\times$ 6
+communication styles; risk majority baseline 0.644, clarification majority
+baseline 0.833).
+
+\subsubsection{Zero-shot baseline (M2)}
 
 Table~\ref{tab:main} reports the zero-shot baseline (M2), an instruction-tuned
 Qwen3.5-9B prompted with our structured triage schema. M2 parses at 100\% and
@@ -111,7 +125,7 @@ across all six styles.}
 \label{tab:main}
 \end{table}
 
-\subsection{Fine-tuning is highly sensitive to target format}
+\subsubsection{Fine-tuning is highly sensitive to target format}
 
 We fine-tune Qwen3.5-9B with QLoRA on leakage-controlled adaptation data drawn
 from the same seed pool as the benchmark but disjoint from it (verbatim-question
@@ -133,7 +147,7 @@ significantly on risk (p$=$0.03, favoring M2) but not on category (p$=$0.71) or
 clarification (p$=$0.30) correctness; parse compliance is statistically
 unchanged (p$=$1.0).
 
-\subsection{Clarification-seeking does not survive fine-tuning}
+\subsubsection{Clarification-seeking does not survive fine-tuning}
 
 Adding structured targets recovers format but not clarification: M3$_\text{J}$
 asks for clarification on almost none of the 90 items that require it (recall
@@ -155,9 +169,72 @@ from M2 on risk (p$=$0.92), category (p$=$0.70), and clarification (p$=$0.20)
 correctness, and on parse compliance (p$=$0.48); its gains are concentrated in
 the safety-oriented rate metrics (under-triage, over-triage) and cross-style
 consistency rather than in raw accuracy.
-=======
-% TODO: Main quantitative results, ablations, and error analysis.
->>>>>>> 431411c1bb35941d8b668644fde22e4c32cafa92
+
+\subsection{Multilingual evaluation on HerHealthEval}
+\label{sec:results-multilingual}
+
+We now evaluate on the aligned multilingual benchmark
+(\texttt{benchmark\_multilingual\_v1}): the same 90 \texttt{menst-*} seeds
+rendered in English, French, and Arabic across the six styles
+($n=540$ per language, $1{,}620$ parallel items), with identical gold labels
+across languages. Because every seed appears in all three languages, this set
+supports \emph{cross-language consistency} and \emph{meaning-preservation}
+measurement, which the English pilot cannot. Category is balanced
+(180/180/180; majority baseline 0.333); risk is uniformly \texttt{see-doctor}
+(under-triage is the honest headline); 24/540 items require clarification.
+
+We compare the base multilingual model (M2, Qwen3.5-9B zero-shot) against the
+fine-tuned multilingual model. To isolate the effect of \emph{label quality} we
+report two fine-tunes: \mlvone{}, whose non-English risk labels were corrupted
+by an English-only risk heuristic applied to translated answers (mislabeling
+$99.8\%$ of French/Arabic training rows \texttt{routine}), and \mlvtwo{}, which
+derives risk from the English source by \texttt{row\_id} so labels are
+language-independent.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llccc}
+\hline
+Model & Lang & interp.\ acc & under-triage $\downarrow$ & clar.\ recall \\
+\hline
+M2 (base)   & EN & \tbd & \tbd & \tbd \\
+            & FR & \tbd & \tbd & \tbd \\
+            & AR & \tbd & \tbd & \tbd \\
+\mlvone{}   & FR & 0.605 & $\sim$1.000 & \tbd \\
+            & AR & \tbd & \tbd & \tbd \\
+\mlvtwo{}   & EN & \tbd & \tbd & \tbd \\
+            & FR & \tbd & \tbd & \tbd \\
+            & AR & \tbd & \tbd & \tbd \\
+\hline
+\end{tabular}
+\caption{Multilingual results on HerHealthEval ($n=540$/language). interp.\ acc
+$=$ category (symptom-interpretation) accuracy; under-triage $=$ fraction of
+gold \texttt{see-doctor} routed to \texttt{routine} (lower is better). Values
+marked \tbd{} are being computed. \mlvone{} vs.\ \mlvtwo{} isolates the effect
+of language-independent risk labeling.}
+\label{tab:multilingual}
+\end{table}
+
+\subsubsection{Cross-lingual under-triage from language-dependent labels}
+
+Our clearest ``why models misunderstand non-English'' result is a controlled
+ablation. \mlvone{} \emph{understands} French: on the French benchmark it parses
+at 0.998 and reaches category accuracy 0.605 (higher than its English
+category accuracy), yet it routes $539/540$ French items to \texttt{routine}
+(under-triage $\approx 1.0$) --- it almost never recommends seeing a doctor in
+French. The cause is not comprehension but supervision: the fine-tuning
+pipeline derived risk labels by matching \emph{English} consult words against
+the \emph{translated} answers, so $99.8\%$ of French (and Arabic) training rows
+were labeled \texttt{routine}. Recovering risk from the English source by
+\texttt{row\_id} (\mlvtwo{}) restores the training risk distribution to match
+English (routine $0.58$ / see-doctor $0.40$). This demonstrates that
+cross-lingual safety failures can arise from \emph{language-dependent label
+quality} rather than from the model's inability to understand the non-English
+input --- a failure mode invisible to English-only evaluation.
+
+% MULTILINGUAL RESULTS: cross-language consistency, per-style error analysis,
+% and McNemar/CI stats are filled here as the eval matrix completes.
 
 \section{Discussion}
 \label{sec:discussion}

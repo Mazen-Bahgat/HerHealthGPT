@@ -4,4 +4,95 @@
 \section{Methods}
 \label{sec:methods}
 
-% TODO: Benchmark construction, annotation protocol, evaluation metrics, and fine-tuning setup.
+\subsection{Benchmark construction}
+\label{sec:methods-benchmark}
+
+HerHealthEval is built on existing female-health resources rather than
+free-form synthesis. Seed questions are drawn from menstrual-health QA
+(MENST/MenstLLaMA) and women's-health cases identified in patient--doctor
+dialogue corpora (MedDialog/HealthCareMagic/iCliniq), filtered to three
+concern categories: \textbf{menstrual}, \textbf{PCOS/hormonal}, and
+\textbf{fertility}. This yields 90 seed conditions (30 per category).
+
+Each seed is a fixed underlying clinical state expressed in six
+\emph{communication registers}: \emph{canonical}, \emph{clinical},
+\emph{layperson}, \emph{indirect/cultural}, \emph{ambiguous}, and
+\emph{emotionally concerned}. For example, the same amenorrhea seed appears as
+``\emph{My menstrual cycle has become irregular}'' (clinical),
+``\emph{My periods are all over the place lately}'' (lay), and
+``\emph{Something feels wrong with my cycle}'' (ambiguous). Holding the clinical
+state fixed while varying only the surface form is what lets us attribute
+differences in model behavior to \emph{language understanding} rather than to
+differences in the underlying case. This gives $90 \times 6 = 540$ items per
+language.
+
+Every item carries gold labels for concern \textbf{category}, \textbf{risk
+level}, \textbf{recommended action}, and whether the input genuinely
+\textbf{requires clarification}. Labels are a property of the seed and are
+therefore identical across languages and registers, which is what makes
+cross-language and cross-style consistency measurable.
+
+\subsection{Translation and validation protocol}
+\label{sec:methods-translation}
+
+The English benchmark is translated into French and Arabic. Machine translation
+provides an initial draft, which is then validated in two tiers, following the
+supervisor's protocol: (1) a \emph{native speaker} reviews fluency and
+naturalness, and (2) a \emph{linguistic professional} reviews meaning
+preservation, ambiguity, and cultural appropriateness (critical for the
+indirect/cultural and ambiguous registers, where literal translation would
+destroy the phenomenon under study). Per-item validation status is recorded in
+the benchmark. This produces $1{,}620$ parallel, human-validated items
+(540 $\times$ 3 languages). Adaptation (fine-tuning) data is drawn from a
+disjoint seed pool and passes an explicit leakage filter (verbatim-question and
+shared-answer overlaps with the benchmark are removed before training).
+
+\subsection{Models}
+\label{sec:methods-models}
+
+Following the comparison design, we evaluate: (i) a \textbf{base multilingual
+LLM} --- Qwen3.5-9B, zero-shot (M2); and (ii) a \textbf{fine-tuned multilingual
+LLM} --- QLoRA adaptation of the same model on the joint English+French+Arabic
+corpus. Qwen3.5-9B is natively multilingual, so it serves as both the base and
+multilingual-base reference. Retrieval augmentation is left to future work.
+
+Fine-tuning uses QLoRA (4-bit NF4; LoRA rank 16, $\alpha=16$, on all attention
+and MLP projections), learning rate $2\times10^{-4}$ with cosine schedule and
+$0.03$ warmup, max gradient norm $0.3$, bf16, paged 8-bit AdamW, two epochs,
+effective batch size 16, max sequence length 2048, seed 3407, with loss
+computed on responses only and thinking-mode disabled so training and
+evaluation prompts match. Targets are wrapped in the exact structured schema the
+benchmark scores (predicted category, interpreted symptom, risk, recommended
+action, clarification decision, unsafe flag, response text). To keep supervision
+language-independent, risk and clarification labels are derived from the English
+source and attached to French/Arabic rows by seed identifier, avoiding a
+cross-lingual labeling failure we document in Section~\ref{sec:results-multilingual}.
+
+\subsection{Evaluation metrics}
+\label{sec:methods-metrics}
+
+We evaluate \emph{language understanding}, not answer generation. All metrics are
+computed deterministically from the model's structured prediction against gold:
+
+\begin{itemize}
+  \item \textbf{Symptom-interpretation accuracy}: predicted vs.\ gold concern
+    category (majority baseline 0.333 on the balanced multilingual set).
+  \item \textbf{Under-triage / unsafe-reassurance rate}: $P(\text{predict
+    routine} \mid \text{gold see-doctor})$ --- the safety-critical error.
+  \item \textbf{Clarification appropriateness}: recall on genuinely ambiguous
+    items and specificity on the rest.
+  \item \textbf{Cross-language consistency}: for a fixed (seed, style), whether
+    the risk/category verdict agrees across English, French, and Arabic
+    (operationalizes meaning preservation).
+  \item \textbf{Cross-style consistency}: whether the verdict is stable across
+    the six registers of the same seed (surface-form robustness).
+  \item \textbf{Misunderstanding rate}: complement of interpretation accuracy,
+    with a strict variant that counts unparseable outputs.
+\end{itemize}
+
+Because gold risk is uniformly \texttt{see-doctor}, we report per-class recall,
+under-triage, and majority baselines rather than aggregate accuracy alone.
+Paired model comparisons use McNemar's test on the shared items; rate estimates
+report bootstrap 95\% confidence intervals. Cultural sensitivity is proxied by
+performance on the indirect/cultural register; automatic scoring of response
+helpfulness/clarity is left to future work (Limitations).
