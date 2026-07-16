@@ -247,7 +247,38 @@ input --- a failure mode invisible to English-only evaluation.
 \section{Discussion}
 \label{sec:discussion}
 
-% TODO: Interpretation of findings, limitations, ethics, and future work.
+\paragraph{Understanding is necessary but not sufficient for safety.}
+Our clearest result separates two things that answer-accuracy conflates:
+whether a model \emph{understands} a female-health message, and whether it
+\emph{acts safely} on it. The fine-tuned model interprets French and Arabic
+input well (category accuracy $0.61$--$0.62$, parse compliance $0.998$) yet
+routes almost every non-English case to \texttt{routine}. Comprehension is
+intact; the failure is in the mapping from understanding to a safe recommendation.
+Evaluations that score only the final answer, or that aggregate over languages,
+would miss this dissociation entirely.
+
+\paragraph{Language-dependent label quality is a hidden multilingual failure
+mode.} The cross-lingual under-triage we observe does not originate in the model
+but in \emph{supervision}: an English-centric risk-labeling heuristic, applied to
+translated answers, mislabeled $99.8\%$ of French and Arabic adaptation targets
+as low-risk, and the model faithfully learned to under-triage non-English input.
+Because French and Arabic collapse identically (risk agreement $0.994$), the
+failure is systematic, not noise. This has a concrete methodological implication
+for multilingual safety benchmarks: seeds must be aligned across languages,
+safety metrics must be reported \emph{per language}, and the \emph{provenance of
+labels} must be audited for language independence. A benchmark that is English-only,
+or that reports a single pooled number, cannot surface this class of bug.
+
+\paragraph{Clarification-seeking is a fragile capability that adaptation erases.}
+The English pilot shows that supervised fine-tuning on answer-style data drives
+clarification-seeking on genuinely ambiguous input from a strong baseline
+($0.856$ recall) to near zero, and that naive rebalancing of the training mixture
+does not restore it. In a high-stakes domain where much female-health language is
+indirect or vague, the ability to \emph{ask rather than answer} is itself
+safety-relevant. Recovering it---via explicit clarification supervision,
+uncertainty-aware objectives, or retrieval-grounded abstention---is a natural
+direction for future work, alongside retrieval augmentation for grounded
+interpretation.
 
 \section*{Limitations}
 
