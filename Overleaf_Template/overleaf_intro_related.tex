@@ -15,7 +15,7 @@ Multilingual health QA adds a second concern: models can give inconsistent healt
 Work from LUHME similarly shows that LLMs may compress cross-cultural variation, that sociocultural context affects how meaning should be adapted, and that successful dialogue depends on establishing common ground \cite{mohammadi-etal-2025-large,freitas-cardoso-2025-nightmare,anikina-etal-2025-building}.
 Together, these findings motivate a controlled evaluation of \emph{interpretation} rather than another medical answer-generation study.
 
-We therefore present \textbf{HerHealthEval}, an initial investigation of language understanding in multilingual women's-health communication.
+We therefore present \textbf{HerHealthEval} (Figure~\ref{fig:overview}), an initial investigation of language understanding in multilingual women's-health communication.
 The controlled evaluation suite spans menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility; it holds the underlying case fixed while varying canonical, clinical, layperson, indirect/culturally sensitive, ambiguous, and emotionally concerned expression.
 Matched English cases are localized into Arabic and French under a protocol that requires native-speaker approval of semantic preservation, naturalness, and register before they enter cross-lingual evaluation or adaptation.
 Each item has predefined targets for concern category, risk level, recommended action, and clarification need.
@@ -35,24 +35,8 @@ We organize the study around three research questions:
     
 \end{enumerate}
 
-\begin{figure*}[t]
-\centering
-\fbox{\parbox{0.96\textwidth}{
-\centering
-\textbf{One underlying women's-health concern}
-$\longrightarrow$
-\textbf{matched registers} (clinical, lay, indirect, ambiguous, emotional)
-$\longrightarrow$
-\textbf{EN / AR / FR with native-speaker validation gate}
-$\longrightarrow$
-\textbf{Qwen3.5-9B adaptation stages}
-$\longrightarrow$
-\textbf{interpretation and safety analysis}\\[2pt]
-Concern category $\mid$ risk/action $\mid$ clarification $\mid$ unsafe response $\mid$ cross-style and cross-language consistency
-}}
-\caption{Conceptual overview. Clinical content is held constant while linguistic form and language vary, separating interpretation failures from changes in the underlying case.}
-\label{fig:concept}
-\end{figure*}
+% Conceptual overview consolidated into the richer TikZ Figure~\ref{fig:overview}
+% (fig1_overview.tex, input near the top of the document).
 
 The contributions align with these questions: (1) a formulation of women's-health interaction as a controlled language-understanding problem across register; (2) a multilingual evaluation framework with matched language variants, a native-speaker validation gate, and leakage-separated adaptation data; and (3) a reproducible, failure-oriented protocol for comparing general-purpose and sequentially adapted models using misunderstanding, triage, clarification, safety, and consistency measures.
 These contributions are deliberately preliminary: the study establishes an evaluation protocol and supports analysis of early failure patterns rather than claiming comprehensive coverage or clinical readiness.
