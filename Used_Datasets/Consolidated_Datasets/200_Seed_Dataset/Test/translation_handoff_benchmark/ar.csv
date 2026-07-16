@@ -1,541 +1,541 @@
-﻿item_key,seed_id,style,Topic,Question,Question_translated
-gss-000__canonical,gss-000,canonical,PCOS,How is PCOS diagnosed?,
-gss-000__clinical,gss-000,clinical,PCOS,What diagnostic criteria and tests are used to establish a PCOS diagnosis?,
-gss-000__layperson,gss-000,layperson,PCOS,How do doctors figure out if you have PCOS?,
-gss-000__indirect_cultural,gss-000,indirect_cultural,PCOS,How does a doctor find out if a woman has this hormone condition?,
-gss-000__ambiguous,gss-000,ambiguous,PCOS,How would they even figure out if that's what's going on?,
-gss-000__emotionally_concerned,gss-000,emotionally_concerned,PCOS,"I think I might have PCOS but I'm scared to find out for sure, how do doctors actually diagnose it?",
-gss-001__canonical,gss-001,canonical,Pregnancy,When will my periods return after pregnancy?,
-gss-001__clinical,gss-001,clinical,Pregnancy,What is the expected duration of postpartum lochia?,
-gss-001__layperson,gss-001,layperson,Pregnancy,How long does the bleeding after childbirth usually last?,
-gss-001__indirect_cultural,gss-001,indirect_cultural,Pregnancy,How long does the bleeding after giving birth usually continue?,
-gss-001__ambiguous,gss-001,ambiguous,Pregnancy,How long is this supposed to keep going after everything?,
-gss-001__emotionally_concerned,gss-001,emotionally_concerned,Pregnancy,"It's been weeks since I gave birth and I'm still bleeding and I'm getting really worried, how long is lochia supposed to last?",
-gss-002__canonical,gss-002,canonical,Pregnancy,What is lochia?,
-gss-002__clinical,gss-002,clinical,Pregnancy,Is contraceptive use indicated during the period of lactation?,
-gss-002__layperson,gss-002,layperson,Pregnancy,Do I still need birth control while I'm breastfeeding?,
-gss-002__indirect_cultural,gss-002,indirect_cultural,Pregnancy,Do I still need to use protection while I'm nursing my baby?,
-gss-002__ambiguous,gss-002,ambiguous,Pregnancy,Do I still need to worry about that while I'm feeding my baby?,
-gss-002__emotionally_concerned,gss-002,emotionally_concerned,Pregnancy,"I really don't want to get pregnant again so soon, and I'm not sure if breastfeeding protects me, do I still need contraception?",
-gss-003__canonical,gss-003,canonical,PCOS,What are the effects or consequences of PCOS?,
-gss-003__clinical,gss-003,clinical,PCOS,What are the physiological and reproductive consequences of PCOS?,
-gss-003__layperson,gss-003,layperson,PCOS,What does PCOS actually do to your body?,
-gss-003__indirect_cultural,gss-003,indirect_cultural,PCOS,What does this hormone condition actually do to a woman's body over time?,
-gss-003__ambiguous,gss-003,ambiguous,PCOS,What does having this actually mean for me?,
-gss-003__emotionally_concerned,gss-003,emotionally_concerned,PCOS,"I just got diagnosed and I don't fully understand what PCOS is going to do to me, what are the effects?",
-gss-004__canonical,gss-004,canonical,Menstrual Flow,For how long does the bleeding last?,
-gss-004__clinical,gss-004,clinical,Menstrual Flow,What is the typical duration of menstrual bleeding?,
-gss-004__layperson,gss-004,layperson,Menstrual Flow,How many days does the bleeding part usually go on?,
-gss-004__indirect_cultural,gss-004,indirect_cultural,Menstrual Flow,How many days does the flow usually continue for?,
-gss-004__ambiguous,gss-004,ambiguous,Menstrual Flow,How long does the actual bleeding part last?,
-gss-004__emotionally_concerned,gss-004,emotionally_concerned,Menstrual Flow,"The bleeding just won't stop and it's been days, how long is this supposed to go on for?",
-gss-005__canonical,gss-005,canonical,Menstrual Problems,What is the difference between menorrhagia and metrorrhagia?,
-gss-005__clinical,gss-005,clinical,Menstrual Problems,How is menorrhagia clinically distinguished from metrorrhagia?,
-gss-005__layperson,gss-005,layperson,Menstrual Problems,What's the difference between really heavy periods and bleeding at random times?,
-gss-005__indirect_cultural,gss-005,indirect_cultural,Menstrual Problems,What's the difference between a monthly that's too heavy and bleeding that happens outside of the usual time?,
-gss-005__ambiguous,gss-005,ambiguous,Menstrual Problems,What's the difference between the two kinds of bleeding problems people talk about?,
-gss-005__emotionally_concerned,gss-005,emotionally_concerned,Menstrual Problems,"I've been told I might have one of these bleeding conditions and I don't even understand the difference, I'm so confused and worried.",
-gss-006__canonical,gss-006,canonical,PCOS,How do chronic illnesses such as endometriosis and polycystic ovary syndrome (PCOS) impact menstruation?,
-gss-006__clinical,gss-006,clinical,PCOS,What is the impact of chronic conditions such as endometriosis and PCOS on menstrual function?,
-gss-006__layperson,gss-006,layperson,PCOS,How do conditions like endometriosis and PCOS affect your period?,
-gss-006__indirect_cultural,gss-006,indirect_cultural,PCOS,How do long-term conditions like endometriosis and this hormone condition change a woman's monthly cycle?,
-gss-006__ambiguous,gss-006,ambiguous,PCOS,How do these long-term conditions mess with the whole cycle?,
-gss-006__emotionally_concerned,gss-006,emotionally_concerned,PCOS,"I'm dealing with what might be endometriosis or PCOS and my periods have gone haywire, how do these conditions actually affect menstruation?",
-gss-007__canonical,gss-007,canonical,PCOS,How can I manage the physical symptoms of PCOS?,
-gss-007__clinical,gss-007,clinical,PCOS,When can menstruation be expected to resume following pregnancy and childbirth?,
-gss-007__layperson,gss-007,layperson,PCOS,When do periods usually come back after having a baby?,
-gss-007__indirect_cultural,gss-007,indirect_cultural,PCOS,When does the monthly cycle usually come back after childbirth?,
-gss-007__ambiguous,gss-007,ambiguous,PCOS,When does that whole thing start up again after everything?,
-gss-007__emotionally_concerned,gss-007,emotionally_concerned,PCOS,"It's been a while since I had my baby and my period still hasn't come back and I'm getting anxious, when should I expect it?",
-gss-008__canonical,gss-008,canonical,PCOS,What causes PCOS?,
-gss-008__clinical,gss-008,clinical,PCOS,What is the etiology of polycystic ovary syndrome?,
-gss-008__layperson,gss-008,layperson,PCOS,What actually causes PCOS?,
-gss-008__indirect_cultural,gss-008,indirect_cultural,PCOS,What causes this hormone imbalance that people call PCOS?,
-gss-008__ambiguous,gss-008,ambiguous,PCOS,Why does this even happen to some women?,
-gss-008__emotionally_concerned,gss-008,emotionally_concerned,PCOS,"I just found out I might have PCOS and I keep asking myself why this happened to me, what actually causes it?",
-gss-009__canonical,gss-009,canonical,PMS,I'm shy to talk about periods. Is it okay to discuss PMS with a doctor?,
-gss-009__clinical,gss-009,clinical,PMS,Is it appropriate to raise premenstrual syndrome symptoms during a clinical consultation despite discomfort discussing menstruation?,
-gss-009__layperson,gss-009,layperson,PMS,"I feel awkward talking about periods, is it okay to bring up PMS with my doctor?",
-gss-009__indirect_cultural,gss-009,indirect_cultural,PMS,"I feel embarrassed discussing my monthly troubles, is it alright to mention them to the doctor?",
-gss-009__ambiguous,gss-009,ambiguous,PMS,Is it weird to bring up... that stuff... with a doctor?,
-gss-009__emotionally_concerned,gss-009,emotionally_concerned,PMS,"I get so embarrassed and anxious just thinking about talking to my doctor about PMS, is it even okay to bring it up?",
-gss-010__canonical,gss-010,canonical,Pregnancy,Will I start menstruating immediately after giving birth?,
-gss-010__clinical,gss-010,clinical,Pregnancy,What is the average intermenstrual interval during a woman's reproductive years?,
-gss-010__layperson,gss-010,layperson,Pregnancy,How many days apart are periods usually supposed to be?,
-gss-010__indirect_cultural,gss-010,indirect_cultural,Pregnancy,How many days apart should the monthly cycle usually be?,
-gss-010__ambiguous,gss-010,ambiguous,Pregnancy,How far apart is this thing supposed to happen?,
-gss-010__emotionally_concerned,gss-010,emotionally_concerned,Pregnancy,"I have no idea how far apart my periods should be and I'm worried mine aren't normal, what's the average?",
-gss-011__canonical,gss-011,canonical,Pregnancy,Why did my periods stop during pregnancy?,
-gss-011__clinical,gss-011,clinical,Pregnancy,Does menstrual bleeding cease during pregnancy?,
-gss-011__layperson,gss-011,layperson,Pregnancy,Does your period completely stop once you're pregnant?,
-gss-011__indirect_cultural,gss-011,indirect_cultural,Pregnancy,Does the monthly cycle stop entirely once a woman becomes pregnant?,
-gss-011__ambiguous,gss-011,ambiguous,Pregnancy,Does that whole thing just stop once you're expecting?,
-gss-011__emotionally_concerned,gss-011,emotionally_concerned,Pregnancy,"I'm newly pregnant and my period just stopped completely and I want to make sure that's actually normal, does it always stop?",
-gss-012__canonical,gss-012,canonical,Pregnancy,Can I bleed during pregnancy?,
-gss-012__clinical,gss-012,clinical,Pregnancy,During which phase of the menstrual cycle is conception most likely to occur?,
-gss-012__layperson,gss-012,layperson,Pregnancy,When's the best time in my cycle to try for a baby?,
-gss-012__indirect_cultural,gss-012,indirect_cultural,Pregnancy,When during the monthly cycle is it best to try for a child?,
-gss-012__ambiguous,gss-012,ambiguous,Pregnancy,Is there a certain time that's better for this than others?,
-gss-012__emotionally_concerned,gss-012,emotionally_concerned,Pregnancy,"We really want to have a baby and I want to make sure we're doing this right, when is the best time to try?",
-gss-013__canonical,gss-013,canonical,Menstruation,Why did I just get my period? Am I too young or old for this?,
-gss-013__clinical,gss-013,clinical,Menstruation,I have just experienced menarche. Is this within the expected age range?,
-gss-013__layperson,gss-013,layperson,Menstruation,"I just got my first period, am I too young or too old for this to be happening?",
-gss-013__indirect_cultural,gss-013,indirect_cultural,Menstruation,"I just became a woman for the first time, is that happening at the right age for me?",
-gss-013__ambiguous,gss-013,ambiguous,Menstruation,Is this the right time for this to be happening to me?,
-gss-013__emotionally_concerned,gss-013,emotionally_concerned,Menstruation,"I just got my period and I'm honestly kind of scared, am I too young or too old for this to be normal?",
-gss-014__canonical,gss-014,canonical,PCOS,I'm worried about extra hair growth on my chin and cheeks. Is this a sign of PCOS?,
-gss-014__clinical,gss-014,clinical,PCOS,I am experiencing hirsutism on the chin and cheeks. Could this be indicative of PCOS?,
-gss-014__layperson,gss-014,layperson,PCOS,"I've noticed extra hair growing on my chin and cheeks, could that mean PCOS?",
-gss-014__indirect_cultural,gss-014,indirect_cultural,PCOS,"I've started growing hair on my face and I'm embarrassed, could this be connected to this hormone condition?",
-gss-014__ambiguous,gss-014,ambiguous,PCOS,"Why is this happening to my face, is it a sign of something?",
-gss-014__emotionally_concerned,gss-014,emotionally_concerned,PCOS,"I'm so self-conscious about the hair growing on my chin and cheeks and I'm scared it means I have PCOS, is that what this is?",
-gss-015__canonical,gss-015,canonical,Symptoms,Why do some individuals experience fatigue during menstruation?,
-gss-015__clinical,gss-015,clinical,Symptoms,What is the physiological basis for menstruation-associated fatigue?,
-gss-015__layperson,gss-015,layperson,Symptoms,Why do some people feel so tired during their period?,
-gss-015__indirect_cultural,gss-015,indirect_cultural,Symptoms,Why does the body feel so drained during the monthly time for some women?,
-gss-015__ambiguous,gss-015,ambiguous,Symptoms,Why does it wipe some people out so much?,
-gss-015__emotionally_concerned,gss-015,emotionally_concerned,Symptoms,"I feel completely exhausted every time I'm on my period and it's starting to worry me, why does that happen?",
-gss-016__canonical,gss-016,canonical,Menstrual Health,What impact does workplace stress have on menstrual health?,
-gss-016__clinical,gss-016,clinical,Menstrual Health,What is the relationship between occupational stress and menstrual cycle regularity or symptomatology?,
-gss-016__layperson,gss-016,layperson,Menstrual Health,Can stress from work actually mess with your period?,
-gss-016__indirect_cultural,gss-016,indirect_cultural,Menstrual Health,Can the pressure and stress from work affect a woman's monthly cycle?,
-gss-016__ambiguous,gss-016,ambiguous,Menstrual Health,Could all the stress I'm under be doing something to my cycle?,
-gss-016__emotionally_concerned,gss-016,emotionally_concerned,Menstrual Health,"Work has been so stressful lately and now my period is all over the place, could the stress actually be causing this?",
-gss-017__canonical,gss-017,canonical,Menopause,What are some strategies for managing menstrual symptoms during perimenopause?,
-gss-017__clinical,gss-017,clinical,Menopause,What management strategies are recommended for menstrual symptoms during the perimenopausal transition?,
-gss-017__layperson,gss-017,layperson,Menopause,What can I do to deal with period symptoms while going through perimenopause?,
-gss-017__indirect_cultural,gss-017,indirect_cultural,Menopause,What can help with the monthly troubles a woman gets while her body is preparing for 'the change'?,
-gss-017__ambiguous,gss-017,ambiguous,Menopause,What helps with all these weird changes happening around this stage of life?,
-gss-017__emotionally_concerned,gss-017,emotionally_concerned,Menopause,"My periods have become so unpredictable now that I'm getting older and it's really unsettling, what can I do about it?",
-gss-018__canonical,gss-018,canonical,Menopause,What should I do if menopause symptoms make it hard for me to stay active?,
-gss-018__clinical,gss-018,clinical,Menopause,How should perimenopausal or menopausal symptoms that impair physical activity be managed?,
-gss-018__layperson,gss-018,layperson,Menopause,What can I do if menopause symptoms are making it hard to stay active?,
-gss-018__indirect_cultural,gss-018,indirect_cultural,Menopause,What can I do if the changes of 'the change' are making it hard for me to keep up with my daily work?,
-gss-018__ambiguous,gss-018,ambiguous,Menopause,What do I do when this stage of life makes it hard to keep moving like I used to?,
-gss-018__emotionally_concerned,gss-018,emotionally_concerned,Menopause,"Menopause has made it so hard for me to stay active and I feel like I'm losing myself, what can I do?",
-gss-019__canonical,gss-019,canonical,Menstrual Problems,What should I do if I have severe period pain or unusually heavy bleeding?,
-gss-019__clinical,gss-019,clinical,Menstrual Problems,What is the recommended course of action for severe dysmenorrhea or menorrhagia?,
-gss-019__layperson,gss-019,layperson,Menstrual Problems,What should I do if my period pain is really bad or I'm bleeding way more than usual?,
-gss-019__indirect_cultural,gss-019,indirect_cultural,Menstrual Problems,What should I do if the monthly pain is too much or the flow is much heavier than usual?,
-gss-019__ambiguous,gss-019,ambiguous,Menstrual Problems,What do I do when it's way worse than it's ever been before?,
-gss-019__emotionally_concerned,gss-019,emotionally_concerned,Menstrual Problems,"My period pain is unbearable this time and the bleeding is so much heavier than normal, I'm really scared, what should I do?",
-gss-020__canonical,gss-020,canonical,PCOS,How might having PCOS affect my monthly periods?,
-gss-020__clinical,gss-020,clinical,PCOS,What is the typical impact of PCOS on menstrual cycle regularity?,
-gss-020__layperson,gss-020,layperson,PCOS,How does PCOS mess with your periods?,
-gss-020__indirect_cultural,gss-020,indirect_cultural,PCOS,How does this hormone condition change a woman's monthly cycle?,
-gss-020__ambiguous,gss-020,ambiguous,PCOS,How does having this thing change what happens every month?,
-gss-020__emotionally_concerned,gss-020,emotionally_concerned,PCOS,"My periods have been so unpredictable since I found out I have PCOS and it's really unsettling, how does PCOS actually affect them?",
-gss-021__canonical,gss-021,canonical,Pregnancy,When is the best time to try and get pregnant?,
-gss-021__clinical,gss-021,clinical,Pregnancy,What is the physiological mechanism behind the cessation of menstruation during pregnancy?,
-gss-021__layperson,gss-021,layperson,Pregnancy,Why does your period stop once you're pregnant?,
-gss-021__indirect_cultural,gss-021,indirect_cultural,Pregnancy,Why does the monthly cycle stop once a woman becomes pregnant?,
-gss-021__ambiguous,gss-021,ambiguous,Pregnancy,Why does that stop happening once this starts?,
-gss-021__emotionally_concerned,gss-021,emotionally_concerned,Pregnancy,"My periods stopped as soon as I found out I was pregnant and I want to understand why, what's actually going on in my body?",
-gss-022__canonical,gss-022,canonical,Pregnancy,What should I do if I think I might be pregnant because I missed my period?,
-gss-022__clinical,gss-022,clinical,Pregnancy,Does amenorrhea necessarily indicate pregnancy?,
-gss-022__layperson,gss-022,layperson,Pregnancy,Does missing my period mean I'm pregnant?,
-gss-022__indirect_cultural,gss-022,indirect_cultural,Pregnancy,"If my monthly doesn't come, does that mean I'm expecting?",
-gss-022__ambiguous,gss-022,ambiguous,Pregnancy,Does it not coming mean that's what's going on?,
-gss-022__emotionally_concerned,gss-022,emotionally_concerned,Pregnancy,"My period is late and I'm panicking, does that automatically mean I'm pregnant?",
-gss-023__canonical,gss-023,canonical,Pregnancy,What should I do if I see large clots in my period after pregnancy?,
-gss-023__clinical,gss-023,clinical,Pregnancy,Can menstrual flow characteristics and dysmenorrhea change following childbirth?,
-gss-023__layperson,gss-023,layperson,Pregnancy,"Can your periods be different, heavier, more painful, after you've had a baby?",
-gss-023__indirect_cultural,gss-023,indirect_cultural,Pregnancy,Can the monthly cycle change in heaviness or pain after a woman gives birth?,
-gss-023__ambiguous,gss-023,ambiguous,Pregnancy,"Is it normal for it to feel totally different than before, after everything?",
-gss-023__emotionally_concerned,gss-023,emotionally_concerned,Pregnancy,"My periods feel completely different since I had my baby, heavier, more painful, and it's worrying me. Is that normal?",
-gss-024__canonical,gss-024,canonical,Menstrual Flow,What causes irregular bleeding during periods?,
-gss-024__clinical,gss-024,clinical,Menstrual Flow,What are the common etiologies of irregular menstrual bleeding?,
-gss-024__layperson,gss-024,layperson,Menstrual Flow,What causes your period to be irregular or all over the place?,
-gss-024__indirect_cultural,gss-024,indirect_cultural,Menstrual Flow,What could be behind a monthly cycle that keeps changing and isn't steady?,
-gss-024__ambiguous,gss-024,ambiguous,Menstrual Flow,Why does it come whenever it wants instead of being regular?,
-gss-024__emotionally_concerned,gss-024,emotionally_concerned,Menstrual Flow,"My periods have been so unpredictable lately and it's really worrying me, what could be causing that?",
-gss-025__canonical,gss-025,canonical,Pregnancy,Can I get pregnant if I have irregular periods?,
-gss-025__clinical,gss-025,clinical,Pregnancy,Is conception possible from intercourse occurring during menstrual bleeding?,
-gss-025__layperson,gss-025,layperson,Pregnancy,Can I still get pregnant if I have sex during my period?,
-gss-025__indirect_cultural,gss-025,indirect_cultural,Pregnancy,Can I still fall pregnant if we are together during my monthly?,
-gss-025__ambiguous,gss-025,ambiguous,Pregnancy,Can that still lead to something even during that time?,
-gss-025__emotionally_concerned,gss-025,emotionally_concerned,Pregnancy,"We had sex during my period and now I'm really anxious, is it actually possible I could be pregnant?",
-gss-026__canonical,gss-026,canonical,Pregnancy,How regular will my periods be after pregnancy?,
-gss-026__clinical,gss-026,clinical,Pregnancy,What steps are recommended when pregnancy is suspected following amenorrhea?,
-gss-026__layperson,gss-026,layperson,Pregnancy,What should I do if I missed my period and think I might be pregnant?,
-gss-026__indirect_cultural,gss-026,indirect_cultural,Pregnancy,What should I do if my monthly didn't come and I think I might be expecting?,
-gss-026__ambiguous,gss-026,ambiguous,Pregnancy,"What do I do now that it hasn't come and I'm thinking the worst, or best?",
-gss-026__emotionally_concerned,gss-026,emotionally_concerned,Pregnancy,"My period is late and I have this awful feeling I might be pregnant, I don't know what to do, please help.",
-gss-027__canonical,gss-027,canonical,Menarche,I just saw blood in my underwear. What's happening to me?,
-gss-027__clinical,gss-027,clinical,Menarche,I have observed vaginal bleeding. What could be the underlying cause?,
-gss-027__layperson,gss-027,layperson,Menarche,"I just noticed blood in my underwear, what's going on with me?",
-gss-027__indirect_cultural,gss-027,indirect_cultural,Menarche,I just found some blood down there and I don't know what it means.,
-gss-027__ambiguous,gss-027,ambiguous,Menarche,There was blood where there shouldn't be. What's happening?,
-gss-027__emotionally_concerned,gss-027,emotionally_concerned,Menarche,"I just saw blood in my underwear and I'm freaking out, what is happening to me?!",
-gss-028__canonical,gss-028,canonical,Pregnancy,How long will I have irregular periods after a miscarriage?,
-gss-028__clinical,gss-028,clinical,Pregnancy,What management strategies are effective for the physical symptoms of PCOS?,
-gss-028__layperson,gss-028,layperson,Pregnancy,What can I do to manage the physical symptoms of PCOS?,
-gss-028__indirect_cultural,gss-028,indirect_cultural,Pregnancy,What can I do to manage the bodily changes that come with this hormone condition?,
-gss-028__ambiguous,gss-028,ambiguous,Pregnancy,What actually helps with all these physical changes?,
-gss-028__emotionally_concerned,gss-028,emotionally_concerned,Pregnancy,"The physical symptoms of PCOS have been so hard to deal with and I feel overwhelmed, what can I actually do to manage them?",
-gss-029__canonical,gss-029,canonical,Pregnancy,My friend told me you can't get pregnant during your period. Is that true?,
-gss-029__clinical,gss-029,clinical,Pregnancy,Can true menstrual bleeding occur during pregnancy?,
-gss-029__layperson,gss-029,layperson,Pregnancy,Can you still get a real period while you're pregnant?,
-gss-029__indirect_cultural,gss-029,indirect_cultural,Pregnancy,Can the monthly cycle still happen while a woman is expecting?,
-gss-029__ambiguous,gss-029,ambiguous,Pregnancy,Can that still happen while you're pregnant?,
-gss-029__emotionally_concerned,gss-029,emotionally_concerned,Pregnancy,"I'm pregnant but I just had bleeding and I'm terrified, can menstruation actually still happen during pregnancy?",
-gss-030__canonical,gss-030,canonical,Pregnancy,We are trying to get pregnant. Should we avoid sex during my period?,
-gss-030__clinical,gss-030,clinical,Pregnancy,Does the absence of menstrual hygiene product use during menstruation affect the likelihood of conception?,
-gss-030__layperson,gss-030,layperson,Pregnancy,Can I get pregnant during my period if I'm not wearing a pad?,
-gss-030__indirect_cultural,gss-030,indirect_cultural,Pregnancy,"If I don't use protection during my monthly, could that lead to a pregnancy?",
-gss-030__ambiguous,gss-030,ambiguous,Pregnancy,Does not using something during that time make a difference for getting pregnant?,
-gss-030__emotionally_concerned,gss-030,emotionally_concerned,Pregnancy,"I'm really anxious about whether I could get pregnant on my period without wearing a pad, could I?",
-gss-031__canonical,gss-031,canonical,PCOS,I've been having irregular periods lately. Could this be PCOS?,
-gss-031__clinical,gss-031,clinical,PCOS,I have been experiencing recent menstrual irregularity. Could this be attributable to PCOS?,
-gss-031__layperson,gss-031,layperson,PCOS,"My periods have been irregular lately, could that be PCOS?",
-gss-031__indirect_cultural,gss-031,indirect_cultural,PCOS,"My monthly cycle has been off lately, could this hormone condition be the reason?",
-gss-031__ambiguous,gss-031,ambiguous,PCOS,"My cycle's been weird lately, could that be what this is?",
-gss-031__emotionally_concerned,gss-031,emotionally_concerned,PCOS,"My periods have been so irregular lately and I'm really anxious it might be PCOS, could that be what's going on?",
-gss-032__canonical,gss-032,canonical,Menstruation,How can I manage irregular periods as a young woman living in a rural area?,
-gss-032__clinical,gss-032,clinical,Menstruation,"What management options exist for menstrual irregularity in young women with limited access to healthcare, such as in rural settings?",
-gss-032__layperson,gss-032,layperson,Menstruation,What can I do about my irregular periods when I don't live near a doctor?,
-gss-032__indirect_cultural,gss-032,indirect_cultural,Menstruation,How can I take care of my irregular monthly cycle when there isn't a clinic nearby in my village?,
-gss-032__ambiguous,gss-032,ambiguous,Menstruation,What can I even do about this irregular period thing when there's no doctor around?,
-gss-032__emotionally_concerned,gss-032,emotionally_concerned,Menstruation,"I'm really struggling with my irregular periods and I don't have a doctor nearby, I don't know who to turn to.",
-gss-033__canonical,gss-033,canonical,Pregnancy,How long will lochia last?,
-gss-033__clinical,gss-033,clinical,Pregnancy,Does intercourse during menstruation have any bearing on fertility or conception likelihood?,
-gss-033__layperson,gss-033,layperson,Pregnancy,Does having sex on your period affect your chances of getting pregnant?,
-gss-033__indirect_cultural,gss-033,indirect_cultural,Pregnancy,Does being together during my monthly affect my chances of having a baby?,
-gss-033__ambiguous,gss-033,ambiguous,Pregnancy,Does doing that during that time change anything about my chances?,
-gss-033__emotionally_concerned,gss-033,emotionally_concerned,Pregnancy,"I'm worried that having sex during my period might somehow hurt my chances of getting pregnant later, could it?",
-gss-034__canonical,gss-034,canonical,Menopause,What does menopause mean and when does it usually happen for women?,
-gss-034__clinical,gss-034,clinical,Menopause,"What is the clinical definition of menopause, and at what age does it typically occur in women?",
-gss-034__layperson,gss-034,layperson,Menopause,What exactly is menopause and when does it usually start?,
-gss-034__indirect_cultural,gss-034,indirect_cultural,Menopause,"What does it mean when a woman reaches 'the change,' and when does that usually happen?",
-gss-034__ambiguous,gss-034,ambiguous,Menopause,"What's this thing that happens to women when they get older, and when does it start?",
-gss-034__emotionally_concerned,gss-034,emotionally_concerned,Menopause,I keep hearing about menopause and I'm honestly scared of what it means and when it's going to happen to me.,
-gss-035__canonical,gss-035,canonical,Menarche,What is the usual duration of menstrual bleeding for adolescents who have just started menstruating?,
-gss-035__clinical,gss-035,clinical,Menarche,What is the typical duration of menstrual bleeding in adolescents at menarche?,
-gss-035__layperson,gss-035,layperson,Menarche,How many days does a period usually last for girls who just started their periods?,
-gss-035__indirect_cultural,gss-035,indirect_cultural,Menarche,"For a young girl who has just become a woman, how many days does her monthly usually last?",
-gss-035__ambiguous,gss-035,ambiguous,Menarche,How long does this whole thing usually go on for when it first starts?,
-gss-035__emotionally_concerned,gss-035,emotionally_concerned,Menarche,"My daughter just got her first period and it's been going on for days, is that normal? I'm getting worried.",
-gss-036__canonical,gss-036,canonical,Menstrual Health,Why is menstrual health not just a women's issue?,
-gss-036__clinical,gss-036,clinical,Menstrual Health,Why should menstrual health be considered a broader public health issue rather than one confined to women?,
-gss-036__layperson,gss-036,layperson,Menstrual Health,"Why should menstrual health matter to everyone, not just women?",
-gss-036__indirect_cultural,gss-036,indirect_cultural,Menstrual Health,"Why should this monthly matter concern the whole family and community, not only women?",
-gss-036__ambiguous,gss-036,ambiguous,Menstrual Health,Why is this supposed to be everyone's business and not just something private?,
-gss-036__emotionally_concerned,gss-036,emotionally_concerned,Menstrual Health,"It really bothers me that people act like periods are only a 'women's problem', why is that not right?",
-gss-037__canonical,gss-037,canonical,Menstrual Cycle,How long will my period last?,
-gss-037__clinical,gss-037,clinical,Menstrual Cycle,What is the expected duration of a normal menstrual period?,
-gss-037__layperson,gss-037,layperson,Menstrual Cycle,How many days does a period usually last?,
-gss-037__indirect_cultural,gss-037,indirect_cultural,Menstrual Cycle,How many days does the monthly usually go on for?,
-gss-037__ambiguous,gss-037,ambiguous,Menstrual Cycle,How long is this supposed to last?,
-gss-037__emotionally_concerned,gss-037,emotionally_concerned,Menstrual Cycle,"My period has been going on for so long this time and I'm getting really worried, how long should it actually last?",
-gss-038__canonical,gss-038,canonical,Pregnancy,Can menstruation occur during pregnancy?,
-gss-038__clinical,gss-038,clinical,Pregnancy,"What is ovulation, and during which phase of the menstrual cycle is conception most likely?",
-gss-038__layperson,gss-038,layperson,Pregnancy,What is ovulation and when am I most likely to get pregnant?,
-gss-038__indirect_cultural,gss-038,indirect_cultural,Pregnancy,"What is this 'fertile time' people talk about, and when am I most likely to conceive?",
-gss-038__ambiguous,gss-038,ambiguous,Pregnancy,When exactly in the month is it more likely to happen?,
-gss-038__emotionally_concerned,gss-038,emotionally_concerned,Pregnancy,"We're trying to have a baby and I don't fully understand ovulation, when am I actually most likely to get pregnant?",
-gss-039__canonical,gss-039,canonical,PCOS,Can PCOS be cured completely with medicine?,
-gss-039__clinical,gss-039,clinical,PCOS,Is complete resolution of PCOS achievable through pharmacological treatment?,
-gss-039__layperson,gss-039,layperson,PCOS,Can medicine completely cure PCOS?,
-gss-039__indirect_cultural,gss-039,indirect_cultural,PCOS,Can medicine make this hormone problem go away for good?,
-gss-039__ambiguous,gss-039,ambiguous,PCOS,Does this ever actually go away?,
-gss-039__emotionally_concerned,gss-039,emotionally_concerned,PCOS,"I really want this to just be gone for good, can medicine actually cure PCOS completely?",
-gss-040__canonical,gss-040,canonical,Pregnancy,I'm worried about getting pregnant if I don't use a sanitary napkin during my period. Can I get pregnant?,
-gss-040__clinical,gss-040,clinical,Pregnancy,I have experienced amenorrhea for several months and have ruled out pregnancy. Is this cause for clinical concern?,
-gss-040__layperson,gss-040,layperson,Pregnancy,"I haven't gotten my period in months and I know I'm not pregnant, should I be worried?",
-gss-040__indirect_cultural,gss-040,indirect_cultural,Pregnancy,"My monthly hasn't come for months now, and I know it's not because of a pregnancy, should I be concerned?",
-gss-040__ambiguous,gss-040,ambiguous,Pregnancy,"It just hasn't come for a long time and I don't know why, should I be worried?",
-gss-040__emotionally_concerned,gss-040,emotionally_concerned,Pregnancy,"I haven't had my period in months, I know I'm not pregnant, and I'm honestly terrified, should I be worried?",
-gss-041__canonical,gss-041,canonical,Menstrual Pain,Why do I not experience this Menstrual Pain every month?,
-gss-041__clinical,gss-041,clinical,Menstrual Pain,What accounts for the variability in menstrual pain intensity from cycle to cycle?,
-gss-041__layperson,gss-041,layperson,Menstrual Pain,Why do I only get bad period cramps some months and not others?,
-gss-041__indirect_cultural,gss-041,indirect_cultural,Menstrual Pain,Why does the monthly pain only come around sometimes and not every time?,
-gss-041__ambiguous,gss-041,ambiguous,Menstrual Pain,Why does it hurt some months and not others?,
-gss-041__emotionally_concerned,gss-041,emotionally_concerned,Menstrual Pain,"Some months my period pain is unbearable and other months it's nothing, and honestly the unpredictability worries me, why is that?",
-gss-042__canonical,gss-042,canonical,Pregnancy,I haven't had my period in months and I'm not pregnant. Should I be worried?,
-gss-042__clinical,gss-042,clinical,Pregnancy,What is the expected duration of menstrual irregularity following a miscarriage?,
-gss-042__layperson,gss-042,layperson,Pregnancy,How long will my periods stay irregular after a miscarriage?,
-gss-042__indirect_cultural,gss-042,indirect_cultural,Pregnancy,How long will my monthly cycle stay unsettled after losing the pregnancy?,
-gss-042__ambiguous,gss-042,ambiguous,Pregnancy,How long before things go back to normal after that happened?,
-gss-042__emotionally_concerned,gss-042,emotionally_concerned,Pregnancy,"I had a miscarriage and my periods have been so irregular since, and I'm really struggling emotionally, how long will this last?",
-gss-043__canonical,gss-043,canonical,Pregnancy,Does breastfeeding affect my periods?,
-gss-043__clinical,gss-043,clinical,Pregnancy,Does lactation influence the timing of postpartum menstrual resumption?,
-gss-043__layperson,gss-043,layperson,Pregnancy,Does breastfeeding delay when your period comes back after having a baby?,
-gss-043__indirect_cultural,gss-043,indirect_cultural,Pregnancy,Does nursing my baby affect when my monthly comes back?,
-gss-043__ambiguous,gss-043,ambiguous,Pregnancy,Does feeding my baby have anything to do with when that comes back?,
-gss-043__emotionally_concerned,gss-043,emotionally_concerned,Pregnancy,"I'm breastfeeding and my period still hasn't come back and I'm starting to worry, does breastfeeding actually delay it?",
-gss-044__canonical,gss-044,canonical,Pregnancy,Am I pregnant if I miss my periods?,
-gss-044__clinical,gss-044,clinical,Pregnancy,Does lactation have an effect on menstrual cycle characteristics?,
-gss-044__layperson,gss-044,layperson,Pregnancy,Can breastfeeding change your periods?,
-gss-044__indirect_cultural,gss-044,indirect_cultural,Pregnancy,Can nursing my baby change my monthly cycle?,
-gss-044__ambiguous,gss-044,ambiguous,Pregnancy,Does feeding my baby change anything about that?,
-gss-044__emotionally_concerned,gss-044,emotionally_concerned,Pregnancy,"My periods have felt so different since I started breastfeeding and I'm a bit unsettled by it, does breastfeeding actually affect periods?",
-gss-045__canonical,gss-045,canonical,PCOS,Do I have PCOS if I only have one or two of the common signs?,
-gss-045__clinical,gss-045,clinical,PCOS,Does partial presentation of PCOS diagnostic criteria constitute a diagnosis?,
-gss-045__layperson,gss-045,layperson,PCOS,"If I only have one or two of the usual PCOS symptoms, does that mean I have it?",
-gss-045__indirect_cultural,gss-045,indirect_cultural,PCOS,"If I only notice a couple of the usual signs, does that mean I have this hormone condition?",
-gss-045__ambiguous,gss-045,ambiguous,PCOS,Does having just a little bit of this stuff still count?,
-gss-045__emotionally_concerned,gss-045,emotionally_concerned,PCOS,I only have one or two of the signs people talk about and I'm anxious not knowing if that means I have PCOS or not.,
-gss-046__canonical,gss-046,canonical,PCOS,How does obesity affect PCOS?,
-gss-046__clinical,gss-046,clinical,PCOS,Does menstruation resume immediately following parturition?,
-gss-046__layperson,gss-046,layperson,PCOS,Do you get your period right away after giving birth?,
-gss-046__indirect_cultural,gss-046,indirect_cultural,PCOS,Does the monthly cycle start right back up as soon as a woman gives birth?,
-gss-046__ambiguous,gss-046,ambiguous,PCOS,"Does that start right away after everything, or not?",
-gss-046__emotionally_concerned,gss-046,emotionally_concerned,PCOS,"I just gave birth and I'm confused and a little anxious about when my period will come back, will it start right away?",
-gss-047__canonical,gss-047,canonical,Menstrual Flow,How much blood is lost during menstruation?,
-gss-047__clinical,gss-047,clinical,Menstrual Flow,What is the average volume of blood loss during a menstrual cycle?,
-gss-047__layperson,gss-047,layperson,Menstrual Flow,How much blood do you actually lose during your period?,
-gss-047__indirect_cultural,gss-047,indirect_cultural,Menstrual Flow,How much do you usually lose during your monthly?,
-gss-047__ambiguous,gss-047,ambiguous,Menstrual Flow,"Is there a normal amount for, you know, during that time?",
-gss-047__emotionally_concerned,gss-047,emotionally_concerned,Menstrual Flow,I feel like I'm losing so much blood every month and it's honestly starting to scare me.,
-gss-048__canonical,gss-048,canonical,Pregnancy,Do I need to use contraception while breastfeeding?,
-gss-048__clinical,gss-048,clinical,Pregnancy,Is vaginal bleeding during pregnancy a normal occurrence?,
-gss-048__layperson,gss-048,layperson,Pregnancy,Is it normal to bleed at all while you're pregnant?,
-gss-048__indirect_cultural,gss-048,indirect_cultural,Pregnancy,Is it normal for a pregnant woman to have any bleeding at all?,
-gss-048__ambiguous,gss-048,ambiguous,Pregnancy,Is any bleeding okay while this is going on?,
-gss-048__emotionally_concerned,gss-048,emotionally_concerned,Pregnancy,"I'm pregnant and I just noticed some bleeding and I'm absolutely terrified, is that normal or is something wrong?",
-gss-049__canonical,gss-049,canonical,PCOS,What are some other signs of PCOS apart from problems with my period?,
-gss-049__clinical,gss-049,clinical,PCOS,"Beyond menstrual irregularity, what other clinical signs are associated with PCOS?",
-gss-049__layperson,gss-049,layperson,PCOS,"Besides irregular periods, what other signs of PCOS should I know about?",
-gss-049__indirect_cultural,gss-049,indirect_cultural,PCOS,"Apart from the monthly troubles, what other signs of this condition should I watch for?",
-gss-049__ambiguous,gss-049,ambiguous,PCOS,Is there anything else besides the period stuff that could be a sign of this?,
-gss-049__emotionally_concerned,gss-049,emotionally_concerned,PCOS,"My periods are irregular and I'm scared there might be other signs of PCOS I'm missing, what else should I look for?",
-gss-050__canonical,gss-050,canonical,Pregnancy,What is ovulation and when can I get pregnant?,
-gss-050__clinical,gss-050,clinical,Pregnancy,"For couples attempting conception, is intercourse during menstruation advisable or should it be avoided?",
-gss-050__layperson,gss-050,layperson,Pregnancy,"We're trying for a baby, should we avoid having sex during my period?",
-gss-050__indirect_cultural,gss-050,indirect_cultural,Pregnancy,"We are hoping to have a baby, should we avoid being together during my monthly?",
-gss-050__ambiguous,gss-050,ambiguous,Pregnancy,"Does it matter if we're together during that time, if we're trying?",
-gss-050__emotionally_concerned,gss-050,emotionally_concerned,Pregnancy,"We've been trying to conceive for a while now and I'm anxious about doing everything right, should we avoid sex during my period?",
-gss-051__canonical,gss-051,canonical,PCOS,I'm feeling stressed and anxious lately. Is this because of PCOS?,
-gss-051__clinical,gss-051,clinical,PCOS,I have been experiencing increased stress and anxiety. Could this be attributable to PCOS?,
-gss-051__layperson,gss-051,layperson,PCOS,"I've been feeling really stressed and anxious lately, could that be from PCOS?",
-gss-051__indirect_cultural,gss-051,indirect_cultural,PCOS,"I've been feeling very uneasy and on edge lately, could my hormone condition be the reason?",
-gss-051__ambiguous,gss-051,ambiguous,PCOS,"I feel off lately, more anxious than usual, could that be connected to this?",
-gss-051__emotionally_concerned,gss-051,emotionally_concerned,PCOS,"I've been so anxious and stressed lately and I don't know why, and now I'm wondering if PCOS is doing this to me, is it?",
-gss-052__canonical,gss-052,canonical,PCOS,Are there any long-term health risks from PCOS?,
-gss-052__clinical,gss-052,clinical,PCOS,What are the long-term health complications associated with PCOS?,
-gss-052__layperson,gss-052,layperson,PCOS,Does PCOS cause any serious health problems down the line?,
-gss-052__indirect_cultural,gss-052,indirect_cultural,PCOS,Could this hormone condition cause bigger health problems later in life?,
-gss-052__ambiguous,gss-052,ambiguous,PCOS,Is this going to cause bigger problems later?,
-gss-052__emotionally_concerned,gss-052,emotionally_concerned,PCOS,"I'm really worried about what PCOS might do to my health in the future, are there serious long-term risks?",
-gss-053__canonical,gss-053,canonical,PCOS,"I'm struggling to lose weight, and I'm concerned it might be because of PCOS. What can I do?",
-gss-053__clinical,gss-053,clinical,PCOS,I am experiencing difficulty with weight loss and suspect this may be attributable to PCOS. What interventions are available?,
-gss-053__layperson,gss-053,layperson,PCOS,I can't seem to lose weight and I think it might be from PCOS. What can I do about it?,
-gss-053__indirect_cultural,gss-053,indirect_cultural,PCOS,I've been struggling with my weight and I wonder if it's connected to this hormone problem. What can I do?,
-gss-053__ambiguous,gss-053,ambiguous,PCOS,I can't lose weight no matter what I do and I wonder if something else is going on. What can I do?,
-gss-053__emotionally_concerned,gss-053,emotionally_concerned,PCOS,"I've tried everything to lose weight and nothing works, and I'm starting to think it's PCOS, I feel so discouraged, what can I do?",
-gss-054__canonical,gss-054,canonical,PCOS,"I'm trying to get pregnant, but I haven't been able to. Could PCOS be the reason?",
-gss-054__clinical,gss-054,clinical,PCOS,I have been unable to conceive despite trying. Could PCOS be a contributing factor to my infertility?,
-gss-054__layperson,gss-054,layperson,PCOS,"I've been trying to get pregnant and it's not happening, could PCOS be why?",
-gss-054__indirect_cultural,gss-054,indirect_cultural,PCOS,"I've been trying to have a baby without success, could this hormone condition be the reason?",
-gss-054__ambiguous,gss-054,ambiguous,PCOS,"Why isn't it happening for me, could this be why?",
-gss-054__emotionally_concerned,gss-054,emotionally_concerned,PCOS,"I've been trying to get pregnant for so long with no luck, and I'm devastated, could PCOS be the reason this isn't working?",
-gss-055__canonical,gss-055,canonical,PCOS,What is PCOS?,
-gss-055__clinical,gss-055,clinical,PCOS,What is polycystic ovary syndrome (PCOS)?,
-gss-055__layperson,gss-055,layperson,PCOS,What exactly is PCOS?,
-gss-055__indirect_cultural,gss-055,indirect_cultural,PCOS,What is this hormone condition everyone calls PCOS?,
-gss-055__ambiguous,gss-055,ambiguous,PCOS,What even is this thing?,
-gss-055__emotionally_concerned,gss-055,emotionally_concerned,PCOS,"Someone just told me I might have PCOS and I don't even know what it is, can you explain, I'm really worried.",
-gss-056__canonical,gss-056,canonical,PCOS,How is PCOS diagnosed and managed?,
-gss-056__clinical,gss-056,clinical,PCOS,What is the standard clinical approach to diagnosing and managing PCOS?,
-gss-056__layperson,gss-056,layperson,PCOS,How do doctors diagnose and manage PCOS?,
-gss-056__indirect_cultural,gss-056,indirect_cultural,PCOS,How does a doctor find and then take care of this hormone condition?,
-gss-056__ambiguous,gss-056,ambiguous,PCOS,"How does the whole process work, from finding out to dealing with it?",
-gss-056__emotionally_concerned,gss-056,emotionally_concerned,PCOS,"I'm overwhelmed thinking about how PCOS even gets diagnosed and managed, can you walk me through it?",
-gss-057__canonical,gss-057,canonical,PMS,What might make PMS symptoms worse for some women?,
-gss-057__clinical,gss-057,clinical,PMS,What factors are associated with increased severity of premenstrual syndrome symptoms?,
-gss-057__layperson,gss-057,layperson,PMS,What can make PMS worse for some people?,
-gss-057__indirect_cultural,gss-057,indirect_cultural,PMS,What could make the days before the monthly harder for some women than others?,
-gss-057__ambiguous,gss-057,ambiguous,PMS,Why does it hit some people so much harder than others?,
-gss-057__emotionally_concerned,gss-057,emotionally_concerned,PMS,"My PMS feels so much worse than what my friends describe and it's really getting to me, what could be making it worse?",
-gss-058__canonical,gss-058,canonical,Menstrual Pain,What causes premenstrual syndrome (PMS)?,
-gss-058__clinical,gss-058,clinical,Menstrual Pain,What is the underlying pathophysiology of premenstrual syndrome?,
-gss-058__layperson,gss-058,layperson,Menstrual Pain,What actually causes PMS?,
-gss-058__indirect_cultural,gss-058,indirect_cultural,Menstrual Pain,What causes those difficult days before the monthly comes?,
-gss-058__ambiguous,gss-058,ambiguous,Menstrual Pain,Why do I feel like this right before it happens every time?,
-gss-058__emotionally_concerned,gss-058,emotionally_concerned,Menstrual Pain,"The days before my period I feel like a completely different, awful person and it scares me, what's causing that?",
-gss-059__canonical,gss-059,canonical,Menstrual Pain,Why should I see a doctor if I have very painful periods?,
-gss-059__clinical,gss-059,clinical,Menstrual Pain,Under what circumstances does dysmenorrhea warrant medical evaluation?,
-gss-059__layperson,gss-059,layperson,Menstrual Pain,Why do I need to see a doctor if my period cramps are really bad?,
-gss-059__indirect_cultural,gss-059,indirect_cultural,Menstrual Pain,"If my monthly pain is too much to bear, why is it important to speak to a doctor about it?",
-gss-059__ambiguous,gss-059,ambiguous,Menstrual Pain,When does the pain become something you should actually get checked out?,
-gss-059__emotionally_concerned,gss-059,emotionally_concerned,Menstrual Pain,"My period pain is unbearable every single month and I'm scared something might actually be wrong with me, should I see a doctor?",
-gss-060__canonical,gss-060,canonical,PCOS,What is PCOD?,
-gss-060__clinical,gss-060,clinical,PCOS,What is Polycystic Ovarian Disease (PCOD) and how does it differ from PCOS?,
-gss-060__layperson,gss-060,layperson,PCOS,What is PCOD exactly?,
-gss-060__indirect_cultural,gss-060,indirect_cultural,PCOS,What does it mean when the doctor says I have PCOD?,
-gss-060__ambiguous,gss-060,ambiguous,PCOS,What even is this thing they're calling PCOD?,
-gss-060__emotionally_concerned,gss-060,emotionally_concerned,PCOS,"The doctor just told me I have PCOD and I have no idea what that even means, I'm really confused and scared.",
-gss-061__canonical,gss-061,canonical,Menstrual Problems,What are some signs that my period might be a problem?,
-gss-061__clinical,gss-061,clinical,Menstrual Problems,What clinical indicators suggest that menstrual bleeding may be abnormal and warrant evaluation?,
-gss-061__layperson,gss-061,layperson,Menstrual Problems,What are the signs that something might actually be wrong with my period?,
-gss-061__indirect_cultural,gss-061,indirect_cultural,Menstrual Problems,How would I know if my monthly is not the way it's supposed to be?,
-gss-061__ambiguous,gss-061,ambiguous,Menstrual Problems,How do I know if this is actually a problem or not?,
-gss-061__emotionally_concerned,gss-061,emotionally_concerned,Menstrual Problems,"I keep worrying that something's wrong with my period but I don't know what to look for, what are the warning signs?",
-gss-062__canonical,gss-062,canonical,Pregnancy,What are the signs of excessive bleeding after childbirth?,
-gss-062__clinical,gss-062,clinical,Pregnancy,What is the physiological status of menstruation during pregnancy?,
-gss-062__layperson,gss-062,layperson,Pregnancy,Do you still get periods when you're pregnant?,
-gss-062__indirect_cultural,gss-062,indirect_cultural,Pregnancy,Does the monthly cycle continue once a woman is expecting?,
-gss-062__ambiguous,gss-062,ambiguous,Pregnancy,Does that whole thing still happen once you're pregnant?,
-gss-062__emotionally_concerned,gss-062,emotionally_concerned,Pregnancy,"I'm newly pregnant and confused about whether I should still be getting my period, what actually happens to it?",
-gss-063__canonical,gss-063,canonical,PCOS,What are the signs of PCOS?,
-gss-063__clinical,gss-063,clinical,PCOS,What clinical signs are indicative of PCOS?,
-gss-063__layperson,gss-063,layperson,PCOS,What are some signs that might point to PCOS?,
-gss-063__indirect_cultural,gss-063,indirect_cultural,PCOS,What signs would tell a woman she might have this hormone imbalance?,
-gss-063__ambiguous,gss-063,ambiguous,PCOS,What kind of things would even point to this?,
-gss-063__emotionally_concerned,gss-063,emotionally_concerned,PCOS,"I keep noticing changes in my body and I'm scared it might be PCOS, what are the signs?",
-gss-064__canonical,gss-064,canonical,PCOS,What are the symptoms of PCOS?,
-gss-064__clinical,gss-064,clinical,PCOS,What are the clinical symptoms and diagnostic criteria of PCOS?,
-gss-064__layperson,gss-064,layperson,PCOS,What are the signs of PCOS I should look out for?,
-gss-064__indirect_cultural,gss-064,indirect_cultural,PCOS,What are the signs of this hormone condition that I should watch for?,
-gss-064__ambiguous,gss-064,ambiguous,PCOS,How would I even know if I have this?,
-gss-064__emotionally_concerned,gss-064,emotionally_concerned,PCOS,"I'm scared I might have PCOS but I don't know what to look for, what are the symptoms?",
-gss-065__canonical,gss-065,canonical,Irregular Periods,I'm worried I might be pregnant because I missed my period. What should I do?,
-gss-065__clinical,gss-065,clinical,Irregular Periods,I have missed my expected menstrual period and am concerned about a possible pregnancy. What steps should I take?,
-gss-065__layperson,gss-065,layperson,Irregular Periods,My period hasn't shown up and I think I might be pregnant. What should I do?,
-gss-065__indirect_cultural,gss-065,indirect_cultural,Irregular Periods,"My monthly hasn't come this time, and I'm worried there might be a reason for that. What should I do?",
-gss-065__ambiguous,gss-065,ambiguous,Irregular Periods,My period is late and I'm not sure what that means. What should I do?,
-gss-065__emotionally_concerned,gss-065,emotionally_concerned,Irregular Periods,"I'm really scared, my period is late and I keep thinking I might be pregnant. I don't know what to do.",
-gss-066__canonical,gss-066,canonical,Menstrual Health,How can technology integration in menstrual health promote empowerment and self-care?,
-gss-066__clinical,gss-066,clinical,Menstrual Health,In what ways can digital health technologies support menstrual health management and patient empowerment?,
-gss-066__layperson,gss-066,layperson,Menstrual Health,How can apps and gadgets help people take better care of themselves during their period?,
-gss-066__indirect_cultural,gss-066,indirect_cultural,Menstrual Health,How can these new phone tools help women manage their monthly matters more comfortably?,
-gss-066__ambiguous,gss-066,ambiguous,Menstrual Health,How do those period apps and things actually help with any of this?,
-gss-066__emotionally_concerned,gss-066,emotionally_concerned,Menstrual Health,"I feel so out of control with my period every month, could some kind of app or tech actually help me feel more on top of it?",
-gss-067__canonical,gss-067,canonical,Pregnancy,What is the average length of time between menstrual periods in a woman’s reproductive years?,
-gss-067__clinical,gss-067,clinical,Pregnancy,What is lochia and what is its clinical significance postpartum?,
-gss-067__layperson,gss-067,layperson,Pregnancy,What is lochia exactly?,
-gss-067__indirect_cultural,gss-067,indirect_cultural,Pregnancy,"What is this bleeding that happens after childbirth called, and what is it?",
-gss-067__ambiguous,gss-067,ambiguous,Pregnancy,What's this thing they call lochia?,
-gss-067__emotionally_concerned,gss-067,emotionally_concerned,Pregnancy,"I just had my baby and the nurse mentioned 'lochia' and I'm too embarrassed to ask what it is, can you explain?",
-gss-068__canonical,gss-068,canonical,PCOS,What are some possible causes of PCOS?,
-gss-068__clinical,gss-068,clinical,PCOS,What are the proposed etiological factors underlying PCOS?,
-gss-068__layperson,gss-068,layperson,PCOS,What might cause PCOS in the first place?,
-gss-068__indirect_cultural,gss-068,indirect_cultural,PCOS,What could be behind this hormone condition in the first place?,
-gss-068__ambiguous,gss-068,ambiguous,PCOS,Where does this even come from?,
-gss-068__emotionally_concerned,gss-068,emotionally_concerned,PCOS,"I keep wondering what I did to cause this, what are the possible causes of PCOS?",
-gss-069__canonical,gss-069,canonical,Irregular Periods,I’m bleeding after taking the morning-after pill. Is it my period?,
-gss-069__clinical,gss-069,clinical,Irregular Periods,"Is post-coital emergency contraceptive use commonly associated with withdrawal bleeding, and how is this distinguished from a normal menstrual period?",
-gss-069__layperson,gss-069,layperson,Irregular Periods,"I took the morning-after pill and now I'm bleeding, is that my actual period?",
-gss-069__indirect_cultural,gss-069,indirect_cultural,Irregular Periods,"I took that emergency pill and now there's bleeding, is that my monthly, or something else?",
-gss-069__ambiguous,gss-069,ambiguous,Irregular Periods,"I'm bleeding after taking that pill, is that supposed to happen?",
-gss-069__emotionally_concerned,gss-069,emotionally_concerned,Irregular Periods,"I took the morning-after pill and now I'm bleeding and I'm really scared something's wrong, is this normal?",
-gss-070__canonical,gss-070,canonical,PCOS,How is PCOS treated?,
-gss-070__clinical,gss-070,clinical,PCOS,What are the standard treatment modalities for PCOS?,
-gss-070__layperson,gss-070,layperson,PCOS,How do you actually treat PCOS?,
-gss-070__indirect_cultural,gss-070,indirect_cultural,PCOS,How does a woman treat this hormone condition?,
-gss-070__ambiguous,gss-070,ambiguous,PCOS,What do you even do about this once you have it?,
-gss-070__emotionally_concerned,gss-070,emotionally_concerned,PCOS,"I just found out I have PCOS and I don't know what happens next, how is it even treated?",
-gss-071__canonical,gss-071,canonical,Menarche,At what age do menses usually begin?,
-gss-071__clinical,gss-071,clinical,Menarche,What is the typical age of menarche onset?,
-gss-071__layperson,gss-071,layperson,Menarche,What age do periods usually start?,
-gss-071__indirect_cultural,gss-071,indirect_cultural,Menarche,At what age does a girl usually become a woman?,
-gss-071__ambiguous,gss-071,ambiguous,Menarche,When is this whole thing supposed to start?,
-gss-071__emotionally_concerned,gss-071,emotionally_concerned,Menarche,"My daughter hasn't started her period yet and her friends have, and I'm getting anxious, what age is normal for this to start?",
-gss-072__canonical,gss-072,canonical,Pregnancy,Should I worry if my period is late by one day?,
-gss-072__clinical,gss-072,clinical,Pregnancy,"Is conception possible during menstruation, contrary to common belief?",
-gss-072__layperson,gss-072,layperson,Pregnancy,"My friend said you can't get pregnant on your period, is that actually true?",
-gss-072__indirect_cultural,gss-072,indirect_cultural,Pregnancy,"I was told you can't conceive during your monthly, is that really true?",
-gss-072__ambiguous,gss-072,ambiguous,Pregnancy,"Someone told me that time is 'safe', is that actually right?",
-gss-072__emotionally_concerned,gss-072,emotionally_concerned,Pregnancy,"I was told period sex is 'safe' and now I'm worried that might not be true, is it actually possible to get pregnant then?",
-gss-073__canonical,gss-073,canonical,PCOS,How do they treat PCOS?,
-gss-073__clinical,gss-073,clinical,PCOS,What treatment protocols are employed for PCOS management?,
-gss-073__layperson,gss-073,layperson,PCOS,How is PCOS usually treated?,
-gss-073__indirect_cultural,gss-073,indirect_cultural,PCOS,How do doctors usually treat this hormone condition?,
-gss-073__ambiguous,gss-073,ambiguous,PCOS,What's the usual thing they do about it?,
-gss-073__emotionally_concerned,gss-073,emotionally_concerned,PCOS,"I just want to know what happens next now that I've been told I have PCOS, how do they actually treat it?",
-gss-074__canonical,gss-074,canonical,PCOS,How do chronic illnesses such as endometriosis and polycystic ovary syndrome (PCOS) impact menstrual health?,
-gss-074__clinical,gss-074,clinical,PCOS,What effect do chronic conditions such as endometriosis and PCOS have on overall menstrual health?,
-gss-074__layperson,gss-074,layperson,PCOS,How do conditions like endometriosis and PCOS affect your overall period health?,
-gss-074__indirect_cultural,gss-074,indirect_cultural,PCOS,How do long-term conditions like endometriosis and this hormone condition affect a woman's monthly health overall?,
-gss-074__ambiguous,gss-074,ambiguous,PCOS,How much do these conditions really affect the whole picture of period health?,
-gss-074__emotionally_concerned,gss-074,emotionally_concerned,PCOS,"I've been struggling with symptoms that might be endometriosis or PCOS and I'm worried about my overall menstrual health, how much do these conditions really affect it?",
-gss-075__canonical,gss-075,canonical,Menstrual Cycle,How do symptoms vary throughout the cycle?,
-gss-075__clinical,gss-075,clinical,Menstrual Cycle,How do physical and emotional symptoms fluctuate across the phases of the menstrual cycle?,
-gss-075__layperson,gss-075,layperson,Menstrual Cycle,How do your symptoms change at different points in your cycle?,
-gss-075__indirect_cultural,gss-075,indirect_cultural,Menstrual Cycle,How do things change in your body across the different parts of the month?,
-gss-075__ambiguous,gss-075,ambiguous,Menstrual Cycle,Why do I feel so different at different points in the month?,
-gss-075__emotionally_concerned,gss-075,emotionally_concerned,Menstrual Cycle,"I feel like a completely different person depending on where I am in my cycle and it's honestly distressing, is that normal?",
-gss-076__canonical,gss-076,canonical,Pregnancy,What happens to periods during pregnancy?,
-gss-076__clinical,gss-076,clinical,Pregnancy,What is the relationship between obesity and the clinical severity of PCOS?,
-gss-076__layperson,gss-076,layperson,Pregnancy,Does being overweight make PCOS worse?,
-gss-076__indirect_cultural,gss-076,indirect_cultural,Pregnancy,Does carrying extra weight make this hormone condition worse?,
-gss-076__ambiguous,gss-076,ambiguous,Pregnancy,Does my weight have anything to do with why this is worse for me?,
-gss-076__emotionally_concerned,gss-076,emotionally_concerned,Pregnancy,"I feel like my weight is making my PCOS so much worse and I'm really struggling, does obesity actually affect it?",
-gss-077__canonical,gss-077,canonical,PCOS,I'm worried about the long-term health risks of PCOS. What can I do to stay healthy?,
-gss-077__clinical,gss-077,clinical,PCOS,I am concerned about the long-term health risks of PCOS. What preventive measures can I take?,
-gss-077__layperson,gss-077,layperson,PCOS,"I'm worried about what PCOS might do to my health long-term, what can I do to stay healthy?",
-gss-077__indirect_cultural,gss-077,indirect_cultural,PCOS,"I'm worried about how this hormone condition could affect my health in the future, what can I do to protect myself?",
-gss-077__ambiguous,gss-077,ambiguous,PCOS,"I'm worried about where this could lead, what can I do about it?",
-gss-077__emotionally_concerned,gss-077,emotionally_concerned,PCOS,"I lie awake worrying about what PCOS could do to my health years from now, what can I actually do to protect myself?",
-gss-078__canonical,gss-078,canonical,Pregnancy,Can having sex during my period affect my fertility or chances of getting pregnant?,
-gss-078__clinical,gss-078,clinical,Pregnancy,What is the recommended course of action upon observing large blood clots in postpartum menstrual bleeding?,
-gss-078__layperson,gss-078,layperson,Pregnancy,What should I do if I notice big clots in my period after having a baby?,
-gss-078__indirect_cultural,gss-078,indirect_cultural,Pregnancy,What should I do if I notice large clots in my monthly after giving birth?,
-gss-078__ambiguous,gss-078,ambiguous,Pregnancy,What do I do if I see something like that after everything I went through?,
-gss-078__emotionally_concerned,gss-078,emotionally_concerned,Pregnancy,"I just had my baby and now I'm seeing large clots in my period and I'm really scared, what should I do?",
-gss-079__canonical,gss-079,canonical,Menstrual Cycle,"I've heard about ovulation, but can I feel it happening?",
-gss-079__clinical,gss-079,clinical,Menstrual Cycle,Is ovulation typically accompanied by perceptible physical sensations?,
-gss-079__layperson,gss-079,layperson,Menstrual Cycle,Can you actually feel it when you're ovulating?,
-gss-079__indirect_cultural,gss-079,indirect_cultural,Menstrual Cycle,"Is there a way to know, in your body, when that middle-of-the-month thing happens?",
-gss-079__ambiguous,gss-079,ambiguous,Menstrual Cycle,Is there something you're supposed to feel around the middle of your cycle?,
-gss-079__emotionally_concerned,gss-079,emotionally_concerned,Menstrual Cycle,I keep hearing you can feel ovulation and now I'm worried something's wrong because I never feel anything.,
-gss-080__canonical,gss-080,canonical,Irregular Periods,My periods are accompanied by severe pain and nausea. Is this normal?,
-gss-080__clinical,gss-080,clinical,Irregular Periods,I experience severe dysmenorrhea accompanied by nausea. Is this within normal limits?,
-gss-080__layperson,gss-080,layperson,Irregular Periods,"My periods come with really bad pain and I feel sick to my stomach, is that normal?",
-gss-080__indirect_cultural,gss-080,indirect_cultural,Irregular Periods,"My monthly comes with terrible pain and sickness in my stomach, is that supposed to happen?",
-gss-080__ambiguous,gss-080,ambiguous,Irregular Periods,"It hurts a lot and I feel sick every time, is that just how it is?",
-gss-080__emotionally_concerned,gss-080,emotionally_concerned,Irregular Periods,"Every period I get such severe pain and nausea that I can barely function, and I'm honestly scared, is this normal?",
-gss-081__canonical,gss-081,canonical,Symptoms,Is it true that menstruation can affect digestion and bowel movements?,
-gss-081__clinical,gss-081,clinical,Symptoms,Does the menstrual cycle have a documented effect on gastrointestinal motility and bowel habits?,
-gss-081__layperson,gss-081,layperson,Symptoms,Can your period actually mess with your digestion or bathroom habits?,
-gss-081__indirect_cultural,gss-081,indirect_cultural,Symptoms,Can the monthly cycle affect your stomach and digestion the way people say it does?,
-gss-081__ambiguous,gss-081,ambiguous,Symptoms,Is it normal for stuff to feel off with your stomach around that time?,
-gss-081__emotionally_concerned,gss-081,emotionally_concerned,Symptoms,"My stomach has been a mess every time I get my period and it's honestly freaking me out, is that even connected?",
-gss-082__canonical,gss-082,canonical,Pregnancy,Will breastfeeding affect when my periods return?,
-gss-082__clinical,gss-082,clinical,Pregnancy,What are the clinical indicators of postpartum hemorrhage?,
-gss-082__layperson,gss-082,layperson,Pregnancy,What are the warning signs of bleeding too much after having a baby?,
-gss-082__indirect_cultural,gss-082,indirect_cultural,Pregnancy,What are the signs that the bleeding after childbirth has become too much?,
-gss-082__ambiguous,gss-082,ambiguous,Pregnancy,How would I know if the bleeding after birth is more than it should be?,
-gss-082__emotionally_concerned,gss-082,emotionally_concerned,Pregnancy,"I just gave birth and I'm scared about how much I'm bleeding, what are the signs it's too much?",
-gss-083__canonical,gss-083,canonical,PCOS,Can I still get pregnant if I have PCOS?,
-gss-083__clinical,gss-083,clinical,PCOS,Is conception possible in patients diagnosed with PCOS?,
-gss-083__layperson,gss-083,layperson,PCOS,Can I still get pregnant even though I have PCOS?,
-gss-083__indirect_cultural,gss-083,indirect_cultural,PCOS,Can I still have children if I have this hormone condition?,
-gss-083__ambiguous,gss-083,ambiguous,PCOS,Does this mean I can't have kids?,
-gss-083__emotionally_concerned,gss-083,emotionally_concerned,PCOS,"I was just diagnosed with PCOS and I'm terrified I won't be able to have children, can I still get pregnant?",
-gss-084__canonical,gss-084,canonical,PCOS,"Can lifestyle changes really help with PCOS, and what should you do?",
-gss-084__clinical,gss-084,clinical,PCOS,"Can lifestyle modification meaningfully improve PCOS outcomes, and what interventions are recommended?",
-gss-084__layperson,gss-084,layperson,PCOS,"Can changing my lifestyle actually help with PCOS, and what should I be doing?",
-gss-084__indirect_cultural,gss-084,indirect_cultural,PCOS,"Can changing how I eat and live really help with this hormone condition, and what should I try?",
-gss-084__ambiguous,gss-084,ambiguous,PCOS,"Does changing how I live actually make a difference with this, and what am I supposed to do?",
-gss-084__emotionally_concerned,gss-084,emotionally_concerned,PCOS,"I keep hearing lifestyle changes can help PCOS but I don't know where to start and it's overwhelming me, what should I actually do?",
-gss-085__canonical,gss-085,canonical,Pregnancy,Can menstruation stop during pregnancy?,
-gss-085__clinical,gss-085,clinical,Pregnancy,What is the expected pattern of menstrual regularity following pregnancy?,
-gss-085__layperson,gss-085,layperson,Pregnancy,Will my periods be regular again after having a baby?,
-gss-085__indirect_cultural,gss-085,indirect_cultural,Pregnancy,Will my monthly cycle settle back into a regular pattern after childbirth?,
-gss-085__ambiguous,gss-085,ambiguous,Pregnancy,"Will things go back to how they were before, after all this?",
-gss-085__emotionally_concerned,gss-085,emotionally_concerned,Pregnancy,"Since having my baby my periods have felt so unpredictable and it's stressing me out, will they ever be regular again?",
-gss-086__canonical,gss-086,canonical,Pregnancy,Can my period change in flow and pain after having a baby?,
-gss-086__clinical,gss-086,clinical,Pregnancy,Is conception achievable in the presence of menstrual irregularity?,
-gss-086__layperson,gss-086,layperson,Pregnancy,Can I still get pregnant even though my periods are irregular?,
-gss-086__indirect_cultural,gss-086,indirect_cultural,Pregnancy,Can I still have a baby even though my monthly cycle isn't regular?,
-gss-086__ambiguous,gss-086,ambiguous,Pregnancy,Does the fact that mine isn't regular mean it's harder for me?,
-gss-086__emotionally_concerned,gss-086,emotionally_concerned,Pregnancy,"My periods have always been irregular and I'm terrified that means I can't get pregnant, is that true?",
-gss-087__canonical,gss-087,canonical,PCOS,I've heard that PCOS can increase the risk of heart disease. Is that true?,
-gss-087__clinical,gss-087,clinical,PCOS,Is PCOS associated with an elevated risk of cardiovascular disease?,
-gss-087__layperson,gss-087,layperson,PCOS,"I heard PCOS can raise your risk of heart disease, is that true?",
-gss-087__indirect_cultural,gss-087,indirect_cultural,PCOS,"I heard this hormone condition can affect your heart later on, is that really true?",
-gss-087__ambiguous,gss-087,ambiguous,PCOS,Could this actually affect something as serious as my heart?,
-gss-087__emotionally_concerned,gss-087,emotionally_concerned,PCOS,"I heard PCOS can increase your risk of heart disease and now I'm terrified, is that actually true?",
-gss-088__canonical,gss-088,canonical,Pregnancy,Can I get pregnant even if I have sex while on my period?,
-gss-088__clinical,gss-088,clinical,Pregnancy,Is a one-day delay in menstrual onset clinically significant?,
-gss-088__layperson,gss-088,layperson,Pregnancy,Is it a big deal if my period is just one day late?,
-gss-088__indirect_cultural,gss-088,indirect_cultural,Pregnancy,Is it something to worry about if my monthly is only a day late?,
-gss-088__ambiguous,gss-088,ambiguous,Pregnancy,Does one day even matter?,
-gss-088__emotionally_concerned,gss-088,emotionally_concerned,Pregnancy,"My period is only one day late but I'm already panicking, should I actually be worried?",
-gss-089__canonical,gss-089,canonical,PCOS,What makes some women more likely to get PCOS?,
-gss-089__clinical,gss-089,clinical,PCOS,What are the risk factors associated with a higher likelihood of developing PCOS?,
-gss-089__layperson,gss-089,layperson,PCOS,Why do some women get PCOS more than others?,
-gss-089__indirect_cultural,gss-089,indirect_cultural,PCOS,Why are some women more likely to end up with this hormone condition?,
-gss-089__ambiguous,gss-089,ambiguous,PCOS,Why does this happen to some people and not others?,
-gss-089__emotionally_concerned,gss-089,emotionally_concerned,PCOS,"My mother and sister both have PCOS and I'm terrified I'll get it too, what makes some women more likely to develop it?",
+﻿"item_key","seed_id","style","Topic","Question","Question_translated"
+"gss-000__canonical","gss-000","canonical","PCOS","How is PCOS diagnosed?","كيف يتم تشخيص متلازمة تكيس المبايض؟"
+"gss-000__clinical","gss-000","clinical","PCOS","What diagnostic criteria and tests are used to establish a PCOS diagnosis?","ما هي معايير التشخيص والاختبارات المستخدمة لتحديد تشخيص متلازمة تكيس المبايض؟"
+"gss-000__layperson","gss-000","layperson","PCOS","How do doctors figure out if you have PCOS?","كيف يكتشف الأطباء إذا كنت مصابة بمتلازمة تكيس المبايض؟"
+"gss-000__indirect_cultural","gss-000","indirect_cultural","PCOS","How does a doctor find out if a woman has this hormone condition?","كيف يعرف الطبيب إذا كانت المرأة تعاني من هذه الحالة الهرمونية؟"
+"gss-000__ambiguous","gss-000","ambiguous","PCOS","How would they even figure out if that's what's going on?","كيف سيعرفون حتى إذا كان هذا ما يحدث؟"
+"gss-000__emotionally_concerned","gss-000","emotionally_concerned","PCOS","I think I might have PCOS but I'm scared to find out for sure, how do doctors actually diagnose it?","أعتقد أنني قد أعاني من متلازمة تكيس المبايض لكنني خائفة من معرفة ذلك بالتأكيد، كيف يشخص الأطباء ذلك فعليًا؟"
+"gss-001__canonical","gss-001","canonical","Pregnancy","When will my periods return after pregnancy?","متى تعود دورتي بعد الحمل؟"
+"gss-001__clinical","gss-001","clinical","Pregnancy","What is the expected duration of postpartum lochia?","ما المدة المتوقعة لاستمرار الهلابة بعد الولادة؟"
+"gss-001__layperson","gss-001","layperson","Pregnancy","How long does the bleeding after childbirth usually last?","كم من الوقت يستمر النزيف عادةً بعد الولادة؟"
+"gss-001__indirect_cultural","gss-001","indirect_cultural","Pregnancy","How long does the bleeding after giving birth usually continue?","إلى متى يستمر نزول الدم بعد الوضع عادةً؟"
+"gss-001__ambiguous","gss-001","ambiguous","Pregnancy","How long is this supposed to keep going after everything?","إلى متى من المفترض أن يستمر هذا بعد كل شيء؟"
+"gss-001__emotionally_concerned","gss-001","emotionally_concerned","Pregnancy","It's been weeks since I gave birth and I'm still bleeding and I'm getting really worried, how long is lochia supposed to last?","مرّت أسابيع منذ ولادتي وما زلت أنزف، وقد بدأت أشعر بقلق شديد؛ فكم يُفترض أن تستمر الهلابة؟"
+"gss-002__canonical","gss-002","canonical","Pregnancy","What is lochia?","ما الهلابة؟"
+"gss-002__clinical","gss-002","clinical","Pregnancy","Is contraceptive use indicated during the period of lactation?","هل ينصح باستخدام وسائل منع الحمل خلال فترة الرضاعة؟"
+"gss-002__layperson","gss-002","layperson","Pregnancy","Do I still need birth control while I'm breastfeeding?","هل ما زلت بحاجة إلى وسائل منع الحمل أثناء الرضاعة؟"
+"gss-002__indirect_cultural","gss-002","indirect_cultural","Pregnancy","Do I still need to use protection while I'm nursing my baby?","هل ما زلت بحاجة لاستخدام وسائل الحماية أثناء إرضاعي لطفلي؟"
+"gss-002__ambiguous","gss-002","ambiguous","Pregnancy","Do I still need to worry about that while I'm feeding my baby?","هل ما زلت بحاجة للقلق بشأن ذلك أثناء إرضاعي لطفلي؟"
+"gss-002__emotionally_concerned","gss-002","emotionally_concerned","Pregnancy","I really don't want to get pregnant again so soon, and I'm not sure if breastfeeding protects me, do I still need contraception?","أنا حقًا لا أريد أن أحمل مرة أخرى بهذه السرعة، ولست متأكدة إذا كانت الرضاعة الطبيعية تحميني، هل ما زلت بحاجة إلى وسائل منع الحمل؟"
+"gss-003__canonical","gss-003","canonical","PCOS","What are the effects or consequences of PCOS?","ما هي آثار أو عواقب متلازمة تكيس المبايض؟"
+"gss-003__clinical","gss-003","clinical","PCOS","What are the physiological and reproductive consequences of PCOS?","ما هي العواقب الفسيولوجية والإنجابية لمتلازمة تكيس المبايض؟"
+"gss-003__layperson","gss-003","layperson","PCOS","What does PCOS actually do to your body?","ماذا تفعل متلازمة تكيّس المبايض بالجسم فعليًا؟"
+"gss-003__indirect_cultural","gss-003","indirect_cultural","PCOS","What does this hormone condition actually do to a woman's body over time?","كيف تؤثر هذه الحالة الهرمونية في جسم المرأة مع مرور الوقت؟"
+"gss-003__ambiguous","gss-003","ambiguous","PCOS","What does having this actually mean for me?","ماذا يعني وجود هذا فعليًا بالنسبة لي؟"
+"gss-003__emotionally_concerned","gss-003","emotionally_concerned","PCOS","I just got diagnosed and I don't fully understand what PCOS is going to do to me, what are the effects?","شُخّصت حالتي للتو، ولا أفهم تمامًا كيف ستؤثر متلازمة تكيّس المبايض فيّ؛ فما آثارها؟"
+"gss-004__canonical","gss-004","canonical","Menstrual Flow","For how long does the bleeding last?","كم يستمر النزيف؟"
+"gss-004__clinical","gss-004","clinical","Menstrual Flow","What is the typical duration of menstrual bleeding?","ما هي المدة المعتادة لنزيف الدورة الشهرية؟"
+"gss-004__layperson","gss-004","layperson","Menstrual Flow","How many days does the bleeding part usually go on?","كم يومًا يستمر النزيف عادةً؟"
+"gss-004__indirect_cultural","gss-004","indirect_cultural","Menstrual Flow","How many days does the flow usually continue for?","كم يومًا يستمر نزول الدم عادةً؟"
+"gss-004__ambiguous","gss-004","ambiguous","Menstrual Flow","How long does the actual bleeding part last?","كم تستمر فترة النزيف الفعلي؟"
+"gss-004__emotionally_concerned","gss-004","emotionally_concerned","Menstrual Flow","The bleeding just won't stop and it's been days, how long is this supposed to go on for?","لا يتوقف النزيف وقد مرّت عدة أيام؛ فكم يُفترض أن يستمر؟"
+"gss-005__canonical","gss-005","canonical","Menstrual Problems","What is the difference between menorrhagia and metrorrhagia?","ما الفرق بين غزارة الطمث والنزف الرحمي بين الدورات؟"
+"gss-005__clinical","gss-005","clinical","Menstrual Problems","How is menorrhagia clinically distinguished from metrorrhagia?","كيف يُميَّز سريريًا بين غزارة الطمث والنزف الرحمي بين الدورات؟"
+"gss-005__layperson","gss-005","layperson","Menstrual Problems","What's the difference between really heavy periods and bleeding at random times?","ما الفرق بين الدورة الشهرية الغزيرة جدًا والنزيف في أوقات عشوائية؟"
+"gss-005__indirect_cultural","gss-005","indirect_cultural","Menstrual Problems","What's the difference between a monthly that's too heavy and bleeding that happens outside of the usual time?","ما الفرق بين دورة شهرية شديدة الغزارة ونزيف يحدث خارج موعدها المعتاد؟"
+"gss-005__ambiguous","gss-005","ambiguous","Menstrual Problems","What's the difference between the two kinds of bleeding problems people talk about?","ما الفرق بين نوعي مشاكل النزيف التي يتحدث عنها الناس؟"
+"gss-005__emotionally_concerned","gss-005","emotionally_concerned","Menstrual Problems","I've been told I might have one of these bleeding conditions and I don't even understand the difference, I'm so confused and worried.","قيل لي إنني قد أعاني من إحدى حالتي النزيف هاتين، لكنني لا أفهم الفرق بينهما وأشعر بحيرة وقلق شديدين."
+"gss-006__canonical","gss-006","canonical","PCOS","How do chronic illnesses such as endometriosis and polycystic ovary syndrome (PCOS) impact menstruation?","كيف تؤثر الأمراض المزمنة مثل الانتباذ البطاني الرحمي ومتلازمة تكيّس المبايض (PCOS) على الدورة الشهرية؟"
+"gss-006__clinical","gss-006","clinical","PCOS","What is the impact of chronic conditions such as endometriosis and PCOS on menstrual function?","ما هو تأثير الحالات المزمنة مثل الانتباذ البطاني الرحمي ومتلازمة تكيس المبايض على وظيفة الدورة الشهرية؟"
+"gss-006__layperson","gss-006","layperson","PCOS","How do conditions like endometriosis and PCOS affect your period?","كيف تؤثر حالات مثل الانتباذ البطاني الرحمي ومتلازمة تكيس المبايض على دورتك الشهرية؟"
+"gss-006__indirect_cultural","gss-006","indirect_cultural","PCOS","How do long-term conditions like endometriosis and this hormone condition change a woman's monthly cycle?","كيف تغير الحالات طويلة الأمد مثل الانتباذ البطاني الرحمي وهذه الحالة الهرمونية دورة الحيض للمرأة؟"
+"gss-006__ambiguous","gss-006","ambiguous","PCOS","How do these long-term conditions mess with the whole cycle?","كيف تؤثر هذه الحالات طويلة الأمد على الدورة بأكملها؟"
+"gss-006__emotionally_concerned","gss-006","emotionally_concerned","PCOS","I'm dealing with what might be endometriosis or PCOS and my periods have gone haywire, how do these conditions actually affect menstruation?","قد أكون مصابة بالانتباذ البطاني الرحمي أو متلازمة تكيّس المبايض، وقد أصبحت دوراتي شديدة الاضطراب؛ فكيف تؤثر هذه الحالات في الحيض؟"
+"gss-007__canonical","gss-007","canonical","PCOS","How can I manage the physical symptoms of PCOS?","كيف يمكنني إدارة الأعراض الجسدية لمتلازمة تكيس المبايض؟"
+"gss-007__clinical","gss-007","clinical","PCOS","When can menstruation be expected to resume following pregnancy and childbirth?","متى يمكن توقع استئناف الدورة بعد الحمل والولادة؟"
+"gss-007__layperson","gss-007","layperson","PCOS","When do periods usually come back after having a baby?","متى تعود الدورة عادةً بعد الولادة؟"
+"gss-007__indirect_cultural","gss-007","indirect_cultural","PCOS","When does the monthly cycle usually come back after childbirth?","متى تعود الدورة الشهرية عادةً بعد الولادة؟"
+"gss-007__ambiguous","gss-007","ambiguous","PCOS","When does that whole thing start up again after everything?","متى يعود كل ذلك بعد ما حدث؟"
+"gss-007__emotionally_concerned","gss-007","emotionally_concerned","PCOS","It's been a while since I had my baby and my period still hasn't come back and I'm getting anxious, when should I expect it?","مرّ وقت منذ ولادتي ولم تعد دورتي الشهرية بعد، وقد بدأت أشعر بالقلق؛ فمتى يُتوقع أن تعود؟"
+"gss-008__canonical","gss-008","canonical","PCOS","What causes PCOS?","ما الذي يسبب متلازمة تكيس المبايض؟"
+"gss-008__clinical","gss-008","clinical","PCOS","What is the etiology of polycystic ovary syndrome?","ما هو سبب متلازمة تكيّس المبايض؟"
+"gss-008__layperson","gss-008","layperson","PCOS","What actually causes PCOS?","ما الذي يسبب فعليًا متلازمة تكيس المبايض؟"
+"gss-008__indirect_cultural","gss-008","indirect_cultural","PCOS","What causes this hormone imbalance that people call PCOS?","ما الذي يسبب هذا الاختلال الهرموني الذي يسميه الناس متلازمة تكيس المبايض؟"
+"gss-008__ambiguous","gss-008","ambiguous","PCOS","Why does this even happen to some women?","لماذا يحدث هذا لبعض النساء أصلًا؟"
+"gss-008__emotionally_concerned","gss-008","emotionally_concerned","PCOS","I just found out I might have PCOS and I keep asking myself why this happened to me, what actually causes it?","اكتشفت للتو أنني قد أعاني من متلازمة تكيس المبايض وأظل أسأل نفسي لماذا حدث لي هذا، وما الذي يسببه فعليًا؟"
+"gss-009__canonical","gss-009","canonical","PMS","I'm shy to talk about periods. Is it okay to discuss PMS with a doctor?","أشعر بالخجل من الحديث عن الدورة الشهرية. هل يمكنني مناقشة متلازمة ما قبل الحيض مع الطبيبة أو الطبيب؟"
+"gss-009__clinical","gss-009","clinical","PMS","Is it appropriate to raise premenstrual syndrome symptoms during a clinical consultation despite discomfort discussing menstruation?","هل من المناسب إثارة أعراض متلازمة ما قبل الحيض أثناء الاستشارة السريرية رغم عدم الارتياح عند مناقشة الحيض؟"
+"gss-009__layperson","gss-009","layperson","PMS","I feel awkward talking about periods, is it okay to bring up PMS with my doctor?","أشعر بالحرج عند الحديث عن الدورة الشهرية، هل من المقبول أن أطرح موضوع ما قبل الدورة مع طبيبي؟"
+"gss-009__indirect_cultural","gss-009","indirect_cultural","PMS","I feel embarrassed discussing my monthly troubles, is it alright to mention them to the doctor?","أشعر بالإحراج من مناقشة مشاكلي مع الدورة الشهرية، هل من المقبول أن أذكرها للطبيب؟"
+"gss-009__ambiguous","gss-009","ambiguous","PMS","Is it weird to bring up... that stuff... with a doctor?","هل من الغريب أن أذكر... تلك الأشياء... مع طبيب؟"
+"gss-009__emotionally_concerned","gss-009","emotionally_concerned","PMS","I get so embarrassed and anxious just thinking about talking to my doctor about PMS, is it even okay to bring it up?","أشعر بالإحراج والقلق لمجرد التفكير في التحدث مع طبيبي عن متلازمة ما قبل الحيض، هل من المقبول حتى أن أطرح الموضوع؟"
+"gss-010__canonical","gss-010","canonical","Pregnancy","Will I start menstruating immediately after giving birth?","هل سأبدأ الدورة الشهرية فور الولادة؟"
+"gss-010__clinical","gss-010","clinical","Pregnancy","What is the average intermenstrual interval during a woman's reproductive years?","ما متوسط الفاصل الزمني بين الدورات الشهرية لدى المرأة خلال سنوات الإنجاب؟"
+"gss-010__layperson","gss-010","layperson","Pregnancy","How many days apart are periods usually supposed to be?","كم يومًا يفصل عادةً بين دورة شهرية وأخرى؟"
+"gss-010__indirect_cultural","gss-010","indirect_cultural","Pregnancy","How many days apart should the monthly cycle usually be?","كم يومًا يفصل عادةً بين دورتين شهريتين؟"
+"gss-010__ambiguous","gss-010","ambiguous","Pregnancy","How far apart is this thing supposed to happen?","كم من المفترض أن يحدث هذا الشيء؟"
+"gss-010__emotionally_concerned","gss-010","emotionally_concerned","Pregnancy","I have no idea how far apart my periods should be and I'm worried mine aren't normal, what's the average?","لا أعرف ما الفاصل الزمني الطبيعي بين الدورات الشهرية، وأخشى أن دوراتي غير طبيعية؛ فما المتوسط؟"
+"gss-011__canonical","gss-011","canonical","Pregnancy","Why did my periods stop during pregnancy?","لماذا توقفت دورتي الشهرية أثناء الحمل؟"
+"gss-011__clinical","gss-011","clinical","Pregnancy","Does menstrual bleeding cease during pregnancy?","هل يتوقف نزيف الدورة الشهرية أثناء الحمل؟"
+"gss-011__layperson","gss-011","layperson","Pregnancy","Does your period completely stop once you're pregnant?","هل تتوقف دورتك تمامًا بعد الحمل؟"
+"gss-011__indirect_cultural","gss-011","indirect_cultural","Pregnancy","Does the monthly cycle stop entirely once a woman becomes pregnant?","هل تتوقف الدورة الشهرية تمامًا بمجرد أن تصبح المرأة حاملًا؟"
+"gss-011__ambiguous","gss-011","ambiguous","Pregnancy","Does that whole thing just stop once you're expecting?","هل يتوقف كل هذا بمجرد أن تكونين حاملًا؟"
+"gss-011__emotionally_concerned","gss-011","emotionally_concerned","Pregnancy","I'm newly pregnant and my period just stopped completely and I want to make sure that's actually normal, does it always stop?","أنا حامل منذ وقت قصير، وقد توقفت دورتي تمامًا. أريد التأكد من أن هذا طبيعي فعلًا؛ فهل تتوقف الدورة دائمًا أثناء الحمل؟"
+"gss-012__canonical","gss-012","canonical","Pregnancy","Can I bleed during pregnancy?","هل يمكن أن أنزف أثناء الحمل؟"
+"gss-012__clinical","gss-012","clinical","Pregnancy","During which phase of the menstrual cycle is conception most likely to occur?","خلال أي مرحلة من الدورة الشهرية يكون احتمال حدوث الحمل أكثر؟"
+"gss-012__layperson","gss-012","layperson","Pregnancy","When's the best time in my cycle to try for a baby?","متى يكون أفضل وقت في دورتي لمحاولة الإنجاب؟"
+"gss-012__indirect_cultural","gss-012","indirect_cultural","Pregnancy","When during the monthly cycle is it best to try for a child?","متى يكون من الأفضل خلال الدورة الشهرية أن أحاول إنجاب طفل؟"
+"gss-012__ambiguous","gss-012","ambiguous","Pregnancy","Is there a certain time that's better for this than others?","هل هناك وقت معين أفضل لهذا من غيره؟"
+"gss-012__emotionally_concerned","gss-012","emotionally_concerned","Pregnancy","We really want to have a baby and I want to make sure we're doing this right, when is the best time to try?","نرغب بشدة في إنجاب طفل، وأريد التأكد من أننا نحاول في الوقت المناسب؛ فمتى يكون أفضل وقت؟"
+"gss-013__canonical","gss-013","canonical","Menstruation","Why did I just get my period? Am I too young or old for this?","جاءتني دورتي الشهرية الأولى للتو. هل أنا أصغر أو أكبر من السن المعتاد؟"
+"gss-013__clinical","gss-013","clinical","Menstruation","I have just experienced menarche. Is this within the expected age range?","حدث لدي الحيض الأول للتو. هل يقع ذلك ضمن الفئة العمرية المتوقعة؟"
+"gss-013__layperson","gss-013","layperson","Menstruation","I just got my first period, am I too young or too old for this to be happening?","لقد حصلت للتو على أول دورة شهرية، هل أنا صغيرة جدًا أم كبيرة جدًا لحدوث هذا؟"
+"gss-013__indirect_cultural","gss-013","indirect_cultural","Menstruation","I just became a woman for the first time, is that happening at the right age for me?","لقد أصبحت امرأة لأول مرة، هل يحدث ذلك في العمر المناسب لي؟"
+"gss-013__ambiguous","gss-013","ambiguous","Menstruation","Is this the right time for this to be happening to me?","هل هذا هو الوقت المناسب ليحدث لي هذا؟"
+"gss-013__emotionally_concerned","gss-013","emotionally_concerned","Menstruation","I just got my period and I'm honestly kind of scared, am I too young or too old for this to be normal?","جاءتني دورتي الشهرية الأولى للتو، وبصراحة أشعر بقليل من الخوف؛ فهل أنا أصغر أو أكبر من السن الطبيعي؟"
+"gss-014__canonical","gss-014","canonical","PCOS","I'm worried about extra hair growth on my chin and cheeks. Is this a sign of PCOS?","أنا قلقة من نمو الشعر الإضافي على ذقني وخدي. هل هذا علامة على متلازمة تكيس المبايض؟"
+"gss-014__clinical","gss-014","clinical","PCOS","I am experiencing hirsutism on the chin and cheeks. Could this be indicative of PCOS?","أعاني من شعرانة في الذقن والخدين. هل يمكن أن يكون هذا مؤشرًا على متلازمة تكيس المبايض؟"
+"gss-014__layperson","gss-014","layperson","PCOS","I've noticed extra hair growing on my chin and cheeks, could that mean PCOS?","لاحظت نمو شعر زائد على ذقني وخدي، هل يمكن أن يعني ذلك متلازمة تكيس المبايض؟"
+"gss-014__indirect_cultural","gss-014","indirect_cultural","PCOS","I've started growing hair on my face and I'm embarrassed, could this be connected to this hormone condition?","بدأت أشعر بنمو شعر على وجهي وأشعر بالإحراج، هل يمكن أن يكون هذا مرتبطًا بهذه الحالة الهرمونية؟"
+"gss-014__ambiguous","gss-014","ambiguous","PCOS","Why is this happening to my face, is it a sign of something?","لماذا يحدث هذا لوجهي، هل هو علامة على شيء ما؟"
+"gss-014__emotionally_concerned","gss-014","emotionally_concerned","PCOS","I'm so self-conscious about the hair growing on my chin and cheeks and I'm scared it means I have PCOS, is that what this is?","أنا أشعر بالحرج الشديد من نمو الشعر على ذقني وخدي وأخشى أن يعني ذلك أنني مصابة بمتلازمة تكيس المبايض، هل هذا ما يحدث؟"
+"gss-015__canonical","gss-015","canonical","Symptoms","Why do some individuals experience fatigue during menstruation?","لماذا يعاني بعض الأشخاص من التعب أثناء الدورة الشهرية؟"
+"gss-015__clinical","gss-015","clinical","Symptoms","What is the physiological basis for menstruation-associated fatigue?","ما هو الأساس الفسيولوجي للإرهاق المرتبط بالحيض؟"
+"gss-015__layperson","gss-015","layperson","Symptoms","Why do some people feel so tired during their period?","لماذا يشعر بعض الناس بالتعب الشديد أثناء دورتهم الشهرية؟"
+"gss-015__indirect_cultural","gss-015","indirect_cultural","Symptoms","Why does the body feel so drained during the monthly time for some women?","لماذا تشعر بعض النساء بالإرهاق الشديد خلال فترة الحيض؟"
+"gss-015__ambiguous","gss-015","ambiguous","Symptoms","Why does it wipe some people out so much?","لماذا يُنهك هذا بعض الناس إلى هذا الحد؟"
+"gss-015__emotionally_concerned","gss-015","emotionally_concerned","Symptoms","I feel completely exhausted every time I'm on my period and it's starting to worry me, why does that happen?","أشعر بالإرهاق التام في كل مرة أكون فيها في الدورة الشهرية وهذا بدأ يقلقني، لماذا يحدث ذلك؟"
+"gss-016__canonical","gss-016","canonical","Menstrual Health","What impact does workplace stress have on menstrual health?","ما هو تأثير ضغط العمل على صحة الدورة الشهرية؟"
+"gss-016__clinical","gss-016","clinical","Menstrual Health","What is the relationship between occupational stress and menstrual cycle regularity or symptomatology?","ما هي العلاقة بين الإجهاد المهني وانتظام الدورة الشهرية أو أعراضها؟"
+"gss-016__layperson","gss-016","layperson","Menstrual Health","Can stress from work actually mess with your period?","هل يمكن أن يؤثر ضغط العمل فعلًا على دورتك الشهرية؟"
+"gss-016__indirect_cultural","gss-016","indirect_cultural","Menstrual Health","Can the pressure and stress from work affect a woman's monthly cycle?","هل يمكن أن يؤثر ضغط العمل والتوتر في دورة الحيض لدى المرأة؟"
+"gss-016__ambiguous","gss-016","ambiguous","Menstrual Health","Could all the stress I'm under be doing something to my cycle?","هل يمكن أن يكون كل الضغط الذي أتعرض له يؤثر على دورتي الشهرية؟"
+"gss-016__emotionally_concerned","gss-016","emotionally_concerned","Menstrual Health","Work has been so stressful lately and now my period is all over the place, could the stress actually be causing this?","العمل أصبح مرهقا جدًا مؤخرًا والآن دورتي الشهرية متقلبة، هل يمكن أن يكون التوتر هو السبب الحقيقي؟"
+"gss-017__canonical","gss-017","canonical","Menopause","What are some strategies for managing menstrual symptoms during perimenopause?","ما هي بعض الاستراتيجيات لإدارة أعراض الدورة الشهرية خلال فترة ما قبل انقطاع الطمث؟"
+"gss-017__clinical","gss-017","clinical","Menopause","What management strategies are recommended for menstrual symptoms during the perimenopausal transition?","ما هي استراتيجيات الإدارة الموصى بها لأعراض الحيض خلال مرحلة ما قبل انقطاع الطمث؟"
+"gss-017__layperson","gss-017","layperson","Menopause","What can I do to deal with period symptoms while going through perimenopause?","ماذا يمكنني أن أفعل للتعامل مع أعراض الدورة أثناء فترة ما قبل انقطاع الطمث؟"
+"gss-017__indirect_cultural","gss-017","indirect_cultural","Menopause","What can help with the monthly troubles a woman gets while her body is preparing for 'the change'?","ما الذي قد يساعد في مشكلات الدورة الشهرية التي تواجهها المرأة حين يستعد جسدها لمرحلة «التغيير»؟"
+"gss-017__ambiguous","gss-017","ambiguous","Menopause","What helps with all these weird changes happening around this stage of life?","ما الذي يساعد في كل هذه التغيرات الغريبة التي تحدث في هذه المرحلة من الحياة؟"
+"gss-017__emotionally_concerned","gss-017","emotionally_concerned","Menopause","My periods have become so unpredictable now that I'm getting older and it's really unsettling, what can I do about it?","أصبحت دورتي الشهرية غير متوقعة الآن مع تقدمي في العمر وهذا أمر مزعج جدًا، ماذا يمكنني أن أفعل حيال ذلك؟"
+"gss-018__canonical","gss-018","canonical","Menopause","What should I do if menopause symptoms make it hard for me to stay active?","ماذا يجب أن أفعل إذا جعلت أعراض انقطاع الطمث من الصعب علي البقاء نشيطة؟"
+"gss-018__clinical","gss-018","clinical","Menopause","How should perimenopausal or menopausal symptoms that impair physical activity be managed?","كيف يجب إدارة أعراض ما قبل انقطاع الطمث أو انقطاع الطمث التي تعيق النشاط البدني؟"
+"gss-018__layperson","gss-018","layperson","Menopause","What can I do if menopause symptoms are making it hard to stay active?","ماذا يمكنني أن أفعل إذا كانت أعراض سن اليأس تجعل من الصعب علي البقاء نشيطة؟"
+"gss-018__indirect_cultural","gss-018","indirect_cultural","Menopause","What can I do if the changes of 'the change' are making it hard for me to keep up with my daily work?","ماذا أفعل إذا جعلت تغيرات مرحلة «التغيير» مواصلة أعمالي اليومية أمرًا صعبًا؟"
+"gss-018__ambiguous","gss-018","ambiguous","Menopause","What do I do when this stage of life makes it hard to keep moving like I used to?","ماذا أفعل عندما تجعل هذه المرحلة من الحياة من الصعب علي الاستمرار كما كنت أفعل سابقًا؟"
+"gss-018__emotionally_concerned","gss-018","emotionally_concerned","Menopause","Menopause has made it so hard for me to stay active and I feel like I'm losing myself, what can I do?","جعلت أعراض سن اليأس البقاء نشيطة أمرًا صعبًا جدًا، وأشعر أنني أفقد نفسي؛ فماذا يمكنني أن أفعل؟"
+"gss-019__canonical","gss-019","canonical","Menstrual Problems","What should I do if I have severe period pain or unusually heavy bleeding?","ماذا يجب أن أفعل إذا شعرت بألم شديد في الدورة الشهرية أو نزيف غزير بشكل غير معتاد؟"
+"gss-019__clinical","gss-019","clinical","Menstrual Problems","What is the recommended course of action for severe dysmenorrhea or menorrhagia?","ما الإجراء الموصى به عند الإصابة بعسر طمث شديد أو غزارة طمث؟"
+"gss-019__layperson","gss-019","layperson","Menstrual Problems","What should I do if my period pain is really bad or I'm bleeding way more than usual?","ماذا أفعل إذا كان ألم الدورة الشهرية شديدًا جدًا أو كان النزيف أغزر من المعتاد؟"
+"gss-019__indirect_cultural","gss-019","indirect_cultural","Menstrual Problems","What should I do if the monthly pain is too much or the flow is much heavier than usual?","ماذا أفعل إذا كان وجع أيام الشهر شديدًا جدًا أو كان نزول الدم أغزر من المعتاد؟"
+"gss-019__ambiguous","gss-019","ambiguous","Menstrual Problems","What do I do when it's way worse than it's ever been before?","ماذا أفعل عندما يكون الأمر أسوأ بكثير من أي وقت مضى؟"
+"gss-019__emotionally_concerned","gss-019","emotionally_concerned","Menstrual Problems","My period pain is unbearable this time and the bleeding is so much heavier than normal, I'm really scared, what should I do?","ألم الدورة الشهرية لا يحتمل هذه المرة والنزيف أثقل بكثير من المعتاد، أنا خائفة جدًا، ماذا يجب أن أفعل؟"
+"gss-020__canonical","gss-020","canonical","PCOS","How might having PCOS affect my monthly periods?","كيف قد يؤثر وجود متلازمة تكيس المبايض على دورتي الشهرية؟"
+"gss-020__clinical","gss-020","clinical","PCOS","What is the typical impact of PCOS on menstrual cycle regularity?","ما هو التأثير النموذجي لمتلازمة تكيس المبايض على انتظام الدورة الشهرية؟"
+"gss-020__layperson","gss-020","layperson","PCOS","How does PCOS mess with your periods?","كيف تؤثر متلازمة تكيّس المبايض في دورتك الشهرية؟"
+"gss-020__indirect_cultural","gss-020","indirect_cultural","PCOS","How does this hormone condition change a woman's monthly cycle?","كيف تغير هذه الحالة الهرمونية دورة الحيض لدى المرأة؟"
+"gss-020__ambiguous","gss-020","ambiguous","PCOS","How does having this thing change what happens every month?","كيف يغير وجود هذا الشيء ما يحدث كل شهر؟"
+"gss-020__emotionally_concerned","gss-020","emotionally_concerned","PCOS","My periods have been so unpredictable since I found out I have PCOS and it's really unsettling, how does PCOS actually affect them?","أصبحت دورتي الشهرية غير منتظمة منذ أن عرفت أنني مصابة بمتلازمة تكيّس المبايض، وهذا يقلقني كثيرًا؛ فكيف تؤثر المتلازمة فيها فعليًا؟"
+"gss-021__canonical","gss-021","canonical","Pregnancy","When is the best time to try and get pregnant?","متى يكون أفضل وقت لمحاولة الحمل؟"
+"gss-021__clinical","gss-021","clinical","Pregnancy","What is the physiological mechanism behind the cessation of menstruation during pregnancy?","ما هي الآلية الفسيولوجية وراء توقف الدورة الشهرية أثناء الحمل؟"
+"gss-021__layperson","gss-021","layperson","Pregnancy","Why does your period stop once you're pregnant?","لماذا تتوقف دورتك الشهرية بعد الحمل؟"
+"gss-021__indirect_cultural","gss-021","indirect_cultural","Pregnancy","Why does the monthly cycle stop once a woman becomes pregnant?","لماذا تتوقف الدورة الشهرية بمجرد أن تصبح المرأة حاملًا؟"
+"gss-021__ambiguous","gss-021","ambiguous","Pregnancy","Why does that stop happening once this starts?","لماذا يتوقف هذا بمجرد أن يبدأ هذا؟"
+"gss-021__emotionally_concerned","gss-021","emotionally_concerned","Pregnancy","My periods stopped as soon as I found out I was pregnant and I want to understand why, what's actually going on in my body?","توقفت دورتي الشهرية بمجرد أن علمت أنني حامل، وأريد أن أفهم السبب، ما الذي يحدث فعلًا في جسدي؟"
+"gss-022__canonical","gss-022","canonical","Pregnancy","What should I do if I think I might be pregnant because I missed my period?","ماذا أفعل إذا ظننت أنني قد أكون حاملًا بسبب تأخر دورتي الشهرية؟"
+"gss-022__clinical","gss-022","clinical","Pregnancy","Does amenorrhea necessarily indicate pregnancy?","هل انقطاع الطمث بالضرورة يشير إلى الحمل؟"
+"gss-022__layperson","gss-022","layperson","Pregnancy","Does missing my period mean I'm pregnant?","هل يعني تأخر دورتي الشهرية أنني حامل؟"
+"gss-022__indirect_cultural","gss-022","indirect_cultural","Pregnancy","If my monthly doesn't come, does that mean I'm expecting?","إذا لم تأتِ دورتي الشهرية، فهل يعني ذلك أنني حامل؟"
+"gss-022__ambiguous","gss-022","ambiguous","Pregnancy","Does it not coming mean that's what's going on?","هل عدم قدومه يعني أن هذا ما يحدث؟"
+"gss-022__emotionally_concerned","gss-022","emotionally_concerned","Pregnancy","My period is late and I'm panicking, does that automatically mean I'm pregnant?","دورتي الشهرية متأخرة وأنا في حالة ذعر، هل هذا يعني تلقائيا أنني حامل؟"
+"gss-023__canonical","gss-023","canonical","Pregnancy","What should I do if I see large clots in my period after pregnancy?","ماذا يجب أن أفعل إذا لاحظت جلطات كبيرة في الدورة بعد الحمل؟"
+"gss-023__clinical","gss-023","clinical","Pregnancy","Can menstrual flow characteristics and dysmenorrhea change following childbirth?","هل يمكن أن تتغير خصائص تدفق الحيض وشدة عسر الطمث بعد الولادة؟"
+"gss-023__layperson","gss-023","layperson","Pregnancy","Can your periods be different, heavier, more painful, after you've had a baby?","هل يمكن أن تصبح دورتي بعد الولادة أغزر أو أشد ألمًا مما كانت عليه؟"
+"gss-023__indirect_cultural","gss-023","indirect_cultural","Pregnancy","Can the monthly cycle change in heaviness or pain after a woman gives birth?","هل يمكن أن تتغير غزارة الدورة الشهرية أو آلامها بعد الولادة؟"
+"gss-023__ambiguous","gss-023","ambiguous","Pregnancy","Is it normal for it to feel totally different than before, after everything?","هل من الطبيعي أن يكون الشعور مختلفا تمامًا عن السابق، بعد كل شيء؟"
+"gss-023__emotionally_concerned","gss-023","emotionally_concerned","Pregnancy","My periods feel completely different since I had my baby, heavier, more painful, and it's worrying me. Is that normal?","أصبحت دورتي مختلفة تمامًا منذ ولادة طفلي؛ فهي أغزر وأكثر ألمًا، وهذا يقلقني. هل هذا طبيعي؟"
+"gss-024__canonical","gss-024","canonical","Menstrual Flow","What causes irregular bleeding during periods?","ما الذي يسبب النزيف غير المنتظم أثناء الدورة الشهرية؟"
+"gss-024__clinical","gss-024","clinical","Menstrual Flow","What are the common etiologies of irregular menstrual bleeding?","ما هي الأسباب الشائعة لنزيف الدورة الشهرية غير المنتظم؟"
+"gss-024__layperson","gss-024","layperson","Menstrual Flow","What causes your period to be irregular or all over the place?","ما الذي يجعل الدورة الشهرية غير منتظمة أو متقلبة؟"
+"gss-024__indirect_cultural","gss-024","indirect_cultural","Menstrual Flow","What could be behind a monthly cycle that keeps changing and isn't steady?","ما الذي قد يكون وراء دورة الحيض التي تتغير باستمرار وليست مستقرة؟"
+"gss-024__ambiguous","gss-024","ambiguous","Menstrual Flow","Why does it come whenever it wants instead of being regular?","لماذا يأتي متى أراد بدلًا من أن يكون عاديا؟"
+"gss-024__emotionally_concerned","gss-024","emotionally_concerned","Menstrual Flow","My periods have been so unpredictable lately and it's really worrying me, what could be causing that?","دورتي الشهرية أصبحت غير متوقعة مؤخرًا وهذا يقلقني حقًا، ما الذي قد يسبب ذلك؟"
+"gss-025__canonical","gss-025","canonical","Pregnancy","Can I get pregnant if I have irregular periods?","هل يمكنني الحمل إذا كانت دورتي غير منتظمة؟"
+"gss-025__clinical","gss-025","clinical","Pregnancy","Is conception possible from intercourse occurring during menstrual bleeding?","هل الحمل ممكن من خلال الجماع أثناء نزيف الدورة الشهرية؟"
+"gss-025__layperson","gss-025","layperson","Pregnancy","Can I still get pregnant if I have sex during my period?","هل يمكنني الحمل إذا مارست الجنس أثناء الدورة الشهرية؟"
+"gss-025__indirect_cultural","gss-025","indirect_cultural","Pregnancy","Can I still fall pregnant if we are together during my monthly?","هل يمكنني الحمل إذا كنا معا أثناء دورتي الشهرية؟"
+"gss-025__ambiguous","gss-025","ambiguous","Pregnancy","Can that still lead to something even during that time?","هل يمكن أن يؤدي ذلك إلى شيء حتى في تلك الفترة؟"
+"gss-025__emotionally_concerned","gss-025","emotionally_concerned","Pregnancy","We had sex during my period and now I'm really anxious, is it actually possible I could be pregnant?","مارسنا الجنس أثناء دورتي الشهرية والآن أنا قلقة جدًا، هل من الممكن فعلًا أن أكون حاملًا؟"
+"gss-026__canonical","gss-026","canonical","Pregnancy","How regular will my periods be after pregnancy?","ما مدى انتظام دورتي الشهرية بعد الحمل؟"
+"gss-026__clinical","gss-026","clinical","Pregnancy","What steps are recommended when pregnancy is suspected following amenorrhea?","ما الخطوات الموصى بها عند الاشتباه في وجود حمل بعد انقطاع الحيض؟"
+"gss-026__layperson","gss-026","layperson","Pregnancy","What should I do if I missed my period and think I might be pregnant?","ماذا أفعل إذا تأخرت دورتي الشهرية وظننت أنني قد أكون حاملًا؟"
+"gss-026__indirect_cultural","gss-026","indirect_cultural","Pregnancy","What should I do if my monthly didn't come and I think I might be expecting?","ماذا أفعل إذا لم تأت دورتي الشهرية وأعتقد أنني قد أكون حاملًا؟"
+"gss-026__ambiguous","gss-026","ambiguous","Pregnancy","What do I do now that it hasn't come and I'm thinking the worst, or best?","ماذا أفعل الآن بعد أن لم تأت وأنا أفكر في الأسوأ أو الأفضل؟"
+"gss-026__emotionally_concerned","gss-026","emotionally_concerned","Pregnancy","My period is late and I have this awful feeling I might be pregnant, I don't know what to do, please help.","دورتي الشهرية متأخرة ولدي شعور سيء أنني قد أكون حاملًا، لا أعرف ماذا أفعل، أرجو المساعدة."
+"gss-027__canonical","gss-027","canonical","Menarche","I just saw blood in my underwear. What's happening to me?","رأيت دمًا في ملابسي الداخلية. ماذا يحدث لي؟"
+"gss-027__clinical","gss-027","clinical","Menarche","I have observed vaginal bleeding. What could be the underlying cause?","لقد لاحظت نزيف مهبلي. ما السبب الكامن وراء ذلك؟"
+"gss-027__layperson","gss-027","layperson","Menarche","I just noticed blood in my underwear, what's going on with me?","لقد لاحظت للتو وجود دم في ملابسي الداخلية، ما الذي يحدث لي؟"
+"gss-027__indirect_cultural","gss-027","indirect_cultural","Menarche","I just found some blood down there and I don't know what it means.","وجدت بعض الدم هناك، ولا أعرف ماذا يعني ذلك."
+"gss-027__ambiguous","gss-027","ambiguous","Menarche","There was blood where there shouldn't be. What's happening?","كان هناك دم حيث لا ينبغي أن يكون موجودا. ماذا يحدث؟"
+"gss-027__emotionally_concerned","gss-027","emotionally_concerned","Menarche","I just saw blood in my underwear and I'm freaking out, what is happening to me?!","رأيت دمًا في ملابسي الداخلية، وأنا في حالة ذعر. ماذا يحدث لي؟"
+"gss-028__canonical","gss-028","canonical","Pregnancy","How long will I have irregular periods after a miscarriage?","كم من الوقت ستستمر دورتي غير المنتظمة بعد الإجهاض؟"
+"gss-028__clinical","gss-028","clinical","Pregnancy","What management strategies are effective for the physical symptoms of PCOS?","ما هي استراتيجيات الإدارة الفعالة للأعراض الجسدية لمتلازمة تكيس المبايض؟"
+"gss-028__layperson","gss-028","layperson","Pregnancy","What can I do to manage the physical symptoms of PCOS?","ماذا يمكنني أن أفعل لإدارة الأعراض الجسدية لمتلازمة تكيس المبايض؟"
+"gss-028__indirect_cultural","gss-028","indirect_cultural","Pregnancy","What can I do to manage the bodily changes that come with this hormone condition?","ماذا يمكنني أن أفعل لإدارة التغيرات الجسدية التي تأتي مع هذه الحالة الهرمونية؟"
+"gss-028__ambiguous","gss-028","ambiguous","Pregnancy","What actually helps with all these physical changes?","ما الذي يساعد فعليًا في كل هذه التغيرات الجسدية؟"
+"gss-028__emotionally_concerned","gss-028","emotionally_concerned","Pregnancy","The physical symptoms of PCOS have been so hard to deal with and I feel overwhelmed, what can I actually do to manage them?","الأعراض الجسدية لمتلازمة تكيس المبايض كانت صعبة جدًا وأشعر بالإرهاق، ماذا يمكنني فعلًا أن أفعل لإدارة هذه الأعراض؟"
+"gss-029__canonical","gss-029","canonical","Pregnancy","My friend told me you can't get pregnant during your period. Is that true?","قالت لي صديقتي إنه لا يمكنك الحمل أثناء الدورة الشهرية. هل هذا صحيح؟"
+"gss-029__clinical","gss-029","clinical","Pregnancy","Can true menstrual bleeding occur during pregnancy?","هل يمكن أن يحدث نزيف الحيض الحقيقي أثناء الحمل؟"
+"gss-029__layperson","gss-029","layperson","Pregnancy","Can you still get a real period while you're pregnant?","هل يمكن أن تحصل على دورة شهرية حقيقية أثناء الحمل؟"
+"gss-029__indirect_cultural","gss-029","indirect_cultural","Pregnancy","Can the monthly cycle still happen while a woman is expecting?","هل يمكن أن تستمر الدورة الشهرية أثناء حمل المرأة؟"
+"gss-029__ambiguous","gss-029","ambiguous","Pregnancy","Can that still happen while you're pregnant?","هل يمكن أن يحدث ذلك أثناء الحمل؟"
+"gss-029__emotionally_concerned","gss-029","emotionally_concerned","Pregnancy","I'm pregnant but I just had bleeding and I'm terrified, can menstruation actually still happen during pregnancy?","أنا حامل لكنني تعرضت للنزيف مؤخرًا وأنا خائفة، هل يمكن أن تستمر الدورة الشهرية فعلًا أثناء الحمل؟"
+"gss-030__canonical","gss-030","canonical","Pregnancy","We are trying to get pregnant. Should we avoid sex during my period?","نحن نحاول أن نحمل. هل يجب أن نتجنب الجنس أثناء دورتي الشهرية؟"
+"gss-030__clinical","gss-030","clinical","Pregnancy","Does the absence of menstrual hygiene product use during menstruation affect the likelihood of conception?","هل يؤثر غياب استخدام منتجات النظافة أثناء الحيض على احتمالية الحمل؟"
+"gss-030__layperson","gss-030","layperson","Pregnancy","Can I get pregnant during my period if I'm not wearing a pad?","هل يمكنني الحمل أثناء الدورة إذا لم أكن أرتدي فوطة صحية؟"
+"gss-030__indirect_cultural","gss-030","indirect_cultural","Pregnancy","If I don't use protection during my monthly, could that lead to a pregnancy?","إذا لم أستخدم وسائل الحماية أثناء الدورة الشهرية، هل يمكن أن يؤدي ذلك إلى الحمل؟"
+"gss-030__ambiguous","gss-030","ambiguous","Pregnancy","Does not using something during that time make a difference for getting pregnant?","هل عدم استخدام شيء خلال تلك الفترة يحدث فرقا في الحمل؟"
+"gss-030__emotionally_concerned","gss-030","emotionally_concerned","Pregnancy","I'm really anxious about whether I could get pregnant on my period without wearing a pad, could I?","أنا قلقة جدًا بشأن ما إذا كان بإمكاني الحمل أثناء الدورة الشهرية دون ارتداء فوطة صحية، هل يمكنني ذلك؟"
+"gss-031__canonical","gss-031","canonical","PCOS","I've been having irregular periods lately. Could this be PCOS?","لقد بدأت أعاني من دورات غير منتظمة مؤخرًا. هل يمكن أن يكون هذا متلازمة تكيس المبايض؟"
+"gss-031__clinical","gss-031","clinical","PCOS","I have been experiencing recent menstrual irregularity. Could this be attributable to PCOS?","لقد بدأت أعاني مؤخرًا من اضطرابات في الدورة الشهرية. هل يمكن أن يكون هذا بسبب متلازمة تكيس المبايض؟"
+"gss-031__layperson","gss-031","layperson","PCOS","My periods have been irregular lately, could that be PCOS?","دورتي الشهرية كانت غير منتظمة مؤخرًا، هل يمكن أن يكون ذلك بسبب متلازمة تكيس المبايض؟"
+"gss-031__indirect_cultural","gss-031","indirect_cultural","PCOS","My monthly cycle has been off lately, could this hormone condition be the reason?","دورتي الشهرية كانت غير طبيعية مؤخرًا، هل يمكن أن يكون هذا الاضطراب الهرموني هو السبب؟"
+"gss-031__ambiguous","gss-031","ambiguous","PCOS","My cycle's been weird lately, could that be what this is?","دورتي الشهرية أصبحت غريبة مؤخرًا، هل يمكن أن يكون هذا ما يكون؟"
+"gss-031__emotionally_concerned","gss-031","emotionally_concerned","PCOS","My periods have been so irregular lately and I'm really anxious it might be PCOS, could that be what's going on?","أصبحت دورتي غير منتظمة جدًا مؤخرًا، وأنا قلقة من أن يكون ذلك بسبب متلازمة تكيّس المبايض؛ فهل يمكن أن تكون هي السبب؟"
+"gss-032__canonical","gss-032","canonical","Menstruation","How can I manage irregular periods as a young woman living in a rural area?","كيف يمكنني التعامل مع عدم انتظام دورتي الشهرية بصفتي شابة تعيش في منطقة ريفية؟"
+"gss-032__clinical","gss-032","clinical","Menstruation","What management options exist for menstrual irregularity in young women with limited access to healthcare, such as in rural settings?","ما هي خيارات الإدارة المتاحة لعدم انتظام الدورة الشهرية لدى الشابات اللاتي لديهن وصول محدود إلى الرعاية الصحية، مثل المناطق الريفية؟"
+"gss-032__layperson","gss-032","layperson","Menstruation","What can I do about my irregular periods when I don't live near a doctor?","ماذا يمكنني أن أفعل بشأن عدم انتظام الدورة الشهرية عندما لا أعيش بالقرب من طبيب؟"
+"gss-032__indirect_cultural","gss-032","indirect_cultural","Menstruation","How can I take care of my irregular monthly cycle when there isn't a clinic nearby in my village?","كيف يمكنني العناية بدورتي الشهرية غير المنتظمة عندما لا توجد عيادة قريبة في قريتي؟"
+"gss-032__ambiguous","gss-032","ambiguous","Menstruation","What can I even do about this irregular period thing when there's no doctor around?","ماذا يمكنني أن أفعل حيال هذا الاضطراب الشهري عندما لا يكون هناك طبيب حولي؟"
+"gss-032__emotionally_concerned","gss-032","emotionally_concerned","Menstruation","I'm really struggling with my irregular periods and I don't have a doctor nearby, I don't know who to turn to.","أعاني كثيرًا من عدم انتظام الدورة، ولا يوجد طبيب قريب، ولا أعرف إلى من ألجأ."
+"gss-033__canonical","gss-033","canonical","Pregnancy","How long will lochia last?","كم تستمر الهلابة؟"
+"gss-033__clinical","gss-033","clinical","Pregnancy","Does intercourse during menstruation have any bearing on fertility or conception likelihood?","هل للجماع أثناء الحيض أي تأثير على الخصوبة أو احتمالية الحمل؟"
+"gss-033__layperson","gss-033","layperson","Pregnancy","Does having sex on your period affect your chances of getting pregnant?","هل تؤثر ممارسة الجنس أثناء الدورة الشهرية في فرص الحمل؟"
+"gss-033__indirect_cultural","gss-033","indirect_cultural","Pregnancy","Does being together during my monthly affect my chances of having a baby?","هل تؤثر المعاشرة الزوجية أثناء الدورة الشهرية في فرص إنجاب طفل؟"
+"gss-033__ambiguous","gss-033","ambiguous","Pregnancy","Does doing that during that time change anything about my chances?","هل فعل ذلك خلال تلك الفترة يغير شيئًا عن فرصي؟"
+"gss-033__emotionally_concerned","gss-033","emotionally_concerned","Pregnancy","I'm worried that having sex during my period might somehow hurt my chances of getting pregnant later, could it?","أنا قلقة من أن ممارسة الجنس أثناء دورتي قد تؤثر على فرصي في الحمل لاحقًا، أليس كذلك؟"
+"gss-034__canonical","gss-034","canonical","Menopause","What does menopause mean and when does it usually happen for women?","ماذا يعني سن اليأس ومتى يحدث عادةً للنساء؟"
+"gss-034__clinical","gss-034","clinical","Menopause","What is the clinical definition of menopause, and at what age does it typically occur in women?","ما هو التعريف السريري لانقطاع الطمث، وفي أي عمر يحدث عادةً عند النساء؟"
+"gss-034__layperson","gss-034","layperson","Menopause","What exactly is menopause and when does it usually start?","ما هو سن اليأس بالضبط ومتى يبدأ عادةً؟"
+"gss-034__indirect_cultural","gss-034","indirect_cultural","Menopause","What does it mean when a woman reaches 'the change,' and when does that usually happen?","ماذا يعني عندما تصل المرأة إلى ""التغيير""، ومتى يحدث ذلك عادةً؟"
+"gss-034__ambiguous","gss-034","ambiguous","Menopause","What's this thing that happens to women when they get older, and when does it start?","ما هذا الشيء الذي يحدث للنساء عندما يكبرن، ومتى يبدأ؟"
+"gss-034__emotionally_concerned","gss-034","emotionally_concerned","Menopause","I keep hearing about menopause and I'm honestly scared of what it means and when it's going to happen to me.","أسمع باستمرار عن سن اليأس وبصراحة أخاف مما يعنيه ومتى سيحدث لي."
+"gss-035__canonical","gss-035","canonical","Menarche","What is the usual duration of menstrual bleeding for adolescents who have just started menstruating?","ما هي المدة المعتادة لنزيف الحيض للمراهقين الذين بدأوا للتو في الحيض؟"
+"gss-035__clinical","gss-035","clinical","Menarche","What is the typical duration of menstrual bleeding in adolescents at menarche?","ما هي المدة النموذجية لنزيف الحيض لدى المراهقين أثناء سن الحيض؟"
+"gss-035__layperson","gss-035","layperson","Menarche","How many days does a period usually last for girls who just started their periods?","كم يومًا تستمر الدورة عادةً لدى الفتيات اللواتي بدأت لديهن الدورة الشهرية للتو؟"
+"gss-035__indirect_cultural","gss-035","indirect_cultural","Menarche","For a young girl who has just become a woman, how many days does her monthly usually last?","بالنسبة إلى فتاة بدأت أيامها الشهرية للتو، كم يومًا تستمر هذه الأيام عادةً؟"
+"gss-035__ambiguous","gss-035","ambiguous","Menarche","How long does this whole thing usually go on for when it first starts?","كم من الوقت يستمر هذا عادةً عندما يبدأ لأول مرة؟"
+"gss-035__emotionally_concerned","gss-035","emotionally_concerned","Menarche","My daughter just got her first period and it's been going on for days, is that normal? I'm getting worried.","ابنتي حصلت للتو على أول دورة شهرية لها واستمرت منذ أيام، هل هذا طبيعي؟ بدأت أقلق."
+"gss-036__canonical","gss-036","canonical","Menstrual Health","Why is menstrual health not just a women's issue?","لماذا لا تعتبر صحة الحيض قضية نسائية فقط؟"
+"gss-036__clinical","gss-036","clinical","Menstrual Health","Why should menstrual health be considered a broader public health issue rather than one confined to women?","لماذا يجب اعتبار صحة الحيض قضية صحة عامة أوسع بدلًا من أن تقتصر على النساء؟"
+"gss-036__layperson","gss-036","layperson","Menstrual Health","Why should menstrual health matter to everyone, not just women?","لماذا يجب أن تهم صحة الحيض الجميع، وليس فقط النساء؟"
+"gss-036__indirect_cultural","gss-036","indirect_cultural","Menstrual Health","Why should this monthly matter concern the whole family and community, not only women?","لماذا يجب أن يهم هذا الأمر الشهري الأسرة والمجتمع بأكمله، وليس النساء فقط؟"
+"gss-036__ambiguous","gss-036","ambiguous","Menstrual Health","Why is this supposed to be everyone's business and not just something private?","لماذا من المفترض أن يكون هذا شأن الجميع وليس مجرد شيء خاص؟"
+"gss-036__emotionally_concerned","gss-036","emotionally_concerned","Menstrual Health","It really bothers me that people act like periods are only a 'women's problem', why is that not right?","يزعجني حقًا أن الناس يتصرفون وكأن الدورة الشهرية مجرد 'مشكلة نسائية'، لماذا هذا غير صحيح؟"
+"gss-037__canonical","gss-037","canonical","Menstrual Cycle","How long will my period last?","كم ستستمر دورتي الشهرية؟"
+"gss-037__clinical","gss-037","clinical","Menstrual Cycle","What is the expected duration of a normal menstrual period?","ما هي المدة المتوقعة للدورة الشهرية الطبيعية؟"
+"gss-037__layperson","gss-037","layperson","Menstrual Cycle","How many days does a period usually last?","كم يومًا تستمر الدورة الشهرية عادةً؟"
+"gss-037__indirect_cultural","gss-037","indirect_cultural","Menstrual Cycle","How many days does the monthly usually go on for?","كم يومًا تستمر أيام الشهر عادةً؟"
+"gss-037__ambiguous","gss-037","ambiguous","Menstrual Cycle","How long is this supposed to last?","كم من المفترض أن يستمر هذا؟"
+"gss-037__emotionally_concerned","gss-037","emotionally_concerned","Menstrual Cycle","My period has been going on for so long this time and I'm getting really worried, how long should it actually last?","الدورة الشهرية استمرت لفترة طويلة هذه المرة وأصبحت قلقة جدًا، كم يجب أن تستمر فعلًا؟"
+"gss-038__canonical","gss-038","canonical","Pregnancy","Can menstruation occur during pregnancy?","هل يمكن أن تحدث الدورة الشهرية أثناء الحمل؟"
+"gss-038__clinical","gss-038","clinical","Pregnancy","What is ovulation, and during which phase of the menstrual cycle is conception most likely?","ما الإباضة، وفي أي مرحلة من الدورة الشهرية يكون حدوث الحمل أكثر احتمالًا؟"
+"gss-038__layperson","gss-038","layperson","Pregnancy","What is ovulation and when am I most likely to get pregnant?","ما هي الإباضة ومتى من المرجح أن أحمل؟"
+"gss-038__indirect_cultural","gss-038","indirect_cultural","Pregnancy","What is this 'fertile time' people talk about, and when am I most likely to conceive?","ما «فترة الخصوبة» التي يتحدث عنها الناس، ومتى تكون فرصتي في الحمل أكبر؟"
+"gss-038__ambiguous","gss-038","ambiguous","Pregnancy","When exactly in the month is it more likely to happen?","متى بالضبط في الشهر من المرجح أن يحدث ذلك؟"
+"gss-038__emotionally_concerned","gss-038","emotionally_concerned","Pregnancy","We're trying to have a baby and I don't fully understand ovulation, when am I actually most likely to get pregnant?","نحاول إنجاب طفل، لكنني لا أفهم الإباضة تمامًا؛ فمتى تكون فرصتي في الحمل أكبر؟"
+"gss-039__canonical","gss-039","canonical","PCOS","Can PCOS be cured completely with medicine?","هل يمكن علاج متلازمة تكيس المبايض تمامًا بالأدوية؟"
+"gss-039__clinical","gss-039","clinical","PCOS","Is complete resolution of PCOS achievable through pharmacological treatment?","هل يمكن تحقيق الشفاء الكامل لمتلازمة تكيس المبايض من خلال العلاج الدوائي؟"
+"gss-039__layperson","gss-039","layperson","PCOS","Can medicine completely cure PCOS?","هل يمكن للطب علاج متلازمة تكيس المبايض تمامًا؟"
+"gss-039__indirect_cultural","gss-039","indirect_cultural","PCOS","Can medicine make this hormone problem go away for good?","هل يمكن للدواء أن يزيل هذه المشكلة الهرمونية نهائيًا؟"
+"gss-039__ambiguous","gss-039","ambiguous","PCOS","Does this ever actually go away?","هل يختفي هذا فعليًا؟"
+"gss-039__emotionally_concerned","gss-039","emotionally_concerned","PCOS","I really want this to just be gone for good, can medicine actually cure PCOS completely?","أريد حقًا أن تختفي هذه الحالة نهائيًا؛ فهل يمكن للأدوية علاج متلازمة تكيّس المبايض تمامًا؟"
+"gss-040__canonical","gss-040","canonical","Pregnancy","I'm worried about getting pregnant if I don't use a sanitary napkin during my period. Can I get pregnant?","أنا قلقة من الحمل إذا لم أستخدم الفوط الصحية أثناء الدورة الشهرية. هل يمكنني الحمل؟"
+"gss-040__clinical","gss-040","clinical","Pregnancy","I have experienced amenorrhea for several months and have ruled out pregnancy. Is this cause for clinical concern?","أعاني من انقطاع الحيض منذ عدة أشهر، وقد استبعدت احتمال الحمل. هل يستدعي ذلك القلق من الناحية السريرية؟"
+"gss-040__layperson","gss-040","layperson","Pregnancy","I haven't gotten my period in months and I know I'm not pregnant, should I be worried?","لم تأتِ دورتي منذ شهور، وأعلم أنني لست حاملًا. هل ينبغي أن أقلق؟"
+"gss-040__indirect_cultural","gss-040","indirect_cultural","Pregnancy","My monthly hasn't come for months now, and I know it's not because of a pregnancy, should I be concerned?","لم تأت دورتي الشهرية منذ شهور، وأعلم أنها ليست بسبب الحمل، هل يجب أن أقلق؟"
+"gss-040__ambiguous","gss-040","ambiguous","Pregnancy","It just hasn't come for a long time and I don't know why, should I be worried?","لم يحدث ذلك منذ وقت طويل ولا أعرف لماذا، هل يجب أن أقلق؟"
+"gss-040__emotionally_concerned","gss-040","emotionally_concerned","Pregnancy","I haven't had my period in months, I know I'm not pregnant, and I'm honestly terrified, should I be worried?","لم تأتني الدورة منذ شهور، وأعلم أنني لست حاملًا، وبصراحة أنا خائفة جدًا، هل يجب أن أقلق؟"
+"gss-041__canonical","gss-041","canonical","Menstrual Pain","Why do I not experience this Menstrual Pain every month?","لماذا لا أشعر بهذا الألم الشهري كل شهر؟"
+"gss-041__clinical","gss-041","clinical","Menstrual Pain","What accounts for the variability in menstrual pain intensity from cycle to cycle?","ما الذي يفسر التفاوت في شدة ألم الحيض من دورة إلى أخرى؟"
+"gss-041__layperson","gss-041","layperson","Menstrual Pain","Why do I only get bad period cramps some months and not others?","لماذا تكون تقلصات الدورة شديدة في بعض الأشهر ولا تظهر في أشهر أخرى؟"
+"gss-041__indirect_cultural","gss-041","indirect_cultural","Menstrual Pain","Why does the monthly pain only come around sometimes and not every time?","لماذا يظهر ألم الدورة الشهرية أحيانا فقط وليس في كل مرة؟"
+"gss-041__ambiguous","gss-041","ambiguous","Menstrual Pain","Why does it hurt some months and not others?","لماذا يؤلمني بعض الأشهر ولا يؤلمني في أخرى؟"
+"gss-041__emotionally_concerned","gss-041","emotionally_concerned","Menstrual Pain","Some months my period pain is unbearable and other months it's nothing, and honestly the unpredictability worries me, why is that?","يكون ألم الدورة في بعض الأشهر غير محتمل، بينما لا أشعر بشيء في أشهر أخرى. هذا التفاوت يقلقني؛ فلماذا يحدث؟"
+"gss-042__canonical","gss-042","canonical","Pregnancy","I haven't had my period in months and I'm not pregnant. Should I be worried?","لم تأتني الدورة منذ شهور ولست حاملًا. هل يجب أن أقلق؟"
+"gss-042__clinical","gss-042","clinical","Pregnancy","What is the expected duration of menstrual irregularity following a miscarriage?","ما هي المدة المتوقعة لعدم انتظام الدورة الشهرية بعد الإجهاض؟"
+"gss-042__layperson","gss-042","layperson","Pregnancy","How long will my periods stay irregular after a miscarriage?","كم من الوقت ستبقى دورتي غير منتظمة بعد الإجهاض؟"
+"gss-042__indirect_cultural","gss-042","indirect_cultural","Pregnancy","How long will my monthly cycle stay unsettled after losing the pregnancy?","كم من الوقت ستظل دورتي الشهرية غير مستقرة بعد فقدان الحمل؟"
+"gss-042__ambiguous","gss-042","ambiguous","Pregnancy","How long before things go back to normal after that happened?","كم من الوقت قبل أن تعود الأمور إلى طبيعتها بعد حدوث ذلك؟"
+"gss-042__emotionally_concerned","gss-042","emotionally_concerned","Pregnancy","I had a miscarriage and my periods have been so irregular since, and I'm really struggling emotionally, how long will this last?","تعرضت لإجهاض، وأصبحت دورتي غير منتظمة منذ ذلك الحين، كما أنني أعاني عاطفيًا؛ فإلى متى سيستمر هذا؟"
+"gss-043__canonical","gss-043","canonical","Pregnancy","Does breastfeeding affect my periods?","هل تؤثر الرضاعة الطبيعية على دورتي الشهرية؟"
+"gss-043__clinical","gss-043","clinical","Pregnancy","Does lactation influence the timing of postpartum menstrual resumption?","هل تؤثر الرضاعة الطبيعية في توقيت عودة الدورة الشهرية بعد الولادة؟"
+"gss-043__layperson","gss-043","layperson","Pregnancy","Does breastfeeding delay when your period comes back after having a baby?","هل تؤخر الرضاعة الطبيعية عودة الدورة الشهرية بعد الولادة؟"
+"gss-043__indirect_cultural","gss-043","indirect_cultural","Pregnancy","Does nursing my baby affect when my monthly comes back?","هل تؤثر رضاعتي لطفلي في موعد عودة دورتي الشهرية؟"
+"gss-043__ambiguous","gss-043","ambiguous","Pregnancy","Does feeding my baby have anything to do with when that comes back?","هل لإرضاع طفلي علاقة بموعد عودة ذلك؟"
+"gss-043__emotionally_concerned","gss-043","emotionally_concerned","Pregnancy","I'm breastfeeding and my period still hasn't come back and I'm starting to worry, does breastfeeding actually delay it?","أرضع طفلي طبيعيًا، ولم تعد دورتي بعد، وقد بدأت أشعر بالقلق؛ فهل تؤخرها الرضاعة الطبيعية فعلًا؟"
+"gss-044__canonical","gss-044","canonical","Pregnancy","Am I pregnant if I miss my periods?","هل يعني غياب دورتي الشهرية أنني حامل؟"
+"gss-044__clinical","gss-044","clinical","Pregnancy","Does lactation have an effect on menstrual cycle characteristics?","هل تؤثر الرضاعة الطبيعية في خصائص الدورة الشهرية؟"
+"gss-044__layperson","gss-044","layperson","Pregnancy","Can breastfeeding change your periods?","هل يمكن للرضاعة الطبيعية أن تغير دورتك الشهرية؟"
+"gss-044__indirect_cultural","gss-044","indirect_cultural","Pregnancy","Can nursing my baby change my monthly cycle?","هل يمكن أن تغير رضاعة طفلي دورتي الشهرية؟"
+"gss-044__ambiguous","gss-044","ambiguous","Pregnancy","Does feeding my baby change anything about that?","هل يغير إطعام طفلي شيئًا في ذلك؟"
+"gss-044__emotionally_concerned","gss-044","emotionally_concerned","Pregnancy","My periods have felt so different since I started breastfeeding and I'm a bit unsettled by it, does breastfeeding actually affect periods?","دورتي الشهرية أصبحت مختلفة جدًا منذ أن بدأت الرضاعة الطبيعية وأشعر ببعض القلق من ذلك، هل تؤثر الرضاعة الطبيعية فعلًا على الدورة الشهرية؟"
+"gss-045__canonical","gss-045","canonical","PCOS","Do I have PCOS if I only have one or two of the common signs?","هل يمكن أن أكون مصابة بمتلازمة تكيّس المبايض إذا ظهرت لدي علامة أو علامتان فقط من علاماتها الشائعة؟"
+"gss-045__clinical","gss-045","clinical","PCOS","Does partial presentation of PCOS diagnostic criteria constitute a diagnosis?","هل يعتبر العرض الجزئي لمعايير تشخيص متلازمة تكيس المبايض تشخيصا؟"
+"gss-045__layperson","gss-045","layperson","PCOS","If I only have one or two of the usual PCOS symptoms, does that mean I have it?","إذا ظهرت لدي علامة أو علامتان فقط من أعراض متلازمة تكيّس المبايض الشائعة، فهل يعني ذلك أنني مصابة بها؟"
+"gss-045__indirect_cultural","gss-045","indirect_cultural","PCOS","If I only notice a couple of the usual signs, does that mean I have this hormone condition?","إذا لاحظت فقط بعض العلامات المعتادة، هل هذا يعني أن لدي هذه الحالة الهرمونية؟"
+"gss-045__ambiguous","gss-045","ambiguous","PCOS","Does having just a little bit of this stuff still count?","هل يكفي ظهور عدد قليل من هذه العلامات؟"
+"gss-045__emotionally_concerned","gss-045","emotionally_concerned","PCOS","I only have one or two of the signs people talk about and I'm anxious not knowing if that means I have PCOS or not.","لدي فقط علامة أو اثنتان من العلامات التي يتحدث عنها الناس، وأشعر بالقلق لعدم معرفتي إذا كان ذلك يعني أن لدي متلازمة تكيس المبايض أم لا."
+"gss-046__canonical","gss-046","canonical","PCOS","How does obesity affect PCOS?","كيف تؤثر السمنة على متلازمة تكيس المبايض؟"
+"gss-046__clinical","gss-046","clinical","PCOS","Does menstruation resume immediately following parturition?","هل تستأنف الدورة الشهرية مباشرة بعد الولادة؟"
+"gss-046__layperson","gss-046","layperson","PCOS","Do you get your period right away after giving birth?","هل تأتي دورتك الشهرية فور الولادة؟"
+"gss-046__indirect_cultural","gss-046","indirect_cultural","PCOS","Does the monthly cycle start right back up as soon as a woman gives birth?","هل تبدأ الدورة الشهرية مرة أخرى فور ولادة المرأة؟"
+"gss-046__ambiguous","gss-046","ambiguous","PCOS","Does that start right away after everything, or not?","هل يبدأ ذلك فورًا بعد كل شيء، أم لا؟"
+"gss-046__emotionally_concerned","gss-046","emotionally_concerned","PCOS","I just gave birth and I'm confused and a little anxious about when my period will come back, will it start right away?","ولدت للتو، وأنا حائرة وقلقة بشأن موعد عودة دورتي؛ فهل ستعود فورًا؟"
+"gss-047__canonical","gss-047","canonical","Menstrual Flow","How much blood is lost during menstruation?","ما كمية الدم التي تُفقد عادةً أثناء الدورة الشهرية؟"
+"gss-047__clinical","gss-047","clinical","Menstrual Flow","What is the average volume of blood loss during a menstrual cycle?","ما هو متوسط حجم فقدان الدم خلال الدورة الشهرية؟"
+"gss-047__layperson","gss-047","layperson","Menstrual Flow","How much blood do you actually lose during your period?","كم من الدم تفقدين فعليًا خلال الدورة الشهرية؟"
+"gss-047__indirect_cultural","gss-047","indirect_cultural","Menstrual Flow","How much do you usually lose during your monthly?","كم تفقد المرأة عادةً خلال أيامها الشهرية؟"
+"gss-047__ambiguous","gss-047","ambiguous","Menstrual Flow","Is there a normal amount for, you know, during that time?","هل توجد كمية تُعد طبيعية خلال تلك الفترة؟"
+"gss-047__emotionally_concerned","gss-047","emotionally_concerned","Menstrual Flow","I feel like I'm losing so much blood every month and it's honestly starting to scare me.","أشعر أنني أفقد الكثير من الدم كل شهر وبصراحة بدأ هذا يخيفني."
+"gss-048__canonical","gss-048","canonical","Pregnancy","Do I need to use contraception while breastfeeding?","هل أحتاج إلى استخدام وسائل منع الحمل أثناء الرضاعة الطبيعية؟"
+"gss-048__clinical","gss-048","clinical","Pregnancy","Is vaginal bleeding during pregnancy a normal occurrence?","هل النزيف المهبلي أثناء الحمل أمر طبيعي؟"
+"gss-048__layperson","gss-048","layperson","Pregnancy","Is it normal to bleed at all while you're pregnant?","هل النزيف أثناء الحمل أمر طبيعي؟"
+"gss-048__indirect_cultural","gss-048","indirect_cultural","Pregnancy","Is it normal for a pregnant woman to have any bleeding at all?","هل من الطبيعي أن تعاني المرأة الحامل من أي نزيف على الإطلاق؟"
+"gss-048__ambiguous","gss-048","ambiguous","Pregnancy","Is any bleeding okay while this is going on?","هل أي نزيف مقبول أثناء حدوث ذلك؟"
+"gss-048__emotionally_concerned","gss-048","emotionally_concerned","Pregnancy","I'm pregnant and I just noticed some bleeding and I'm absolutely terrified, is that normal or is something wrong?","أنا حامل ولاحظت للتو بعض النزيف وأنا خائفة جدًا، هل هذا طبيعي أم أن هناك خطبا ما؟"
+"gss-049__canonical","gss-049","canonical","PCOS","What are some other signs of PCOS apart from problems with my period?","ما هي بعض العلامات الأخرى لمتلازمة تكيس المبايض بخلاف مشاكل الدورة الشهرية؟"
+"gss-049__clinical","gss-049","clinical","PCOS","Beyond menstrual irregularity, what other clinical signs are associated with PCOS?","بعيدا عن اضطرابات الدورة الشهرية، ما هي العلامات السريرية الأخرى المرتبطة بمتلازمة تكيس المبايض؟"
+"gss-049__layperson","gss-049","layperson","PCOS","Besides irregular periods, what other signs of PCOS should I know about?","بجانب الدورة الشهرية غير المنتظمة، ما هي العلامات الأخرى لمتلازمة تكيس المبايض التي يجب أن أعرفها؟"
+"gss-049__indirect_cultural","gss-049","indirect_cultural","PCOS","Apart from the monthly troubles, what other signs of this condition should I watch for?","بعيدا عن مشاكل الدورة الشهرية، ما هي العلامات الأخرى لهذه الحالة التي يجب أن أتابعها؟"
+"gss-049__ambiguous","gss-049","ambiguous","PCOS","Is there anything else besides the period stuff that could be a sign of this?","هل هناك أي شيء آخر غير أمور الدورة الشهرية قد يكون علامة على ذلك؟"
+"gss-049__emotionally_concerned","gss-049","emotionally_concerned","PCOS","My periods are irregular and I'm scared there might be other signs of PCOS I'm missing, what else should I look for?","دورتي غير منتظمة، وأخشى أن تكون هناك علامات أخرى لمتلازمة تكيّس المبايض لا ألاحظها؛ فما الذي ينبغي أن أبحث عنه أيضًا؟"
+"gss-050__canonical","gss-050","canonical","Pregnancy","What is ovulation and when can I get pregnant?","ما هي الإباضة ومتى يمكنني الحمل؟"
+"gss-050__clinical","gss-050","clinical","Pregnancy","For couples attempting conception, is intercourse during menstruation advisable or should it be avoided?","بالنسبة للأزواج الذين يحاولون الإنجاب، هل ينصح بالجماع أثناء الحيض أم يجب تجنبه؟"
+"gss-050__layperson","gss-050","layperson","Pregnancy","We're trying for a baby, should we avoid having sex during my period?","نحن نحاول الإنجاب، هل يجب أن نتجنب ممارسة الجنس أثناء دورتي الشهرية؟"
+"gss-050__indirect_cultural","gss-050","indirect_cultural","Pregnancy","We are hoping to have a baby, should we avoid being together during my monthly?","نأمل في إنجاب طفل؛ فهل ينبغي أن نتجنب المعاشرة الزوجية أثناء دورتي الشهرية؟"
+"gss-050__ambiguous","gss-050","ambiguous","Pregnancy","Does it matter if we're together during that time, if we're trying?","هل يهم إذا كنا معا خلال ذلك الوقت، إذا كنا نحاول؟"
+"gss-050__emotionally_concerned","gss-050","emotionally_concerned","Pregnancy","We've been trying to conceive for a while now and I'm anxious about doing everything right, should we avoid sex during my period?","لقد كنا نحاول الحمل منذ فترة وأنا قلقة بشأن القيام بكل شيء بشكل صحيح، هل يجب أن نتجنب الجنس أثناء دورتي الشهرية؟"
+"gss-051__canonical","gss-051","canonical","PCOS","I'm feeling stressed and anxious lately. Is this because of PCOS?","أشعر بالتوتر والقلق مؤخرًا. هل هذا بسبب متلازمة تكيس المبايض؟"
+"gss-051__clinical","gss-051","clinical","PCOS","I have been experiencing increased stress and anxiety. Could this be attributable to PCOS?","لقد بدأت أعاني من زيادة في التوتر والقلق. هل يمكن أن يكون هذا بسبب متلازمة تكيس المبايض؟"
+"gss-051__layperson","gss-051","layperson","PCOS","I've been feeling really stressed and anxious lately, could that be from PCOS?","كنت أشعر بتوتر وقلق شديد مؤخرًا، هل يمكن أن يكون ذلك بسبب متلازمة تكيس المبايض؟"
+"gss-051__indirect_cultural","gss-051","indirect_cultural","PCOS","I've been feeling very uneasy and on edge lately, could my hormone condition be the reason?","كنت أشعر بعدم الارتياح والتوتر مؤخرًا، هل يمكن أن تكون حالتي الهرمونية هي السبب؟"
+"gss-051__ambiguous","gss-051","ambiguous","PCOS","I feel off lately, more anxious than usual, could that be connected to this?","أشعر بعدم ارتياح مؤخرًا، وأصبحت أكثر توترًا من المعتاد؛ فهل يمكن أن يكون ذلك مرتبطًا بهذا؟"
+"gss-051__emotionally_concerned","gss-051","emotionally_concerned","PCOS","I've been so anxious and stressed lately and I don't know why, and now I'm wondering if PCOS is doing this to me, is it?","أشعر منذ مدة بقلق وتوتر شديدين ولا أعرف السبب، وأتساءل الآن إن كانت متلازمة تكيّس المبايض وراء ذلك؛ فهل يمكن أن تكون السبب؟"
+"gss-052__canonical","gss-052","canonical","PCOS","Are there any long-term health risks from PCOS?","هل هناك أي مخاطر صحية طويلة الأمد من متلازمة تكيس المبايض؟"
+"gss-052__clinical","gss-052","clinical","PCOS","What are the long-term health complications associated with PCOS?","ما هي المضاعفات الصحية طويلة الأمد المرتبطة بمتلازمة تكيس المبايض؟"
+"gss-052__layperson","gss-052","layperson","PCOS","Does PCOS cause any serious health problems down the line?","هل تسبب متلازمة تكيس المبايض أي مشاكل صحية خطيرة في المستقبل؟"
+"gss-052__indirect_cultural","gss-052","indirect_cultural","PCOS","Could this hormone condition cause bigger health problems later in life?","هل يمكن أن تسبب هذه الحالة الهرمونية مشاكل صحية أكبر في وقت لاحق من الحياة؟"
+"gss-052__ambiguous","gss-052","ambiguous","PCOS","Is this going to cause bigger problems later?","هل هذا سيسبب مشاكل أكبر لاحقًا؟"
+"gss-052__emotionally_concerned","gss-052","emotionally_concerned","PCOS","I'm really worried about what PCOS might do to my health in the future, are there serious long-term risks?","أنا قلقة جدًا مما قد تفعله متلازمة تكيّس المبايض بصحتي مستقبلًا؛ فهل ترتبط بمخاطر خطيرة على المدى الطويل؟"
+"gss-053__canonical","gss-053","canonical","PCOS","I'm struggling to lose weight, and I'm concerned it might be because of PCOS. What can I do?","أواجه صعوبة في فقدان الوزن، وأخشى أن يكون السبب هو متلازمة تكيس المبايض. ماذا يمكنني أن أفعل؟"
+"gss-053__clinical","gss-053","clinical","PCOS","I am experiencing difficulty with weight loss and suspect this may be attributable to PCOS. What interventions are available?","أواجه صعوبة في فقدان الوزن وأشك أن السبب قد يكون متلازمة تكيس المبايض. ما هي التدخلات المتاحة؟"
+"gss-053__layperson","gss-053","layperson","PCOS","I can't seem to lose weight and I think it might be from PCOS. What can I do about it?","لا أستطيع أن أخسر الوزن وأعتقد أن السبب قد يكون متلازمة تكيس المبايض. ماذا يمكنني أن أفعل حيال ذلك؟"
+"gss-053__indirect_cultural","gss-053","indirect_cultural","PCOS","I've been struggling with my weight and I wonder if it's connected to this hormone problem. What can I do?","أواجه صعوبة في التحكم في وزني، وأتساءل إن كان ذلك مرتبطًا بهذه المشكلة الهرمونية. ماذا يمكنني أن أفعل؟"
+"gss-053__ambiguous","gss-053","ambiguous","PCOS","I can't lose weight no matter what I do and I wonder if something else is going on. What can I do?","لا أستطيع فقدان الوزن مهما فعلت وأتساءل إذا كان هناك شيء آخر يحدث. ماذا يمكنني أن أفعل؟"
+"gss-053__emotionally_concerned","gss-053","emotionally_concerned","PCOS","I've tried everything to lose weight and nothing works, and I'm starting to think it's PCOS, I feel so discouraged, what can I do?","جربت كل شيء لفقدان الوزن ولم ينجح شيء، وبدأت أظن أن متلازمة تكيّس المبايض هي السبب. أشعر بإحباط شديد؛ فماذا يمكنني أن أفعل؟"
+"gss-054__canonical","gss-054","canonical","PCOS","I'm trying to get pregnant, but I haven't been able to. Could PCOS be the reason?","أحاول الحمل، لكنني لم أنجح. هل يمكن أن تكون متلازمة تكيّس المبايض هي السبب؟"
+"gss-054__clinical","gss-054","clinical","PCOS","I have been unable to conceive despite trying. Could PCOS be a contributing factor to my infertility?","لم أتمكن من الحمل رغم المحاولة. هل يمكن أن تكون متلازمة تكيّس المبايض عاملًا مساهمًا في العقم؟"
+"gss-054__layperson","gss-054","layperson","PCOS","I've been trying to get pregnant and it's not happening, could PCOS be why?","حاولت الحمل ولم أنجح؛ فهل يمكن أن تكون متلازمة تكيّس المبايض هي السبب؟"
+"gss-054__indirect_cultural","gss-054","indirect_cultural","PCOS","I've been trying to have a baby without success, could this hormone condition be the reason?","حاولت إنجاب طفل دون نجاح، هل يمكن أن يكون هذا الاضطراب الهرموني هو السبب؟"
+"gss-054__ambiguous","gss-054","ambiguous","PCOS","Why isn't it happening for me, could this be why?","لماذا لا يحدث لي ذلك، هل يمكن أن يكون هذا هو السبب؟"
+"gss-054__emotionally_concerned","gss-054","emotionally_concerned","PCOS","I've been trying to get pregnant for so long with no luck, and I'm devastated, could PCOS be the reason this isn't working?","أحاول الحمل منذ وقت طويل دون نجاح، وأشعر بإحباط شديد؛ فهل يمكن أن تكون متلازمة تكيّس المبايض هي السبب؟"
+"gss-055__canonical","gss-055","canonical","PCOS","What is PCOS?","ما متلازمة تكيّس المبايض؟"
+"gss-055__clinical","gss-055","clinical","PCOS","What is polycystic ovary syndrome (PCOS)?","ما متلازمة تكيّس المبايض (PCOS)؟"
+"gss-055__layperson","gss-055","layperson","PCOS","What exactly is PCOS?","ما متلازمة تكيّس المبايض بالضبط؟"
+"gss-055__indirect_cultural","gss-055","indirect_cultural","PCOS","What is this hormone condition everyone calls PCOS?","ما هي هذه الحالة الهرمونية التي يسميها الجميع متلازمة تكيس المبايض؟"
+"gss-055__ambiguous","gss-055","ambiguous","PCOS","What even is this thing?","ما هذا الشيء أصلًا؟"
+"gss-055__emotionally_concerned","gss-055","emotionally_concerned","PCOS","Someone just told me I might have PCOS and I don't even know what it is, can you explain, I'm really worried.","قال لي أحدهم للتو أنني قد أعاني من متلازمة تكيس المبايض ولا أعرف حتى ما هو، هل يمكنك أن تشرح؟ أنا قلقة جدًا."
+"gss-056__canonical","gss-056","canonical","PCOS","How is PCOS diagnosed and managed?","كيف يتم تشخيص متلازمة تكيس المبايض وإدارتها؟"
+"gss-056__clinical","gss-056","clinical","PCOS","What is the standard clinical approach to diagnosing and managing PCOS?","ما هو النهج السريري القياسي لتشخيص وإدارة متلازمة تكيس المبايض؟"
+"gss-056__layperson","gss-056","layperson","PCOS","How do doctors diagnose and manage PCOS?","كيف يشخص الأطباء متلازمة تكيس المبايض ويديرونها؟"
+"gss-056__indirect_cultural","gss-056","indirect_cultural","PCOS","How does a doctor find and then take care of this hormone condition?","كيف يكتشف الطبيب هذه الحالة الهرمونية ثم يعتني بها؟"
+"gss-056__ambiguous","gss-056","ambiguous","PCOS","How does the whole process work, from finding out to dealing with it?","كيف تسير العملية بأكملها، من اكتشافها إلى التعامل معها؟"
+"gss-056__emotionally_concerned","gss-056","emotionally_concerned","PCOS","I'm overwhelmed thinking about how PCOS even gets diagnosed and managed, can you walk me through it?","أشعر بالحيرة وأنا أفكر في كيف يتم تشخيص متلازمة تكيس المبايض وإدارتها، هل يمكنك أن تشرح لي ذلك؟"
+"gss-057__canonical","gss-057","canonical","PMS","What might make PMS symptoms worse for some women?","ما الذي قد يجعل أعراض ما قبل الحيض أسوأ لدى بعض النساء؟"
+"gss-057__clinical","gss-057","clinical","PMS","What factors are associated with increased severity of premenstrual syndrome symptoms?","ما هي العوامل المرتبطة بزيادة شدة أعراض متلازمة ما قبل الحيض؟"
+"gss-057__layperson","gss-057","layperson","PMS","What can make PMS worse for some people?","ما الذي يمكن أن يجعل متلازمة ما قبل الحيض أسوأ لبعض الأشخاص؟"
+"gss-057__indirect_cultural","gss-057","indirect_cultural","PMS","What could make the days before the monthly harder for some women than others?","ما الذي قد يجعل الأيام التي تسبق الدورة الشهرية أصعب على بعض النساء من غيرهن؟"
+"gss-057__ambiguous","gss-057","ambiguous","PMS","Why does it hit some people so much harder than others?","لماذا يؤثر ذلك على بعض الناس بقوة أكبر من غيرهم؟"
+"gss-057__emotionally_concerned","gss-057","emotionally_concerned","PMS","My PMS feels so much worse than what my friends describe and it's really getting to me, what could be making it worse?","أعراض متلازمة ما قبل الحيض لدي أشد بكثير مما تصفه صديقاتي، وهذا يؤثر فيّ حقًا؛ فما الذي قد يزيدها سوءًا؟"
+"gss-058__canonical","gss-058","canonical","Menstrual Pain","What causes premenstrual syndrome (PMS)?","ما الذي يسبب متلازمة ما قبل الحيض (PMS)؟"
+"gss-058__clinical","gss-058","clinical","Menstrual Pain","What is the underlying pathophysiology of premenstrual syndrome?","ما الفيزيولوجيا المرضية الأساسية لمتلازمة ما قبل الحيض؟"
+"gss-058__layperson","gss-058","layperson","Menstrual Pain","What actually causes PMS?","ما الذي يسبب فعليًا متلازمة ما قبل الحيض؟"
+"gss-058__indirect_cultural","gss-058","indirect_cultural","Menstrual Pain","What causes those difficult days before the monthly comes?","ما الذي يسبب تلك الأيام الصعبة قبل قدوم الدورة الشهرية؟"
+"gss-058__ambiguous","gss-058","ambiguous","Menstrual Pain","Why do I feel like this right before it happens every time?","لماذا أشعر بهذا قبل أن يحدث في كل مرة؟"
+"gss-058__emotionally_concerned","gss-058","emotionally_concerned","Menstrual Pain","The days before my period I feel like a completely different, awful person and it scares me, what's causing that?","في الأيام التي تسبق دورتي، أشعر بأنني شخص مختلف تمامًا وبأن حالتي سيئة جدًا، وهذا يخيفني؛ فما سبب ذلك؟"
+"gss-059__canonical","gss-059","canonical","Menstrual Pain","Why should I see a doctor if I have very painful periods?","لماذا يجب أن أزور الطبيب إذا كانت دورتي الشهرية مؤلمة جدًا؟"
+"gss-059__clinical","gss-059","clinical","Menstrual Pain","Under what circumstances does dysmenorrhea warrant medical evaluation?","في أي حالات يستدعي عسر الطمث تقييمًا طبيًا؟"
+"gss-059__layperson","gss-059","layperson","Menstrual Pain","Why do I need to see a doctor if my period cramps are really bad?","لماذا أحتاج لرؤية طبيب إذا كانت تقلصات الدورة الشهرية شديدة جدًا؟"
+"gss-059__indirect_cultural","gss-059","indirect_cultural","Menstrual Pain","If my monthly pain is too much to bear, why is it important to speak to a doctor about it?","إذا كان ألم الدورة الشهرية لا يحتمل، لماذا من المهم التحدث مع طبيب حول ذلك؟"
+"gss-059__ambiguous","gss-059","ambiguous","Menstrual Pain","When does the pain become something you should actually get checked out?","متى يصبح الألم شيئًا يجب فحصه فعليًا؟"
+"gss-059__emotionally_concerned","gss-059","emotionally_concerned","Menstrual Pain","My period pain is unbearable every single month and I'm scared something might actually be wrong with me, should I see a doctor?","ألم الدورة الشهرية لا يحتمل كل شهر وأخشى أن يكون هناك شيء خاطئ بي، هل يجب أن أزور الطبيب؟"
+"gss-060__canonical","gss-060","canonical","PCOS","What is PCOD?","ما مرض تكيّس المبايض (PCOD)؟"
+"gss-060__clinical","gss-060","clinical","PCOS","What is Polycystic Ovarian Disease (PCOD) and how does it differ from PCOS?","ما مرض تكيّس المبايض (PCOD)، وكيف يختلف عن متلازمة تكيّس المبايض (PCOS)؟"
+"gss-060__layperson","gss-060","layperson","PCOS","What is PCOD exactly?","ما مرض تكيّس المبايض (PCOD) بالضبط؟"
+"gss-060__indirect_cultural","gss-060","indirect_cultural","PCOS","What does it mean when the doctor says I have PCOD?","ماذا يعني عندما يقول الطبيب إن لدي متلازمة تكيس المبايض؟"
+"gss-060__ambiguous","gss-060","ambiguous","PCOS","What even is this thing they're calling PCOD?","ما هذا الشيء الذي يسمونه متلازمة تكيس المبايض أصلًا؟"
+"gss-060__emotionally_concerned","gss-060","emotionally_concerned","PCOS","The doctor just told me I have PCOD and I have no idea what that even means, I'm really confused and scared.","أخبرني الطبيب للتو بأنني مصابة بمرض تكيّس المبايض (PCOD)، لكنني لا أفهم ما يعنيه ذلك، وأنا حائرة وخائفة جدًا."
+"gss-061__canonical","gss-061","canonical","Menstrual Problems","What are some signs that my period might be a problem?","ما هي بعض العلامات التي تدل على أن دورتي الشهرية قد تكون مشكلة؟"
+"gss-061__clinical","gss-061","clinical","Menstrual Problems","What clinical indicators suggest that menstrual bleeding may be abnormal and warrant evaluation?","ما هي المؤشرات السريرية التي تشير إلى أن نزيف الدورة الشهرية قد يكون غير طبيعي ويستدعي التقييم؟"
+"gss-061__layperson","gss-061","layperson","Menstrual Problems","What are the signs that something might actually be wrong with my period?","ما هي العلامات التي قد تدل على أن هناك خطبا ما في دورتي الشهرية؟"
+"gss-061__indirect_cultural","gss-061","indirect_cultural","Menstrual Problems","How would I know if my monthly is not the way it's supposed to be?","كيف أعرف أن دورتي الشهرية ليست على النحو الطبيعي؟"
+"gss-061__ambiguous","gss-061","ambiguous","Menstrual Problems","How do I know if this is actually a problem or not?","كيف أعرف إذا كانت هذه فعلًا مشكلة أم لا؟"
+"gss-061__emotionally_concerned","gss-061","emotionally_concerned","Menstrual Problems","I keep worrying that something's wrong with my period but I don't know what to look for, what are the warning signs?","أقلق باستمرار من وجود شيء غير طبيعي في دورتي، لكنني لا أعرف ما الذي ينبغي أن أبحث عنه؛ فما علامات التحذير؟"
+"gss-062__canonical","gss-062","canonical","Pregnancy","What are the signs of excessive bleeding after childbirth?","ما هي علامات النزيف المفرط بعد الولادة؟"
+"gss-062__clinical","gss-062","clinical","Pregnancy","What is the physiological status of menstruation during pregnancy?","ما هو الوضع الفسيولوجي للدورة الشهرية أثناء الحمل؟"
+"gss-062__layperson","gss-062","layperson","Pregnancy","Do you still get periods when you're pregnant?","هل تستمر الدورة الشهرية أثناء الحمل؟"
+"gss-062__indirect_cultural","gss-062","indirect_cultural","Pregnancy","Does the monthly cycle continue once a woman is expecting?","هل تستمر الدورة الشهرية بعد أن تصبح المرأة حاملًا؟"
+"gss-062__ambiguous","gss-062","ambiguous","Pregnancy","Does that whole thing still happen once you're pregnant?","هل يستمر كل ذلك بعد أن أصبحت حاملًا؟"
+"gss-062__emotionally_concerned","gss-062","emotionally_concerned","Pregnancy","I'm newly pregnant and confused about whether I should still be getting my period, what actually happens to it?","أنا في بداية حملي ومحتارة بشأن ما إذا كان من المفترض أن تستمر دورتي؛ فماذا يحدث لها أثناء الحمل؟"
+"gss-063__canonical","gss-063","canonical","PCOS","What are the signs of PCOS?","ما هي علامات متلازمة تكيس المبايض؟"
+"gss-063__clinical","gss-063","clinical","PCOS","What clinical signs are indicative of PCOS?","ما هي العلامات السريرية التي تشير إلى متلازمة تكيس المبايض؟"
+"gss-063__layperson","gss-063","layperson","PCOS","What are some signs that might point to PCOS?","ما هي بعض العلامات التي قد تشير إلى متلازمة تكيس المبايض؟"
+"gss-063__indirect_cultural","gss-063","indirect_cultural","PCOS","What signs would tell a woman she might have this hormone imbalance?","ما هي العلامات التي قد تخبر المرأة بأنها قد تعاني من هذا الاختلال الهرموني؟"
+"gss-063__ambiguous","gss-063","ambiguous","PCOS","What kind of things would even point to this?","ما هي الأشياء التي قد تشير إلى هذا؟"
+"gss-063__emotionally_concerned","gss-063","emotionally_concerned","PCOS","I keep noticing changes in my body and I'm scared it might be PCOS, what are the signs?","ألاحظ تغيرات مستمرة في جسدي، وأخشى أن أكون مصابة بمتلازمة تكيّس المبايض؛ فما علاماتها؟"
+"gss-064__canonical","gss-064","canonical","PCOS","What are the symptoms of PCOS?","ما هي أعراض متلازمة تكيس المبايض؟"
+"gss-064__clinical","gss-064","clinical","PCOS","What are the clinical symptoms and diagnostic criteria of PCOS?","ما هي الأعراض السريرية والمعايير التشخيصية لمتلازمة تكيس المبايض؟"
+"gss-064__layperson","gss-064","layperson","PCOS","What are the signs of PCOS I should look out for?","ما هي علامات متلازمة تكيس المبايض التي يجب أن أحذر منها؟"
+"gss-064__indirect_cultural","gss-064","indirect_cultural","PCOS","What are the signs of this hormone condition that I should watch for?","ما هي علامات هذه الحالة الهرمونية التي يجب أن أراقبها؟"
+"gss-064__ambiguous","gss-064","ambiguous","PCOS","How would I even know if I have this?","كيف لي أن أعرف حتى إذا كنت أعاني من هذا؟"
+"gss-064__emotionally_concerned","gss-064","emotionally_concerned","PCOS","I'm scared I might have PCOS but I don't know what to look for, what are the symptoms?","أنا خائفة من أن أكون مصابة بمتلازمة تكيس المبايض لكنني لا أعرف ماذا أبحث عنه، ما هي الأعراض؟"
+"gss-065__canonical","gss-065","canonical","Irregular Periods","I'm worried I might be pregnant because I missed my period. What should I do?","أخشى أن أكون حاملًا لأن دورتي الشهرية تأخرت. ماذا أفعل؟"
+"gss-065__clinical","gss-065","clinical","Irregular Periods","I have missed my expected menstrual period and am concerned about a possible pregnancy. What steps should I take?","تأخرت دورتي الشهرية المتوقعة، وأشعر بالقلق من احتمال وجود حمل. ما الخطوات التي ينبغي أن أتخذها؟"
+"gss-065__layperson","gss-065","layperson","Irregular Periods","My period hasn't shown up and I think I might be pregnant. What should I do?","لم تأت دورتي الشهرية وأعتقد أنني قد أكون حاملًا. ماذا علي أن أفعل؟"
+"gss-065__indirect_cultural","gss-065","indirect_cultural","Irregular Periods","My monthly hasn't come this time, and I'm worried there might be a reason for that. What should I do?","لم تأتِ دورتي هذه المرة، وأخشى أن يكون وراء ذلك سبب ما. ماذا أفعل؟"
+"gss-065__ambiguous","gss-065","ambiguous","Irregular Periods","My period is late and I'm not sure what that means. What should I do?","دورتي الشهرية متأخرة ولست متأكدة ماذا يعني ذلك. ماذا علي أن أفعل؟"
+"gss-065__emotionally_concerned","gss-065","emotionally_concerned","Irregular Periods","I'm really scared, my period is late and I keep thinking I might be pregnant. I don't know what to do.","أنا خائفة جدًا، دورتي الشهرية متأخرة وأظل أفكر أنني قد أكون حاملًا. لا أعرف ماذا أفعل."
+"gss-066__canonical","gss-066","canonical","Menstrual Health","How can technology integration in menstrual health promote empowerment and self-care?","كيف يمكن لدمج التكنولوجيا في صحة الحيض أن يعزز التمكين والعناية الذاتية؟"
+"gss-066__clinical","gss-066","clinical","Menstrual Health","In what ways can digital health technologies support menstrual health management and patient empowerment?","بأي طرق يمكن لتقنيات الصحة الرقمية دعم إدارة صحة الحيض وتمكين المرضى؟"
+"gss-066__layperson","gss-066","layperson","Menstrual Health","How can apps and gadgets help people take better care of themselves during their period?","كيف يمكن للتطبيقات والأجهزة أن تساعد الناس على العناية بأنفسهم بشكل أفضل خلال فترة الحيض؟"
+"gss-066__indirect_cultural","gss-066","indirect_cultural","Menstrual Health","How can these new phone tools help women manage their monthly matters more comfortably?","كيف يمكن لهذه الأدوات الجديدة للهواتف مساعدة النساء على إدارة أمور الدورة الشهرية بشكل أكثر راحة؟"
+"gss-066__ambiguous","gss-066","ambiguous","Menstrual Health","How do those period apps and things actually help with any of this?","كيف تساعد تطبيقات الدورة الشهرية وهذه الأشياء فعليًا في كل هذا؟"
+"gss-066__emotionally_concerned","gss-066","emotionally_concerned","Menstrual Health","I feel so out of control with my period every month, could some kind of app or tech actually help me feel more on top of it?","أشعر بأنني فقدت السيطرة على دورتي؛ فهل يمكن لتطبيق أو تقنية أن يساعدني فعلًا على إدارتها والشعور بمزيد من التوازن؟"
+"gss-067__canonical","gss-067","canonical","Pregnancy","What is the average length of time between menstrual periods in a woman’s reproductive years?","ما متوسط المدة الفاصلة بين الدورات الشهرية لدى المرأة في سن الإنجاب؟"
+"gss-067__clinical","gss-067","clinical","Pregnancy","What is lochia and what is its clinical significance postpartum?","ما الهلابة، وما دلالتها السريرية بعد الولادة؟"
+"gss-067__layperson","gss-067","layperson","Pregnancy","What is lochia exactly?","ما المقصود بالهلابة تحديدًا؟"
+"gss-067__indirect_cultural","gss-067","indirect_cultural","Pregnancy","What is this bleeding that happens after childbirth called, and what is it?","ما المقصود بالنزيف الذي يحدث بعد الولادة؟"
+"gss-067__ambiguous","gss-067","ambiguous","Pregnancy","What's this thing they call lochia?","ما هذا الشيء الذي يسمونه الهلابة؟"
+"gss-067__emotionally_concerned","gss-067","emotionally_concerned","Pregnancy","I just had my baby and the nurse mentioned 'lochia' and I'm too embarrassed to ask what it is, can you explain?","أنجبت طفلي للتو، وذكرت الممرضة «الهلابة»، لكنني شعرت بحرج شديد من السؤال عنها؛ فهل يمكنك توضيح معناها؟"
+"gss-068__canonical","gss-068","canonical","PCOS","What are some possible causes of PCOS?","ما هي بعض الأسباب المحتملة لمتلازمة تكيس المبايض؟"
+"gss-068__clinical","gss-068","clinical","PCOS","What are the proposed etiological factors underlying PCOS?","ما هي العوامل المسببة المقترحة التي تكمن وراء متلازمة تكيس المبايض؟"
+"gss-068__layperson","gss-068","layperson","PCOS","What might cause PCOS in the first place?","ما الذي قد يسبب متلازمة تكيس المبايض في المقام الأول؟"
+"gss-068__indirect_cultural","gss-068","indirect_cultural","PCOS","What could be behind this hormone condition in the first place?","ما الذي قد يكون وراء هذه الحالة الهرمونية في المقام الأول؟"
+"gss-068__ambiguous","gss-068","ambiguous","PCOS","Where does this even come from?","من أين يأتي هذا أصلًا؟"
+"gss-068__emotionally_concerned","gss-068","emotionally_concerned","PCOS","I keep wondering what I did to cause this, what are the possible causes of PCOS?","لا أكف عن التساؤل عمّا فعلته لحدوث هذه الحالة؛ فما الأسباب المحتملة لمتلازمة تكيّس المبايض؟"
+"gss-069__canonical","gss-069","canonical","Irregular Periods","I’m bleeding after taking the morning-after pill. Is it my period?","أعاني من نزيف بعد تناول حبة منع الحمل الطارئة. هل هذه دورتي الشهرية؟"
+"gss-069__clinical","gss-069","clinical","Irregular Periods","Is post-coital emergency contraceptive use commonly associated with withdrawal bleeding, and how is this distinguished from a normal menstrual period?","هل يرتبط استخدام وسائل منع الحمل الطارئة بعد الجماع عادةً بنزف انسحابي، وكيف يمكن تمييزه عن الدورة الشهرية الطبيعية؟"
+"gss-069__layperson","gss-069","layperson","Irregular Periods","I took the morning-after pill and now I'm bleeding, is that my actual period?","تناولت حبة منع الحمل الطارئة وبدأ النزيف؛ فهل هذه دورتي الشهرية فعلًا؟"
+"gss-069__indirect_cultural","gss-069","indirect_cultural","Irregular Periods","I took that emergency pill and now there's bleeding, is that my monthly, or something else?","تناولت حبة منع الحمل الطارئة ثم حدث نزيف؛ فهل هذه دورتي الشهرية أم شيء آخر؟"
+"gss-069__ambiguous","gss-069","ambiguous","Irregular Periods","I'm bleeding after taking that pill, is that supposed to happen?","أنا أنزف بعد تناول تلك الحبة، هل من المفترض أن يحدث ذلك؟"
+"gss-069__emotionally_concerned","gss-069","emotionally_concerned","Irregular Periods","I took the morning-after pill and now I'm bleeding and I'm really scared something's wrong, is this normal?","تناولت حبة منع الحمل الطارئة وبدأت أنزف، وأنا خائفة جدًا من أن يكون هناك خطب ما؛ فهل هذا طبيعي؟"
+"gss-070__canonical","gss-070","canonical","PCOS","How is PCOS treated?","كيف يتم علاج متلازمة تكيس المبايض؟"
+"gss-070__clinical","gss-070","clinical","PCOS","What are the standard treatment modalities for PCOS?","ما هي طرق العلاج القياسية لمتلازمة تكيس المبايض؟"
+"gss-070__layperson","gss-070","layperson","PCOS","How do you actually treat PCOS?","كيف تُعالَج متلازمة تكيّس المبايض فعليًا؟"
+"gss-070__indirect_cultural","gss-070","indirect_cultural","PCOS","How does a woman treat this hormone condition?","كيف تعالج المرأة هذه الحالة الهرمونية؟"
+"gss-070__ambiguous","gss-070","ambiguous","PCOS","What do you even do about this once you have it?","ماذا تفعل حيال هذا بعد أن تحصل عليه؟"
+"gss-070__emotionally_concerned","gss-070","emotionally_concerned","PCOS","I just found out I have PCOS and I don't know what happens next, how is it even treated?","اكتشفت للتو أنني مصابة بمتلازمة تكيّس المبايض، ولا أعرف ما الخطوة التالية؛ فكيف تُعالَج؟"
+"gss-071__canonical","gss-071","canonical","Menarche","At what age do menses usually begin?","في أي عمر يبدأ الحيض عادةً؟"
+"gss-071__clinical","gss-071","clinical","Menarche","What is the typical age of menarche onset?","ما هو العمر النموذجي لبداية الحيض؟"
+"gss-071__layperson","gss-071","layperson","Menarche","What age do periods usually start?","في أي عمر تبدأ الدورة الشهرية عادةً؟"
+"gss-071__indirect_cultural","gss-071","indirect_cultural","Menarche","At what age does a girl usually become a woman?","في أي عمر عادةً تصبح الفتاة امرأة؟"
+"gss-071__ambiguous","gss-071","ambiguous","Menarche","When is this whole thing supposed to start?","متى من المفترض أن يبدأ كل هذا؟"
+"gss-071__emotionally_concerned","gss-071","emotionally_concerned","Menarche","My daughter hasn't started her period yet and her friends have, and I'm getting anxious, what age is normal for this to start?","لم تبدأ الدورة الشهرية لدى ابنتي بعد، بينما بدأت لدى صديقاتها، وقد أصبحت قلقة؛ فما العمر الطبيعي لبدئها؟"
+"gss-072__canonical","gss-072","canonical","Pregnancy","Should I worry if my period is late by one day?","هل يجب أن أقلق إذا تأخرت دورتي الشهرية بيوم واحد؟"
+"gss-072__clinical","gss-072","clinical","Pregnancy","Is conception possible during menstruation, contrary to common belief?","هل الحمل ممكن أثناء الحيض، على عكس الاعتقاد الشائع؟"
+"gss-072__layperson","gss-072","layperson","Pregnancy","My friend said you can't get pregnant on your period, is that actually true?","قالت صديقتي إنه لا يمكنك الحمل أثناء الدورة الشهرية، هل هذا صحيح فعلًا؟"
+"gss-072__indirect_cultural","gss-072","indirect_cultural","Pregnancy","I was told you can't conceive during your monthly, is that really true?","قيل لي إن المرأة لا تحمل خلال أيامها الشهرية؛ فهل هذا صحيح حقًا؟"
+"gss-072__ambiguous","gss-072","ambiguous","Pregnancy","Someone told me that time is 'safe', is that actually right?","قال لي أحدهم إن الوقت 'آمن'، هل هذا صحيح فعلًا؟"
+"gss-072__emotionally_concerned","gss-072","emotionally_concerned","Pregnancy","I was told period sex is 'safe' and now I'm worried that might not be true, is it actually possible to get pregnant then?","قيل لي إن ممارسة الجنس أثناء الدورة الشهرية «آمنة»، لكنني أخشى ألا يكون ذلك صحيحًا؛ فهل يمكن الحمل حينها فعلًا؟"
+"gss-073__canonical","gss-073","canonical","PCOS","How do they treat PCOS?","كيف يعالجون متلازمة تكيس المبايض؟"
+"gss-073__clinical","gss-073","clinical","PCOS","What treatment protocols are employed for PCOS management?","ما هي بروتوكولات العلاج المستخدمة لإدارة متلازمة تكيس المبايض؟"
+"gss-073__layperson","gss-073","layperson","PCOS","How is PCOS usually treated?","كيف يتم عادةً علاج متلازمة تكيس المبايض (PCOS)؟"
+"gss-073__indirect_cultural","gss-073","indirect_cultural","PCOS","How do doctors usually treat this hormone condition?","كيف يعالج الأطباء عادةً هذه الحالة الهرمونية؟"
+"gss-073__ambiguous","gss-073","ambiguous","PCOS","What's the usual thing they do about it?","ما هو الشيء المعتاد الذي يفعلونه حيال ذلك؟"
+"gss-073__emotionally_concerned","gss-073","emotionally_concerned","PCOS","I just want to know what happens next now that I've been told I have PCOS, how do they actually treat it?","أريد فقط أن أعرف ماذا سيحدث بعد ذلك بعد أن أخبروني أن لدي متلازمة تكيس المبايض، كيف يعالجونها فعليًا؟"
+"gss-074__canonical","gss-074","canonical","PCOS","How do chronic illnesses such as endometriosis and polycystic ovary syndrome (PCOS) impact menstrual health?","كيف تؤثر الأمراض المزمنة مثل الانتباذ البطاني الرحمي ومتلازمة تكيس المبايض (PCOS) على صحة الدورة الشهرية؟"
+"gss-074__clinical","gss-074","clinical","PCOS","What effect do chronic conditions such as endometriosis and PCOS have on overall menstrual health?","ما هو تأثير الحالات المزمنة مثل الانتباذ البطاني الرحمي ومتلازمة تكيس المبايض على صحة الدورة الشهرية بشكل عام؟"
+"gss-074__layperson","gss-074","layperson","PCOS","How do conditions like endometriosis and PCOS affect your overall period health?","كيف تؤثر حالات مثل الانتباذ البطاني الرحمي ومتلازمة تكيس المبايض على صحة دورتك الشهرية بشكل عام؟"
+"gss-074__indirect_cultural","gss-074","indirect_cultural","PCOS","How do long-term conditions like endometriosis and this hormone condition affect a woman's monthly health overall?","كيف تؤثر الحالات طويلة الأمد مثل الانتباذ البطاني الرحمي وهذه الحالة الهرمونية على صحة الحيض بشكل عام؟"
+"gss-074__ambiguous","gss-074","ambiguous","PCOS","How much do these conditions really affect the whole picture of period health?","إلى أي مدى تؤثر هذه الحالات فعليًا على الصورة الكاملة لصحة الدورة الشهرية؟"
+"gss-074__emotionally_concerned","gss-074","emotionally_concerned","PCOS","I've been struggling with symptoms that might be endometriosis or PCOS and I'm worried about my overall menstrual health, how much do these conditions really affect it?","أعاني من أعراض قد تشير إلى الانتباذ البطاني الرحمي أو متلازمة تكيّس المبايض، وأنا قلقة بشأن صحتي الحيضية عمومًا؛ فإلى أي مدى تؤثر هذه الحالات فيها؟"
+"gss-075__canonical","gss-075","canonical","Menstrual Cycle","How do symptoms vary throughout the cycle?","كيف تختلف الأعراض خلال الدورة؟"
+"gss-075__clinical","gss-075","clinical","Menstrual Cycle","How do physical and emotional symptoms fluctuate across the phases of the menstrual cycle?","كيف تتغير الأعراض الجسدية والعاطفية عبر مراحل الدورة الشهرية؟"
+"gss-075__layperson","gss-075","layperson","Menstrual Cycle","How do your symptoms change at different points in your cycle?","كيف تتغير أعراضك في فترات مختلفة من دورتك الشهرية؟"
+"gss-075__indirect_cultural","gss-075","indirect_cultural","Menstrual Cycle","How do things change in your body across the different parts of the month?","كيف تتغير الأمور في جسمك عبر أجزاء الشهر المختلفة؟"
+"gss-075__ambiguous","gss-075","ambiguous","Menstrual Cycle","Why do I feel so different at different points in the month?","لماذا أشعر باختلاف كبير في أوقات مختلفة من الشهر؟"
+"gss-075__emotionally_concerned","gss-075","emotionally_concerned","Menstrual Cycle","I feel like a completely different person depending on where I am in my cycle and it's honestly distressing, is that normal?","أشعر بأنني شخص مختلف تمامًا بحسب المرحلة التي أمر بها من دورتي، وهذا مزعج فعلًا؛ فهل هو طبيعي؟"
+"gss-076__canonical","gss-076","canonical","Pregnancy","What happens to periods during pregnancy?","ماذا يحدث للدورات الشهرية أثناء الحمل؟"
+"gss-076__clinical","gss-076","clinical","Pregnancy","What is the relationship between obesity and the clinical severity of PCOS?","ما هي العلاقة بين السمنة وشدة متلازمة تكيس المبايض السريرية؟"
+"gss-076__layperson","gss-076","layperson","Pregnancy","Does being overweight make PCOS worse?","هل تجعل زيادة الوزن أعراض متلازمة تكيّس المبايض أسوأ؟"
+"gss-076__indirect_cultural","gss-076","indirect_cultural","Pregnancy","Does carrying extra weight make this hormone condition worse?","هل تجعل زيادة الوزن هذه الحالة الهرمونية أسوأ؟"
+"gss-076__ambiguous","gss-076","ambiguous","Pregnancy","Does my weight have anything to do with why this is worse for me?","هل لوزني علاقة بكون هذا الأمر أسوأ لدي؟"
+"gss-076__emotionally_concerned","gss-076","emotionally_concerned","Pregnancy","I feel like my weight is making my PCOS so much worse and I'm really struggling, does obesity actually affect it?","أشعر أن وزني يزيد من سوء متلازمة تكيس المبايض وأنا أعاني حقًا، هل السمنة تؤثر فعلًا؟"
+"gss-077__canonical","gss-077","canonical","PCOS","I'm worried about the long-term health risks of PCOS. What can I do to stay healthy?","أنا قلقة بشأن المخاطر الصحية طويلة الأمد لمتلازمة تكيس المبايض. ماذا يمكنني أن أفعل لأبقى بصحة جيدة؟"
+"gss-077__clinical","gss-077","clinical","PCOS","I am concerned about the long-term health risks of PCOS. What preventive measures can I take?","أنا قلقة بشأن المخاطر الصحية طويلة الأمد لمتلازمة تكيس المبايض. ما هي التدابير الوقائية التي يمكنني اتخاذها؟"
+"gss-077__layperson","gss-077","layperson","PCOS","I'm worried about what PCOS might do to my health long-term, what can I do to stay healthy?","أنا قلقة مما قد تفعله متلازمة تكيّس المبايض بصحتي على المدى الطويل؛ فماذا أفعل لأحافظ على صحتي؟"
+"gss-077__indirect_cultural","gss-077","indirect_cultural","PCOS","I'm worried about how this hormone condition could affect my health in the future, what can I do to protect myself?","أنا قلقة من كيف يمكن أن تؤثر هذه الحالة الهرمونية على صحتي في المستقبل، ماذا يمكنني أن أفعل لحماية نفسي؟"
+"gss-077__ambiguous","gss-077","ambiguous","PCOS","I'm worried about where this could lead, what can I do about it?","أنا قلقة بشأن إلى أين قد يؤدي هذا، ماذا يمكنني أن أفعل حيال ذلك؟"
+"gss-077__emotionally_concerned","gss-077","emotionally_concerned","PCOS","I lie awake worrying about what PCOS could do to my health years from now, what can I actually do to protect myself?","أبقى مستيقظة من شدة القلق بشأن ما قد تفعله متلازمة تكيّس المبايض بصحتي بعد سنوات؛ فماذا يمكنني أن أفعل لحماية نفسي؟"
+"gss-078__canonical","gss-078","canonical","Pregnancy","Can having sex during my period affect my fertility or chances of getting pregnant?","هل يمكن لممارسة الجنس أثناء الدورة الشهرية أن تؤثر في خصوبتي أو فرص الحمل؟"
+"gss-078__clinical","gss-078","clinical","Pregnancy","What is the recommended course of action upon observing large blood clots in postpartum menstrual bleeding?","ما هو الإجراء الموصى به عند ملاحظة جلطات دموية كبيرة في نزيف الدورة الشهرية بعد الولادة؟"
+"gss-078__layperson","gss-078","layperson","Pregnancy","What should I do if I notice big clots in my period after having a baby?","ماذا يجب أن أفعل إذا لاحظت جلطات كبيرة في الدورة بعد الولادة؟"
+"gss-078__indirect_cultural","gss-078","indirect_cultural","Pregnancy","What should I do if I notice large clots in my monthly after giving birth?","ماذا أفعل إذا لاحظت كتلًا دموية كبيرة في النزف الشهري بعد الولادة؟"
+"gss-078__ambiguous","gss-078","ambiguous","Pregnancy","What do I do if I see something like that after everything I went through?","ماذا أفعل إذا رأيت شيئًا كهذا بعد كل ما مررت به؟"
+"gss-078__emotionally_concerned","gss-078","emotionally_concerned","Pregnancy","I just had my baby and now I'm seeing large clots in my period and I'm really scared, what should I do?","أنجبت طفلي للتو، وأرى الآن جلطات دموية كبيرة في نزيفي، وأنا خائفة جدًا؛ فماذا أفعل؟"
+"gss-079__canonical","gss-079","canonical","Menstrual Cycle","I've heard about ovulation, but can I feel it happening?","سمعت عن الإباضة؛ فهل يمكنني الشعور بحدوثها؟"
+"gss-079__clinical","gss-079","clinical","Menstrual Cycle","Is ovulation typically accompanied by perceptible physical sensations?","هل تصاحب الإباضة عادةً أحاسيس جسدية ملحوظة؟"
+"gss-079__layperson","gss-079","layperson","Menstrual Cycle","Can you actually feel it when you're ovulating?","هل يمكن حقًا الشعور بحدوث الإباضة؟"
+"gss-079__indirect_cultural","gss-079","indirect_cultural","Menstrual Cycle","Is there a way to know, in your body, when that middle-of-the-month thing happens?","هل توجد علامة تدل على حدوث ذلك الأمر في منتصف الشهر؟"
+"gss-079__ambiguous","gss-079","ambiguous","Menstrual Cycle","Is there something you're supposed to feel around the middle of your cycle?","هل هناك شيء من المفترض أن تشعر به في منتصف دورتك؟"
+"gss-079__emotionally_concerned","gss-079","emotionally_concerned","Menstrual Cycle","I keep hearing you can feel ovulation and now I'm worried something's wrong because I never feel anything.","أسمع كثيرًا أنه يمكن الشعور بحدوث الإباضة، وأشعر الآن بالقلق لأنني لا أشعر بأي شيء؛ فهل هناك مشكلة؟"
+"gss-080__canonical","gss-080","canonical","Irregular Periods","My periods are accompanied by severe pain and nausea. Is this normal?","دورتي الشهرية مصحوبة بألم شديد وغثيان. هل هذا طبيعي؟"
+"gss-080__clinical","gss-080","clinical","Irregular Periods","I experience severe dysmenorrhea accompanied by nausea. Is this within normal limits?","أعاني من عسر طمث شديد مصحوب بالغثيان. هل يُعد ذلك ضمن الحدود الطبيعية؟"
+"gss-080__layperson","gss-080","layperson","Irregular Periods","My periods come with really bad pain and I feel sick to my stomach, is that normal?","دورتي الشهرية تأتي بألم شديد وأشعر بالغثيان، هل هذا طبيعي؟"
+"gss-080__indirect_cultural","gss-080","indirect_cultural","Irregular Periods","My monthly comes with terrible pain and sickness in my stomach, is that supposed to happen?","تأتي دورتي الشهرية مع ألم شديد وغثيان؛ فهل يُفترض أن يحدث ذلك؟"
+"gss-080__ambiguous","gss-080","ambiguous","Irregular Periods","It hurts a lot and I feel sick every time, is that just how it is?","الألم شديد وأشعر بالغثيان في كل مرة، هل هذا هو الواقع؟"
+"gss-080__emotionally_concerned","gss-080","emotionally_concerned","Irregular Periods","Every period I get such severe pain and nausea that I can barely function, and I'm honestly scared, is this normal?","في كل دورة أشعر بألم وغثيان شديدين لدرجة أنني بالكاد أستطيع ممارسة أنشطتي، وهذا يخيفني؛ فهل هو طبيعي؟"
+"gss-081__canonical","gss-081","canonical","Symptoms","Is it true that menstruation can affect digestion and bowel movements?","هل صحيح أن الدورة الشهرية يمكن أن تؤثر على الهضم وحركة الأمعاء؟"
+"gss-081__clinical","gss-081","clinical","Symptoms","Does the menstrual cycle have a documented effect on gastrointestinal motility and bowel habits?","هل للدورة الشهرية تأثير موثق على حركة الجهاز الهضمي وعادات الأمعاء؟"
+"gss-081__layperson","gss-081","layperson","Symptoms","Can your period actually mess with your digestion or bathroom habits?","هل يمكن أن تؤثر دورتك الشهرية فعلًا على عاداتك الهضمية أو عادات الذهاب للحمام؟"
+"gss-081__indirect_cultural","gss-081","indirect_cultural","Symptoms","Can the monthly cycle affect your stomach and digestion the way people say it does?","هل يمكن أن تؤثر الدورة الشهرية على معدتك وهضمك كما يقول الناس؟"
+"gss-081__ambiguous","gss-081","ambiguous","Symptoms","Is it normal for stuff to feel off with your stomach around that time?","هل من الطبيعي أن تشعر بعدم ارتياح في معدتك في ذلك الوقت؟"
+"gss-081__emotionally_concerned","gss-081","emotionally_concerned","Symptoms","My stomach has been a mess every time I get my period and it's honestly freaking me out, is that even connected?","تضطرب معدتي في كل مرة تأتيني فيها الدورة، وهذا يقلقني؛ فهل الأمران مرتبطان؟"
+"gss-082__canonical","gss-082","canonical","Pregnancy","Will breastfeeding affect when my periods return?","هل ستؤثر الرضاعة الطبيعية على عودة دورتي الشهرية؟"
+"gss-082__clinical","gss-082","clinical","Pregnancy","What are the clinical indicators of postpartum hemorrhage?","ما هي المؤشرات السريرية لنزيف ما بعد الولادة؟"
+"gss-082__layperson","gss-082","layperson","Pregnancy","What are the warning signs of bleeding too much after having a baby?","ما هي علامات التحذير من النزيف المفرط بعد الولادة؟"
+"gss-082__indirect_cultural","gss-082","indirect_cultural","Pregnancy","What are the signs that the bleeding after childbirth has become too much?","ما هي العلامات التي تدل على أن النزيف بعد الولادة أصبح شديدا؟"
+"gss-082__ambiguous","gss-082","ambiguous","Pregnancy","How would I know if the bleeding after birth is more than it should be?","كيف سأعرف إذا كان النزيف بعد الولادة أكبر مما ينبغي؟"
+"gss-082__emotionally_concerned","gss-082","emotionally_concerned","Pregnancy","I just gave birth and I'm scared about how much I'm bleeding, what are the signs it's too much?","لقد أنجبت للتو وأنا خائفة من كمية النزيف، ما هي العلامات التي تدل على أن النزيف أصبح أكثر من اللازم؟"
+"gss-083__canonical","gss-083","canonical","PCOS","Can I still get pregnant if I have PCOS?","هل يمكنني الحمل إذا كنت مصابة بمتلازمة تكيس المبايض؟"
+"gss-083__clinical","gss-083","clinical","PCOS","Is conception possible in patients diagnosed with PCOS?","هل يمكن للمصابات بمتلازمة تكيّس المبايض أن يحملن؟"
+"gss-083__layperson","gss-083","layperson","PCOS","Can I still get pregnant even though I have PCOS?","هل يمكنني الحمل رغم إصابتي بمتلازمة تكيس المبايض؟"
+"gss-083__indirect_cultural","gss-083","indirect_cultural","PCOS","Can I still have children if I have this hormone condition?","هل يمكنني إنجاب الأطفال إذا كنت أعاني من هذه الحالة الهرمونية؟"
+"gss-083__ambiguous","gss-083","ambiguous","PCOS","Does this mean I can't have kids?","هل هذا يعني أنني لا أستطيع إنجاب أطفال؟"
+"gss-083__emotionally_concerned","gss-083","emotionally_concerned","PCOS","I was just diagnosed with PCOS and I'm terrified I won't be able to have children, can I still get pregnant?","شُخّصت مؤخرًا بمتلازمة تكيّس المبايض، وأنا خائفة جدًا من ألا أتمكن من الإنجاب؛ فهل ما زال بإمكاني الحمل؟"
+"gss-084__canonical","gss-084","canonical","PCOS","Can lifestyle changes really help with PCOS, and what should you do?","هل يمكن لتغييرات نمط الحياة أن تساعد فعلًا في علاج متلازمة تكيّس المبايض، وماذا ينبغي أن أفعل؟"
+"gss-084__clinical","gss-084","clinical","PCOS","Can lifestyle modification meaningfully improve PCOS outcomes, and what interventions are recommended?","هل يمكن لتعديل نمط الحياة أن يحسن بشكل ملحوظ نتائج متلازمة تكيس المبايض، وما هي التدخلات الموصى بها؟"
+"gss-084__layperson","gss-084","layperson","PCOS","Can changing my lifestyle actually help with PCOS, and what should I be doing?","هل يمكن أن يساعد تغيير نمط حياتي فعلًا في علاج متلازمة تكيس المبايض، وماذا يجب أن أفعل؟"
+"gss-084__indirect_cultural","gss-084","indirect_cultural","PCOS","Can changing how I eat and live really help with this hormone condition, and what should I try?","هل يمكن أن يساعد تغيير طريقة أكلي وحياتي فعلًا في هذه الحالة الهرمونية، وما الذي يجب أن أجربه؟"
+"gss-084__ambiguous","gss-084","ambiguous","PCOS","Does changing how I live actually make a difference with this, and what am I supposed to do?","هل تغيير طريقة حياتي يحدث فرقا فعليًا في هذا، وماذا يفترض بي أن أفعل؟"
+"gss-084__emotionally_concerned","gss-084","emotionally_concerned","PCOS","I keep hearing lifestyle changes can help PCOS but I don't know where to start and it's overwhelming me, what should I actually do?","أسمع دائمًا أن تغييرات نمط الحياة قد تساعد في متلازمة تكيّس المبايض، لكنني لا أعرف من أين أبدأ، وهذا يثقل كاهلي؛ فماذا ينبغي أن أفعل؟"
+"gss-085__canonical","gss-085","canonical","Pregnancy","Can menstruation stop during pregnancy?","هل يمكن أن يتوقف الحيض أثناء الحمل؟"
+"gss-085__clinical","gss-085","clinical","Pregnancy","What is the expected pattern of menstrual regularity following pregnancy?","ما هو النمط المتوقع لانتظام الدورة الشهرية بعد الحمل؟"
+"gss-085__layperson","gss-085","layperson","Pregnancy","Will my periods be regular again after having a baby?","هل ستنتظم دورتي الشهرية من جديد بعد إنجاب طفل؟"
+"gss-085__indirect_cultural","gss-085","indirect_cultural","Pregnancy","Will my monthly cycle settle back into a regular pattern after childbirth?","هل ستعود دورتي الشهرية إلى النمط الطبيعي بعد الولادة؟"
+"gss-085__ambiguous","gss-085","ambiguous","Pregnancy","Will things go back to how they were before, after all this?","هل ستعود الأمور كما كانت من قبل، بعد كل هذا؟"
+"gss-085__emotionally_concerned","gss-085","emotionally_concerned","Pregnancy","Since having my baby my periods have felt so unpredictable and it's stressing me out, will they ever be regular again?","منذ ولادة طفلي، أصبحت دورتي الشهرية غير متوقعة وهذا يسبب لي توترا، هل ستعود منتظمة مرة أخرى؟"
+"gss-086__canonical","gss-086","canonical","Pregnancy","Can my period change in flow and pain after having a baby?","هل يمكن أن تتغير غزارة دورتي الشهرية وآلامها بعد الولادة؟"
+"gss-086__clinical","gss-086","clinical","Pregnancy","Is conception achievable in the presence of menstrual irregularity?","هل يمكن تحقيق الحمل في ظل وجود اضطرابات في الدورة الشهرية؟"
+"gss-086__layperson","gss-086","layperson","Pregnancy","Can I still get pregnant even though my periods are irregular?","هل يمكنني الحمل رغم أن دورتي الشهرية غير منتظمة؟"
+"gss-086__indirect_cultural","gss-086","indirect_cultural","Pregnancy","Can I still have a baby even though my monthly cycle isn't regular?","هل يمكنني إنجاب طفل حتى وإن لم تكن دورتي الشهرية منتظمة؟"
+"gss-086__ambiguous","gss-086","ambiguous","Pregnancy","Does the fact that mine isn't regular mean it's harder for me?","هل يعني عدم انتظامه أن الأمر سيكون أصعب بالنسبة إليّ؟"
+"gss-086__emotionally_concerned","gss-086","emotionally_concerned","Pregnancy","My periods have always been irregular and I'm terrified that means I can't get pregnant, is that true?","كانت دورتي الشهرية دائما غير منتظمة وأنا خائفة جدًا من أن هذا يعني أنني لا أستطيع الحمل، هل هذا صحيح؟"
+"gss-087__canonical","gss-087","canonical","PCOS","I've heard that PCOS can increase the risk of heart disease. Is that true?","سمعت أن متلازمة تكيس المبايض يمكن أن تزيد من خطر الإصابة بأمراض القلب. هل هذا صحيح؟"
+"gss-087__clinical","gss-087","clinical","PCOS","Is PCOS associated with an elevated risk of cardiovascular disease?","هل ترتبط متلازمة تكيّس المبايض بزيادة خطر الإصابة بأمراض القلب والأوعية الدموية؟"
+"gss-087__layperson","gss-087","layperson","PCOS","I heard PCOS can raise your risk of heart disease, is that true?","سمعت أن متلازمة تكيس المبايض قد تزيد من خطر الإصابة بأمراض القلب، هل هذا صحيح؟"
+"gss-087__indirect_cultural","gss-087","indirect_cultural","PCOS","I heard this hormone condition can affect your heart later on, is that really true?","سمعت أن هذه الحالة الهرمونية قد تؤثر على القلب لاحقًا، هل هذا صحيح حقًا؟"
+"gss-087__ambiguous","gss-087","ambiguous","PCOS","Could this actually affect something as serious as my heart?","هل يمكن أن يؤثر هذا فعلًا على شيء خطير مثل قلبي؟"
+"gss-087__emotionally_concerned","gss-087","emotionally_concerned","PCOS","I heard PCOS can increase your risk of heart disease and now I'm terrified, is that actually true?","سمعت أن متلازمة تكيس المبايض قد تزيد من خطر الإصابة بأمراض القلب والآن أنا خائفة، هل هذا صحيح فعلًا؟"
+"gss-088__canonical","gss-088","canonical","Pregnancy","Can I get pregnant even if I have sex while on my period?","هل يمكنني الحمل حتى لو مارست الجنس أثناء فترة الدورة الشهرية؟"
+"gss-088__clinical","gss-088","clinical","Pregnancy","Is a one-day delay in menstrual onset clinically significant?","هل التأخير في بداية الدورة الشهرية ليوم واحد مهم سريريًا؟"
+"gss-088__layperson","gss-088","layperson","Pregnancy","Is it a big deal if my period is just one day late?","هل يهم إذا تأخرت دورتي الشهرية يومًا واحدًا فقط؟"
+"gss-088__indirect_cultural","gss-088","indirect_cultural","Pregnancy","Is it something to worry about if my monthly is only a day late?","هل يستدعي الأمر القلق إذا تأخرت دورتي يومًا واحدًا فقط؟"
+"gss-088__ambiguous","gss-088","ambiguous","Pregnancy","Does one day even matter?","هل يوم واحد مهم أصلًا؟"
+"gss-088__emotionally_concerned","gss-088","emotionally_concerned","Pregnancy","My period is only one day late but I'm already panicking, should I actually be worried?","دورتي الشهرية متأخرة بيوم واحد فقط لكنني بالفعل أشعر بالذعر، هل يجب أن أقلق فعلًا؟"
+"gss-089__canonical","gss-089","canonical","PCOS","What makes some women more likely to get PCOS?","ما الذي يجعل بعض النساء أكثر عرضة للإصابة بمتلازمة تكيس المبايض؟"
+"gss-089__clinical","gss-089","clinical","PCOS","What are the risk factors associated with a higher likelihood of developing PCOS?","ما هي عوامل الخطر المرتبطة بزيادة احتمالية الإصابة بمتلازمة تكيس المبايض؟"
+"gss-089__layperson","gss-089","layperson","PCOS","Why do some women get PCOS more than others?","لماذا تصاب بعض النساء بمتلازمة تكيس المبايض أكثر من غيرهن؟"
+"gss-089__indirect_cultural","gss-089","indirect_cultural","PCOS","Why are some women more likely to end up with this hormone condition?","لماذا بعض النساء أكثر عرضة للإصابة بهذه الحالة الهرمونية؟"
+"gss-089__ambiguous","gss-089","ambiguous","PCOS","Why does this happen to some people and not others?","لماذا يحدث هذا لبعض الناس وليس لآخرين؟"
+"gss-089__emotionally_concerned","gss-089","emotionally_concerned","PCOS","My mother and sister both have PCOS and I'm terrified I'll get it too, what makes some women more likely to develop it?","أمي وأختي كلتاهما مصابتان بمتلازمة تكيّس المبايض، وأنا خائفة جدًا من أن أُصاب بها أيضًا؛ فما الذي يجعل بعض النساء أكثر عرضة لها؟"
