@@ -162,3 +162,28 @@ def test_recover_styles_fails_on_unknown_row_id():
            "Topic": "PCOS", "Keywords": "k"}
     with pytest.raises(ValueError):
         prep.recover_styles([row], {"train-0001": "ambiguous"})
+
+
+def test_recover_risks_attaches_english_risk_so_fr_ar_is_not_all_routine():
+    import json
+    # FR handoff row: translated answer carries no English consult words, so the
+    # English risk heuristic on it would collapse to "routine". The English
+    # source for this row_id advises seeing a doctor -> recovered risk see-doctor.
+    fr = {"row_id": "train-0007", "Style": "clinical", "Topic": "PCOS",
+          "Question": "Mes règles sont irrégulières, est-ce grave ?",
+          "Answer": "Il est conseillé d'en parler à un professionnel de santé."}
+    risk_by_row_id = {"train-0007": "see-doctor"}
+    out = prep.recover_risks([fr], risk_by_row_id)
+    assert out[0]["_risk"] == "see-doctor"
+    obj = json.loads(prep.to_json_record(out[0])["messages"][1]["content"])
+    assert obj["predicted_risk"] == "see-doctor"   # not the collapsed "routine"
+
+
+def test_recover_risks_falls_back_to_own_answer_when_row_id_absent():
+    import json
+    row = {"row_id": "train-0099", "Style": "clinical", "Topic": "PCOS",
+           "Question": "Q?", "Answer": "You should see a doctor about this."}
+    out = prep.recover_risks([row], {"train-0001": "routine"})  # 0099 not in map
+    assert "_risk" not in out[0]
+    obj = json.loads(prep.to_json_record(out[0])["messages"][1]["content"])
+    assert obj["predicted_risk"] == "see-doctor"   # heuristic on own EN answer

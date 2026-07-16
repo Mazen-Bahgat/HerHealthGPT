@@ -115,6 +115,32 @@ def recover_styles(rows: list[dict], style_by_row_id: dict[str, str]) -> list[di
     return out
 
 
+def load_risk_by_row_id() -> dict[str, str]:
+    """row_id -> risk label derived from the ENGLISH source answer. Risk is a
+    property of the seed, not the language: risk_heuristic keys on English
+    consult words, so running it on translated FR/AR answers collapses almost
+    everything to 'routine' (verified: FR train non-clarify was 99.8% routine).
+    Deriving risk once from the EN answer and attaching it by row_id keeps FR/AR
+    risk labels identical to EN for the same seed."""
+    return {r["row_id"]: risk_heuristic((r.get("Answer") or "").strip())
+            for r in read_csv(DEFAULT_TRAIN) + read_csv(DEFAULT_VAL)}
+
+
+def recover_risks(rows: list[dict], risk_by_row_id: dict[str, str]) -> list[dict]:
+    """Attach `_risk` (English-derived) by row_id join. Rows whose row_id is not
+    in the map keep no `_risk` and fall back to the heuristic on their own
+    answer in to_json_record (correct for EN, whose answer is already English)."""
+    out = []
+    for r in rows:
+        if r.get("row_id") in risk_by_row_id:
+            mapped = dict(r)
+            mapped["_risk"] = risk_by_row_id[r["row_id"]]
+            out.append(mapped)
+        else:
+            out.append(r)
+    return out
+
+
 def is_degenerate_ambiguous(row: dict) -> bool:
     """Ambiguity rewrites that erased the content words entirely
     ("What is something? I'm not really sure...") — training on these pairs a
@@ -227,7 +253,7 @@ def to_json_record(row: dict) -> dict:
         obj = {
             "predicted_category": cat,
             "interpreted_symptom": _first_sentence(a),
-            "predicted_risk": risk_heuristic(a),
+            "predicted_risk": row.get("_risk") or risk_heuristic(a),
             "recommended_action": _first_sentence(a),
             "asks_clarification": False,
             "clarifying_question": "",
@@ -281,6 +307,12 @@ def main() -> None:
         styles = load_style_by_row_id()
         train_rows = recover_styles(train_rows, styles)
         val_rows = recover_styles(val_rows, styles)
+        # Risk is language-independent: derive it from the EN source answer by
+        # row_id, else the English-word heuristic on translated text collapses
+        # FR/AR risk to ~99.8% routine.
+        risk_by_row_id = load_risk_by_row_id()
+        train_rows = recover_risks(train_rows, risk_by_row_id)
+        val_rows = recover_risks(val_rows, risk_by_row_id)
 
     bench_questions = {norm_q(r["Question"]) for r in read_csv(args.benchmark)}
     degenerate_ids = load_degenerate_row_ids()
