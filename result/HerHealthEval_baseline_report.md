@@ -18,9 +18,11 @@ Every figure in this report is reproducible with one command (see §9).
 - The **baseline** is **M2 = base Qwen3.5-9B, zero-shot** (no fine-tuning),
   prompted with our structured triage schema. It is *also* the multilingual
   reference, because Qwen3.5-9B is natively multilingual.
-- The baseline **interprets** the concern (category accuracy) at **0.617 / 0.614 /
-  0.617** in EN / FR / AR — remarkably **stable across languages** (well above the
-  0.333 majority baseline).
+- The baseline **interprets** the concern (strict category accuracy) at **0.617 /
+  0.614 / 0.617** in EN / FR / AR — remarkably **stable across languages** (well
+  above the 0.333 majority baseline). Under the clinically-gated **relaxed** metric
+  (§4.3), true interpretation is **~0.88** in every language: most strict "errors"
+  are justified adjacent-category reads, not misunderstandings.
 - Its safety-critical weakness is **under-triage** — routing a *see-doctor* case to
   *routine* — at **0.463 / 0.440 / 0.420** (EN/FR/AR): the base model misses
   ~42–46% of cases that should see a clinician, but does so *consistently* across
@@ -111,15 +113,21 @@ behaviour rather than a single risk-accuracy number.
 ## 4. Baseline (M2) results — in depth
 
 ### 4.1 Overall, per language (with 95% CIs)
-| Lang | parse_ok | interpretation [95% CI] | under-triage ↓ [95% CI] | clar. recall | clar. spec |
-|---|---|---|---|---|---|
-| EN | 1.000 | 0.617 [0.576, 0.657] | 0.463 [0.422, 0.506] | 0.208 | 0.878 |
-| FR | 0.998 | 0.614 [0.573, 0.655] | 0.440 [0.399, 0.482] | 0.333 | 0.862 |
-| AR | 1.000 | 0.617 [0.574, 0.656] | 0.420 [0.380, 0.463] | 0.375 | 0.849 |
+Interpretation is shown in all three brackets (strict / relaxed content-gated /
+loose upper-bound; see §4.3 and `error_analysis_menstrual.md`).
+
+| Lang | parse_ok | interp strict [95% CI] | interp relaxed | interp loose | under-triage ↓ [95% CI] | clar. recall | clar. spec |
+|---|---|---|---|---|---|---|---|
+| EN | 1.000 | 0.617 [0.576, 0.657] | 0.878 | 0.930 | 0.463 [0.422, 0.506] | 0.208 | 0.878 |
+| FR | 0.998 | 0.614 [0.573, 0.655] | 0.881 | 0.952 | 0.440 [0.399, 0.482] | 0.333 | 0.862 |
+| AR | 1.000 | 0.617 [0.574, 0.656] | 0.883 | 0.952 | 0.420 [0.380, 0.463] | 0.375 | 0.849 |
 
 **Reading:** interpretation is statistically identical across the three languages
-(overlapping CIs); the base model understands the concern equally well regardless
-of language. Under-triage is high everywhere (~0.42–0.46) but, again, consistent.
+(overlapping strict CIs), and the clinically-gated **relaxed** interpretation is
+~0.88 in every language — the base model understands the concern equally well
+regardless of language, and far better than strict exact-match accuracy suggests.
+Under-triage is high everywhere (~0.42–0.46) but, again, consistent. All three
+interpretation brackets are also emitted by `scripts/multilingual_report.py`.
 
 ### 4.2 By communication register (the surface-form effect)
 Interpretation accuracy / under-triage per register (averaged behaviour; each cell n≈90):
