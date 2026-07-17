@@ -124,8 +124,16 @@ under-triage = P(routine | gold see-doctor); clar recall on 24 gold=yes items.
 | M3ml-v1 | fr | 0.998 | 0.605 | **1.000** | 0.000 | 1.000 | 0.618 |
 | M3ml-v1 | ar | 0.998 | 0.618 | **0.998** | 0.000 | 0.998 | 0.578 |
 | M3ml-v2 | en | 1.000 | 0.644 | 0.439 | 0.000 | 1.000 | 0.667 |
-| M3ml-v2 | fr | *running* | | | | | |
-| M3ml-v2 | ar | *pending* | | | | | |
+| M3ml-v2 | fr | 0.996 | 0.617 | **0.450** | 0.000 | 1.000 | 0.629 |
+| M3ml-v2 | ar | *running* | | | | | |
+
+**v1→v2 FR ablation (the payoff):** correcting the risk labels drops FR
+under-triage from **1.000 → 0.450** (≈ base M2's 0.440) while category
+interpretation is statistically unchanged (McNemar p=0.42). The risk McNemar is
+total and one-directional — b=0, c=292, p=5e-65: v2 recovers the correct
+see-doctor verdict on 292 FR items where v1 failed, and v1 is *never* correct
+where v2 fails. Corrected language-independent supervision restores cross-lingual
+safety to baseline **without harming interpretation**.
 
 ### 4.2 Cross-language consistency
 - **M2 base EN↔FR↔AR:** risk **0.711** (n=540 aligned triples), category
