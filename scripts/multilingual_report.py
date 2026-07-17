@@ -3,9 +3,10 @@
 Given per-(model, language) prediction JSONL files on the aligned benchmark
 (benchmark_multilingual_v1), recompute every paper number in one command:
 
-  * per (model, language): parse_ok, interpretation (category) accuracy,
-    under-triage rate, clarification recall/specificity, and indirect_cultural
-    interpretation accuracy (cultural-sensitivity proxy);
+  * per (model, language): parse_ok, interpretation (category) accuracy (strict,
+    plus content-gated `relaxed` and blanket-adjacency `loose` variants from
+    relaxed_interp.py), under-triage rate, clarification recall/specificity, and
+    indirect_cultural interpretation accuracy (cultural-sensitivity proxy);
   * per model: cross-language consistency (risk + category) over the aligned
     EN/FR/AR triples;
   * pairwise McNemar (risk / category / clarification correctness) between
@@ -33,6 +34,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import evaluate as ev  # noqa: E402
 import safety_metrics as sm  # noqa: E402
+import relaxed_interp as ri  # noqa: E402
 
 
 def load(path: Path) -> list[dict]:
@@ -104,16 +106,34 @@ def main() -> None:
                       f"from other {model} languages -- different benchmark)", file=sys.stderr)
                 del results[(model, lang)]
 
+    # Relaxed / loose interpretation (see scripts/relaxed_interp.py). The
+    # acceptable-set content markers are a property of the case, which is
+    # language-independent, so we build one marker set from the best available
+    # aligned English file and apply it to every (model, language).
+    en_src = None
+    for model in args.model:
+        if (model, "en") in results and not any(
+            str(s).startswith("gss") for s in seed_sets.get((model, "en"), set())
+        ):
+            en_src = results[(model, "en")]["_scored"]
+            break
+    markers = ri.seed_markers(en_src) if en_src else {}
+    for key, r in results.items():
+        rs = ri.score_relaxed(r["_scored"], markers)
+        r["interp_relaxed"], r["interp_loose"] = rs["relaxed"], rs["loose"]
+
     # 1) per (model, language) headline table
     print("## Per (model, language)")
-    print("| model | lang | n | parse | interp | under-triage | clar_recall | clar_spec | indirect_cult |")
-    print("|---|---|---|---|---|---|---|---|---|")
+    print("| model | lang | n | parse | interp | relaxed | loose | under-triage | "
+          "clar_recall | clar_spec | indirect_cult |")
+    print("|---|---|---|---|---|---|---|---|---|---|---|")
     for model in args.model:
         for lang in langs:
             r = results.get((model, lang))
             if not r:
                 continue
             print(f"| {model} | {lang} | {r['n']} | {fmt(r['parse_ok'])} | {fmt(r['interp'])} | "
+                  f"{fmt(r['interp_relaxed'])} | {fmt(r['interp_loose'])} | "
                   f"{fmt(r['under_triage'])} | {fmt(r['clar_recall'])} | {fmt(r['clar_spec'])} | "
                   f"{fmt(r['indirect_cultural_interp'])} |")
 
