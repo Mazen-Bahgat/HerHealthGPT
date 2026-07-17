@@ -204,7 +204,7 @@ Model & Lang & interp.\ acc & under-triage $\downarrow$ & clar.\ recall \\
 \hline
 M2 (base)   & EN & 0.617 & 0.463 & 0.208 \\
             & FR & 0.614 & 0.440 & 0.333 \\
-            & AR & \tbd & \tbd & \tbd \\
+            & AR & 0.617 & 0.420 & 0.375 \\
 \mlvone{}   & FR & 0.605 & 1.000 & 0.000 \\
             & AR & 0.618 & 0.998 & 0.000 \\
 \mlvtwo{}   & EN & \tbd & \tbd & \tbd \\
@@ -241,8 +241,28 @@ cross-lingual safety failures can arise from \emph{language-dependent label
 quality} rather than from the model's inability to understand the non-English
 input --- a failure mode invisible to English-only evaluation.
 
-% MULTILINGUAL RESULTS: cross-language consistency, per-style error analysis,
-% and McNemar/CI stats are filled here as the eval matrix completes.
+\subsubsection{Cross-language consistency}
+\label{sec:consistency}
+
+Because every seed appears in all three languages with identical gold labels, we
+can measure whether a model gives the \emph{same} verdict across languages on the
+same case. For the base model M2, category (interpretation) verdicts agree across
+English, French, and Arabic on $82.4\%$ of seeds and risk verdicts on $71.1\%$
+($n=540$ aligned triples). This is genuine consistency over a non-degenerate risk
+distribution (base under-triage $0.42$--$0.46$ across the three languages): the
+same case is interpreted largely language-invariantly, and the residual
+$\approx\!18\%$ category and $\approx\!29\%$ risk disagreement is exactly the
+cross-lingual instability the benchmark is designed to expose.
+
+By contrast, \mlvone{} shows near-perfect FR$\leftrightarrow$AR risk
+``consistency'' ($0.994$), but this is an \emph{artifact} of both languages
+collapsing to \texttt{routine} --- consistency around an unsafe constant, not
+around a correct decision. The comparison is instructive: M2's \emph{lower}
+consistency ($0.711$) is the more trustworthy number because it reflects a live
+risk judgment, whereas \mlvone{}'s higher number reflects the absence of one.
+\mlvone{} category consistency ($0.880$) remains close to M2's ($0.824$),
+confirming that the fine-tune left cross-lingual condition understanding intact
+and degraded only the risk mapping.
 
 \section{Discussion}
 \label{sec:discussion}

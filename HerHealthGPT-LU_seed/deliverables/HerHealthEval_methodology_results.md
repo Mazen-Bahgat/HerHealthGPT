@@ -120,17 +120,28 @@ under-triage = P(routine | gold see-doctor); clar recall on 24 gold=yes items.
 |---|---|---|---|---|---|---|---|
 | M2 (base) | en | 1.000 | 0.617 | 0.463 | 0.208 | 0.878 | 0.611 |
 | M2 (base) | fr | 0.998 | 0.614 | 0.440 | 0.333 | 0.862 | 0.600 |
-| M2 (base) | ar | *running* | | | | | |
+| M2 (base) | ar | 1.000 | 0.617 | 0.420 | 0.375 | 0.849 | 0.611 |
 | M3ml-v1 | fr | 0.998 | 0.605 | **1.000** | 0.000 | 1.000 | 0.618 |
 | M3ml-v1 | ar | 0.998 | 0.618 | **0.998** | 0.000 | 0.998 | 0.578 |
 | M3ml-v2 | en/fr/ar | *pending retrain* | | | | | |
 
 ### 4.2 Cross-language consistency
-- **M3ml-v1 FR↔AR:** risk 0.994 (n=540), category 0.880 (n=540). High risk
-  "consistency" is an artifact of *both* languages collapsing to routine — the
-  model is consistently unsafe. Category consistency 0.880 shows genuine
-  cross-lingual condition understanding.
-- M2 base and M3ml-v2 (EN/FR/AR triples): *pending*.
+- **M2 base EN↔FR↔AR:** risk **0.711** (n=540 aligned triples), category
+  **0.824** (n=540). This is *genuine* consistency: the base model gives the same
+  category verdict across languages 82% of the time and the same risk verdict 71%
+  of the time, with a non-degenerate risk distribution (under-triage 0.42–0.46
+  across the three languages, not a collapse). Interpretation of the same case is
+  largely language-invariant; the residual ~18% category disagreement and ~29%
+  risk disagreement are the honest cross-lingual instability the benchmark is
+  designed to surface.
+- **M3ml-v1 FR↔AR:** risk 0.994 (n=540), category 0.880 (n=540). The near-perfect
+  risk "consistency" is an *artifact* of *both* languages collapsing to routine —
+  the model is consistently unsafe, not consistently correct. Contrast with M2's
+  0.711: M2's lower number is more trustworthy because it reflects a live
+  risk decision rather than a constant. Category consistency 0.880 (slightly above
+  M2's 0.824) shows the fine-tune did not damage cross-lingual condition
+  understanding — only the risk labels were broken.
+- M3ml-v2 (EN/FR/AR triples): *pending retrain*.
 
 ### 4.3 Per-style error analysis
 - Cross-style risk consistency (M3ml-v1): FR 0.978, AR 0.978 (n=90) — verdict
