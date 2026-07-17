@@ -15,3 +15,6 @@ data/ft/
 unsloth_compiled_cache/
 unsloth_training_checkpoints/
 models/
+
+# training/eval logs
+logs/

@@ -57,6 +57,8 @@ We present HerHealthEval, a multilingual benchmark and evaluation framework for 
 Our controlled evaluation suite covers menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility in English, Arabic, and French, pairing clinical, lay, indirect, ambiguous, and emotionally concerned expressions with predefined targets for concern category, risk level, recommended action, and clarification need.
 The protocol requires native-speaker validation of Arabic and French for meaning preservation, naturalness, and register before cross-lingual evaluation or adaptation, while evaluation cases remain separated from leakage-controlled adaptation data.
 The experimental design centers Qwen3.5-9B and specifies a general-purpose baseline, English domain adaptation, and subsequent Arabic/French adaptation, evaluated through misunderstanding, under-triage, clarification, unsafe-response, and cross-style/cross-language consistency measures.
+Empirically, we find that naive multilingual fine-tuning can \emph{degrade safety below the base model}: a fine-tune that interprets French and Arabic as well as the base model nonetheless under-triages almost every non-English case (under-triage $\approx 1.0$ vs.\ the base model's $0.42$--$0.46$), a failure a controlled ablation traces to language-dependent label quality rather than comprehension (paired risk discordance entirely one-directional, $p<10^{-63}$).
+Correcting the labels to be language-independent restores non-English safety to a level statistically indistinguishable from the base model ($p=0.88$/$0.94$ for French/Arabic) while yielding the best interpretation accuracy of any configuration.
 Rather than claiming comprehensive clinical coverage, this preliminary study establishes a failure-oriented protocol for testing women's-health language understanding beyond answer generation.
 \end{abstract}
 
@@ -209,14 +211,17 @@ M2 (base)   & EN & 0.617 & 0.463 & 0.208 \\
             & AR & 0.618 & 0.998 & 0.000 \\
 \mlvtwo{}   & EN & 0.644 & 0.439 & 0.000 \\
             & FR & 0.617 & 0.450 & 0.000 \\
-            & AR & \tbd & \tbd & \tbd \\
+            & AR & 0.646 & 0.443 & 0.000 \\
 \hline
 \end{tabular}
 \caption{Multilingual results on HerHealthEval ($n=540$/language). interp.\ acc
 $=$ category (symptom-interpretation) accuracy; under-triage $=$ fraction of
-gold \texttt{see-doctor} routed to \texttt{routine} (lower is better). Values
-marked \tbd{} are being computed. \mlvone{} vs.\ \mlvtwo{} isolates the effect
-of language-independent risk labeling.}
+gold \texttt{see-doctor} routed to \texttt{routine} (lower is better); clar.\
+recall on the $24$ gold-yes items. \mlvone{} vs.\ \mlvtwo{} isolates the effect
+of language-independent risk labeling: \mlvone{} collapses non-English
+under-triage to $\approx\!1.0$, while \mlvtwo{} restores it to the base model's
+level and attains the best interpretation accuracy in every language.
+(\mlvone{} English uses a separate legacy set and is omitted.)}
 \label{tab:multilingual}
 \end{table}
 
@@ -236,10 +241,15 @@ pipeline derived risk labels by matching \emph{English} consult words against
 the \emph{translated} answers, so $99.8\%$ of French (and Arabic) training rows
 were labeled \texttt{routine}. Recovering risk from the English source by
 \texttt{row\_id} (\mlvtwo{}) restores the training risk distribution to match
-English (routine $0.58$ / see-doctor $0.40$). This demonstrates that
+English (routine $0.58$ / see-doctor $0.40$), and this single change repairs the
+behavior: \mlvtwo{} under-triages $0.450$ of French and $0.443$ of Arabic
+see-doctor items --- back to the base model's $0.44$/$0.42$ and far below
+\mlvone{}'s $\approx\!1.0$ --- while its category interpretation is statistically
+unchanged from \mlvone{} (\S\ref{sec:mcnemar}). This demonstrates that
 cross-lingual safety failures can arise from \emph{language-dependent label
 quality} rather than from the model's inability to understand the non-English
-input --- a failure mode invisible to English-only evaluation.
+input --- a failure mode invisible to English-only evaluation, and one fixed by
+correcting supervision rather than by adding data or languages.
 
 \subsubsection{Cross-language consistency}
 \label{sec:consistency}
@@ -263,6 +273,13 @@ risk judgment, whereas \mlvone{}'s higher number reflects the absence of one.
 \mlvone{} category consistency ($0.880$) remains close to M2's ($0.824$),
 confirming that the fine-tune left cross-lingual condition understanding intact
 and degraded only the risk mapping.
+
+The corrected fine-tune \mlvtwo{} behaves like the base model rather than
+\mlvone{}: risk consistency $0.681$ and category consistency $0.837$ ($n=540$),
+both over a live risk distribution (under-triage $0.44$--$0.45$ across languages).
+Its category consistency is in fact the highest of the three models, so the
+correction makes interpretation the \emph{most} language-invariant while keeping
+risk consistency honest rather than collapsed.
 
 \subsubsection{Paired significance (McNemar)}
 \label{sec:mcnemar}
@@ -306,6 +323,50 @@ wherever the two disagree. Category shows no significant difference; the
 clarification column favors \mlvone{} only through the always-abstain majority
 baseline (gold is $95.6\%$ ``no clarification'').}
 \label{tab:mcnemar}
+\end{table}
+
+Correcting the risk labels to be language-independent (\mlvtwo{}) reverses this
+picture (Table~\ref{tab:mcnemar2}). Against \mlvone{}, \mlvtwo{} recovers the
+correct risk verdict on $292$ French and $296$ Arabic items while \mlvone{} is
+correct on \emph{zero} items where \mlvtwo{} fails ($p<10^{-64}$) --- the same
+total, one-directional discordance as the base-model comparison, now in the
+corrected model's favor, and with category interpretation left unchanged (FR
+$p=0.42$, AR $p=0.055$). Against the base model M2, \mlvtwo{}'s risk decisions are
+now statistically \emph{indistinguishable} in the non-English languages (FR
+$p=0.88$, AR $p=0.94$) and modestly safer in English ($p=0.011$): the corrected
+fine-tune has climbed all the way back to the base model's safety rather than
+merely improving on \mlvone{}. Interpretation remains at least on par with the
+base model in every language, and \mlvtwo{} attains the best category accuracy in
+Table~\ref{tab:multilingual}. The one measure that does not recover is
+clarification: like \mlvone{}, \mlvtwo{} rarely asks (recall $0.00$), so M2 retains
+a genuine advantage there ($p\sim10^{-11}$). Restoring calibrated clarification,
+left aside in this iteration, is the clearest remaining target.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lllccc}
+\hline
+Comparison & Lang & Measure & $b$ & $c$ & $p$ \\
+\hline
+\mlvone{} vs \mlvtwo{} & FR & risk     & 0  & 292 & $5.0\!\times\!10^{-65}$ \\
+                       &    & category & 16 & 22  & $0.42$ \\
+                       & AR & risk     & 0  & 296 & $6.7\!\times\!10^{-66}$ \\
+                       &    & category & 16 & 30  & $0.055$ \\
+\hline
+M2 vs \mlvtwo{}        & EN & risk     & 63 & 96  & $0.011$ \\
+                       & FR & risk     & 84 & 87  & $0.88$ \\
+                       & AR & risk     & 83 & 81  & $0.94$ \\
+\hline
+\end{tabular}
+\caption{McNemar's paired test for the correction. Top: \mlvone{} vs.\ \mlvtwo{}
+($b$ = \mlvone{} right and \mlvtwo{} wrong; $c$ = reverse). Correcting the labels
+flips the risk discordance to entirely one-directional in \mlvtwo{}'s favor
+($b=0$), while category is unchanged. Bottom: M2 (base) vs.\ \mlvtwo{}; after the
+fix, risk is statistically indistinguishable from the base model in French and
+Arabic. \mlvone{}'s English predictions use a separate legacy set and are excluded
+from the top block.}
+\label{tab:mcnemar2}
 \end{table}
 
 \section{Discussion}

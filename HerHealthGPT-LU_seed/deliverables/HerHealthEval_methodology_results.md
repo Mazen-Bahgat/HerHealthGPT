@@ -125,7 +125,7 @@ under-triage = P(routine | gold see-doctor); clar recall on 24 gold=yes items.
 | M3ml-v1 | ar | 0.998 | 0.618 | **0.998** | 0.000 | 0.998 | 0.578 |
 | M3ml-v2 | en | 1.000 | 0.644 | 0.439 | 0.000 | 1.000 | 0.667 |
 | M3ml-v2 | fr | 0.996 | 0.617 | **0.450** | 0.000 | 1.000 | 0.629 |
-| M3ml-v2 | ar | *running* | | | | | |
+| M3ml-v2 | ar | 0.994 | 0.646 | **0.443** | 0.000 | 1.000 | 0.644 |
 
 **v1→v2 FR ablation (the payoff):** correcting the risk labels drops FR
 under-triage from **1.000 → 0.450** (≈ base M2's 0.440) while category
@@ -151,7 +151,12 @@ safety to baseline **without harming interpretation**.
   risk decision rather than a constant. Category consistency 0.880 (slightly above
   M2's 0.824) shows the fine-tune did not damage cross-lingual condition
   understanding — only the risk labels were broken.
-- M3ml-v2 (EN/FR/AR triples): *pending retrain*.
+- **M3ml-v2 EN↔FR↔AR:** risk **0.681** (n=540), category **0.837** (n=540).
+  Like M2 and unlike M3ml-v1, this is *genuine* consistency over a live risk
+  distribution (under-triage 0.44–0.45 across languages) — the corrected fine-tune
+  is consistent because it agrees on real verdicts, not because it collapsed. Its
+  category consistency (0.837) is the highest of the three models, i.e. the most
+  language-invariant interpretation.
 
 ### 4.3 Per-style error analysis
 - Cross-style risk consistency (M3ml-v1): FR 0.978, AR 0.978 (n=90) — verdict
@@ -164,8 +169,12 @@ safety to baseline **without harming interpretation**.
 FR/AR see-doctor items while parsing at 0.998 and interpreting category at
 0.605/0.618 — it understands the input but was trained to under-triage it,
 because the English-word risk heuristic mislabeled 99.8% of FR/AR training rows
-routine. v2 (risk recovered from EN source by row_id) is the corrected arm;
-retrain + eval pending.
+routine. **v2 (risk recovered from EN source by row_id) fixes it: FR/AR
+under-triage 0.450/0.443 (≈ base M2 0.440/0.420, vs v1's 1.000/0.998), with
+category interpretation statistically unchanged (v1-vs-v2 McNemar p=0.42/0.055)
+and M2-vs-v2 risk indistinguishable from baseline (p=0.88/0.94).** Correcting
+supervision — not adding data or languages — is what restores cross-lingual
+safety.
 
 **Confirmed finding so far (M3ml-v1, on this benchmark):** French fine-tuned
 predictions collapse to "routine" on 539/540 items (under-triage ≈ 1.00) while
@@ -195,7 +204,38 @@ evidence that M3ml-v1's cross-lingual under-triage is systematic. Category is
 statistically identical (fine-tune neither helped nor hurt *which condition* is
 recognized). The clarification "advantage" of v1 is a majority-baseline artifact
 (never-ask wins the 95.6% gold-no items); M2 alone has non-zero clarification
-recall. M2-vs-v2 and v1-vs-v2 McNemar: *pending v2 retrain*.
+recall.
+
+**v1 vs v2 (the correction is total):** correcting the labels flips the risk
+discordance completely.
+
+| Lang | Measure | b (v1 right) | c (v2 right) | p-value | Reading |
+|---|---|---|---|---|---|
+| FR | risk | 0 | 292 | 4.96e-65 | v2 fixes 292; v1 **never** better |
+| FR | category | 16 | 22 | 0.42 | interpretation unchanged |
+| AR | risk | 0 | 296 | 6.67e-66 | v2 fixes 296; v1 **never** better |
+| AR | category | 16 | 30 | 0.055 | interpretation ~unchanged |
+
+(EN not comparable: M3ml-v1's EN predictions are on the legacy `gss-*` set, a
+different benchmark — correctly excluded by the report's seed-namespace guard.)
+
+**M2 vs v2 (v2 recovered baseline safety):** after the fix, base and corrected
+fine-tune are statistically indistinguishable on risk in the non-English
+languages — v2 climbed all the way back to the base model's safety.
+
+| Lang | Measure | b (M2 right) | c (v2 right) | p-value | Reading |
+|---|---|---|---|---|---|
+| EN | risk | 63 | 96 | 0.011 | v2 modestly safer than base |
+| FR | risk | 84 | 87 | 0.88 | **indistinguishable** from base |
+| AR | risk | 83 | 81 | 0.94 | **indistinguishable** from base |
+| EN/FR/AR | category | n.s. | | 0.23/1.0/0.27 | interpretation ~ base |
+| EN/FR/AR | clarification | 5/10/12 | 63/72/78 | ~1e-11 | v2 worse — collapsed clar (deferred) |
+
+**Bottom line:** v1 broke non-English safety (under-triage → ~1.0), v2 restored it
+to baseline (under-triage 0.44–0.45; M2-vs-v2 risk n.s.) *and* improved
+interpretation (best interp on all three languages), while cross-lingual
+consistency became genuine again (0.681/0.837, not v1's collapsed 0.994).
+Clarification remains the open failure across all fine-tunes (deferred by design).
 
 ## 5. Contribution statement (draft — the doctor's open "??" item)
 
