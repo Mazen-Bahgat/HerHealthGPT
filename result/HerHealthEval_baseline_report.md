@@ -163,10 +163,27 @@ seed (irregular periods + polycystic ovaries on ultrasound) is a textbook PCOS
 presentation the model arguably reads *more* correctly than the gold. The
 confusion is stable across all six registers and all three languages, and
 fine-tuning merely shifts it (base → fertility; fine-tunes → PCOS) without
-resolving it. **Recommendation:** report a relaxed clinically-acceptable
-interpretation metric and/or refine the conception-motivated menstrual labels, and
-frame the gap as *category-boundary ambiguity in real patient language* — a
-substantive finding rather than a weakness.
+resolving it.
+
+**Relaxed clinically-acceptable metric (implemented; `scripts/relaxed_interp.py`).**
+Crediting content-justified adjacent reads (conception→fertility, cysts→PCOS,
+gated on the language-independent English case content) raises the base model's
+interpretation to **~0.88** (menstrual 0.39→0.81):
+
+| Model | EN strict → relaxed | FR | AR |
+|---|---|---|---|
+| M2 (base) | 0.617 → **0.878** | 0.614 → 0.881 | 0.617 → 0.883 |
+| M3ml-v1 | — | 0.605 → 0.803 | 0.618 → 0.805 |
+| M3ml-v2 | 0.644 → 0.806 | 0.617 → 0.810 | 0.646 → 0.829 |
+
+**Important nuance for the paper:** the strict-accuracy ranking *flips* under
+clinical gating. By strict accuracy M3ml-v2 leads (0.644 > 0.617); by the
+content-gated relaxed metric the **base model leads** (0.878 > 0.806), because
+fine-tuning shifted menstrual errors toward PCOS (usually *not* justified by the
+case) whereas the base model's errors go to fertility (*justified* by the
+conception-themed seeds). So the fine-tune's strict gain partly reflects a
+category-prior shift, not better clinical interpretation. See
+`error_analysis_menstrual.md` for the full table and mechanism.
 
 ### 4.4 Cross-style consistency (same case, six phrasings)
 | Lang | risk consistency | category consistency |

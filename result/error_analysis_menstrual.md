@@ -90,7 +90,54 @@ patient language**, robust across models and languages.
    real patient language frequently carry fertility or PCOS intent that the model
    (reasonably) surfaces.
 
-## 5. Reproduce
+## 5. Relaxed (clinically-acceptable) interpretation metric
+
+We implemented the recommended relaxed metric (`scripts/relaxed_interp.py`, unit
+tests in `tests/test_relaxed_interp.py`). A prediction is credited if it lands in a
+per-item **acceptable set** = {gold} ∪ {clinically-adjacent categories *justified by
+the case content*}. Adjacency is **content-gated**, not blanket: an adjacent
+category counts only when the case text contains its clinical markers (conception/
+pregnancy → fertility; cysts/polycystic/ovaries → PCOS; period/cycle/bleeding →
+menstrual). Markers are detected on the **English source per seed** (case content is
+language-independent) and applied uniformly across EN/FR/AR.
+
+| Model | Lang | strict interp | **relaxed interp** | Δ | menstrual strict→relaxed |
+|---|---|---|---|---|---|
+| M2 (base) | EN | 0.617 | **0.878** | +0.261 | 0.394 → 0.811 |
+| M2 (base) | FR | 0.614 | **0.881** | +0.267 | 0.394 → 0.800 |
+| M2 (base) | AR | 0.617 | **0.883** | +0.267 | 0.400 → 0.806 |
+| M3ml-v1 | FR | 0.605 | 0.803 | +0.199 | 0.374 → 0.592 |
+| M3ml-v1 | AR | 0.618 | 0.805 | +0.187 | 0.378 → 0.600 |
+| M3ml-v2 | EN | 0.644 | 0.806 | +0.161 | 0.367 → 0.583 |
+| M3ml-v2 | FR | 0.617 | 0.810 | +0.193 | 0.333 → 0.589 |
+| M3ml-v2 | AR | 0.646 | 0.829 | +0.182 | 0.380 → 0.631 |
+
+**Two findings:**
+
+1. **True interpretation quality is far higher than strict accuracy implies.** The
+   base model's clinically-acceptable interpretation is **~0.88** (not 0.62), and
+   menstrual rises from ~0.39 to ~0.81 — confirming most "menstrual errors" are
+   justified adjacent reads.
+
+2. **The strict-accuracy ranking flips under clinical gating.** By strict accuracy,
+   M3ml-v2 leads (EN 0.644 > base 0.617). By the *content-gated relaxed* metric,
+   the **base model leads** (EN 0.878 > v2 0.806). The reason is mechanistic: the
+   base model's menstrual errors go to **fertility**, which the conception-themed
+   seeds *justify* (credited); fine-tuning shifted those errors to **PCOS**, which
+   those same seeds usually do *not* justify (not credited). So the fine-tune's
+   strict-accuracy gain partly reflects a category-prior shift toward a
+   *less-justified* adjacent label, not better clinical understanding. This is a
+   caution against reading the strict-accuracy improvement as a genuine
+   interpretation gain.
+
+Reproduce:
+```bash
+python scripts/relaxed_interp.py \
+  --dir Used_Datasets/Consolidated_Datasets/200_Seed_Dataset \
+  --model M2ml --model M3ml --model M3ml_v2 --langs en,fr,ar
+```
+
+## 6. Reproduce (confusion + examples)
 ```bash
 # confusion + examples were produced with scripts/evaluate.py scorers over
 # Used_Datasets/Consolidated_Datasets/200_Seed_Dataset/M2ml_{en,fr,ar}.jsonl
