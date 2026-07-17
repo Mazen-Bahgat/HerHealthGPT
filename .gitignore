@@ -18,3 +18,13 @@ models/
 
 # training/eval logs
 logs/
+
+# LaTeX build artifacts + downloaded anthology shards (Overleaf pulls shards itself)
+Overleaf_Template/anthology-*.bib
+Overleaf_Template/*.pdf
+Overleaf_Template/*.aux
+Overleaf_Template/*.log
+Overleaf_Template/*.blg
+Overleaf_Template/*.bbl
+Overleaf_Template/*.out
+Overleaf_Template/*.xdv

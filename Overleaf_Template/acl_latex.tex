@@ -30,6 +30,7 @@
 %Including images in your LaTeX document requires adding
 %additional package(s)
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
 
@@ -44,15 +45,15 @@
 \newcommand{\mlvtwo}{M3ml\textsubscript{v2}}
 \newcommand{\tbd}{--}
 
-\title{HerHealthEval: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?}
-%HerHealthGPT: Do Language Models Understand Women’s Health Communication Across Languages and Cultures?Double-blind submission: omit author names until camera-ready.
+\title{HerHealthEval: Do Language Models Understand Women's Health Communication Across Languages and Cultures?}
+%HerHealthGPT: Do Language Models Understand Women's Health Communication Across Languages and Cultures?Double-blind submission: omit author names until camera-ready.
 \author{Anonymous ACL submission}
 
 \begin{document}
 \maketitle
 \begin{abstract}
 Large language models are increasingly used to answer women's-health questions, but fluent answers do not establish that a model has correctly understood what a patient is trying to communicate.
-We present HerHealthEval, a multilingual benchmark and evaluation framework for studying language understanding in women’s-health communication across languages and linguistic registers.
+We present HerHealthEval, a multilingual benchmark and evaluation framework for studying language understanding in women's-health communication across languages and linguistic registers.
 
 Our controlled evaluation suite covers menstruation, polycystic ovary syndrome (PCOS)/hormonal concerns, and fertility in English, Arabic, and French, pairing clinical, lay, indirect, ambiguous, and emotionally concerned expressions with predefined targets for concern category, risk level, recommended action, and clarification need.
 The protocol requires native-speaker validation of Arabic and French for meaning preservation, naturalness, and register before cross-lingual evaluation or adaptation, while evaluation cases remain separated from leakage-controlled adaptation data.
