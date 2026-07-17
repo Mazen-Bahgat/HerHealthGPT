@@ -167,6 +167,26 @@ motivates the v2 correction.
 
 ---
 
+### 4.5 Paired significance — McNemar (M2 base vs M3ml-v1)
+Shared 540 items/language. `b` = M2 right & v1 wrong; `c` = v1 right & M2 wrong.
+
+| Lang | Measure | b | c | p-value | Reading |
+|---|---|---|---|---|---|
+| FR | risk | 289 | 0 | 2.2e-64 | M2 safer, **one-directional** (c=0) |
+| FR | category | 78 | 73 | 0.75 | no diff — interpretation unchanged |
+| FR | clarification | 9 | 72 | 5.6e-12 | v1 "wins" via always-abstain majority baseline |
+| AR | risk | 298 | 0 | 2.5e-66 | M2 safer, **one-directional** (c=0) |
+| AR | category | 73 | 73 | 0.93 | no diff — interpretation unchanged |
+| AR | clarification | 10 | 77 | 1.5e-12 | v1 "wins" via always-abstain majority baseline |
+
+**Headline:** the risk discordance between base and fine-tune is total and
+one-sided (c=0 in both languages, p<1e-63) — the strongest possible paired
+evidence that M3ml-v1's cross-lingual under-triage is systematic. Category is
+statistically identical (fine-tune neither helped nor hurt *which condition* is
+recognized). The clarification "advantage" of v1 is a majority-baseline artifact
+(never-ask wins the 95.6% gold-no items); M2 alone has non-zero clarification
+recall. M2-vs-v2 and v1-vs-v2 McNemar: *pending v2 retrain*.
+
 ## 5. Contribution statement (draft — the doctor's open "??" item)
 
 This paper makes four contributions:

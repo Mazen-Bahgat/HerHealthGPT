@@ -264,6 +264,50 @@ risk judgment, whereas \mlvone{}'s higher number reflects the absence of one.
 confirming that the fine-tune left cross-lingual condition understanding intact
 and degraded only the risk mapping.
 
+\subsubsection{Paired significance (McNemar)}
+\label{sec:mcnemar}
+
+We test M2 against \mlvone{} on the shared $540$ items per language with McNemar's
+paired test (Table~\ref{tab:mcnemar}). On \emph{risk} the difference is both
+enormous and one-directional: M2 recovers the correct \texttt{see-doctor} verdict
+on $289$ French and $298$ Arabic items where \mlvone{} fails, while \mlvone{} is
+correct on \emph{zero} items where M2 fails ($p<10^{-63}$ both languages). The
+discordance has no offsetting direction --- statistical confirmation that the
+fine-tune's cross-lingual under-triage is systematic, not noise. On
+\emph{category} (interpretation) the two models are statistically
+indistinguishable (FR $p=0.75$, AR $p=0.93$), confirming that adaptation neither
+helped nor harmed which condition the model recognizes. On \emph{clarification},
+raw correctness favors \mlvone{} (discordant pairs $9{:}72$ FR, $10{:}77$ AR in
+its favor), but only because \mlvone{} never asks for clarification and $95.6\%$
+of gold items require none: always-abstain wins the majority class. M2 trades that
+specificity for non-zero clarification recall ($0.33$--$0.38$ vs.\ \mlvone{}'s
+$0.00$). The apparent ``win'' for the fine-tune on clarification accuracy is thus
+a majority-baseline artifact, and is reported here precisely to expose it.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llccc}
+\hline
+Lang & Measure & $b$ & $c$ & $p$ \\
+\hline
+FR & risk          & 289 & 0  & $2.2\!\times\!10^{-64}$ \\
+   & category       & 78  & 73 & $0.75$ \\
+   & clarification  & 9   & 72 & $5.6\!\times\!10^{-12}$ \\
+AR & risk          & 298 & 0  & $2.5\!\times\!10^{-66}$ \\
+   & category       & 73  & 73 & $0.93$ \\
+   & clarification  & 10  & 77 & $1.5\!\times\!10^{-12}$ \\
+\hline
+\end{tabular}
+\caption{McNemar's paired test, M2 (base) vs.\ \mlvone{}, on the shared $540$
+items per language. $b$ = items M2 gets right and \mlvone{} wrong; $c$ = the
+reverse. Risk discordance is entirely one-directional ($c=0$): M2 is safer
+wherever the two disagree. Category shows no significant difference; the
+clarification column favors \mlvone{} only through the always-abstain majority
+baseline (gold is $95.6\%$ ``no clarification'').}
+\label{tab:mcnemar}
+\end{table}
+
 \section{Discussion}
 \label{sec:discussion}
 
