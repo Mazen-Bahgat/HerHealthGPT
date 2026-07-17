@@ -8,6 +8,7 @@ N=540 items/language (90 seeds × 6 registers).
 | Path | What it is |
 |---|---|
 | **`HerHealthEval_baseline_report.md`** / **`paper/HerHealthEval_baseline_report.pdf`** | **In-depth baseline & full-results report for supervisor review** — the document to build the paper on. Per-register, per-category, cross-style, bootstrap-CI, and McNemar detail with interpretation and a suggested paper structure. |
+| `error_analysis_menstrual.md` / `paper/error_analysis_menstrual.pdf` | Error analysis of the menstrual interpretation gap — shows it is largely category-boundary ambiguity (conception-/PCOS-themed seeds), not a model blind spot, with confusion tables and verbatim examples. |
 | `paper/HerHealthEval.pdf` | Compiled 10-page paper draft (final results). |
 | `HerHealthEval_methodology_results.md` | Living methodology + results doc (protocol, metric taxonomy, all numbers, contribution statement, limitations). |
 | `multilingual_report.md` | Auto-generated reproducible report (headline table, cross-language consistency, all McNemar p-values) from `scripts/multilingual_report.py`. |

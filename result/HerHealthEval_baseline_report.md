@@ -150,10 +150,23 @@ Interpretation accuracy per category (n≈180 each):
 
 **Key finding.** The base model recognises fertility concerns almost perfectly but
 menstrual concerns poorly (~0.39), with PCOS in between — a ~50-point gap that
-holds across all three languages. This is a strong, language-invariant structural
-effect worth a dedicated analysis in the paper (candidate explanations: menstrual
-seeds are labeled with finer-grained gold conditions, or the model over-maps
-menstrual descriptions onto adjacent categories).
+holds across all three languages.
+
+**Error analysis (see `error_analysis_menstrual.md`) shows this is largely a
+category-boundary artifact, not a blind spot.** Of the wrong menstrual items,
+**87% are mapped to an adjacent category** (fertility or PCOS) and only 13% to
+"other". The reason: **14 of the 30 menstrual seeds (47%) explicitly concern
+conception/pregnancy** (e.g. *"Do irregular periods influence the ability to get
+pregnant?"*, *"trying for child since 1 yr"*) — labeled `menstrual` by presenting
+symptom but *fertility* by patient intent, which is what the model surfaces. One
+seed (irregular periods + polycystic ovaries on ultrasound) is a textbook PCOS
+presentation the model arguably reads *more* correctly than the gold. The
+confusion is stable across all six registers and all three languages, and
+fine-tuning merely shifts it (base → fertility; fine-tunes → PCOS) without
+resolving it. **Recommendation:** report a relaxed clinically-acceptable
+interpretation metric and/or refine the conception-motivated menstrual labels, and
+frame the gap as *category-boundary ambiguity in real patient language* — a
+substantive finding rather than a weakness.
 
 ### 4.4 Cross-style consistency (same case, six phrasings)
 | Lang | risk consistency | category consistency |
