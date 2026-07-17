@@ -2,22 +2,3 @@
 % Model adaptation lineage figure. \input from overleaf_methods.tex inside
 % a figure environment. Requires \usetikzlibrary{arrows.meta,positioning}
 % in the preamble of the compiling main file. Vertical chain, single column.
-\centering
-\begin{tikzpicture}[
-  node distance=2.2mm,
-  every node/.style={font=\scriptsize},
-  box/.style={rectangle, draw, rounded corners, align=center,
-              minimum height=6.5mm, text width=6.3cm, inner sep=2.5pt},
-  dashedbox/.style={box, dashed},
-  arr/.style={-{Latex[length=1.8mm]}, thick}
-]
-\node[box] (m2) {M2 --- Qwen3.5-9B zero-shot baseline};
-\node[box, below=of m2] (m3) {M3 --- QLoRA, structured (JSON) targets};
-\node[box, below=of m3] (m3o) {M3+O --- M3 + clarification oversampling};
-\node[box, below=of m3o] (ml) {M3-ML --- joint EN+FR+AR (M3+O recipe), scored on EN};
-\node[dashedbox, below=of ml] (frar) {FR / AR evaluation sets --- pending};
-\draw[arr] (m2) -- (m3);
-\draw[arr] (m3) -- (m3o);
-\draw[arr] (m3o) -- (ml);
-\draw[arr, dashed] (ml) -- (frar);
-\end{tikzpicture}
