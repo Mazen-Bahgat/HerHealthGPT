@@ -7,10 +7,14 @@ N=540 items/language (90 seeds × 6 registers).
 ## Contents
 | Path | What it is |
 |---|---|
-| `paper/HerHealthEval.pdf` | Compiled 10-page paper (final). |
+| **`HerHealthEval_baseline_report.md`** / **`paper/HerHealthEval_baseline_report.pdf`** | **In-depth baseline & full-results report for supervisor review** — the document to build the paper on. Per-register, per-category, cross-style, bootstrap-CI, and McNemar detail with interpretation and a suggested paper structure. |
+| `paper/HerHealthEval.pdf` | Compiled 10-page paper draft (final results). |
 | `HerHealthEval_methodology_results.md` | Living methodology + results doc (protocol, metric taxonomy, all numbers, contribution statement, limitations). |
 | `multilingual_report.md` | Auto-generated reproducible report (headline table, cross-language consistency, all McNemar p-values) from `scripts/multilingual_report.py`. |
 | `predictions/` | The 9 raw prediction JSONLs (3 models × EN/FR/AR). |
+
+> **Start here for review:** `paper/HerHealthEval_baseline_report.pdf` (a
+> professor-ready deep dive) or its editable source `HerHealthEval_baseline_report.md`.
 
 > Note: `predictions/M3ml_en.jsonl` is a **legacy English-only set** (`gss-*`
 > seeds) on a *different* benchmark; it is excluded from all aligned multilingual
