@@ -101,16 +101,30 @@ pregnancy → fertility; cysts/polycystic/ovaries → PCOS; period/cycle/bleedin
 menstrual). Markers are detected on the **English source per seed** (case content is
 language-independent) and applied uniformly across EN/FR/AR.
 
-| Model | Lang | strict interp | **relaxed interp** | Δ | menstrual strict→relaxed |
+Three metrics, bracketing interpretation from exact-match to upper bound:
+- **strict** — `predicted == gold` (exact match).
+- **relaxed (gated)** — credits adjacent reads *justified by the case content*
+  (the defensible metric).
+- **loose (upper bound)** — credits *any* clinical-category prediction regardless
+  of content (only off-taxonomy `other` fails); reported to bracket the estimate.
+
+| Model | Lang | strict | **relaxed (gated)** | loose (upper) | menstrual strict→relaxed |
 |---|---|---|---|---|---|
-| M2 (base) | EN | 0.617 | **0.878** | +0.261 | 0.394 → 0.811 |
-| M2 (base) | FR | 0.614 | **0.881** | +0.267 | 0.394 → 0.800 |
-| M2 (base) | AR | 0.617 | **0.883** | +0.267 | 0.400 → 0.806 |
-| M3ml-v1 | FR | 0.605 | 0.803 | +0.199 | 0.374 → 0.592 |
-| M3ml-v1 | AR | 0.618 | 0.805 | +0.187 | 0.378 → 0.600 |
-| M3ml-v2 | EN | 0.644 | 0.806 | +0.161 | 0.367 → 0.583 |
-| M3ml-v2 | FR | 0.617 | 0.810 | +0.193 | 0.333 → 0.589 |
-| M3ml-v2 | AR | 0.646 | 0.829 | +0.182 | 0.380 → 0.631 |
+| M2 (base) | EN | 0.617 | **0.878** | 0.930 | 0.394 → 0.811 |
+| M2 (base) | FR | 0.614 | **0.881** | 0.952 | 0.394 → 0.800 |
+| M2 (base) | AR | 0.617 | **0.883** | 0.952 | 0.400 → 0.806 |
+| M3ml-v1 | FR | 0.605 | 0.803 | 1.000 | 0.374 → 0.592 |
+| M3ml-v1 | AR | 0.618 | 0.805 | 0.998 | 0.378 → 0.600 |
+| M3ml-v2 | EN | 0.644 | 0.806 | 0.996 | 0.367 → 0.583 |
+| M3ml-v2 | FR | 0.617 | 0.810 | 0.994 | 0.333 → 0.589 |
+| M3ml-v2 | AR | 0.646 | 0.829 | 0.996 | 0.380 → 0.631 |
+
+**Reading the loose column.** It is near-ceiling for the fine-tunes (~0.99–1.00)
+because they *never abstain to `other`* — they always commit to one of the three
+clinical categories — whereas the base model outputs `other` for ~5–7% of items.
+So the loose metric mostly measures "does the model ever say other," making it a
+weak discriminator; the **gated relaxed metric is the one to report as the headline
+interpretation quality**, with strict and loose as the lower/upper brackets.
 
 **Two findings:**
 

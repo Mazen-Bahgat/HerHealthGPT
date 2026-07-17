@@ -69,7 +69,7 @@ def seed_markers(en_recs: list[dict]) -> dict[str, set]:
 
 
 def acceptable_set(seed_id: str, gold: str, markers: dict[str, set]) -> set:
-    """{gold} plus adjacent categories justified by the case content."""
+    """{gold} plus adjacent categories justified by the case content (content-gated)."""
     acc = {gold}
     present = markers.get(seed_id, set())
     for c in CATEGORIES:
@@ -78,20 +78,32 @@ def acceptable_set(seed_id: str, gold: str, markers: dict[str, set]) -> set:
     return acc
 
 
+def acceptable_set_loose(gold: str) -> set:
+    """{gold} plus ALL clinically-adjacent categories regardless of case content.
+
+    In this domain the three categories (menstrual, PCOS, fertility) are pairwise
+    clinically related, so the loose acceptable set is all three. This credits any
+    prediction that lands in a clinical category (only ``other``/off-taxonomy
+    predictions fail) and is reported as an *upper bound* on interpretation, to
+    bracket the content-gated relaxed metric."""
+    return set(CATEGORIES) | {gold}
+
+
 def load(path: Path) -> list[dict]:
     return [ev.score_record(json.loads(l)) for l in path.open(encoding="utf-8") if l.strip()]
 
 
 def score_relaxed(recs: list[dict], markers: dict[str, set]) -> dict:
     ok = [r for r in recs if r.get("parse_ok")]
-    strict = sum(1 for r in ok if r.get("category_correct"))
-    relaxed = 0
+    strict = relaxed = loose = 0
     relaxed_by_cat: dict[str, list] = defaultdict(lambda: [0, 0])  # [correct, n]
     for r in ok:
         gold = r.get("gold_category")
-        acc = acceptable_set(r.get("seed_id"), gold, markers)
-        hit = r.get("predicted_category") in acc
+        pred = r.get("predicted_category")
+        strict += 1 if r.get("category_correct") else 0
+        hit = pred in acceptable_set(r.get("seed_id"), gold, markers)
         relaxed += 1 if hit else 0
+        loose += 1 if pred in acceptable_set_loose(gold) else 0
         relaxed_by_cat[gold][1] += 1
         relaxed_by_cat[gold][0] += 1 if hit else 0
     n = len(ok)
@@ -99,6 +111,7 @@ def score_relaxed(recs: list[dict], markers: dict[str, set]) -> dict:
         "n": n,
         "strict": strict / n if n else None,
         "relaxed": relaxed / n if n else None,
+        "loose": loose / n if n else None,
         "by_cat": {c: (v[0] / v[1] if v[1] else None) for c, v in relaxed_by_cat.items()},
     }
 
@@ -111,8 +124,8 @@ def main() -> None:
     args = ap.parse_args()
     langs = [x.strip() for x in args.langs.split(",") if x.strip()]
 
-    print("## Strict vs relaxed (clinically-acceptable) interpretation")
-    print("| model | lang | n | strict | relaxed | Δ | menstrual (strict→relaxed) |")
+    print("## Strict vs relaxed (clinically-acceptable) vs loose (upper-bound) interpretation")
+    print("| model | lang | n | strict | relaxed (gated) | loose (upper) | menstrual (strict→relaxed) |")
     print("|---|---|---|---|---|---|---|")
     for model in args.model:
         # markers from this model's own EN file if aligned; else from M2ml_en
@@ -137,9 +150,8 @@ def main() -> None:
             # strict menstrual for the arrow
             ok = [r for r in recs if r.get("parse_ok") and r.get("gold_category") == "menstrual"]
             men_strict = sum(1 for r in ok if r.get("category_correct")) / len(ok) if ok else None
-            d = (s["relaxed"] - s["strict"]) if s["relaxed"] is not None else None
             print(f"| {model} | {lang} | {s['n']} | {s['strict']:.3f} | {s['relaxed']:.3f} | "
-                  f"+{d:.3f} | {men_strict:.3f}→{men:.3f} |")
+                  f"{s['loose']:.3f} | {men_strict:.3f}→{men:.3f} |")
 
 
 if __name__ == "__main__":

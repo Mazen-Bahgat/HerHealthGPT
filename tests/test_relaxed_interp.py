@@ -54,3 +54,30 @@ def test_strict_correct_always_relaxed_correct():
     markers = ri.seed_markers(recs)
     s = ri.score_relaxed(recs, markers)
     assert s["relaxed"] == 1.0 and s["strict"] == 1.0
+
+
+def test_loose_credits_any_clinical_category_but_not_other():
+    # plain menstrual seed (no fertility/pcos content): gated relaxed rejects the
+    # pcos read, but loose credits it; an "other" read is credited by neither.
+    recs = [
+        {"parse_ok": True, "seed_id": "menst-050", "gold_category": "menstrual",
+         "predicted_category": "pcos", "category_correct": False,
+         "input_text": "my periods are heavier than usual this month"},
+        {"parse_ok": True, "seed_id": "menst-051", "gold_category": "menstrual",
+         "predicted_category": "other", "category_correct": False,
+         "input_text": "my periods are heavier than usual this month"},
+    ]
+    markers = ri.seed_markers(recs)
+    s = ri.score_relaxed(recs, markers)
+    assert s["strict"] == 0.0
+    assert abs(s["relaxed"] - 0.0) < 1e-9   # neither gated-credited (no content)
+    assert abs(s["loose"] - 0.5) < 1e-9     # pcos credited, other not
+
+
+def test_loose_is_upper_bound():
+    recs = [{"parse_ok": True, "seed_id": "menst-002", "gold_category": "menstrual",
+             "predicted_category": "fertility", "category_correct": False,
+             "input_text": "irregular periods, trying to get pregnant"}]
+    markers = ri.seed_markers(recs)
+    s = ri.score_relaxed(recs, markers)
+    assert s["strict"] <= s["relaxed"] <= s["loose"]

@@ -170,11 +170,21 @@ Crediting content-justified adjacent reads (conception→fertility, cysts→PCOS
 gated on the language-independent English case content) raises the base model's
 interpretation to **~0.88** (menstrual 0.39→0.81):
 
-| Model | EN strict → relaxed | FR | AR |
-|---|---|---|---|
-| M2 (base) | 0.617 → **0.878** | 0.614 → 0.881 | 0.617 → 0.883 |
-| M3ml-v1 | — | 0.605 → 0.803 | 0.618 → 0.805 |
-| M3ml-v2 | 0.644 → 0.806 | 0.617 → 0.810 | 0.646 → 0.829 |
+Reported as three brackets — **strict** (exact), **relaxed (gated)** = the
+defensible headline, **loose** = upper bound crediting any clinical-category read:
+
+| Model | Lang | strict | relaxed (gated) | loose (upper) |
+|---|---|---|---|---|
+| M2 (base) | EN | 0.617 | **0.878** | 0.930 |
+| M2 (base) | FR | 0.614 | **0.881** | 0.952 |
+| M2 (base) | AR | 0.617 | **0.883** | 0.952 |
+| M3ml-v1 | FR/AR | 0.605/0.618 | 0.803/0.805 | 1.000/0.998 |
+| M3ml-v2 | EN | 0.644 | 0.806 | 0.996 |
+| M3ml-v2 | FR | 0.617 | 0.810 | 0.994 |
+| M3ml-v2 | AR | 0.646 | 0.829 | 0.996 |
+
+(The loose column is near-ceiling for the fine-tunes because they never abstain to
+`other`; treat gated-relaxed as the headline and loose as an upper bracket.)
 
 **Important nuance for the paper:** the strict-accuracy ranking *flips* under
 clinical gating. By strict accuracy M3ml-v2 leads (0.644 > 0.617); by the
