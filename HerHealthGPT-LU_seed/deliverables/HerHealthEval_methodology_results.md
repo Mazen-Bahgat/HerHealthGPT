@@ -123,7 +123,9 @@ under-triage = P(routine | gold see-doctor); clar recall on 24 gold=yes items.
 | M2 (base) | ar | 1.000 | 0.617 | 0.420 | 0.375 | 0.849 | 0.611 |
 | M3ml-v1 | fr | 0.998 | 0.605 | **1.000** | 0.000 | 1.000 | 0.618 |
 | M3ml-v1 | ar | 0.998 | 0.618 | **0.998** | 0.000 | 0.998 | 0.578 |
-| M3ml-v2 | en/fr/ar | *pending retrain* | | | | | |
+| M3ml-v2 | en | 1.000 | 0.644 | 0.439 | 0.000 | 1.000 | 0.667 |
+| M3ml-v2 | fr | *running* | | | | | |
+| M3ml-v2 | ar | *pending* | | | | | |
 
 ### 4.2 Cross-language consistency
 - **M2 base EN↔FR↔AR:** risk **0.711** (n=540 aligned triples), category
