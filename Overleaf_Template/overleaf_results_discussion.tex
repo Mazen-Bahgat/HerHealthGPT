@@ -49,7 +49,7 @@ Adaptation reliably trades one behavior for another. All three adapted models ke
 \subsection{French evaluation exposes a safety regression invisible in English}
 \label{sec:fr-results}
 
-Table~\ref{tab:fr} compares M2 and M3-ML on identical items scored in English and French. Aggregate accuracy shifts by similar, modest amounts in both languages (risk accuracy $-$0.012 English, $-$0.039 French; category accuracy $-$0.029 English, $-$0.049 French) --- the kind of difference that would look unremarkable if accuracy were the only metric reported. The safety-relevant metrics tell a different story. Under-triage is roughly flat in English (0.718$\to$0.711) but collapses in French: M3-MLfr routes 173 of 174 \texttt{see-doctor} items to \texttt{routine} (under-triage 0.632$\to$0.994), a near-total loss of the model's ability to flag care-warranting French input (Figure~\ref{fig:regression}a). Clarification recall collapses to 0.000 in \emph{both} languages, so that failure is language-independent, but the triage collapse is not: it is specific to French and would be invisible from the English results alone (Figure~\ref{fig:regression}b). By McNemar's test, M3-MLfr is significantly worse than M2fr on both category correctness (p$=$0.017) and risk correctness (p$=$0.045), whereas the same English comparison (M3-ML vs.\ M2) is not significant on either field (p$=$0.164, p$=$0.550; Table~\ref{tab:main}). Cross-style risk consistency appears to \emph{improve} in French (0.544$\to$0.978) even more than in English, but this is the same collapse viewed through the consistency metric: a model that predicts \texttt{routine} for nearly every case is trivially consistent across its six register variants. Taken together, French M3-ML is simultaneously the most internally consistent and the least safe configuration we evaluate. The Arabic evaluation reproduces this pattern exactly: M3-ML routes 537 of 540 Arabic items to \texttt{routine} (under-triage 0.632$\to$0.994 relative to the Arabic zero-shot baseline, clarification recall 0.011), while the Arabic baseline itself behaves like the English and French ones (under-triage 0.638, clarification recall 0.889). The collapse is therefore systematic across both non-English languages rather than a French-specific artifact, and it lowers genuine cross-lingual agreement: three-way English--French--Arabic risk agreement falls from 0.846 for M2 to 0.804 for M3-ML, and M3-ML's near-perfect French--Arabic agreement (0.991) is itself an artifact of the shared \texttt{routine} collapse.
+Table~\ref{tab:fr} compares M2 and M3-ML on identical items scored in English and French. Aggregate accuracy shifts by similar, modest amounts in both languages (risk accuracy $-$0.012 English, $-$0.039 French; category accuracy $-$0.029 English, $-$0.049 French) --- the kind of difference that would look unremarkable if accuracy were the only metric reported. The safety-relevant metrics tell a different story. Under-triage is roughly flat in English (0.718$\to$0.711) but collapses in French: M3-MLfr routes 173 of 174 \texttt{see-doctor} items to \texttt{routine} (under-triage 0.632$\to$0.994), a near-total loss of the model's ability to flag care-warranting French input (Figure~\ref{fig:regression}a). Clarification recall collapses to 0.000 in \emph{both} languages, so that failure is language-independent, but the triage collapse is not: it is specific to French and would be invisible from the English results alone (Figure~\ref{fig:regression}b). By McNemar's test, M3-MLfr is significantly worse than M2fr on both category correctness (p$=$0.017) and risk correctness (p$=$0.045), whereas the same English comparison (M3-ML vs.\ M2) is not significant on either field (p$=$0.164, p$=$0.550; Table~\ref{tab:main}). Cross-style risk consistency appears to \emph{improve} in French (0.544$\to$0.978) even more than in English, but this is the same collapse viewed through the consistency metric: a model that predicts \texttt{routine} for nearly every case is trivially consistent across its six register variants. Taken together, French M3-ML is simultaneously the most internally consistent and the least safe configuration we evaluate. The Arabic evaluation reproduces this pattern exactly: M3-ML routes 537 of 540 Arabic items to \texttt{routine} (under-triage 0.632$\to$0.994 relative to the Arabic zero-shot baseline, clarification recall 0.011), while the Arabic baseline itself behaves like the English and French ones (under-triage 0.638, clarification recall 0.889). The collapse is therefore systematic across both non-English languages rather than a French-specific artifact, and it lowers genuine cross-lingual agreement: three-way English--French--Arabic risk agreement falls from 0.846 for M2 to 0.804 for M3-ML, and M3-ML's near-perfect French--Arabic agreement (0.991) is itself an artifact of the shared \texttt{routine} collapse. The effect is statistically robust: 95\% bootstrap confidence intervals for M3-ML under-triage are [0.981, 1.000] in French and [0.981, 1.000] in Arabic, disjoint from the baseline's [0.561, 0.704] and [0.567, 0.709], whereas the two models' English under-triage intervals overlap ([0.637, 0.774] vs.\ [0.651, 0.785]). Table~\ref{tab:qual} illustrates the failure on representative cases.
 
 \begin{table}[t!]
 \centering
@@ -93,6 +93,28 @@ wrong way are drawn in red; direction and the shaded zones encode good/bad so
 the figure reads without color.}
 \label{fig:regression}
 \end{figure}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{4.9cm}ccc}
+\hline
+Care-warranting case (gold: \texttt{see-doctor}) & Lang & M2 & M3-ML \\
+\hline
+``Still bleeding several weeks after giving birth; how long should lochia last?'' & FR & \texttt{see-doc.} & \texttt{routine} \\
+\emph{(same case)} & AR & \texttt{see-doc.} & \texttt{routine} \\
+``New hair growth on chin and cheeks --- a sign of PCOS?'' & FR & \texttt{see-doc.} & \texttt{routine} \\
+\hline
+\end{tabular}
+\caption{Representative under-triage failures. On identical care-warranting
+cases (gold risk \texttt{see-doctor}), the zero-shot baseline (M2) correctly
+returns \texttt{see-doctor} while the multilingual fine-tune (M3-ML)
+down-classifies to \texttt{routine}. The postpartum-bleeding case collapses in
+both languages. Cases are glossed in English; models received the
+French/Arabic text.}
+\label{tab:qual}
+\end{table}
 
 \section{Discussion}
 \label{sec:discussion}
