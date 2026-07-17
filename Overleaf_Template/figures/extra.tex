@@ -1,0 +1,114 @@
+\centering
+\begin{tikzpicture}[
+  node distance=2.2mm,
+  every node/.style={font=\scriptsize},
+  box/.style={rectangle, draw, rounded corners, align=center,
+              minimum height=6.5mm, text width=6.3cm, inner sep=2.5pt},
+  arr/.style={-{Latex[length=1.8mm]}, thick}
+]
+\node[box] (s1) {Candidate questions: HealthCareMagic/iCliniq (PCOS, fertility) + menstrual corpus; keyword-filtered, artifact-cleaned};
+\node[box, below=of s1] (s2) {Category anchored to NHS/NICHD guidance; CDC specifically for fertility where coverage was thin};
+\node[box, below=of s2] (s3) {Rewritten into 6 matched registers (meaning-preservation checked)};
+\node[box, below=of s3] (s4) {Risk \& clarification targets: keyword heuristic over answer text, not grounding; clarification = ambiguous-register row only};
+\node[box, below=of s4] (s5) {Split: evaluation set vs.\ leakage-excluded adaptation pool};
+\node[box, below=of s5] (s6) {Adaptation pool translated to French \& MSA (LLM), then QA + native-speaker confirmation};
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (s3);
+\draw[arr] (s3) -- (s4);
+\draw[arr] (s4) -- (s5);
+\draw[arr] (s5) -- (s6);
+\end{tikzpicture}
+\section{Related Work}
+\label{sec:related}
+
+This study clusters the closest work into three lines: women's-health answer evaluation, multilingual and sociocultural language understanding, and evaluation design for ambiguity and safety.
+
+\subsection{Women's-Health Answer Evaluation}
+
+Women's-health LLM research primarily asks whether generated answers are accurate, readable, empathetic, or safe \citep{recker-etal-2025-large,devries-etal-2025-enhancing}.
+\citet{adhikary-etal-2025-menstrual} introduce MenstLLaMA, one of the closest domain-adaptation systems, fine-tuning LLaMA-3-8B on menstrual-health QA data and evaluating educational response quality in English.
+\citet{mughal-etal-2025-mai} develop Mai, a menstrual-health dialogue system in English and Roman Urdu motivated by stigma and sociocultural barriers, but evaluated through automatic metrics and user ratings rather than matched interpretation tests.
+For PCOS, \citet{devranoglu-etal-2024-chatgpt} evaluate ChatGPT on clinician-authored questions and \citet{graca-etal-2026-assessing} run an international blinded survey of health-professional ratings; a systematic review of 80 PCOS AI studies finds the broader field still dominated by imaging and structured predictive modeling \citep{ghaderzadeh-etal-2025-artificial}, so conversational LLM evaluation is a small slice of that literature.
+For fertility, \citet{chervenak-etal-2023-promise} compare ChatGPT counseling with public-health sources, and \citet{gely-etal-2026-large} compare LLM answers to infertility FAQs against specialist answers.
+\citet{maurya-etal-2026-whbench} broaden coverage through WHBench, an expert-crafted, safety-aware rubric.
+These studies motivate domain-specific adaptation and careful response evaluation but treat the input question as fixed; none tests whether the same concern is interpreted consistently as its register or language changes.
+
+\subsection{Multilingual and Sociocultural Understanding}
+
+\citet{jin-etal-2024-better} introduce XLingEval to assess correctness, consistency, and verifiability on healthcare questions across English, Spanish, Chinese, and Hindi, finding substantial cross-language disparities; subsequent work likewise reports inconsistent information across languages for equivalent questions \citep{schlicht-etal-2025-consistent}.
+Foundational cross-cultural NLP work distinguishes linguistic diversity from cultural variation, identifying linguistic form, common ground, topic relevance, and communicative objectives as separate dimensions \citep{hershcovich-etal-2022-challenges,adilazuarda-etal-2024-towards}.
+In reproductive health, participatory work with underserved women shows culturally appropriate responses require local context beyond literal translation \citep{deva-etal-2025-family}, while Western-centric rubrics can underrate responses trained annotators judge appropriate \citep{dey-etal-2025-beyond}.
+LUHME work identifies related problems: models compress cultural variation \citep{mohammadi-etal-2025-large}, adaptation can fail when sociocultural context is ignored \citep{freitas-cardoso-2025-nightmare}, and dialogue systems need mechanisms for common ground \citep{anikina-etal-2025-building}.
+Concept-level terminological precision, not surface fluency, matters most where domain mismatches can alter meaning, as in healthcare \citep{heinisch-2025-terminologists}.
+Cross-register transfer work further motivates holding semantic content constant when measuring sensitivity to linguistic form \cite{nicholls-alperin-2025-cross}.
+Our setting brings these concerns together in matched English, Arabic, and French women's-health descriptions rather than testing general medical knowledge alone.
+
+\subsection{Gap and Evaluation Requirements}
+
+The resulting gap is a framework that separates understanding the input from generating an appealing answer.
+Clarification research treats detecting the need to ask, selecting an informative question, and responding after clarification as distinct capabilities that current models still struggle with \citep{testoni-fernandez-2024-asking,zhang-choi-2025-clarify}; structured, stateful dialogue that elicits missing information turn by turn is one practical direction \citep{demarco-etal-2024-converso}.
+Such a framework must (i) hold the underlying concern constant across register and language, (ii) score interpretation, risk/action, and clarification need separately, (iii) expose under-triage and unsafe advice rather than rely on aggregate accuracy, and (iv) prevent overlap between evaluation and adaptation data.
+Native-speaker review targets semantic and register preservation in Arabic and French, while source- and paraphrase-family exclusions separate evaluation from training.
+The blinded clinical-rating designs used in PCOS and fertility studies motivate independent review of response quality \citep{graca-etal-2026-assessing,gely-etal-2026-large}, but our primary measures remain tied to predefined item labels.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.16\textwidth}p{0.20\textwidth}p{0.14\textwidth}p{0.18\textwidth}p{0.20\textwidth}}
+\hline
+\textbf{Study} & \textbf{Goal} & \textbf{Languages Covered} & \textbf{Matched register variants} & \textbf{Explicit triage / clarification targets} \\
+\hline
+MenstLLaMA \citep{adhikary-etal-2025-menstrual} & Educational answer generation & English & No & No \\
+Mai \citep{mughal-etal-2025-mai} & Menstrual-health dialogue generation & English, Roman Urdu & No & No \\
+WHBench \citep{maurya-etal-2026-whbench} & Expert-scored clinical responses & English & No & Safety rubric; no clarification target \\
+\textbf{HerHealthEval (proposed)} & Symptom-language understanding & English (FR/AR: adaptation data) & Yes & Yes \\
+\hline
+\end{tabular}
+\caption{Positioning against the closest women's-health LLM systems. French and Arabic here refer to the adaptation-data languages; the scored evaluation set is English (\ref{sec:limitations}).}
+\label{tab:positioning}
+\end{table*}
+
+LLM judges show only moderate agreement and systematic rubric biases \citep{donati-etal-2025-large}, so rubric-scored cultural sensitivity, helpfulness, clarity, and safety are reported separately from deterministic label metrics; pairing an LLM judge with a human-verification step is one proposed mitigation \citep{griebhaber-etal-2025-toolbox}.
+
+\section{Methods}
+
+The protocol below describes a general procedure rather than a finished, fixed instrument. Design and construction are described qualitatively; exact item and split counts are intentionally omitted (\ref{sec:limitations}).
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=\columnwidth]{Overleaf_Template_20260716_1412/figures/data_processing_pipeline.png}
+\caption{HerHealthEval construction pipeline. Canonical women’s-health cases are converted into matched multilingual register variants and annotated with structured understanding targets. Evaluation and adaptation corpora are separated through a leakage-control protocol that removes exact-match, source-provenance, and paraphrase-family overlap.}
+\label{fig:data_processing}
+\end{figure}
+
+
+\subsection{Design philosophy: matched cases, controlled register}
+
+The evaluation is built around one idea: express a single underlying women's-health concern in several ways a real patient might, while keeping the clinical facts fixed. Each case is written once in a canonical, evidence-anchored form and rewritten into five further \emph{registers} --- clinical, lay, indirect/culturally hedged, ambiguous/under-specified, and emotionally concerned --- so that any change in predicted concern category, risk level, or clarification need can be attributed to \emph{how} the case is phrased (Figure~\ref{fig:concept}, Figure~\ref{fig:pipeline}). Every case carries a predefined target for category, risk, action, and clarification need, so scoring never compares free text directly. For example, a case about heavy menstrual bleeding might appear as a clinical chart-note question in its \emph{clinical} register and as a short, worried, under-specified message in its \emph{ambiguous} register; only the ambiguous variant targets clarification, since it is specifically constructed to omit a detail a clinician would need to ask for (\ref{sec:gold-labels}).
+
+\subsection{Seed curation}
+
+Candidate patient-authored questions for PCOS/hormonal and fertility content were drawn from the HealthCareMagic-100k and iCliniq-10k patient--doctor dialogue datasets \citep{li-etal-2023-chatdoctor,li-2023-chatdoctor-repo}, accessed via a Hugging Face repackaging \citep{malikeh1375-2023-medical}, supplemented by additional patient-question corpora for menstrual-health content. Candidates were filtered by keyword for the three categories; cleaned of a recurring text-substitution artifact present in a subset of ChatDoctor-derived answers; filtered for authentic first-person framing against near-duplicate, myth-only, or off-topic content; and balanced across categories. Where a case's claim mapped to a public-health-authority page, its category was anchored to that source --- NHS and NICHD guidance broadly, with CDC guidance used specifically for fertility content where NHS/NICHD coverage was thin; unmapped claims were flagged rather than assigned an invented category. This anchoring pass is deterministic and rule-based, not model-generated.
+
+\subsection{Register construction}
+
+Each canonical text is rewritten into the remaining five registers under a meaning-preservation constraint: vocabulary, directness, hedging, and affect may vary, but no clinical claim may be added or removed. An early template-based rewriter collapsed distinct cases onto near-identical clinical-register text and was replaced with a pass that verifies distinctness and meaning preservation. Every register variant is flagged for human spot-check.
+
+\subsection{Gold risk and clarification targets}
+\label{sec:gold-labels}
+
+An early approach tried to ground the risk-level target in the same evidence pages used for category anchoring; this was abandoned once it produced a single, non-discriminating label for effectively every case. The risk target used here instead comes from a disclosed, deterministic keyword rule over the case's answer text, computed once per case so all of its register variants share one ground-truth risk label. The clarification target is register-determined by construction: \emph{yes} exactly for a case's ambiguous-register row, \emph{no} otherwise. Both targets are explicitly \emph{silver} --- heuristic, not clinician-adjudicated --- and used identically for the evaluation set and the adaptation data.
+
+\subsection{Multilingual localization}
+
+Matched English cases are localized into French and Modern Standard Arabic (MSA) rather than a regional dialect, so terminology generalizes across Arabic-speaking audiences. Both corpora were produced with the same LLM translation pipeline (OpenAI's Responses API, \texttt{gpt-5.6-sol}, low reasoning effort, structured outputs), preserving each row's register label rather than flattening every register into one translation. Output then passes an automated linguistic screen (structural integrity, encoding, source--target alignment) and native-speaker confirmation of meaning and register; for Arabic this is a professional Arabic$\leftrightarrow$English medical translator working in MSA, checking terminology and grammar (including gender agreement in patient-directed phrasing).
+
+\subsection{Evaluation/adaptation separation}
+
+Evaluation items are held out from every adaptation corpus by two keys: exact (case-insensitive) question match, and shared source-provenance identity, which also removes paraphrase-family overlap. The rule applies uniformly across English, French, and Arabic, and train/validation duplicates are resolved so the same case cannot inform both.
+
+
+
+\subsection{Models and adaptation protocol}
+
+All experiments use Qwen3.5-9B. We report a zero-shot baseline (M2): the base model prompted with a structured triage schema for category, risk, action, and clarification. We then adapt with QLoRA, wrapping each training target in the exact structured schema the evaluation items score against, so adaptation and evaluation speak the same format; an alternative plain question--answer target format was explored during development but is not reported here, as it degraded both format compliance and clarification behavior. The structured targets themselves are derived, not hand-annotated: category is mapped onto the four-way schema, risk reuses the same disclosed keyword heuristic as the gold targets, and the ambiguous register is set to ask for clarification (\ref{sec:gold-labels}). Because clarification examples are a small minority of the data and adaptation tends to suppress clarification-seeking, we also train a variant that oversamples the clarification (ambiguous-register) examples several-fold to strengthen that signal (M3+O). A joint English+French+Arabic run (M3-ML) follows the same recipe on the merged, leakage-controlled trilingual corpus, keeping each row's register label under translation so the clarification signal is preserved in every language; it is scored on English and, newly, French here; Arabic evaluation uses the same translated, native-validated benchmark and is in progress (Figure~\ref{fig:lineage}).
