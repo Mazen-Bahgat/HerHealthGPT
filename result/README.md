@@ -1,8 +1,16 @@
 # HerHealthEval — Results
 
 Consolidated results for the multilingual (EN/FR/AR) female-health
-language-understanding study. All metrics on `benchmark_multilingual_v1`,
-N=540 items/language (90 seeds × 6 registers).
+language-understanding study, N=540 items/language.
+
+**Two evaluation benchmarks are represented here** (see
+`EXPERIMENT_LINEAGE_AUDIT.md` in the repo root for why):
+- **menst** (`benchmark_multilingual_v1`, 100% see-doctor gold) — the deep-dive
+  analyses below (baseline report, relaxed metric, menstrual error analysis).
+- **gss** (`gold_seeds_styled*`, mixed gold) — **the camera-ready paper's
+  benchmark**. `gss_v2_recovery.md` reports the M3-ML-RC correction on gss, which
+  was integrated into the paper at
+  `camera_ready_updated_results/` (repo root) / `E:\camera_ready\camera_ready_updated_results\`.
 
 ## Contents
 | Path | What it is |
@@ -12,7 +20,9 @@ N=540 items/language (90 seeds × 6 registers).
 | `paper/HerHealthEval.pdf` | Compiled 10-page paper draft (final results). |
 | `HerHealthEval_methodology_results.md` | Living methodology + results doc (protocol, metric taxonomy, all numbers, contribution statement, limitations). |
 | `multilingual_report.md` | Auto-generated reproducible report (headline table, cross-language consistency, all McNemar p-values) from `scripts/multilingual_report.py`. |
-| `predictions/` | The 9 raw prediction JSONLs (3 models × EN/FR/AR). |
+| **`gss_v2_recovery.md`** | **The gss-benchmark result used in the paper:** M3-ML-RC recovers FR/AR under-triage 0.994→0.572/0.558 (see-doctor McNemar p≈10⁻²¹/10⁻²³). Directly comparable to the paper's M2/M3-ML. |
+| `predictions/` | menst benchmark: 9 raw JSONLs (3 models × EN/FR/AR). |
+| `predictions_gss/` | gss benchmark: M2_gss_en + M3-ML-RC EN/FR/AR (the new gss eval). M2_gss_fr/ar and M3-ML(v1) gss live on `origin/main`. |
 
 > **Start here for review:** `paper/HerHealthEval_baseline_report.pdf` (a
 > professor-ready deep dive) or its editable source `HerHealthEval_baseline_report.md`.
