@@ -1,0 +1,15 @@
+flowchart TD
+    Out["Model output<br/>(structured schema)"] --> Cat["Concern category"]
+    Out --> Risk["Risk level"]
+    Out --> Clar["Clarification need"]
+    Out --> Safe["Self-reported<br/>unsafe flag"]
+    Cat --> CatAcc["Category accuracy"]
+    Risk --> RiskAcc["Risk accuracy<br/>vs. majority baseline"]
+    Risk --> UT["Under- / over-triage rate"]
+    Clar --> ClarR["Clarification<br/>recall / specificity"]
+    Safe --> SafeW["Weak signal only --<br/>not independently validated"]
+    CatAcc --> CS["Cross-style consistency<br/>(same case, 6 registers)"]
+    RiskAcc --> CS
+    UT --> CS
+    ClarR --> CS
+    CS --> CL["Cross-language consistency<br/>(pending AR/FR evaluation set)"]

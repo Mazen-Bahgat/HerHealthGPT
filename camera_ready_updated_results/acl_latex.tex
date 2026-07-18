@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+
+% Change "review" to "final" to generate the final (sometimes called camera-ready) version.
+% Change to "preprint" to generate a non-anonymous version with page numbers.
+\usepackage[review]{acl}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% Needed for \text{} inside math mode (model-name subscripts, e.g. M3$_\text{QA}$)
+\usepackage{amsmath}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{french}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Noto Naskh Arabic}
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% This is also not strictly necessary, and may be commented out.
+% However, it will improve the aesthetics of text in
+% the typewriter font.
+\usepackage{inconsolata}
+
+%Including images in your LaTeX document requires adding
+%additional package(s)
+\usepackage{graphicx}
+
+% Native vector figures (no external image files needed):
+% see figures/*.tex, \input from overleaf_intro_related.tex / overleaf_methods.tex
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+% Title/author, abstract, and Results+Discussion+Limitations are shared with
+% acl_lualatex.tex via \input so the two compile entry points can never
+% silently diverge — edit only the shared files, never inline here.
+\input{overleaf_titleauthor}
+
+\begin{document}
+\maketitle
+\input{overleaf_abstract}
+
+\input{overleaf_intro_related}
+
+\input{overleaf_methods}
+
+\input{overleaf_results_discussion}
+
+% Bibliography: journal articles in custom.bib; ACL proceedings in anthology shards.
+% In Overleaf: New File -> From External URL
+%   https://aclanthology.org/anthology-1.bib
+%   https://aclanthology.org/anthology-2.bib
+% LUHME'25 citation keys used in this paper resolve from the anthology shards.
+\bibliography{custom,anthology-1,anthology-2}
+
+\end{document}

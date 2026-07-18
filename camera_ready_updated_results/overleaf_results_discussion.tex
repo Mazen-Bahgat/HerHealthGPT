@@ -1,0 +1,228 @@
+% !TEX root = acl_lualatex.tex
+% HerHealthEval / LUHME 2026 — Results, Discussion, and Limitations
+% Double-blind safe.
+% Included from acl_lualatex.tex after overleaf_methods.tex.
+% This file is the single source of truth for these sections.
+
+\section{Results}
+\label{sec:results}
+This study first evaluate language understanding on the English evaluation benchmark ($n=540$) using a general-purpose multilingual baseline (Qwen3.5-9B-Instruct; M2) and QLoRA-adapted variants: structured supervision with JSON targets (M3), the same adaptation with $4\times$ oversampling of clarification examples (M3+O), a jointly adapted English--French--Arabic model (M3-ML), and a risk-corrected re-adaptation of the multilingual model (M3-ML-RC) that derives risk labels once from the English source and propagates them by shared case identity, as prescribed in Section~\ref{sec:gold-labels}.
+
+To assess multilingual robustness, the zero-shot baseline, the multilingual adaptation model, and its risk-corrected re-adaptation (M2, M3-ML, and M3-ML-RC) are additionally evaluated on matched French and Modern Standard Arabic evaluation sets ($n=540$ each). These multilingual benchmarks preserve canonical case identity across languages and share identical language-invariant gold labels, allowing differences in performance to be attributed to linguistic realization rather than changes in underlying clinical content.
+
+Because both risk and clarification labels are imbalanced, majority-class baselines are reported for context. The majority-class accuracy is 0.644 for risk prediction and 0.833 for clarification prediction across all languages.
+
+\subsection{Zero-shot Baseline (M2)}
+Table~\ref{tab:main}, reports results for the zero-shot baseline (M2), a general-purpose Qwen3.5-9B-Instruct model prompted with the structured triage schema. M2 achieves perfect parse compliance and a risk accuracy of 0.667, only modestly exceeding the majority-class baseline of 0.644.
+
+The dominant safety failure is clinical under-triage. Among the 174 cases whose gold risk label is \texttt{see-doctor}, M2 incorrectly routes 71.8\% to the lower-risk \texttt{routine} category, yielding a recall of only 0.264 for \texttt{see-doctor} compared with 0.897 for \texttt{routine}. This asymmetry suggests that aggregate risk accuracy substantially understates safety-critical failure modes.
+
+In contrast, M2 exhibits strong uncertainty handling, achieving a clarification recall of 0.856 and a specificity of 0.862 on the 90 cases requiring clarification. Concern-category accuracy reaches 0.539 overall, with fertility concerns proving the most difficult category (recall 0.467).
+
+Finally, interpretation remains highly sensitive to linguistic realization. The model assigns a consistent risk label to only 64.4\% of case groups across their six register variants and a consistent concern category to only 15.6\%. These findings provide direct evidence that surface communication style, rather than clinical content alone, substantially influences model interpretation (RQ1; Section ~\ref{sec:intro}).
+
+
+\begin{table}[t!]
+\centering
+
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccccc}
+\hline
+Metric & M2 & M3 & M3+O & M3-ML & Base \\
+\hline
+
+parse\_ok
+& \textbf{1.000}
+& 0.998
+& 0.996
+& 0.998
+& --- \\
+
+risk accuracy
+& \textbf{0.667}
+& 0.623
+& 0.665
+& 0.655
+& 0.644 \\
+
+under-triage $\downarrow$
+& 0.718
+& 0.647
+& \textbf{0.605}
+& 0.711
+& --- \\
+
+clarif.\ recall
+& \textbf{0.856}
+& 0.044
+& 0.000
+& 0.000
+& --- \\
+
+category accuracy
+& 0.539
+& 0.549
+& \textbf{0.550}
+& 0.510
+& --- \\
+
+consistency (risk)
+& \textbf{0.644}
+& 0.433
+& 0.444
+& 0.500
+& --- \\
+
+consistency (cat.)
+& 0.156
+& 0.344
+& 0.378
+& \textbf{0.411}
+& --- \\
+
+\hline
+\end{tabular}%
+}
+
+\caption{Results on the English evaluation set ($n=540$).
+M2 is the zero-shot baseline; M3 is QLoRA adaptation using structured
+JSON targets; M3+O adds 4$\times$ oversampling of clarification
+examples; and M3-ML is joint English--French--Arabic adaptation using
+the M3+O recipe, evaluated here on English. ``Base'' denotes the
+majority-class baseline. Lower is better for under-triage. Best values
+per row are shown in \textbf{bold}. Consistency is the fraction of case
+groups assigned the same label across all six communication styles.}
+
+\label{tab:main}
+\end{table}
+
+\subsection{Consistency Masks Safety Regressions}
+
+We adapt Qwen3.5-9B using QLoRA on leakage-controlled adaptation corpora drawn from the same broad case pool as the evaluation benchmark but explicitly separated from it through the protocol described in Section ~\ref{sec:leakage-control}. Training outputs use the same structured schema employed during evaluation.
+
+Adaptation improves several aspects of language understanding. All adapted models retain near-perfect parse compliance ($\geq 0.996$) while reducing under-triage relative to the zero-shot baseline. Adaptation also substantially improves robustness to linguistic variation, more than doubling cross-style category consistency from 0.156 for M2 to 0.344, 0.378, and 0.411 for M3, M3+O, and M3-ML, respectively.
+
+The strongest English triage performance is obtained by M3+O, which recovers risk accuracy to near zero-shot parity (0.665 versus 0.667) while achieving the lowest under-triage rate among all English models (0.605).
+
+These gains, however, come at the expense of uncertainty handling. Clarification recall collapses from 0.856 for M2 to 0.044 for M3 and to 0.000 for both M3+O and M3-ML. Oversampling clarification examples therefore improves English triage performance but fails to recover clarification behavior. Instead, adapted models converge toward near-perfect specificity by almost always providing an answer rather than requesting additional information.
+
+McNemar's tests reveal that M3 performs significantly worse than M2 on risk correctness ($p=0.033$), but not on category correctness ($p=0.707$) or clarification correctness ($p=0.302$). Neither M3+O nor M3-ML differs significantly from M2 on matched per-item accuracy measures, suggesting that the principal effects of adaptation emerge in safety-sensitive and group-level metrics such as under-triage and cross-style consistency rather than aggregate accuracy alone.
+
+Finally, M3-ML achieves the highest English cross-style category consistency (0.411), but does not preserve the triage gains obtained by M3+O. Its multilingual behavior is examined in Section~\ref{sec:multilingual-results}.
+
+
+
+\subsection{Cross-Lingual Safety Regressions}
+\label{sec:multilingual-results}
+
+Table~\ref{tab:multilingual}, compares the zero-shot baseline (M2), the multilingual adaptation model (M3-ML), and its risk-corrected re-adaptation (M3-ML-RC) on matched English, French, and Arabic evaluation sets containing identical underlying concerns and language-invariant labels. While aggregate performance changes appear modest, cross-lingual evaluation reveals severe safety regressions that remain largely invisible under conventional accuracy and consistency metrics---and that we show are correctable at their source.
+
+The most striking effect appears in risk calibration. Under-triage remains largely unchanged in English (0.718$\rightarrow$0.711), but rises dramatically in French (0.632$\rightarrow$0.994) and Arabic (0.638$\rightarrow$0.994) following multilingual adaptation. Across the complete evaluation sets, M3-ML predicts \texttt{routine} for 538 of 540 French cases and 537 of 540 Arabic cases. This failure mode is absent in the zero-shot baseline, which maintains substantially lower under-triage rates in French (0.632) and Arabic (0.638).
+
+Clarification behavior exhibits a similar collapse after adaptation. Clarification recall decreases from 0.856 to 0.000 in English, from 0.811 to 0.000 in French, and from 0.889 to 0.011 in Arabic. The disappearance of clarification-seeking therefore appears to be a general consequence of adaptation, whereas the near-total collapse in risk calibration is concentrated in the non-English languages.
+
+Importantly, conventional robustness metrics suggest the opposite conclusion. French cross-style risk consistency increases from 0.544 to 0.978 and Arabic consistency from 0.456 to 0.967 following adaptation. However, these apparent improvements arise because the adapted model predicts \texttt{routine} for nearly every case rather than because it has become more linguistically robust.
+
+The same phenomenon appears in cross-language agreement. French--Arabic risk agreement rises to 0.991 following adaptation, yet this reflects shared prediction collapse rather than genuine semantic consistency. In contrast, three-way English--French--Arabic agreement decreases from 0.846 for M2 to 0.804 for M3-ML.
+
+Collectively, these findings demonstrate that multilingual consistency metrics alone can substantially overestimate the robustness and safety of adapted healthcare models, highlighting the importance of evaluating uncertainty handling and risk calibration separately from aggregate accuracy.
+
+\paragraph{Correcting the risk labels recovers safety.}
+The regression above is not intrinsic to multilingual adaptation but stems from the language-asymmetric risk labels documented in Section~\ref{sec:gold-labels}. Re-adapting the multilingual model with risk labels derived once from the English source and propagated by shared case identity (M3-ML-RC) reverses the collapse. Under-triage falls from 0.994 to 0.572 in French and 0.558 in Arabic---below even the zero-shot baseline (0.632 and 0.638)---and from 0.711 to 0.590 in English. On the safety-critical \texttt{see-doctor} cases, M3-ML-RC escalates 74 French and 75 Arabic cases that M3-ML had routed to \texttt{routine}, while reversing only one and zero cases in the opposite direction, respectively (McNemar $p=4.0\times10^{-21}$ for French and $p=5.3\times10^{-23}$ for Arabic). The correction also returns cross-style risk consistency to a genuine, non-degenerate level (0.467 in French and 0.422 in Arabic), comparable to the baseline rather than the collapsed M3-ML values. This safety improvement is invisible to aggregate risk accuracy, on which M3-ML-RC does not differ significantly from M2 or M3-ML, because it trades routine-class accuracy for correctly escalated \texttt{see-doctor} cases---precisely the safety-relevant behavior that aggregate metrics obscure. Crucially, clarification recall remains at zero: correcting the risk labels resolves the triage collapse but not the loss of clarification-seeking, indicating that the two failures are independent and that clarification degradation is a general consequence of adaptation rather than an artifact of label quality.
+
+\begin{table}[t!]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccccccccc}
+\hline
+& \multicolumn{3}{c}{English}
+& \multicolumn{3}{c}{French}
+& \multicolumn{3}{c}{Arabic} \\
+\cline{2-10}
+
+Metric
+& M2 & M3-ML & RC
+& M2 & M3-ML & RC
+& M2 & M3-ML & RC \\
+\hline
+
+parse\_ok
+& 1.000 & 0.998 & 0.994
+& 1.000 & 0.998 & 0.991
+& 1.000 & 0.998 & 0.989 \\
+
+risk accuracy
+& 0.667 & 0.655 & 0.663
+& 0.685 & 0.646 & 0.677
+& 0.674 & 0.646 & 0.684 \\
+
+under-triage $\downarrow$
+& 0.718 & 0.711 & 0.590
+& 0.632 & \textbf{0.994} & 0.572
+& 0.638 & \textbf{0.994} & 0.558 \\
+
+clarif.\ recall
+& 0.856 & \textbf{0.000} & 0.000
+& 0.811 & \textbf{0.000} & 0.000
+& 0.889 & \textbf{0.011} & 0.000 \\
+
+category accuracy
+& 0.539 & 0.510 & 0.531
+& 0.561 & 0.512 & 0.523
+& 0.533 & 0.531 & 0.545 \\
+
+consistency (risk)
+& 0.644 & 0.500 & 0.367
+& 0.544 & \textbf{0.978} & 0.467
+& 0.456 & \textbf{0.967} & 0.422 \\
+
+\hline
+\end{tabular}%
+}
+
+\caption{English, French, and Arabic results for the zero-shot baseline
+(M2), joint multilingual adaptation (M3-ML), and the risk-corrected
+re-adaptation (RC $=$ M3-ML-RC), with $n=540$ matched items per language
+and identical language-invariant gold labels.
+Bold marks the M3-ML \emph{failure} pattern rather than a favorable result:
+under-triage rises to 0.994 in both non-English languages,
+clarification recall collapses to near zero, and high French and Arabic
+risk consistency results from prediction collapse onto
+\texttt{routine}. Correcting the risk labels (RC) reverses the
+under-triage collapse (0.994$\rightarrow$0.572/0.558) and returns risk
+consistency to a genuine, non-degenerate level, but does not recover
+clarification recall.}
+
+\label{tab:multilingual}
+\end{table}
+
+\section{Discussion}
+\label{sec:discussion}
+
+Our findings provide preliminary answers to the three research questions and suggest several broader implications for multilingual healthcare systems.
+
+For RQ1, language understanding in women's-health communication remains highly sensitive to linguistic realization: semantically equivalent concerns expressed through different registers frequently produce different concern and risk predictions. For RQ2, multilingual evaluation reveals systematic language-specific differences in safety behavior that are largely invisible under aggregate accuracy metrics. For RQ3, adaptation improves consistency and reduces under-triage in English, but simultaneously suppresses clarification-seeking behavior and introduces severe safety regressions in non-English languages. These regressions, however, are traceable to a language-asymmetric labeling defect rather than to multilingual adaptation itself: re-adapting with risk labels derived once from the English source (M3-ML-RC) removes the non-English under-triage collapse and restores risk calibration to below the baseline, whereas the collapse of clarification-seeking persists across all adapted models and thus stands as the principal unresolved failure of adaptation.
+
+Collectively, these findings suggest that robust multilingual healthcare systems require explicit evaluation of language understanding, uncertainty handling, and risk calibration separately from response generation quality. More broadly, they indicate that multilingual consistency metrics alone may substantially overestimate the safety and robustness of adapted healthcare models.
+
+\section*{Limitations}
+\label{sec:limitations}
+
+HerHealthEval is intended as an evaluation framework rather than a fixed benchmark with a predefined scale. The present study evaluates three women's-health categories across English, French, and Modern Standard Arabic using a single multilingual model family and silver risk and clarification labels rather than clinician-adjudicated annotations.
+
+Future work will extend the framework to additional health conditions, languages, dialects, and model scales, as well as incorporate clinician validation and guardrailed dialogue mechanisms for uncertainty-aware women's-health communication.
+
+
+\section*{Ethical Considerations}
+\label{sec:ethics}
+
+This work studies language-understanding behavior in multilingual women's-health communication under controlled experimental conditions and does not provide medical advice or support clinical decision-making.
+
+The study uses publicly available patient--doctor dialogue datasets together with machine-generated multilingual variants reviewed for meaning preservation and register fidelity. Analyses are conducted at the level of aggregate linguistic and model-behavior patterns rather than individual patients or clinical outcomes.
+
+Because women's-health communication frequently involves sensitive topics, future releases of HerHealthEval will follow appropriate privacy, governance, and de-identification procedures.
+
+To preserve double-blind review, the benchmark and adaptation data are not released with the current submission. Subject to acceptance and institutional approval, we intend to release the evaluation framework, annotation protocol, and supporting resources to facilitate future research on multilingual language understanding in healthcare communication.

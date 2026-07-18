@@ -1,0 +1,64 @@
+% COMPILE WITH LuaLaTeX — use acl_latex.tex + pdfLaTeX if you don't need Arabic script in the paper body.
+%
+% This file and acl_latex.tex share their title/abstract/Results/Discussion/
+% Limitations content via \input (overleaf_titleauthor, overleaf_abstract,
+% overleaf_results_discussion) so the two compile entry points can never
+% silently diverge. Only this file's engine-specific preamble below (fonts,
+% babel/bidi setup) differs from acl_latex.tex.
+\documentclass[11pt]{article}
+
+% Change "review" to "final" to generate the final (sometimes called camera-ready) version.
+% Change to "preprint" to generate a non-anonymous version with page numbers.
+\usepackage[review]{acl}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+\usepackage{graphicx}
+
+% Needed for \text{} inside math mode (model-name subscripts, e.g. M3$_\text{QA}$)
+\usepackage{amsmath}
+
+% Native vector figures (no external image files needed):
+% see figures/*.tex, \input from overleaf_intro_related.tex / overleaf_methods.tex
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+% LuaLaTeX / XeLaTeX font setup (do not compile this file with pdfLaTeX).
+%\usepackage[french,english]{babel}
+%\babelfont{rm}{TeXGyreTermesX}
+% When Arabic script appears directly in the paper body (e.g. a quoted MSA
+% example), uncomment the three lines below instead of the \usepackage[english]
+% and \babelfont lines above:
+\usepackage[french,english,bidi=default]{babel}
+\babelfont{rm}{TeXGyreTermesX}
+\babelfont[*arabic]{rm}{Noto Naskh Arabic}
+
+\input{overleaf_titleauthor}
+
+\begin{document}
+\maketitle
+\input{overleaf_abstract}
+
+\input{overleaf_intro_related}
+
+\input{overleaf_methods}
+
+\input{overleaf_results_discussion}
+
+% Bibliography: journal articles in custom.bib; ACL proceedings in anthology shards.
+% In Overleaf: New File -> From External URL
+%   https://aclanthology.org/anthology-1.bib
+%   https://aclanthology.org/anthology-2.bib
+% LUHME'25 citation keys used in this paper resolve from the anthology shards.
+\bibliography{custom,anthology-1,anthology-2}
+
+\end{document}

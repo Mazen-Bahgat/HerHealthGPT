@@ -1,0 +1,243 @@
+% !TEX root = acl_lualatex.tex
+% HerHealthEval / LUHME 2026 — Methods
+% Double-blind safe.
+% Included from acl_lualatex.tex via \input.
+
+\section{Methods}
+\label{sec:methods}
+We detail the design of our proposed HerhealthEval framework as follows.
+
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=\columnwidth]
+    {figures/data_processing_pipeline.png}
+    \caption{HerHealthEval construction pipeline. 
+ }
+    \label{fig:data_processing}
+\end{figure}
+
+
+\subsection{Overview of the Proposed Framework}
+
+The key idea behind HerHealthEval is to preserve the underlying clinical
+concern while systematically varying its linguistic realization across
+communication registers and languages.
+
+Each case is first represented as a canonical clinical concern and
+subsequently rewritten into five additional communication registers:
+clinical, lay, indirect or culturally hedged, ambiguous or under-specified,
+and emotionally concerned. The underlying medical content is held fixed
+across these variants.
+
+For example, the canonical concern \emph{menstrual irregularity} may appear
+as a clinical formulation (``I have irregular menstrual bleeding''), a lay
+formulation (``my period is all over the place''), an indirect formulation
+(``something about my cycle feels wrong''), an ambiguous formulation
+(``my periods have changed recently''), or an emotional formulation
+(``I'm really worried because my cycle hasn't been normal for months'').
+Although these expressions differ in explicitness, emotional content, and
+communicative strategy, they correspond to the same underlying concern.
+
+Consequently, changes in predicted concern category, risk level, recommended
+action, or clarification behavior can be attributed to differences in
+linguistic realization rather than differences in the underlying clinical
+evidence
+(Figures~\ref{fig:concept} and~\ref{fig:data_processing}).
+
+Each instance is associated with predefined targets for concern category,
+risk level, recommended action, and clarification need. Evaluation is
+therefore performed against structured understanding labels rather than
+free-text similarity metrics.
+
+Clarification targets are paired with variants that intentionally omit
+clinically relevant details, enabling explicit evaluation of uncertainty
+recognition and clarification-seeking behavior.
+
+
+\subsection{Source}
+
+Candidate patient-authored questions for PCOS or hormonal concerns and
+fertility content were drawn from the HealthCareMagic-100k and iCliniq-10k
+patient--doctor dialogue datasets
+\citep{li-etal-2023-chatdoctor,li-2023-chatdoctor-repo},
+accessed through a Hugging Face repackaging
+\citep{malikeh1375-2023-medical}, and supplemented with additional
+patient-question corpora for menstrual-health content.
+
+Candidates were filtered by keyword into the three target categories and
+cleaned of a recurring text-substitution artifact present in a subset of
+ChatDoctor-derived answers. They were also filtered for authentic
+first-person framing while near-duplicate, myth-only, and off-topic content
+was removed. The remaining cases were subsequently balanced across
+categories.
+
+Concern categories were grounded in authoritative public-health guidance
+whenever a reliable mapping existed. NHS and NICHD resources were used as
+primary references, with CDC guidance supplementing fertility-related topics
+for which coverage was limited. Cases lacking sufficient evidence for
+deterministic category assignment were explicitly flagged rather than
+assigned an inferred label.
+
+
+\subsection{Canonical Clinical Case}
+
+Each collected case is mapped to a single canonical clinical concern that
+serves as the semantic anchor for all subsequent variants.
+
+For example, expressions such as
+``I have irregular menstrual bleeding,''
+``my period is all over the place,'' and
+``something about my cycle feels wrong''
+are mapped to the same underlying concern:
+\emph{menstrual irregularity}.
+
+This canonicalization step transforms linguistic variation into a controlled
+experimental variable while preserving semantic intent.
+
+
+\subsection{Register Construction}
+
+Each canonical case is rewritten into the remaining communication registers
+under a strict meaning-preservation constraint. Lexical choice, directness,
+hedging, and emotional framing may vary, but the underlying clinical evidence
+and concern category must remain unchanged.
+
+Early experiments with template-based rewriting produced excessive lexical
+convergence between otherwise distinct cases, particularly within the
+clinical register. The final protocol therefore incorporates explicit
+distinctness and semantic-preservation checks to ensure that register
+variation reflects differences in linguistic realization rather than
+unintended duplication.
+
+Generated variants undergo human review to verify semantic consistency,
+register fidelity, and linguistic naturalness.
+
+
+\subsection{Multilingual Localization}
+
+Matched English cases are localized into French and Modern Standard Arabic
+(MSA), rather than regional Arabic dialects, to support terminological
+consistency across the controlled evaluation.
+
+Both multilingual corpora are generated using the same translation pipeline
+(OpenAI Responses API, \texttt{gpt-5.6-sol}, high reasoning effort, and
+structured outputs). The communication register associated with each case is
+explicitly preserved rather than collapsing all variants into a single
+translation style.
+
+The resulting outputs undergo a two-stage validation process. First, an
+automated linguistic screening checks structural integrity, encoding
+consistency, and source--target alignment. Second, native-speaking linguistic
+experts review semantic preservation, register fidelity, and linguistic
+naturalness.
+
+For Arabic, this review is performed by a professional Arabic--English
+medical translator working in Modern Standard Arabic, with particular
+attention to clinical terminology, grammatical correctness, and gender
+agreement in patient-directed communication.
+
+
+\subsection{Annotation}
+\label{sec:gold-labels}
+
+An initial attempt to derive risk targets directly from the public-health
+guidance used for concern anchoring proved insufficiently discriminative,
+because most cases mapped to the same broad risk category. We therefore use a
+transparent deterministic keyword heuristic to derive silver risk targets
+from the source answer text.
+
+For the evaluation benchmark, the risk target is computed once per source
+case and propagated to all corresponding register and language variants
+through their shared case identity. Consequently, the matched English,
+French, and Arabic evaluation items use identical language-invariant risk
+labels.
+
+Clarification targets are assigned by construction. The ambiguous-register
+variant is labeled as requiring clarification, whereas all remaining
+register variants receive a negative clarification target. Each
+clarification label is shared across the matched English, French, and Arabic
+versions of the same case and register.
+
+Both risk and clarification targets are silver annotations rather than
+clinician-adjudicated ground truth. A post-hoc audit of the multilingual
+adaptation corpus found that French and Arabic risk labels had instead been
+recomputed by applying an English-keyed keyword heuristic directly to
+translated text. This produced language-asymmetric training labels skewed
+toward \texttt{routine}.
+
+We retain the resulting multilingual model (M3-ML) as a documented failure
+case and additionally construct a risk-corrected re-adaptation (M3-ML-RC)
+that derives risk once from the English source answer and attaches the
+resulting label to translated rows using their shared \texttt{row\_id}, so
+that the matched English, French, and Arabic training items carry identical
+language-invariant risk labels. As reported in
+Section~\ref{sec:multilingual-results}, this correction reverses the French
+and Arabic under-triage collapse, confirming that the collapse characterizes
+the defective adaptation pipeline rather than an inherent inability of the
+base model to understand either language.
+
+
+\subsection{Split for Evaluation}
+
+Following multilingual localization and annotation, the resulting cases are
+partitioned into two disjoint corpora serving complementary purposes: (i) an \emph{adaptation corpus}, used for English domain
+    specialization and multilingual adaptation; and
+    (ii) an \emph{evaluation benchmark}, reserved exclusively for
+    measuring language understanding under controlled variation in register
+    and language.
+
+
+
+\subsection{Leakage Control}
+\label{sec:leakage-control}
+The evaluation benchmark contains held-out concern families spanning all
+supported languages and communication registers, while the adaptation corpus
+provides exposure to the domain without revealing evaluation instances or
+their multilingual realizations.
+
+This separation is central to the HerHealthEval design because multiple
+examples may share the same underlying clinical concern while differing only
+in wording, register, or language. Consequently, a standard row-level
+train--test split is insufficient and may allow contamination through
+paraphrases, translations, or alternative realizations of the same canonical
+concern.
+
+HerHealthEval therefore separates the adaptation and evaluation corpora using
+three exclusion rules: (i) \textbf{Exact-match exclusion}, preventing identical formulations
+    from appearing across the two corpora; (ii) \textbf{Source-provenance exclusion}, preventing cases derived
+    from the same source instance from crossing the split; and (iii)\textbf{Paraphrase-family exclusion}, preventing multilingual or
+    cross-register realizations of the same canonical concern from appearing
+    in both corpora.
+
+
+These constraints are applied uniformly across English, French, and Modern
+Standard Arabic, ensuring that evaluation measures generalization to unseen
+linguistic realizations rather than memorization of previously observed
+formulations.
+
+
+\subsection{Metrics}
+\label{sec:metrics}
+
+We evaluate language understanding using predefined-label measures rather
+than free-text response quality. These measures include concern-category
+accuracy, risk-level accuracy, under- and over-triage rates, and
+clarification recall and specificity. Because the risk labels are
+class-imbalanced, risk accuracy is reported alongside the majority-class
+baseline. Under- and over-triage are reported separately to preserve the
+safety-relevant direction of each error; under-triage measures the
+proportion of gold \texttt{see-doctor} cases incorrectly assigned to
+\texttt{routine}.
+
+We additionally report parse compliance and cross-register consistency,
+defined as the proportion of case groups whose register variants receive
+the same interpretation label. Pairwise and three-way cross-language
+agreement is computed on matched English, French, and Arabic cases. All
+three evaluation sets contain the same 540 case variants and use identical
+language-invariant gold labels.
+
+The model-reported \texttt{unsafe\_response} flag is treated only as an
+auxiliary signal. Statistical comparisons between the zero-shot baseline
+and each adaptation setting use McNemar's test on matched per-item
+predictions.
